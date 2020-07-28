@@ -95,7 +95,7 @@ body {
     display: block;
     top: 100px;
     left: 800px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(255, 0, 0, 0);
     height: 680px;
     width: 500px;
     z-index: 40;
@@ -116,6 +116,12 @@ body {
     padding: 90px 70px 50px 70px;
     border-radius: 10px;
     background: rgba(0, 77, 77, .9)
+}
+
+#closeBtn {
+    position: relative;
+    top: -70px;
+    left: 395px;
 }
 
 .login-snip .login,
