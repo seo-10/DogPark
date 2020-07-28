@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="1231321">
+    <wb-module deploy-name="DogPark_Project">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="1231321"/>
-        <property name="java-output-path" value="/1231321/build/classes"/>
+        <property name="java-output-path" value="/DogPark_Project/build/classes"/>
+        <property name="context-root" value="DogPark_Project"/>
     </wb-module>
 </project-modules>
