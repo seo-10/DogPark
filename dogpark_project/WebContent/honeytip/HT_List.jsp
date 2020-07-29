@@ -1,10 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.dogpark.dto.PageInfo"%>
 <%@page import="com.dogpark.dto.BoardBean"%>
+<%@page import="com.dogpark.dao.Dao"%>
 
-<%@ page import="java.util.*"%>
-<%@ page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.*"%>
+<%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +14,9 @@
 </head>
 <body>
 	<%
-		SqlSessionFactory sqlfactory = Mybatis_DAO.getConn();
+		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		List<Mybatis_DTO> dto = sqlsession.selectList("superpowerselect");
+		List<BoardBean> dto = sqlsession.selectList("superpowerselect");
 		sqlsession.close();
 	%>
  <section>

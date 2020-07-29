@@ -26,7 +26,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     </environments>
 
 <mappers>
-	<mapper resource = "com/dogpark.dao/mapper.xml"/>
+	<mapper resource = "com/dogpark/dao/mapper.xml"/>
 </mappers>
 
 </configuration>
