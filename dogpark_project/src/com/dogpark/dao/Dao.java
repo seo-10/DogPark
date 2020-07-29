@@ -89,4 +89,35 @@ public class Dao {
 		return articleList;
 
 	}
+	
+	public BoardBean selectArticle(int code_no){
+
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		BoardBean boardBean = null;
+
+		try{
+			pstmt = con.prepareStatement("select * from honey_tip where code_no = ?");
+			pstmt.setInt(1, code_no);
+			rs= pstmt.executeQuery();
+
+			if(rs.next()){
+				boardBean = new BoardBean();
+				boardBean.setCode_no(rs.getInt("code_no"));
+				boardBean.setU_id(rs.getString("u_id"));
+				boardBean.setHt_title(rs.getString("ht_title"));
+				boardBean.setHt_contents(rs.getString("ht_contents"));
+				boardBean.setHt_file(rs.getString("ht_file"));
+				boardBean.setHt_view(rs.getInt("ht_view"));
+				boardBean.setDate11(rs.getString("date11"));
+			}
+		}catch(Exception ex){
+		}finally{
+			close(rs);
+			close(pstmt);
+		}
+
+		return boardBean;
+
+	}
 }
