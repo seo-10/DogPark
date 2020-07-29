@@ -11,6 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css">
 </head>
 <body>
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
