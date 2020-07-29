@@ -26,6 +26,16 @@ public class Controller extends javax.servlet.http.HttpServlet
 			forward=new ActionForward();
 			forward.setPath("/qna_board_write.jsp");
 		}
+		
+		else if(command.equals("/SignPro.bo")){
+			action  = new SignProAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		else if(command.equals("/boardWritePro.bo")){
 			action  = new BoardWriteProAction();
 			try {
