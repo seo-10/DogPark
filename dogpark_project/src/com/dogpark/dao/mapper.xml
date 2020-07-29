@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="superpowerselect2" resultType="DTO.Mybatis.Mybatis_DTO" parameterType="DTO.Mybatis.Mybatis_DTO">
 		select * from honey_tip where code_no=#{code_no};
 	</select>
-	<insert id="superpowerinsert" parameterType="DTO.Mybatis.Mybatis_DTO">
+	<insert id="superpowerinsert" parameterType="com.dogpark.dto.BoardBean">
 		insert into honey_tip(code_no,ht_title, ht_contents, ht_file, u_id, ht_view, ht_like,date11) values(default,#{ht_title}, #{ht_contents}, #{ht_file}, #{u_id}, 0, 0,now());
 	</insert>
 	<update id="superpowerupdate" parameterType="DTO.Mybatis.Mybatis_DTO">

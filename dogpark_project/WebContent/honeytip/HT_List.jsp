@@ -13,75 +13,54 @@
 </head>
 <body>
 	<%
-	ArrayList<BoardBean> articleList=(ArrayList<BoardBean>)request.getAttribute("articleList");
-    PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
-	int listCount=pageInfo.getListCount();
-	int nowPage=pageInfo.getPage();
-	int maxPage=pageInfo.getMaxPage();
-	int startPage=pageInfo.getStartPage();
-	int endPage=pageInfo.getEndPage();
-%>
-	<section id="listForm">
-		<h2>
-			글 목록<a href="boardWriteForm.bo">게시판글쓰기</a>
-		</h2>
-		<table>
-			<%
-if(articleList != null && listCount > 0){
-%>
-
-			<tr id="tr_top">
-				<td>번호</td>
-				<td>제목</td>
-				<td>작성자</td>
-				<td>조회수</td>
-				<td>날짜</td>
-			</tr>
-
-			<%
-		for(int i=0;i<articleList.size();i++){	
+		SqlSessionFactory sqlfactory = Mybatis_DAO.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		List<Mybatis_DTO> dto = sqlsession.selectList("superpowerselect");
+		sqlsession.close();
 	%>
-			<tr>
-				<td><%=articleList.get(i).getCode_no()%></td>
-				<td><a href="boardDetail.bo?board_num=<%=articleList.get(i).getCode_no()%>&page=<%=nowPage%>"></a></td>
-				<td><%=articleList.get(i).getHt_title()%></td>
-				<td><%=articleList.get(i).getU_id() %></td>
-				<td><%=articleList.get(i).getHt_view() %></td>
-				<td><%=articleList.get(i).getDate11() %></td>
-			</tr>
+ <section>
+	  <article>
+		<span id="board_ph">꿀팁</span><input type="button" value="글쓰기" id="write_button1"/><input type="text" placeholder="Search" id="search_bar"/>
+	  </article>
+<hr style="clear:both;" />
+	  <article class="honeytip_board">
+		<ul>
+			<li class="honeytip_board_No">No.</li>
+			<li class="honeytip_board_name">제목</li>
+			<li class="honeytip_board_writer">글쓴이</li>
+			<li class="honeytip_board_like">좋아요</li>
+			<li class="honeytip_board_count">조회수</li>
+			<li class="honeytip_board_date">작성시간</li>
+		</ul>
+		<%for(int i=0;i<dto.size();i++){%>
+				<ul>
+					<li class="honeytip_board_No" name="code_no"><%out.println(dto.get(i).getCode_no());%> </li>
+					<li class="honeytip_board_name"><%out.println(dto.get(i).getHt_title());%> </li>
+					<li class="honeytip_board_writer"><%out.println(dto.get(i).getU_id());%> </li>
+					<li class="honeytip_board_like"><%out.println(dto.get(i).getHt_like());%> </li>
+					<li class="honeytip_board_count"><%out.println(dto.get(i).getHt_view());%> </li>
+					<li class="honeytip_board_date"><%out.println(dto.get(i).getDate11());%> </li>
+				</ul>
 		<%} %>
-		</table>
-	</section>
-
-	<section id="pageList">
-		<%if(nowPage<=1){ %>
-		[이전]&nbsp;
-		<%}else{ %>
-		<a href="boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
-		<%} %>
-
-		<%for(int a=startPage;a<=endPage;a++){
-				if(a==nowPage){%>
-		[<%=a %>]
-		<%}else{ %>
-		<a href="boardList.bo?page=<%=a %>">[<%=a %>]
-		</a>&nbsp;
-		<%} %>
-		<%} %>
-
-		<%if(nowPage>=maxPage){ %>
-		[다음]
-		<%}else{ %>
-		<a href="boardList.bo?page=<%=nowPage+1 %>">[다음]</a>
-		<%} %>
-	</section>
-	<%
-	}
-	else{
-	%>
-	<section id="emptyArea">등록된 글이 없습니다.</section>
-	<%
-	}
-	%>
+	  </article>
+	  <article>
+	  	<input type="button" value="글쓰기" id="write_button2" onClick="location.href='html/boardWrite.html'"/>
+	  </article>
+	  <nav class="paging-block">
+		  <ul class="pagination">
+			  <li><a href=""><input type="button" value="<"></a></li>
+			  <li><a href="">1</a></li>
+			  <li><a href="">2</a></li>
+			  <li><a href="">3</a></li>
+			  <li><a href="">4</a></li>
+			  <li><a href="">5</a></li>
+			  <li><a href="">6</a></li>
+			  <li><a href="">7</a></li>
+			  <li><a href="">8</a></li>
+			  <li><a href="">9</a></li>
+			  <li><a href=""><input type="button" value=">"></a></li>
+		  </ul>
+	  </nav>
+  </section>
 </body>
 </html>

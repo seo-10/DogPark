@@ -35,6 +35,11 @@ public class Dao {
 		}
 		return sqlfactory;
 	}
-	
+	public List<BoardBean> superpowerselect() {
+		SqlSession sqlsession = sqlfactory.openSession();
+		List<BoardBean> dto =sqlsession.selectList("superpowerselect");
+		sqlsession.close();
+		return dto;
+	}
 	
 }
