@@ -3,7 +3,6 @@ package com.dogpark.dao;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.List;
-import java.util.ArrayList;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -11,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.dogpark.dto.BoardBean;
+
 
 public class Dao {
 	static SqlSessionFactory sqlfactory;
@@ -34,12 +34,6 @@ public class Dao {
 			e.printStackTrace();
 		}
 		return sqlfactory;
-	}
-	public List<BoardBean> superpowerselect() {
-		SqlSession sqlsession = sqlfactory.openSession();
-		List<BoardBean> dto =sqlsession.selectList("superpowerselect");
-		sqlsession.close();
-		return dto;
 	}
 	
 }

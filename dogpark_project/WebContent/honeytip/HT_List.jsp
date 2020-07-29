@@ -13,12 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		SqlSessionFactory sqlfactory = Dao.getConn();
-		SqlSession sqlsession = sqlfactory.openSession();
-		List<BoardBean> dto = sqlsession.selectList("superpowerselect");
-		sqlsession.close();
-	%>
+<%List<BoardBean> dto = (List<BoardBean>)request.getAttribute("dto"); %>
  <section>
 	  <article>
 		<span id="board_ph">꿀팁</span><input type="button" value="글쓰기" id="write_button1"/><input type="text" placeholder="Search" id="search_bar"/>
