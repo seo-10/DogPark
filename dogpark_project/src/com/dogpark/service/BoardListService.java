@@ -11,8 +11,9 @@ import com.dogpark.dao.Dao;
 import com.dogpark.dto.BoardBean;
 
 public class BoardListService {
-
+		
 		public List<BoardBean> broadlistarticle() throws Exception {
+			System.out.println("서비스부");
 			List<BoardBean> articleList = null;
 			SqlSessionFactory sqlfactory = Dao.getConn();
 			SqlSession sqlsession = sqlfactory.openSession();

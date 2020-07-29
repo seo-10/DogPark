@@ -27,7 +27,7 @@ public class Dao {
 	}
 	public static SqlSessionFactory getConn() {
 		try {
-			Reader reader = Resources.getResourceAsReader("DAO/Mybatis/mybatis-config.xml");
+			Reader reader = Resources.getResourceAsReader("com/dogpark/dao/mybatis-config.xml");
 			sqlfactory = new SqlSessionFactoryBuilder().build(reader);// ¿¬°á
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

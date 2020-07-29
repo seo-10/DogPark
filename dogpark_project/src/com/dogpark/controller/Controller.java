@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.action.*;
-
+import com.dogpark.action.BoardListAction;
 @WebServlet("*.bo")
 public class Controller extends javax.servlet.http.HttpServlet 
 {

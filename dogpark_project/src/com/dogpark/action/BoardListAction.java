@@ -1,6 +1,6 @@
 package com.dogpark.action;
 
-import java.util.List;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,13 +12,13 @@ import com.dogpark.service.BoardListService;
 
 public class BoardListAction implements Action {
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
-		
+		 System.out.println("액션부");
+		 List<BoardBean> articleList = new ArrayList<BoardBean>();
 		BoardListService boardlistService = new BoardListService();
-		List<BoardBean> articleList = boardlistService.broadlistarticle();
+		articleList = boardlistService.broadlistarticle();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
    		forward.setPath("/HT_list.jsp");
-		
 		return forward;
 	 }
 }
