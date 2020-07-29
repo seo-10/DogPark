@@ -36,7 +36,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		else if(command.equals("/boardList.bo")){
-			
+			System.out.println("¿Í¶ó");
 			action = new BoardListAction();
 			try{
 				forward=action.execute(request, response);
@@ -44,6 +44,8 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		
+
 //		else if(command.equals("/boardWritePro.bo")){
 //			action  = new BoardWriteProAction();
 //			try {

@@ -12,14 +12,16 @@ import com.dogpark.dto.BoardBean;
 
 public class BoardListService {
 		
-		public List<BoardBean> broadlistarticle() throws Exception {
+		public List<BoardBean> broadlistarticle() {
+
 			System.out.println("서비스부");
-			List<BoardBean> articleList = null;
-			SqlSessionFactory sqlfactory = Dao.getConn();
-			SqlSession sqlsession = sqlfactory.openSession();
-			articleList =sqlsession.selectList("superpowerselect");
-			sqlsession.close();
-			return articleList;
+				List<BoardBean> articleList = null;
+				SqlSessionFactory sqlfactory = Dao.getConn();
+				SqlSession sqlsession = sqlfactory.openSession();
+				articleList =sqlsession.selectList("superpowerselect");
+				sqlsession.close();
+				return articleList;
+	
 		}
 
 }

@@ -11,14 +11,21 @@ import com.dogpark.dto.PageInfo;
 import com.dogpark.service.BoardListService;
 
 public class BoardListAction implements Action {
-	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
-		 System.out.println("액션부");
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		System.out.println("액션부");
 		 List<BoardBean> articleList = new ArrayList<BoardBean>();
 		BoardListService boardlistService = new BoardListService();
 		articleList = boardlistService.broadlistarticle();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-   		forward.setPath("/HT_List.jsp");
-		return forward;
-	 }
+  		forward.setPath("/HT_List.jsp");
+		
+  		return forward;
+		
+	
+	}
+	
 }
