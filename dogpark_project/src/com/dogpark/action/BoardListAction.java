@@ -11,7 +11,7 @@ import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.PageInfo;
 import com.dogpark.service.BoardListService;
 
-public class BoardListAction {
+public class BoardListAction implements Action {
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		
 		BoardListService bls = new BoardListService();
