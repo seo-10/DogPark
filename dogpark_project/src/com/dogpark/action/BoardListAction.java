@@ -1,6 +1,5 @@
 package com.dogpark.action;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,9 +13,9 @@ import com.dogpark.service.BoardListService;
 public class BoardListAction implements Action {
 	 public ActionForward execute(HttpServletRequest request,HttpServletResponse response) throws Exception{
 		
-		BoardListService bls = new BoardListService();
-		List<BoardBean> dto = bls.broadlistaricle();
-		request.setAttribute("dto", dto);
+		BoardListService boardlistService = new BoardListService();
+		List<BoardBean> articleList = boardlistService.broadlistarticle();
+		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
    		forward.setPath("/HT_list.jsp");
 		

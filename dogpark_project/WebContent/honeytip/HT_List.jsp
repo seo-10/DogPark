@@ -13,7 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%List<BoardBean> dto = (List<BoardBean>)request.getAttribute("dto"); %>
+<%List<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
  <section>
 	  <article>
 		<span id="board_ph">꿀팁</span><input type="button" value="글쓰기" id="write_button1"/><input type="text" placeholder="Search" id="search_bar"/>
