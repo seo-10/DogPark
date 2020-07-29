@@ -36,6 +36,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		else if(command.equals("/boardList.bo")){
+			
 			action = new BoardListAction();
 			try{
 				forward=action.execute(request, response);

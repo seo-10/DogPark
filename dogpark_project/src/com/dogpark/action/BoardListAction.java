@@ -18,7 +18,7 @@ public class BoardListAction implements Action {
 		articleList = boardlistService.broadlistarticle();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-   		forward.setPath("/HT_list.jsp");
+   		forward.setPath("/HT_List.jsp");
 		return forward;
 	 }
 }
