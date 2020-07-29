@@ -141,7 +141,7 @@ body {
     position: absolute;
     padding: 90px 70px 50px 70px;
     border-radius: 10px;
-    background: rgba(0, 77, 77, .9)
+    background: rgba(20, 20, 20, 0.9);
 }
 
 #closeBtn {

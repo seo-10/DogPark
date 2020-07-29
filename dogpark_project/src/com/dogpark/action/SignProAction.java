@@ -3,6 +3,7 @@ package com.dogpark.action;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.Dto;
@@ -19,10 +20,19 @@ public class SignProAction implements Action {
 		ServletContext context = request.getServletContext();
 
 		dto = new Dto();
-		dto.setBOARD_NAME(multi.getParameter("BOARD_NAME"));
-		dto.setBOARD_PASS(multi.getParameter("BOARD_PASS"));
-		dto.setBOARD_SUBJECT(multi.getParameter("BOARD_SUBJECT"));
-		dto.setBOARD_CONTENT(multi.getParameter("BOARD_CONTENT"));
+		dto.setU_id(request.getParameter("u_id"));
+		dto.setU_pw(request.getParameter("u_pw"));
+		dto.setU_email(request.getParameter("u_email"));
+		
+		
+		
+		forward = new ActionForward();
+		forward.setRedirect(true);
+		forward.setPath("LoginOK.jsp");
+		HttpSession session = request.getSession();
+		session.setAttribute("id", id);
+		session.setAttribute("pw", pw);
+		session.setAttribute("pw", pw);
 
 
 		BoardWriteProService boardWriteProService = new BoardWriteProService();
