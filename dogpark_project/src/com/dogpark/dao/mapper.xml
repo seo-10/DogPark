@@ -10,23 +10,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="superpowerselect" resultType="com.dogpark.dto.BoardBean">
 		select * from honey_tip order by code_no DESC;
 	</select>
-	<select id="superpowerselect2" resultType="DTO.Mybatis.Mybatis_DTO" parameterType="DTO.Mybatis.Mybatis_DTO">
-		select * from honey_tip where code_no=#{code_no};
-	</select>
-	<insert id="superpowerinsert" parameterType="com.dogpark.dto.BoardBean">
-		insert into honey_tip(code_no,ht_title, ht_contents, ht_file, u_id, ht_view, ht_like,date11) values(default,#{ht_title}, #{ht_contents}, #{ht_file}, #{u_id}, 0, 0,now());
-	</insert>
-	<update id="superpowerupdate" parameterType="DTO.Mybatis.Mybatis_DTO">
-		update honey_tip set ht_view=ht_view+1 where code_no=#{code_no};
-	</update>
-	<update id="superpowerupdate2" parameterType="DTO.Mybatis.Mybatis_DTO">
-		update honey_tip set ht_contents=#{ht_contents} where code_no=#{code_no};
-	</update>
-	<delete id="superpowerdelete" parameterType="DTO.Mybatis.Mybatis_DTO">
-		delete from honey_tip where code_no=#{code_no};
-	</delete>
 	
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
-		insert into userinfo(id, pwd, email) values(#{u_id}, #{u_pw], #{u_email});
+		insert into userinfo(id, pwd, email) values(#{u_id}, #{u_pw}, #{u_email});
 	</insert>
 </mapper>
