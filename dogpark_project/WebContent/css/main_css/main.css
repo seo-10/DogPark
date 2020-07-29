@@ -1,7 +1,8 @@
 body {
-	background-image: url(../../img/main_img/mainPage.jpg);
+	background-image: url(../../img/main_img/mainPage.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	
+	
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
