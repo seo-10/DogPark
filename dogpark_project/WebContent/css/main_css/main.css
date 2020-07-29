@@ -23,7 +23,7 @@ body {
     top: 50px;
     left: 50px;
     fill: gray;
-    z-index: 31;
+    z-index: 33;
 }
 
 #dropdown h1 {
@@ -100,7 +100,33 @@ body {
     width: 500px;
     z-index: 40;
 }
-/* 로그인 */
+/*------------------- 로그인 유지 우측 상단 -------------------*/
+#login_Ing {
+	position: absolute;
+    display: block;
+    top: 50px;
+    right: 100px;
+    background-color: rgba(255, 0, 0, 0);
+    z-index: 25; 
+}
+#login_Ing a {
+	color: white;	
+}
+#login_Ing svg {
+	fill: white;
+}
+#logout_dialog {
+	font-size: 14pt;
+}
+.ui-logout_dialog-title {
+	font-size:12pt;
+}
+#svg_logout {
+	position: absolute;
+	fill: white;
+	z-index: 31;
+}
+/*------------------- 로그인 창------------------- */
 .login-box {
     width: 100%;
     margin: auto;
@@ -300,4 +326,4 @@ a {
 ::placeholder {
     color: #b3b3b3
 }
-/* ///////////////////////////// */
+/* ------------------- ***** ------------------- */

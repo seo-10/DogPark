@@ -9,28 +9,52 @@ $(document).ready(function() {
         $("#menuBar").stop().slideUp(400);
         $("#svg1").css("fill", "gray");
     });
-});
 
-// //로그인 회원가입 눌렀을때 창 보이기
-// $("#loginBox").hide();
-// $(document).ready(function() {
-//     $("#svg_login").toggle(function(){
-//         $("#loginBox").css("display", "block");
-//     }, function() {
-//         $("#loginBox").css("display", "none");
-//     });
-// });
+
 
 //svg 눌렀을때 로그인 창 보이기
-$(document).ready(function() {
     $("#loginBox").hide();
     $('#svg_login').click(function(){
         $("#loginBox").show();
     });
-});
+
+
 //X 눌렀을때 로그인 창 닫기
-$(document).ready(function() {
     $('#closeBtn').click(function(){
         $("#loginBox").hide();
     });
+
+
+//로그아웃 dialog
+   
+    $(function(){
+    	var url = "mainPage.html";
+      
+        $("#logout_dialog").dialog({
+            autoOpen:false, //자동으로 열리지않게
+            width: 300,
+            height: 200,
+            position:["center"], //x,y  값을 지정
+            //"center", "left", "right", "top", "bottom"
+            modal:true, //모달대화상자
+            resizable:false, //크기 조절 못하게
+            
+            buttons:{
+                "확인":function(){
+                    //$(this).dialog("close");
+                    $(location).attr('href', url);
+                },"취소":function(){
+                    $(this).dialog("close");
+                }
+            }
+        });
+
+        //창 열기 버튼을 클릭했을경우
+        $("#svg_logout").on("click",function(){
+            $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
+        });
+    });
+    
+    
+    
 });
