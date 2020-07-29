@@ -9,7 +9,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <configuration>
 
 	<typeAliases>
-		<typeAlias type="DTO.Mybatis.Mybatis_DTO" alias="DnF"/>
+		<typeAlias type="com.dogpark.dto.Dto" alias="DnF"/>
 	</typeAliases>
 	
 
@@ -26,7 +26,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     </environments>
 
 <mappers>
-	<mapper resource = "DAO/Mybatis/mapper.xml"/>
+	<mapper resource = "com/dogpark.dao/mapper.xml"/>
 </mappers>
 
 </configuration>
