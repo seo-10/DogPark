@@ -1,5 +1,7 @@
 package com.dogpark.action;
 
+import java.io.PrintWriter;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -28,14 +30,12 @@ public class SignProAction implements Action {
 		forward = new ActionForward();
 		forward.setRedirect(true);
 		forward.setPath("SignProService.java");
-		HttpSession session = request.getSession();
-		session.setAttribute("id", id);
-		session.setAttribute("pw", pw);
-		session.setAttribute("pw", pw);
-
-
+//		HttpSession session = request.getSession();
+//		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴. 회원가입에서는 필요없음
+	
+		
 		SignProService signProService = new SignProService();
-		boolean isWriteSuccess = boardWriteProService.registArticle(boardBean);
+		boolean isWriteSuccess = signProService.registArticle(dto);
 		System.out.println(isWriteSuccess);
 		if(!isWriteSuccess){
 			response.setContentType("text/html;charset=UTF-8");
@@ -48,7 +48,7 @@ public class SignProAction implements Action {
 		else{
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setPath("boardList.bo");
+			forward.setPath("mainPage.html");
 		}
 
 		return forward;

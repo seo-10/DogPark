@@ -1,22 +1,22 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    color: #6a6f8c;
-    background: #c8c8c8;
+	background-image: url(../../img/main_img/mainPage.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
     font: 600 16px/18px 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 
-#mainImg {
+/*#mainImg {
     top: 0px;
     left: 0px;
+    height:100%;
     min-width: 100%;
     min-height: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
     z-index: 1;
-}
+}*/
 
 #svg1 {
     position: fixed;
@@ -141,7 +141,8 @@ body {
     position: absolute;
     padding: 90px 70px 50px 70px;
     border-radius: 10px;
-    background: rgba(20, 20, 20, 0.9);
+    /*background: rgba(20, 20, 20, 0.9);*/
+    background: lightgray;
 }
 
 #closeBtn {

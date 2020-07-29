@@ -15,7 +15,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/main_css/main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/main_css/main.css" />
 
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -35,7 +35,7 @@
     <div id="logout_dialog" title="logout">
     	로그아웃 하시겠습니까?
     </div>
-    <img src="img/main_img/mainPage.jpg" id="mainImg" alt="" />
+    <img src="img/main_img/dog.jpg" id="mainImg" alt="" />
     <!-- 부트스트랩 아이콘 -->
     <div id="dropdown">
         <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">

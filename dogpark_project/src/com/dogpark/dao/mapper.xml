@@ -25,4 +25,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<delete id="superpowerdelete" parameterType="DTO.Mybatis.Mybatis_DTO">
 		delete from honey_tip where code_no=#{code_no};
 	</delete>
+	
+	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
+		insert into userinfo(id, pwd, email) values(#{u_id}, #{u_pw], #{u_email});
+	</insert>
 </mapper>

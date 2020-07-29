@@ -12,31 +12,12 @@ import com.mysql.jdbc.Connection;
 
 public class SignProService {
 	
-	public List<Dto> SignID(String id) {
+	public int SignID(Dto dto) {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		List<Dto> dto =sqlsession.selectList("superpowerselect");
+		//List<Dto> dto =sqlsession.selectList("superpowerselect");
+		int check = sqlsession.insert("signInsert", dto);
 		sqlsession.close();
-		return dto;
-	}
-	
-	public String SignPW(String pw) {
-		Connection con = getConnection();
-		Dao dao = Dao.getInstance();
-		dao.setConnection(con);
-		String pw2 = dao.selectPW(pw);
-		
-		close(con);
-		return pw2;
-	}
-	
-	public String SignEmail(String emial) {
-		Connection con = getConnection();
-		Dao dao = Dao.getInstance();
-		dao.setConnection(con);
-		String pw2 = dao.selectPW(pw);
-		
-		close(con);
-		return pw2;
+		return check;
 	}
 }
