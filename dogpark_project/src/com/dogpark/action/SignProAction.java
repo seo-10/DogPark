@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.Dto;
+import com.dogpark.service.SignProService;
 
 public class SignProAction implements Action {
 	int a = 1;
@@ -24,18 +25,16 @@ public class SignProAction implements Action {
 		dto.setU_pw(request.getParameter("u_pw"));
 		dto.setU_email(request.getParameter("u_email"));
 		
-		
-		
 		forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("LoginOK.jsp");
+		forward.setPath("SignProService.java");
 		HttpSession session = request.getSession();
 		session.setAttribute("id", id);
 		session.setAttribute("pw", pw);
 		session.setAttribute("pw", pw);
 
 
-		BoardWriteProService boardWriteProService = new BoardWriteProService();
+		SignProService signProService = new SignProService();
 		boolean isWriteSuccess = boardWriteProService.registArticle(boardBean);
 		System.out.println(isWriteSuccess);
 		if(!isWriteSuccess){

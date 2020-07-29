@@ -1,18 +1,23 @@
 package com.dogpark.service;
 
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
 import com.dogpark.dao.Dao;
+import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.Dto;
 import com.mysql.jdbc.Connection;
 
 public class SignProService {
 	
-	public String SignID(String id) {
-		Connection con = getConnection();
-		Dao dao = Dao.getInstance();
-		dao.setConnection(con);
-		String id2 = dao.selectID(id);
-		
-		close(con);
-		return id2;
+	public List<Dto> SignID(String id) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		List<Dto> dto =sqlsession.selectList("superpowerselect");
+		sqlsession.close();
+		return dto;
 	}
 	
 	public String SignPW(String pw) {
