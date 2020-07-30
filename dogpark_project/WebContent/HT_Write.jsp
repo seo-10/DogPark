@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
+	<%  
 		String title= request.getParameter("ht_title");
 		String contents= request.getParameter("ht_contents");
 		String file= request.getParameter("ht_file");
