@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <%@page import="com.dogpark.dao.Dao"%>
 <%@page import="com.dogpark.dto.Dto"%>
-<%@page import="java.util.List" %>
+<%@page import="java.util.List"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
-<%request.setCharacterEncoding("utf-8"); %>
+<%
+	request.setCharacterEncoding("utf-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,26 +15,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%  
-		String title= request.getParameter("ht_title");
-		String contents= request.getParameter("ht_contents");
-		String file= request.getParameter("ht_file");
-		String writer= request.getParameter("ht_writer");
-		Mybatis_DTO dto = new Mybatis_DTO();
-		SqlSessionFactory sqlfactory = Mybatis_DAO.getConn();
-		SqlSession sqlsession = sqlfactory.openSession();
-		
-		dto.setHt_title(title);
-		dto.setHt_contents(contents);
-		dto.setHt_file(file);
-		dto.setU_id(writer);
-		
-		sqlsession.insert("superpowerinsert",dto);
-		sqlsession.commit();
-		sqlsession.close();
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("honeytip_login_select.jsp");
-		dispatcher.forward(request, response);
-	%>
+	<form name="myform" method="post" action="honeytip_insert.jsp">
+
+		<section style="width: 800px; margin: 0 auto;">
+			<h1>Classic editor</h1>
+			<table>
+				<tr>
+					<td>제목</td>
+					<td><input type="text" size="100px" name="ht_title"></td>
+				</tr>
+			</table>
+			<br>
+
+			<textarea name="ht_contents" id="editor">
+				내용
+			</textarea>
+			작성자 : <input type="text" name="ht_writer"
+				value="<%out.println(session.getAttribute("id"));%>" />
+			<p>
+				<input type="submit" value="글등록">
+			</p>
+
+		</section>
+
+	</form>
+
 </body>
 </html>
