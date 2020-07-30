@@ -1,5 +1,7 @@
 package com.dogpark.service;
 
+import java.util.List;
+
 import com.dogpark.dao.Dao;
 import com.dogpark.dto.Dto;
 
@@ -7,10 +9,16 @@ import com.dogpark.dto.Dto;
 
 public class SignProService {
 	// 회원가입
+	Dao signDao = new Dao();
 	public void insertInfo(Dto dto) throws Exception {
 	
-		Dao signDao = new Dao();
 		signDao.signId(dto);
+
+	}
+	
+	public String checkInfo(Dto dto) throws Exception {
 		
+		String newId = signDao.signIdCheck(dto);
+		return newId;
 	}
 }

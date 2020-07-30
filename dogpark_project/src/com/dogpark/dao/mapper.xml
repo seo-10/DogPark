@@ -21,7 +21,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
 		insert into userinfo(id, pwd, nickname, email) values(#{u_id}, #{u_pw}, #{u_nickname}, #{u_email});
 	</insert>
-	<select id="signCheck" resultType="com.dogpark.dto.Dto" parameterType="com.dogpark.dto.Dto">
-		select id from userinfo;
+	<select id="signCheck" resultType="String" parameterType="com.dogpark.dto.Dto">
+		select id from userinfo where id=#{u_id};
 	</select>
 </mapper>
