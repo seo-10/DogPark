@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
-<%@page import="com.dogpark.dao.Dao"%>
+<%@page import="com.dogpark.dao.signDao"%>
 <%@page import="com.dogpark.dto.Dto"%>
 <%@page import="java.util.List" %>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>

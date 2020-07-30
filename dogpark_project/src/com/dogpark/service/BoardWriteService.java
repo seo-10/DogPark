@@ -1,6 +1,6 @@
 package com.dogpark.service;
 
-import com.dogpark.dao.Dao;
+import com.dogpark.dao.signDao;
 import com.dogpark.dto.BoardBean;
 
 import org.apache.ibatis.io.Resources;
@@ -10,7 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class BoardWriteService {
 	void boardwritearticle() {
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = signDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
 		BoardBean dto = new BoardBean();
