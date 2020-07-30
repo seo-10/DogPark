@@ -13,7 +13,7 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css">
+ <link rel="stylesheet" type="text/css" href="css/ht_board_css/writeBoard/sample/styles.css?ver=1">
 </head>
 <body>
 
@@ -41,6 +41,17 @@
 		</section>
 
 	</form>
+		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+ 	<script>
+	 ClassicEditor
+	 .create(document.querySelector('#editor'))
+	 .then( editor => {
+		 console.log( editor );
+	 } )
+	 .catch( error => {
+		 console.error( error );
+	 } );
+	</script>
 
 </body>
 </html>
