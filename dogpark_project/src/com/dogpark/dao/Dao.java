@@ -2,29 +2,30 @@ package com.dogpark.dao;
 
 import java.io.IOException;
 import java.io.Reader;
-
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.Dto;
-
 
 public class Dao {
 	static SqlSessionFactory sqlfactory;
-	//싱글톤 패턴(관리) = 객체를 한번만 만들어 계속 사용가능 static이 필수로 붙어야함.
+	// 싱글톤 패턴(관리) = 객체를 한번만 만들어 계속 사용가능 static이 필수로 붙어야함.
 	private static Dao instance;
-	
+
 	public static Dao getinstance() {
-		if(instance == null) {
+		if (instance == null) {
 			synchronized (Dao.class) {
 				instance = new Dao();
 			}
 		}
 		return instance;
 	}
+
 	public static SqlSessionFactory getConn() {
 		try {
 			Reader reader = Resources.getResourceAsReader("com/dogpark/dao/mybatis-config.xml");
@@ -35,11 +36,30 @@ public class Dao {
 		}
 		return sqlfactory;
 	}
+
 	public void signId(Dto dto) {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		sqlsession.insert("signInsert", dto);
 		sqlsession.close();
 	}
-	
+
+	public List<BoardBean> broadlistarticle() {
+		List<BoardBean> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		articleList = sqlsession.selectList("superpowerselect");
+		sqlsession.close();
+		return articleList;
+	}
+	public void boardwritearticle(BoardBean dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		sqlsession.insert("superpowerinsert",dto);
+		sqlsession.commit();
+		sqlsession.close();
+		
+	}
+
 }
