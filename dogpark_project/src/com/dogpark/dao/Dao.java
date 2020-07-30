@@ -61,7 +61,7 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-	public List<BoardBean> boradreadarticle(int code){
+	public List<BoardBean> boardreadarticle(int code){
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();

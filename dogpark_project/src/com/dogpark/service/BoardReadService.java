@@ -10,7 +10,7 @@ public class BoardReadService {
 	
 	public List<BoardBean> readarticle(int code){
 		Dao dao= new Dao();
-		articleList=dao.boradreadarticle(code);
+		articleList=dao.boardreadarticle(code);
 		return articleList;
 		
 	}

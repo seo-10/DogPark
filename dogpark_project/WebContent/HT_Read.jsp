@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@page import="java.util.*"%>
+<%@page import="com.dogpark.dto.BoardBean"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,21 +12,21 @@
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
 <section>
 	<div name="ht_read_contents" id="ht_read_contents"><%out.println(dto.get(0).getHt_contents());%></div>
-	<article name="ht_comment_read" id="ht_comment_read">´ñ±Û</article>
-	<article name="ht_comment_write" id="ht_comment_write">´ñ±Û ÀÔ·Â ¶õ</article><input type="button" value="´ñ±Ûµî·Ï" id="ht_comment_btn"/>
+	<article name="ht_comment_read" id="ht_comment_read">ëŒ“ê¸€</article>
+	<article name="ht_comment_write" id="ht_comment_write">ëŒ“ê¸€ ìž…ë ¥ ëž€</article><input type="button" value="ëŒ“ê¸€ë“±ë¡" id="ht_comment_btn"/>
 </section>
 <aside id="ht_aside">
-<aside><h3>²ÜÆÁ Ä¿¹Â´ÏÆ¼</h3></aside>
+<aside><h3>ê¿€íŒ ì»¤ë®¤ë‹ˆí‹°</h3></aside>
 <div></div>
-<article id="ht_read_title">Á¦¸ñ : <%out.println(dto.get(0).getHt_title());%></article>
-<article name="ht_read_writer" id="ht_read_writer">ÀÛ¼ºÀÚ : <%out.println(dto.get(0).getU_id());%></article>
-<article name="ht_read_date" id="ht_read_date">ÀÛ¼º³¯Â¥ : <%out.println(dto.get(0).getDate11());%></article>
-<article id="like_btn">ÁÁ¾Æ¿ä<img src="img/heart_btn.png"  id="heart_btn"/> </article>
-<article id=like_count>ÁÁ¾Æ¿ä ¼ö : 10</article>
+<article id="ht_read_title">ì œëª© : <%out.println(dto.get(0).getHt_title());%></article>
+<article name="ht_read_writer" id="ht_read_writer">ìž‘ì„±ìž : <%out.println(dto.get(0).getU_id());%></article>
+<article name="ht_read_date" id="ht_read_date">ìž‘ì„±ë‚ ì§œ : <%out.println(dto.get(0).getDate11());%></article>
+<article id="like_btn">ì¢‹ì•„ìš”<img src="img/heart_btn.png"  id="heart_btn"/> </article>
+<article id=like_count>ì¢‹ì•„ìš” ìˆ˜ : 10</article>
 <% if(session.getAttribute("id").equals(dto.get(0).getU_id())){
 %>
-<input type="button" value="¼öÁ¤" id="ht_text_update" onclick="location.href='ht_contents_update.jsp?code_no=<%=dto.get(0).getCode_no()%>'"/>
-<input type="button" value="»èÁ¦" id="ht_text_delete" onclick="location.href='ht_deleteprocess.jsp?code_no=<%=dto.get(0).getCode_no()%>'"/>
+<input type="button" value="ìˆ˜ì •" id="ht_text_update" onclick="location.href='ht_contents_update.jsp?code_no=<%=dto.get(0).getCode_no()%>'"/>
+<input type="button" value="ì‚­ì œ" id="ht_text_delete" onclick="location.href='ht_deleteprocess.jsp?code_no=<%=dto.get(0).getCode_no()%>'"/>
 <%} %>
 
 </aside>
