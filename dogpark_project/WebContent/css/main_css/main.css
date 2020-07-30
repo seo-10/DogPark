@@ -202,6 +202,10 @@ body {
     margin-bottom: 16px
 }
 
+.group:nth-child(6) {
+	margin-top: 30px;
+}
+
 .login-space .group .label,
 .login-space .group .input,
 .login-space .group .button {
