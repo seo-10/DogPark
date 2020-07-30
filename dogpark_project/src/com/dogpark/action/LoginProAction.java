@@ -29,7 +29,10 @@ public class LoginProAction implements Action {
 		LoginProService loginProService = new LoginProService();
 		articleList = loginProService.checkInfo(id);
 		
-		System.out.println(dto.getU_id());
+		System.out.println(articleList.size()+"erwerwerwer");
+		System.out.println(articleList.get(1));
+		
+		
 		
 		if(!id.equals(articleList.get(0).getU_id())) {
 			System.out.println("id");
