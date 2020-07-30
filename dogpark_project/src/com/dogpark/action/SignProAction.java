@@ -27,15 +27,12 @@ public class SignProAction implements Action {
 		dto.setU_pw(request.getParameter("u_pw"));
 		dto.setU_email(request.getParameter("u_email"));
 		
-		forward = new ActionForward();
-		forward.setRedirect(true);
-		forward.setPath("SignProService.java");
 //		HttpSession session = request.getSession();
 //		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴. 회원가입에서는 필요없음
 	
 		
 		SignProService signProService = new SignProService();
-		boolean isWriteSuccess = signProService.registArticle(dto);
+		int isWriteSuccess = signProService.signId(dto);
 		System.out.println(isWriteSuccess);
 		if(!isWriteSuccess){
 			response.setContentType("text/html;charset=UTF-8");

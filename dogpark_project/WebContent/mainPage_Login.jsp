@@ -25,17 +25,12 @@
     <script type="text/javascript" src="js/main_js/mainPage.js"></script>
     
     
-    
-
-
-
-    
+   
 </head>
 <body>
     <div id="logout_dialog" title="logout">
     	로그아웃 하시겠습니까?
     </div>
-    <img src="img/main_img/dog.jpg" id="mainImg" alt="" />
     <!-- 부트스트랩 아이콘 -->
     <div id="dropdown">
         <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
