@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css">
 </head>
 <body>
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
@@ -23,6 +24,7 @@
 <article name="ht_read_date" id="ht_read_date">작성날짜 : <%out.println(dto.get(0).getDate11());%></article>
 <article id="like_btn">좋아요<img src="img/heart_btn.png"  id="heart_btn"/> </article>
 <article id=like_count>좋아요 수 : 10</article>
+ 
 <% if(session.getAttribute("id").equals(dto.get(0).getU_id())){
 %>
 <input type="button" value="수정" id="ht_text_update" onclick="location.href='ht_contents_update.jsp?code_no=<%=dto.get(0).getCode_no()%>'"/>

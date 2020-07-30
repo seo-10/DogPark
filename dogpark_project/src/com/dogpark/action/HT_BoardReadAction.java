@@ -25,7 +25,7 @@ public class HT_BoardReadAction implements Action{
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/HT_Read.jsp");
-
+  		
 		return forward;
 	}
 }
