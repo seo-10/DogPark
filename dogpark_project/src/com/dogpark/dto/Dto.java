@@ -4,6 +4,7 @@ public class Dto {
 	String u_id;
 	String u_pw;
 	String u_email;
+	String u_nickname;
 	
 	public String getU_id() {
 		return u_id;
@@ -23,4 +24,12 @@ public class Dto {
 	public void setU_email(String u_email) {
 		this.u_email = u_email;
 	}
+	public String getU_nickname() {
+		return u_nickname;
+	}
+	public void setU_nickname(String u_nickname) {
+		this.u_nickname = u_nickname;
+	}
+	
+	
 }
