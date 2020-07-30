@@ -62,14 +62,14 @@ public class Dao {
 		sqlsession.close();
 	}
 	public List<BoardBean> boradreadarticle(int code){
-		
+		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		List<BoardBean> dto = sqlsession.selectList("ht_board_read_select", code);
+		articleList = sqlsession.selectList("ht_board_read_select", code);
 
 		sqlsession.close();
-		return dto;
+		return articleList;
 		
 	}
 
