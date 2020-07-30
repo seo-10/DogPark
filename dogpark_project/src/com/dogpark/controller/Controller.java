@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.action.*;
-import com.dogpark.action.BoardListAction;
 @WebServlet("*.bo")
 public class Controller extends javax.servlet.http.HttpServlet 
 {
@@ -55,14 +54,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		
-//		else if(command.equals("/boardDetail.bo")){
-//			action = new BoardDetailAction();
-//			try{
-//				forward=action.execute(request, response);
-//			}catch(Exception e){
-//				e.printStackTrace();
-//			}
-//		}
+		else if(command.equals("/boardread.bo")){
+			action = new HT_BoardReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //		else if(command.equals("/boardReplyForm.bo")){
 //			action = new BoardReplyFormAction();
 //			try{

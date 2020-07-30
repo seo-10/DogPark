@@ -32,7 +32,7 @@
 		<%for(int i=0;i<dto.size();i++){%>
 				<ul>
 					<li class="honeytip_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="honeytip_board_name_detail"><a href="HT_Read.jsp?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getHt_title());%></a></li>
+					<li class="honeytip_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getHt_title());%></a></li>
 					<li class="honeytip_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
 					<li class="honeytip_board_like_detail"><%out.println(dto.get(i).getHt_like());%> </li>
 					<li class="honeytip_board_count_detail"><%out.println(dto.get(i).getHt_view());%> </li>
