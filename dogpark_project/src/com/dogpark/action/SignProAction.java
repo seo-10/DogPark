@@ -26,6 +26,7 @@ public class SignProAction implements Action {
 		dto.setU_id(request.getParameter("u_id"));
 		dto.setU_pw(request.getParameter("u_pw"));
 		dto.setU_email(request.getParameter("u_email"));
+		dto.setU_nickname(request.getParameter("u_nickname"));
 		
 //		HttpSession session = request.getSession();
 //		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴. 회원가입에서는 필요없음
