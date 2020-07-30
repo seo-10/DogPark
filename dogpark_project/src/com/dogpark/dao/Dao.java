@@ -54,7 +54,17 @@ public class Dao {
 		sqlsession.close();
 		return articleList;
 	}
-
+	public List<Dto> loginCheck(String id) {
+		
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		List<Dto> articleList = sqlsession.selectList("loginCheck", id);
+		
+		sqlsession.close();
+		return articleList;
+	}
+	
 	public List<BoardBean> boardlistarticle() {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();

@@ -18,7 +18,8 @@ public class SignProService {
 	
 	public String checkInfo(Dto dto) throws Exception {
 		
-		String newId = signDao.signIdCheck(dto);
-		return newId;
+		String articleList = signDao.signIdCheck(dto);
+		
+		return articleList;
 	}
 }

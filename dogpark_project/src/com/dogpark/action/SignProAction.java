@@ -36,21 +36,22 @@ public class SignProAction implements Action {
 		
 		SignProService signProService = new SignProService();
 		
-		String newid = signProService.checkInfo(dto);
+		String signId = signProService.checkInfo(dto);
 		//System.out.println(articleList.size() + "cnt");
 		
-		if(id.equals(newid) ) {
+		if(id.equals(signId)) {
 			System.out.println("중복");
 			
 			out.print("<script>");
 			out.print("alert('id중복');");
-			out.print("</script>");
 			out.print("history.back();");
+			out.print("</script>");
+			
 		}
 		else 
 		{
-			System.out.println("ok");
-			signProService.insertInfo(dto);
+			
+		signProService.insertInfo(dto);
 		
 		forward = new ActionForward();
 		forward.setRedirect(true);

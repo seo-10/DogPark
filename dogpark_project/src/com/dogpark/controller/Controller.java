@@ -34,6 +34,16 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		
+		else if(command.equals("/LoginPro.bo")){
+			action  = new LoginProAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		else if(command.equals("/boardList.bo")){
 			System.out.println("¿Í¶ó");
 			action = new BoardListAction();
