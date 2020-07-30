@@ -60,6 +60,16 @@ public class Dao {
 		sqlsession.insert("ht_boardinsert",dto);
 		sqlsession.commit();
 		sqlsession.close();
+	}
+	public List<BoardBean> boradreadarticle(int code){
+		
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		List<BoardBean> dto = sqlsession.selectList("ht_board_read_select", code);
+
+		sqlsession.close();
+		return dto;
 		
 	}
 
