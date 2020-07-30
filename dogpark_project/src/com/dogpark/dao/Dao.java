@@ -9,6 +9,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.dogpark.dto.Dto;
+
 
 public class Dao {
 	static SqlSessionFactory sqlfactory;
@@ -32,6 +34,12 @@ public class Dao {
 			e.printStackTrace();
 		}
 		return sqlfactory;
+	}
+	public void signId(Dto dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		sqlsession.insert("signInsert", dto);
+		sqlsession.close();
 	}
 	
 }
