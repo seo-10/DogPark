@@ -15,6 +15,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
-		insert into userinfo(id, pwd, email) values(#{u_id}, #{u_pw}, #{u_email});
+		insert into userinfo(id, pwd, nickname, email) values(#{u_id}, #{u_pw}, #{u_nickname}, #{u_email});
 	</insert>
 </mapper>
