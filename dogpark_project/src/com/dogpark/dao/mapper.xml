@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="ht_board_read_select" resultType="com.dogpark.dto.BoardBean" parameterType="com.dogpark.dto.BoardBean">
 		select * from honey_tip where code_no=#{code_no};
 	</select>
+	
 	<insert id="ht_boardinsert" parameterType="com.dogpark.dto.BoardBean">
 		insert into honey_tip(code_no,ht_title, ht_contents, ht_file, u_id, ht_view, ht_like,date11) values(default,#{ht_title}, #{ht_contents}, #{ht_file}, #{u_id}, 0, 0,now());
 	</insert>
@@ -20,4 +21,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
 		insert into userinfo(id, pwd, nickname, email) values(#{u_id}, #{u_pw}, #{u_nickname}, #{u_email});
 	</insert>
+	<select id="signCheck" resultType="com.dogpark.dto.Dto" parameterType="com.dogpark.dto.Dto">
+		select id from userinfo;
+	</select>
 </mapper>

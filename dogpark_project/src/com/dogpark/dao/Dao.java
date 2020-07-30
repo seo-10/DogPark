@@ -44,6 +44,15 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+	public List<Dto> signIdCheck(Dto dto) {
+		List<Dto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		articleList = sqlsession.selectList("signCheck", dto);
+		sqlsession.commit();
+		sqlsession.close();
+		return articleList;
+	}
 
 	public List<BoardBean> boardlistarticle() {
 		List<BoardBean> articleList = null;
