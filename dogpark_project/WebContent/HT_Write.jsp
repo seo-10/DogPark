@@ -13,6 +13,7 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css">
 </head>
 <body>
 
