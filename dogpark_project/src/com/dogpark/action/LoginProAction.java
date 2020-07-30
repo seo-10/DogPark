@@ -19,8 +19,8 @@ public class LoginProAction implements Action {
 		ActionForward forward=null;
 		PrintWriter out = response.getWriter();
 		Dto dto = new Dto();
+		List<Dto> articleList = new ArrayList<>();
 		
-		List<Dto> articleList = new ArrayList<Dto>();
 		ServletContext context = request.getServletContext();
 		
 		String id = request.getParameter("login_id");
@@ -29,8 +29,11 @@ public class LoginProAction implements Action {
 		LoginProService loginProService = new LoginProService();
 		articleList = loginProService.checkInfo(id);
 		
-		System.out.println(articleList.size()+"erwerwerwer");
-		System.out.println(articleList.get(1));
+		String checkId = null;
+		checkId = articleList.get(0).toString();
+		
+		System.out.println("getter : " + dto.getU_id());
+		System.out.println("articleList : " + checkId);
 		
 		
 		
