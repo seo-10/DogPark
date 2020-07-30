@@ -32,7 +32,8 @@ public class SignProAction implements Action {
 	
 		
 		SignProService signProService = new SignProService();
-		int isWriteSuccess = signProService.signId(dto);
+		signProService.insertInfo(dto);
+		
 		System.out.println(isWriteSuccess);
 		if(!isWriteSuccess){
 			response.setContentType("text/html;charset=UTF-8");
