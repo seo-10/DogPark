@@ -18,7 +18,7 @@ public class BoardListAction implements Action {
 		System.out.println("액션부");
 		 List<BoardBean> articleList = new ArrayList<BoardBean>();
 		BoardListService boardlistService = new BoardListService();
-		articleList = boardlistService.broadlistarticle();
+		boardlistService.ListService();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/HT_List.jsp");

@@ -44,7 +44,7 @@ public class Dao {
 		sqlsession.close();
 	}
 
-	public List<BoardBean> broadlistarticle() {
+	public List<BoardBean> boardlistarticle() {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
