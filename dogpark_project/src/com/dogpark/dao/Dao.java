@@ -44,11 +44,11 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-	public List<Dto> signIdCheck(Dto dto) {
+	public List<Dto> signIdCheck() {
 		List<Dto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		articleList = sqlsession.selectList("signCheck", dto);
+		articleList = sqlsession.selectList("signCheck");
 		sqlsession.commit();
 		sqlsession.close();
 		return articleList;
