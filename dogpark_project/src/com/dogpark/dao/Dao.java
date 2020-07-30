@@ -56,7 +56,7 @@ public class Dao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		sqlsession.insert("superpowerinsert",dto);
+		sqlsession.insert("ht_boardinsert",dto);
 		sqlsession.commit();
 		sqlsession.close();
 		

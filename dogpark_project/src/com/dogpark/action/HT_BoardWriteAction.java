@@ -28,7 +28,7 @@ public class HT_BoardWriteAction implements Action {
 	BWS.boardwritearticle(dto);
 
 	ActionForward forward= new ActionForward();
-	forward.setPath("/HT_List.jsp");
+	forward.setPath("boardList.bo");
 	return forward;
 	}
 }
