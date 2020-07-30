@@ -41,6 +41,7 @@ public class Dao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		sqlsession.insert("signInsert", dto);
+		sqlsession.commit();
 		sqlsession.close();
 	}
 

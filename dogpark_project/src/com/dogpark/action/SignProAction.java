@@ -30,24 +30,13 @@ public class SignProAction implements Action {
 //		HttpSession session = request.getSession();
 //		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴. 회원가입에서는 필요없음
 	
-		
+		System.out.println("ㅇㅇ?");
 		SignProService signProService = new SignProService();
 		signProService.insertInfo(dto);
-		
-		System.out.println(isWriteSuccess);
-		if(!isWriteSuccess){
-			response.setContentType("text/html;charset=UTF-8");
-			PrintWriter out = response.getWriter();
-			out.println("<script>");
-			out.println("alert('등록실패')");
-			out.println("history.back();");
-			out.println("</script>");
-		}
-		else{
-			forward = new ActionForward();
-			forward.setRedirect(true);
-			forward.setPath("mainPage.html");
-		}
+		forward = new ActionForward();
+		forward.setRedirect(true);
+		forward.setPath("mainPage.html");
+
 
 		return forward;
 	}
