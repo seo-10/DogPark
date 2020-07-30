@@ -41,7 +41,7 @@
 		<%} %>
 	  </article>
 	  <article>
-	  	<input type="button" value="글쓰기" id="write_button2" onClick="location.href='html/boardWrite.html'"/>
+	  	<input type="button" value="글쓰기" id="write_button2" onClick="location.href='HT_Write.jsp'"/>
 	  </article>
 	  <nav class="paging-block">
 		  <ul class="pagination">

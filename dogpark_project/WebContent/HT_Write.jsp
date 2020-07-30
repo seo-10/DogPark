@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<form name="myform" method="post" action="honeytip_insert.jsp">
+	<form name="myform" method="post" action="boardWritePro.bo">
 
 		<section style="width: 800px; margin: 0 auto;">
 			<h1>Classic editor</h1>

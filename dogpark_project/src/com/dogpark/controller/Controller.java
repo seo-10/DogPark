@@ -46,15 +46,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 		}
 		
 
-//		else if(command.equals("/boardWritePro.bo")){
-//			action  = new BoardWriteProAction();
-//			try {
-//				forward=action.execute(request, response );
-//			} catch (Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		
+		else if(command.equals("/boardWritePro.bo")){
+			action  = new HT_BoardWriteAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 //		else if(command.equals("/boardDetail.bo")){
 //			action = new BoardDetailAction();
 //			try{
