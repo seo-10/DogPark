@@ -7,7 +7,9 @@ import com.dogpark.dto.BoardBean;
 
 public class BoardListService {
 		Dao dao= new Dao();
-		public void ListService(){
-		dao.boardlistarticle();
+		List<BoardBean> articleList = null;
+		public List<BoardBean> ListService(){
+		articleList=dao.boardlistarticle();
+		return articleList;
 		}
 }

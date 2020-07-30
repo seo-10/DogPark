@@ -16,9 +16,9 @@ public class BoardListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		System.out.println("액션부");
-		 List<BoardBean> articleList = new ArrayList<BoardBean>();
+		List<BoardBean> articleList=new ArrayList<BoardBean>();
 		BoardListService boardlistService = new BoardListService();
-		boardlistService.ListService();
+		articleList=boardlistService.ListService();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/HT_List.jsp");
