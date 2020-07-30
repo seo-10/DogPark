@@ -5,7 +5,7 @@ public class Dto {
 	String u_id;
 	String u_pw;
 	String u_email;
-	String u_nickname;;
+	String u_nickname;
 	
 	public String getU_id() {
 		return u_id;
