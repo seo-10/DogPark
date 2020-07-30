@@ -1,6 +1,7 @@
 package com.dogpark.dto;
 
 public class Dto {
+	
 	String u_id;
 	String u_pw;
 	String u_email;
