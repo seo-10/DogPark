@@ -38,6 +38,7 @@ public class Dao {
 	}
 
 	public void signId(Dto dto) {
+		System.out.println("signId");
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		sqlsession.insert("signInsert", dto);
@@ -45,13 +46,13 @@ public class Dao {
 		sqlsession.close();
 	}
 	public String signIdCheck(Dto dto) {
-		
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
 		String articleList = sqlsession.selectOne("signCheck", dto);
 		
 		sqlsession.close();
+		System.out.println("signIdcheck");
 		return articleList;
 	}
 	public List<Dto> loginCheck(String id) {

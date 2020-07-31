@@ -31,13 +31,10 @@ public class SignProAction implements Action {
 		dto.setEmail(request.getParameter("u_email"));
 		dto.setNickname(request.getParameter("u_nickname"));
 		
-//		HttpSession session = request.getSession();
-//		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴.
-		
 		SignProService signProService = new SignProService();
 		
 		String signId = signProService.checkInfo(dto);
-		//System.out.println(articleList.size() + "cnt");
+
 		
 		if(id.equals(signId)) {
 			System.out.println("중복");
