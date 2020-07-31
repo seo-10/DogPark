@@ -50,7 +50,7 @@
                 <a href="#"><li>소개 및 공지</li></a>
                 <a href="#"><li>강아지 분양</li></a>
                 <a href="#"><li>훈련 및 정보</li></a>
-                <a href="#"><li>커뮤니티</li></a>
+                <a href="HT_btn.jsp"><li>커뮤니티</li></a>
                 <a href="#"><li>애견용품</li></a>
                 <a href="#"><li>반려견 LIFE</li></a>
             </ul>

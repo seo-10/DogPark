@@ -93,4 +93,15 @@ public class Dao {
 		
 	}
 
+	public List<BoardBean> modifyselectarticle(int code) {
+		List<BoardBean> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("ht_board_modify_select", code);
+
+		sqlsession.close();
+		return articleList;
+	}
+
 }
