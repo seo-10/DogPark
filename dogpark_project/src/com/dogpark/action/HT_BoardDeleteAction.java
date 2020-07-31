@@ -15,10 +15,7 @@ public class HT_BoardDeleteAction implements Action{
 		BoardDeleteService boarddeleteService = new BoardDeleteService();
 		boarddeleteService.deleteService(code);
 		
-		ActionForward forward= new ActionForward();
-  		forward.setPath("/HT_List.jsp");
-		
-  		return forward;
+  		return null;
 	}
 
 }
