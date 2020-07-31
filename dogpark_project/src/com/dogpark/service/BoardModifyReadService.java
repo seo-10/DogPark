@@ -5,7 +5,7 @@ import java.util.List;
 import com.dogpark.dao.Dao;
 import com.dogpark.dto.BoardBean;
 
-public class BoardModifyService {
+public class BoardModifyReadService {
 	List<BoardBean> articleList = null;
 	public List<BoardBean> modifyselectService(int code) {
 		Dao dao= new Dao();

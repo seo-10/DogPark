@@ -72,6 +72,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/boardmodify.bo")){
+			action = new HT_BoardModifyReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //		else if(command.equals("/boardReplyForm.bo")){
 //			action = new BoardReplyFormAction();
 //			try{

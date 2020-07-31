@@ -8,21 +8,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.BoardBean;
-import com.dogpark.service.BoardModifyService;
+import com.dogpark.service.BoardModifyReadService;
 
 
-public class HT_BoardModifyProAction implements Action {
+public class HT_BoardModifyReadAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("¾×¼ÇºÎ");
 		List<BoardBean> articleList=new ArrayList<BoardBean>();
 		int code = Integer.parseInt(request.getParameter("code_no"));
-		BoardModifyService boardmodifyService = new BoardModifyService();
-		articleList=boardmodifyService.modifyselectService(code);
+		BoardModifyReadService boardmodifyreadService = new BoardModifyReadService();
+		articleList=boardmodifyreadService.modifyselectService(code);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("HT_Read");
+  		forward.setPath("/HT_Update.jsp");
 		
   		return forward;
 	}
