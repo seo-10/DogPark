@@ -26,10 +26,10 @@ public class SignProAction implements Action {
 		
 		dto = new Dto();
 		String id = request.getParameter("u_id");
-		dto.setU_id(id);
-		dto.setU_pw(request.getParameter("u_pw"));
-		dto.setU_email(request.getParameter("u_email"));
-		dto.setU_nickname(request.getParameter("u_nickname"));
+		dto.setId(id);
+		dto.setPwd(request.getParameter("u_pw"));
+		dto.setEmail(request.getParameter("u_email"));
+		dto.setNickname(request.getParameter("u_nickname"));
 		
 //		HttpSession session = request.getSession();
 //		session.setAttribute("id", dto.getU_id());	//id라는 세션에 게터에있는 id값을 갖고옴.
