@@ -119,5 +119,13 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+	public void viewUpArticle(int code) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+	
+		sqlsession.update("ht_viewupdate", code);
+		sqlsession.commit();
+		sqlsession.close();
+	}
 }
 

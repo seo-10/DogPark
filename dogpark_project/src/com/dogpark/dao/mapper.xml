@@ -25,6 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="ht_boardinsert" parameterType="com.dogpark.dto.BoardBean">
 		insert into honey_tip(code_no,ht_title, ht_contents, ht_file, u_id, ht_view, ht_like,date11) values(default,#{ht_title}, #{ht_contents}, #{ht_file}, #{u_id}, 0, 0,now());
 	</insert>
+	<update id="ht_viewupdate" parameterType="com.dogpark.dto.BoardBean">
+		update honey_tip set ht_view=ht_view+1 where code_no=#{code_no};
+	</update>
 	
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
 		insert into userinfo(id, pwd, nickname, email) values(#{id}, #{pwd}, #{nickname}, #{email});

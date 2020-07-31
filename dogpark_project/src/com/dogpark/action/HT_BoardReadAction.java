@@ -19,8 +19,10 @@ public class HT_BoardReadAction implements Action{
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		int code = Integer.parseInt(request.getParameter("code_no"));
+		
 		List<BoardBean> articlList=new ArrayList<BoardBean>();
 		BoardReadService RS = new BoardReadService();
+		RS.viewarticle(code);
 		articlList=RS.readarticle(code);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
