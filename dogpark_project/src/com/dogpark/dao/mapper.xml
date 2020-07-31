@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="ht_board_modify_select" resultType="com.dogpark.dto.BoardBean" parameterType="com.dogpark.dto.BoardBean">
 		select * from honey_tip where code_no=#{code_no};
 	</select>
-	<update id="ht_board_modify_update" parameterType="DTO.Mybatis.Mybatis_DTO">
+	<update id="ht_board_modify_update" parameterType="com.dogpark.dto.BoardBean">
 		update honey_tip set ht_contents=#{ht_contents} where code_no=#{code_no};
 	</update>
 	<insert id="ht_boardinsert" parameterType="com.dogpark.dto.BoardBean">
