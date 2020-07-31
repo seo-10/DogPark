@@ -61,7 +61,7 @@ public class LoginProAction implements Action {
 			
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setPath("mainPage_login.jsp");
+			forward.setPath("mainPage_Login.jsp");
 			
 		}
 			return forward;
