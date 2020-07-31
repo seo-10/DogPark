@@ -26,7 +26,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select id from userinfo where id=#{u_id};
 	</select>
 	<!-- 로그인 아이디 비밀번호 일치 체크 -->
-	<select id="loginCheck" resultType="com.dogpark.dto.Dto" parameterType="com.dogpark.dto.Dto">
-		select id from userinfo where id=#{u_id};
+	<select id="loginCheck" resultType="com.dogpark.dto.Dto" parameterType="String">
+		select id, pwd from userinfo where id=#{u_id};
 	</select>
 </mapper>

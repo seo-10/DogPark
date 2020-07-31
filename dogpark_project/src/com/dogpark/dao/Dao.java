@@ -60,6 +60,7 @@ public class Dao {
 		SqlSession sqlsession = sqlfactory.openSession();
 		
 		List<Dto> articleList = sqlsession.selectList("loginCheck", id);
+		System.out.println("size:" + articleList.size());
 		sqlsession.close();
 		return articleList;
 	}

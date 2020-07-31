@@ -2,22 +2,22 @@ package com.dogpark.dto;
 
 public class Dto {
 	
-	String u_id;
-	String u_pw;
+	String id;
+	String pwd;
 	String u_email;
 	String u_nickname;
 	
-	public String getU_id() {
-		return u_id;
+	public String get_id() {
+		return id;
 	}
-	public void setU_id(String u_id) {
-		this.u_id = u_id;
+	public void set_id(String u_id) {
+		this.id = u_id;
 	}
-	public String getU_pw() {
-		return u_pw;
+	public String get_pwd() {
+		return pwd;
 	}
-	public void setU_pw(String u_pw) {
-		this.u_pw = u_pw;
+	public void set_pwd(String u_pw) {
+		this.pwd = u_pw;
 	}
 	public String getU_email() {
 		return u_email;

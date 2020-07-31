@@ -19,7 +19,7 @@ public class LoginProAction implements Action {
 		ActionForward forward=null;
 		PrintWriter out = response.getWriter();
 		Dto dto = new Dto();
-		List<Dto> articleList = new ArrayList<>();
+
 		
 		ServletContext context = request.getServletContext();
 		
@@ -27,17 +27,16 @@ public class LoginProAction implements Action {
 		String pw = request.getParameter("login_pw");
 		
 		LoginProService loginProService = new LoginProService();
-		articleList = loginProService.checkInfo(id);
+		List<Dto> articleList = loginProService.checkInfo(id);
 		
-		String checkId = null;
-		checkId = articleList.get(0).toString();
-		
-		System.out.println("getter : " + dto.getU_id());
-		System.out.println("articleList : " + checkId);
-		
+				
+		//System.out.println("getter : " + dto.getU_id());
+		System.out.println("articleList : " + articleList.size());
+
 		
 		
-		if(!id.equals(articleList.get(0).getU_id())) {
+		
+		if(!id.equals(articleList.get(0).get_id())) {
 			System.out.println("id");
 			
 			out.print("<script>");
@@ -45,7 +44,7 @@ public class LoginProAction implements Action {
 			out.print("history.back();");
 			out.print("</script>");
 		}
-		else if(!pw.equals(articleList.get(0).getU_pw())) {
+		else if(!pw.equals(articleList.get(0).get_pwd())) {
 			System.out.println("pw");
 			
 			out.print("<script>");
@@ -53,7 +52,7 @@ public class LoginProAction implements Action {
 			out.print("history.back();");
 			out.print("</script>");
 		}
-		else if(id.equals(articleList.get(0).getU_id()) && pw.equals(articleList.get(0).getU_pw())) {
+		else if(id.equals(articleList.get(0).get_id()) && pw.equals(articleList.get(0).get_pwd())) {
 			System.out.println("로그인성공");
 			
 			forward = new ActionForward();
