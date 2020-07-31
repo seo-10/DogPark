@@ -8,17 +8,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.BoardBean;
-import com.dogpark.service.BoardModifyService;
+import com.dogpark.service.BoardModifyReadService;
 
 
-public class HT_BoardModifyAction implements Action {
+public class HT_BoardModifyReadAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("변경출력액션부");
 		List<BoardBean> articleList=new ArrayList<BoardBean>();
 		int code = Integer.parseInt(request.getParameter("code_no"));
-		BoardModifyService boardmodifyreadService = new BoardModifyService();
+		BoardModifyReadService boardmodifyreadService = new BoardModifyReadService();
 		articleList=boardmodifyreadService.modifyselectService(code);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();

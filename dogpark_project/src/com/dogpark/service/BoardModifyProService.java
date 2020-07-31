@@ -8,13 +8,10 @@ import com.dogpark.dto.Dto;
 
 public class BoardModifyProService {
 
-	public List<BoardBean> modifyService(BoardBean dto) {
-		List<BoardBean> articleList = null;
-		System.out.println("변경 출력 서비스부");
+	public void modifyService(BoardBean dto) {
+		System.out.println("변경 서비스부");
 		Dao dao= new Dao();
-		articleList=dao.modifyarticle(dto);
-		return articleList;
-		
+		dao.modifyarticle(dto);
 	}
 
 }

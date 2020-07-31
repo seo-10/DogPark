@@ -74,7 +74,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 		}
 		else if(command.equals("/boardmodify.bo")){
 			System.out.println("컨트롤부 체크");
-			action = new HT_BoardModifyAction();
+			action = new HT_BoardModifyReadAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){
@@ -82,7 +82,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		else if(command.equals("/ht_updateprocess.bo")){
-			action = new HT_BoardModifyAction();
+			action = new HT_BoardModifyProAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){

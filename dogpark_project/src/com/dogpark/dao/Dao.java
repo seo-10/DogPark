@@ -104,11 +104,11 @@ public class Dao {
 		return articleList;
 	}
 	public void modifyarticle(BoardBean dto) {
-		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		articleList = sqlsession.selectList("ht_board_modify_update", dto);
+		sqlsession.update("ht_board_modify_update", dto);
+		sqlsession.commit();
 		
 		sqlsession.close();
 	}
