@@ -43,10 +43,19 @@
 	            </a>
 	        </div>
 	    </div>
-	<form action="boardList.bo" method="post">
-		<section style="border:1px solid red;width:1500px; height:700px; position:fixed; left:410px; top:100px; text-align:center;">
-		<img src="img/htboard_img/honeytip.gif"/><input type="submit" value="꿀팁 커뮤니티" style="width:725px; height:500px; margin:0; padding:0;"/>
-		<input type="button" value="반려견 자랑 커뮤니티"style="width:725px; height:500px; margin:0; padding:0;"/>
+	<form action="" method="post">
+		<section style="border:1px solid red;width:1500px; height:1000px; position:fixed; left:410px; top:100px;">
+			<ul style="float:left;margin:0;padding:0;list-style:none;"><Strong style="position:absolute; font-size:15pt;">꿀팁 커뮤니티</Strong>
+				<li>
+					<img src="img/htboard_img/honeytip.gif" style="width:749px; height:500px;" onclick="location.href='boardList.bo'"/>
+				</li>
+			</ul>
+			<ul style="float:left;margin:0;padding:0;list-style:none;"><Strong style="position:absolute; font-size:15pt;">반려견 자랑 커뮤니티</Strong>
+				<li>
+					<img src="img/htboard_img/jarang.gif" style="width:749px; height:500px;"/>
+				</li>
+			</ul>
+			<div style="border:1px dotted red; height:300px;clear:left;">이미지 혹은 광고 배너</div>
 		</section>
 	</form>
 </body>
