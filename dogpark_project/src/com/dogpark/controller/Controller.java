@@ -89,6 +89,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/ht_delete.bo")){
+			action = new HT_BoardDeleteAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //		else if(command.equals("/boardReplyPro.bo")){
 //			action = new BoardReplyProAction();
 //			try{

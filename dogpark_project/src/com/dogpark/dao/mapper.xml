@@ -19,6 +19,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="ht_board_modify_update" parameterType="com.dogpark.dto.BoardBean">
 		update honey_tip set ht_contents=#{ht_contents} where code_no=#{code_no};
 	</update>
+	<delete id="ht_board_delete" parameterType="com.dogpark.dto.BoardBean">
+		delete from honey_tip where code_no=#{code_no};
+	</delete>
 	<insert id="ht_boardinsert" parameterType="com.dogpark.dto.BoardBean">
 		insert into honey_tip(code_no,ht_title, ht_contents, ht_file, u_id, ht_view, ht_like,date11) values(default,#{ht_title}, #{ht_contents}, #{ht_file}, #{u_id}, 0, 0,now());
 	</insert>

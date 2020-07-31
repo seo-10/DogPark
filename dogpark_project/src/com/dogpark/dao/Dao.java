@@ -112,5 +112,13 @@ public class Dao {
 		
 		sqlsession.close();
 	}
+	public void deleteservice(int code) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
 
+		sqlsession.update("ht_board_delete", code);
+		sqlsession.commit();
+		sqlsession.close();
+	}
 }
+
