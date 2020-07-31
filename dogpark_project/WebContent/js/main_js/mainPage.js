@@ -2,11 +2,11 @@
 $(document).ready(function() { 
     $("#menuBar").hide();
     $("#dropdown").mouseenter(function() {
-        $("#menuBar").stop().slideDown(200);
+        $("#menuBar").stop().fadeIn(400);
         $("#svg1").css("fill", "yellow");
     });
     $("#dropdown").mouseleave(function() {
-        $("#menuBar").stop().slideUp(400);
+        $("#menuBar").stop().fadeOut(300);
         $("#svg1").css("fill", "gray");
     });
 

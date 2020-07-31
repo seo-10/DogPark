@@ -41,7 +41,7 @@ body {
     display: block;
     top: 0px;
     left: 0px;
-    background-color: rgba(66, 97, 63, 0.295);
+    background-color: rgba(50, 90, 80, 0.295);
     height: 100%;
     width: 400px;
     z-index: 10;
@@ -108,10 +108,12 @@ body {
     top: 50px;
     right: 100px;
     background-color: rgba(255, 0, 0, 0);
+    color: white;
     z-index: 25; 
 }
 #login_Ing a {
-	color: white;	
+	color: white;
+	margin-left: 10px;
 }
 #login_Ing svg {
 	fill: white;
