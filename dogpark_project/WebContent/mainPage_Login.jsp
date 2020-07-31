@@ -23,7 +23,8 @@
 
     <!-- CSS 사용 -->
     <link rel="stylesheet" type="text/css" href="css/main_css/main.css" />
-
+    <!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 

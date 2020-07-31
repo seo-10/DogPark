@@ -118,23 +118,13 @@ body {
 #login_Ing svg {
 	fill: white;
 }
-#logout_dialog {
-	font-size: 14pt;
-}
-.ui-logout_dialog-title {
-	font-size:12pt;
-}
-#svg_logout {
-	position: absolute;
-	fill: white;
-	z-index: 31;
-}
+
 /*------------------- 로그인 창------------------- */
 .login-box {
     width: 100%;
     margin: auto;
     max-width: 525px;
-    min-height: 670px;
+    min-height: 750px;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
 }
 

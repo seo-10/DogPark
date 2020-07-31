@@ -1,0 +1,25 @@
+#logout_dialog {
+	font-size: 14pt;
+}
+
+#svg_logout {
+	position: absolute;
+	fill: white;
+	z-index: 31;
+}
+.ui-dialog .ui-dialog-title {
+    float: left;
+    margin: .1em 0;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12pt;
+}
+.ui-dialog .ui-dialog-content {
+    position: relative;
+    border: 0;
+    padding: 1.5em 1.5em;
+    background: none;
+    overflow: auto;
+}
