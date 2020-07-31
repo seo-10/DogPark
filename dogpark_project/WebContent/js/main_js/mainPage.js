@@ -10,14 +10,16 @@ $(document).ready(function() {
         $("#svg1").css("fill", "gray");
     });
 
-
-
-//svg 눌렀을때 로그인 창 보이기
+//svg 문짝 눌렀을때 로그인 창 보이기
     $("#loginBox").hide();
     $('#svg_login').click(function(){
         $("#loginBox").show();
     });
-
+    
+//svg 사람 눌렀을때 회원가입 창 보이기
+    $('#svg_join').click(function(){
+        $("#loginBox").show();
+    });
 
 //X 눌렀을때 로그인 창 닫기
     $('#closeBtn').click(function(){
@@ -54,7 +56,5 @@ $(document).ready(function() {
             $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
         });
     });
-    
-    
-    
+
 });
