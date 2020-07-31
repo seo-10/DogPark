@@ -10,14 +10,11 @@ public class SignProService {
 	public String checkInfo(Dto dto) throws Exception {
 		
 		String articleList = signDao.signIdCheck(dto);
-		System.out.println(dto.getId());
 		return articleList;
 	}
 	
 	public void insertInfo(Dto dto) throws Exception {
 		
-		System.out.println(dto.getId());
 		signDao.signId(dto);
-
 	}
 }

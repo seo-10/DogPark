@@ -48,9 +48,7 @@ public class Dao {
 	public String signIdCheck(Dto dto) {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		
 		String articleList = sqlsession.selectOne("signCheck", dto);
-		
 		sqlsession.close();
 		System.out.println("signIdcheck");
 		return articleList;

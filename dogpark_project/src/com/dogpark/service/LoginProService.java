@@ -14,7 +14,6 @@ public class LoginProService {
 	public List<Dto> checkInfo(String id) throws Exception {
 		
 		List<Dto> articleList = signDao.loginCheck(id);
-		System.out.println(articleList);
 		return articleList;
 	}
 }

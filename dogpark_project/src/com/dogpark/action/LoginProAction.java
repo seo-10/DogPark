@@ -32,21 +32,15 @@ public class LoginProAction implements Action {
 		LoginProService loginProService = new LoginProService();
 		List<Dto> articleList = loginProService.checkInfo(id);
 		
-				
-		//System.out.println("getter : " + dto.getU_id());
-		System.out.println("articleList : " + articleList.size());
-
 		
 		if(!id.equals(articleList.get(0).getId())) {
-			System.out.println("id");
-			
+		
 			out.print("<script>");
 			out.print("alert('id를 확인해주세요');");
 			out.print("history.back();");
 			out.print("</script>");
 		}
 		else if(!pw.equals(articleList.get(0).getPwd())) {
-			System.out.println("pw");
 			
 			out.print("<script>");
 			out.print("alert('비밀번호를 확인해주세요');");
