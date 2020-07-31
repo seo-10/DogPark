@@ -10,7 +10,7 @@
 </head>
 <body>
  <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
-<form name="myform" method="post" action="ht_updateprocess.jsp?code_no=<%=dto.get(0).getCode_no()%>">
+<form name="myform" method="post" action="ht_updateprocess.bo?code_no=<%=dto.get(0).getCode_no()%>">
 <section>
 	<textarea name="ht_read_contents" id="ht_read_contents"> <%out.println(dto.get(0).getHt_contents());%></textarea>
 </section>

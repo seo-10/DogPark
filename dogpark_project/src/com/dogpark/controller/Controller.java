@@ -74,21 +74,21 @@ public class Controller extends javax.servlet.http.HttpServlet
 		}
 		else if(command.equals("/boardmodify.bo")){
 			System.out.println("컨트롤부 체크");
-			action = new HT_BoardModifyReadAction();
+			action = new HT_BoardModifyAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){
 				e.printStackTrace();
 			}
 		}
-//		else if(command.equals("/boardReplyForm.bo")){
-//			action = new BoardReplyFormAction();
-//			try{
-//				forward=action.execute(request, response);
-//			}catch(Exception e){
-//				e.printStackTrace();
-//			}
-//		}
+		else if(command.equals("/ht_updateprocess.bo")){
+			action = new HT_BoardModifyAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //		else if(command.equals("/boardReplyPro.bo")){
 //			action = new BoardReplyProAction();
 //			try{
