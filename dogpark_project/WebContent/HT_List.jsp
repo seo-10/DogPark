@@ -13,6 +13,8 @@
 <title>Insert title here</title>
  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+ <!-- jquery 사용 -->
+    <script type="text/javascript" src="js/community_js/community.js"></script>
 </head>
 <body>
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
