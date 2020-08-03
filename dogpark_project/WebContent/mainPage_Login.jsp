@@ -21,7 +21,7 @@
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
-    <!-- CSS 사용 -->
+    <!-- 메인인덱스 CSS 사용 -->
     <link rel="stylesheet" type="text/css" href="css/main_css/main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
@@ -29,14 +29,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
-   
     <script type="text/javascript" src="js/main_js/mainPage.js"></script>
     
     
    
 </head>
 <body>
-    <div id="logout_dialog" title="logout" style="width: auto; min-height: 0px; max-height: none; height: 80px;">
+    <div id="logout_dialog" title="logout" style="height:90px;" >
     	로그아웃 하시겠습니까?
     </div>
     <!-- 부트스트랩 아이콘 -->

@@ -31,11 +31,11 @@ $(document).ready(function() {
    
     $(function(){
     	var url = "mainPage.html";
-      
+  
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게
             width: 300,
-            height: 200,
+            height: 100,
             position:["center"], //x,y  값을 지정
             //"center", "left", "right", "top", "bottom"
             modal:true, //모달대화상자
@@ -58,3 +58,4 @@ $(document).ready(function() {
     });
 
 });
+

@@ -1,5 +1,7 @@
+
 #logout_dialog {
 	font-size: 14pt;
+	height: 80px;
 }
 
 #svg_logout {
@@ -47,6 +49,8 @@
     overflow: auto;
 }
 
+
+
 .ui-widget-header {
     border: 1px solid #ffffff;
     background: none;
@@ -62,14 +66,14 @@
     margin: -10px 0 0 0;
     padding: 1px;
     height: 20px;
-    background-color: white;
-    border: 1px solid white;
+    background-color: black;
+    border: 1px solid black;
 }
 
 .ui-dialog .ui-dialog-buttonpane button {
     margin: 0px;
     cursor: pointer;
-    height: 34px;
+    height: 40px;
     width: 149px;
 }
 
