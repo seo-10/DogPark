@@ -7,9 +7,24 @@
 <title>Insert title here</title>
  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+  <!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+    <!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+    <!-- 부트스트랩 cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ 
+ <!-- jquery 사용 -->
+    <script type="text/javascript" src="js/community_js/community.js"></script>
 </head>
 
 <body>
+<div id="logout_dialog" title="logout"  >
+    	로그아웃 하시겠습니까?
+</div>
 	<div id="login_Ing">
     	<jsp:include page="header/header.jsp" />
     </div>
@@ -29,19 +44,6 @@
 	                <a href="#"><li>반려견 LIFE</li></a>
 	                
 	            </ul>
-	
-	            <a href="#">
-	                <svg id="svg_login" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-door-closed-fill"  xmlns="http://www.w3.org/2000/svg">
-	                <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-	                </svg>
-	            </a>
-	            
-	            <a href="#">
-	                <svg id="svg_join" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-plus-fill"  xmlns="http://www.w3.org/2000/svg">
-	                <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-	                <path fill-rule="evenodd" d="M13 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z"/>
-	                </svg>
-	            </a>
 	        </div>
 	    </div>
 	<form action="" method="post">
