@@ -1,7 +1,7 @@
 
 #logout_dialog {
 	font-size: 14pt;
-	height: 80px;
+	height: 90px !important;
 }
 
 #svg_logout {

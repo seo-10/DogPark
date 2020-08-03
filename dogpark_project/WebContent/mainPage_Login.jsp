@@ -35,7 +35,7 @@
    
 </head>
 <body>
-    <div id="logout_dialog" title="logout" style="height:90px;" >
+    <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
     </div>
     <!-- 부트스트랩 아이콘 -->

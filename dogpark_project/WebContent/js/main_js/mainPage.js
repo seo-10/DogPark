@@ -35,7 +35,7 @@ $(document).ready(function() {
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게
             width: 300,
-            height: 100,
+            minHeight: 85,
             position:["center"], //x,y  값을 지정
             //"center", "left", "right", "top", "bottom"
             modal:true, //모달대화상자
