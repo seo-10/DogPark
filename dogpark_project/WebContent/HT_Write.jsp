@@ -13,7 +13,7 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=1">
+ <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
   <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
 </head>

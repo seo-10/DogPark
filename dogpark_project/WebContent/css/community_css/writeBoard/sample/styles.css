@@ -161,7 +161,7 @@ body[data-editor='DecoupledDocumentEditor'] .sidebar {
 /* 아이템바 넓이 조절 */
 .ck.ck-reset, .ck.ck-reset_all, .ck.ck-reset_all * {
     box-sizing: border-box;
-    width: 800px !important;
+    width: auto;
     height: auto;
     position: static;
 }
@@ -310,19 +310,6 @@ body[ data-editor='InlineEditor'] .collaboration-demo__row {
 	opacity: 1;
 }
 
-/* --------- SAMPLE GENERIC STYLES (not related to CKEditor) ------------------------------------------------------- */
-body, html {
-	padding: 0;
-	margin: 0;
-
-	font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-section {
-	margin: 0 auto;
-}
 
 /* --------- RWD --------------------------------------------------------------------------------------------------- */
 @media screen and ( max-width: 800px ) {
