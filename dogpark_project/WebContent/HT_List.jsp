@@ -29,7 +29,7 @@
 <body>
 <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
-    </div>
+</div>
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
  <!-- 로그인 유지 -->
  <div id="login_Ing">

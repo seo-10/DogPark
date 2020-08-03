@@ -23,8 +23,8 @@ main .ck-editor[role='application'] .ck.ck-content,
 .ck.ck-editor__editable[role='textbox'],
 /* Inline & Balloon build. */
 .ck.editor[role='textbox'] {
-	width: 800px;
-	
+	width: 900px;
+	margin:0 auto !important;
 	font-size: 1em;
 	line-height: 1.6em;
 	min-height: var(--ck-sample-editor-min-height);
@@ -94,6 +94,7 @@ body[data-editor='DecoupledDocumentEditor'] .sidebar {
 	overflow: hidden;
 	min-height: 100%;
 	flex-grow: 1;
+
 }
 
 /* Do not inherit styles related to the editable editor content. See line 25.*/
@@ -159,11 +160,9 @@ body[data-editor='DecoupledDocumentEditor'] .sidebar {
 	z-index: 20;
 }
 /* 아이템바 넓이 조절 */
-.ck.ck-reset, .ck.ck-reset_all, .ck.ck-reset_all * {
-    box-sizing: border-box;
-    width: auto;
-    height: auto;
-    position: static;
+.ck .ck-toolbar {
+	width: 900px !important;
+	margin:0 auto !important;
 }
 
 .ck.ck-presence-list {

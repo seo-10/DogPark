@@ -56,8 +56,8 @@
 <section id="ht_write">
 	<form name="myform" method="post" action="boardWritePro.bo">
 
-			<h1>Classic editor</h1>
-			<table>
+			<h1 id="ht_category_font">꿀팁 커뮤니티 글작성</h1>
+			<table id="ht_write_table">
 				<tr>
 					<td>제목</td>
 					<td><input type="text" size="100px" name="ht_title"></td>
@@ -68,10 +68,10 @@
 			<textarea name="ht_contents" id="editor">
 				내용
 			</textarea>
-			작성자 : <input type="text" name="ht_writer"
-				value="<%out.println(session.getAttribute("id"));%>" />
+			<div id="ht_writer">작성자 : <input type="text" name="ht_writer" readonly
+				value="<%out.println(session.getAttribute("id"));%>" /></div>
 			<p>
-				<input type="submit" value="글등록">
+				<input type="submit" value="글등록" id="ht_write_input_btn">
 			</p>
 	</form>
 </section>
