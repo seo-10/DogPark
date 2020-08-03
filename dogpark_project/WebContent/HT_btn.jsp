@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css" />
-<link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard_main.css" />
+<link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard.css?ver=1" />
+<link rel="stylesheet" type="text/css" href="css/ht_board_css/htboard_main.css?ver=1" />
 </head>
 
 <body>
@@ -45,18 +45,18 @@
 	        </div>
 	    </div>
 	<form action="" method="post">
-		<section style="border:1px solid red;width:1500px; height:1000px; position:fixed; left:410px; top:100px;margin:0; padding:0;">
-			<ul style="float:left;margin:0;padding:0;list-style:none;"><Strong style="position:absolute; font-size:15pt;">꿀팁 커뮤니티</Strong>
+		<section class="community_contents">
+			<ul><Strong style="position:absolute; font-size:15pt;">꿀팁 커뮤니티</Strong>
 				<li>
-					<a href="boardList.bo"><img src="img/htboard_img/honeytip.gif" style="width:749px; height:500px;"/></a>
+					<a href="boardList.bo"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
-			<ul style="float:left;margin:0;padding:0;list-style:none;"><Strong style="position:absolute; font-size:15pt;">반려견 자랑 커뮤니티</Strong>
+			<ul><Strong style="position:absolute; font-size:15pt;">반려견 자랑 커뮤니티</Strong>
 				<li>
-					<img src="img/htboard_img/jarang.gif" style="width:749px; height:500px;"/>
+					<img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/>
 				</li>
 			</ul>
-			<img src="img/htboard_img/ht_banner1.jpg" style="width:1500px; height:500px; margin:0; padding:0;"/>
+			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>
 		</section>
 	</form>
 </body>
