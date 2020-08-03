@@ -24,12 +24,12 @@
 .ht_board_contents{
 	background-color:rgba(153,153,153,0.9);
 	width:1300px; 
-	height:1000px; 
+	height:700px; 
 	position:absolute;
 	left:480px; 
 	top:100px;
 	margin:0; 
-	padding:0;
+	padding:20px;
 }
 .honeytip_board {
 	border-top:3px solid black;
@@ -101,13 +101,24 @@
 		width:110px;
 		font-size:10pt;
 }
+/*꿀팁 게시판 상세 내용 css*/
+#ht_read{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
 
 #ht_read_contents{
-	border-radius:20px;
+	border-radius:10px;
 	height:900px;
 	width:1000px;
 	background-color:#f9f9f9;
 	margin-top:70px;
+	padding:20px;
 	
 }
 
@@ -115,7 +126,7 @@
 	width:300px;
 	position: fixed;
   	right: 80px;
-  	top: 500px;
+  	top: 170px;
   	height: 300px;
   	z-index: 2;
   	border-radius:20px;
