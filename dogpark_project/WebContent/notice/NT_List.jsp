@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
-<%@page import="com.dogpark.dto.BoardBean"%>
+<%@page import="com.dogpark.dto.NoticeDto"%>
 <%@page import="com.dogpark.dao.Dao"%>
 
 <%@page import="java.util.*"%>
@@ -36,7 +36,7 @@
 </head>
 <body>
 <!-- noticeDto 객체설정 -->
-<% ArrayList<NoticeDto> dto = () %>
+<% ArrayList<NoticeDto> dto = (ArrayList<NoticeDto>)request.getAttribute("articleList"); %>
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
     </div>
@@ -77,7 +77,7 @@
     				<li class="notice_board_count">조회수</li>
     				<li class="notice_board_date">작성일</li>
     			</ul>
-    			<%for(int i=0;i<dto.size();i++){%>
+    			<%for(int i=0; i<dto.size(); i++) { %>
 				<ul>
 					<li class="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
 					<li class="notice_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title());%></a></li>
@@ -86,8 +86,6 @@
 					<li class="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
 				</ul>
 				<%} %>
-    			
-    		
     		</article>
     		
     	</section>

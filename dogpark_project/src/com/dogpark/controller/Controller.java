@@ -20,13 +20,9 @@ public class Controller extends javax.servlet.http.HttpServlet
 		String command=RequestURI.substring(contextPath.length());
 		ActionForward forward=null;
 		Action action=null;
-
-		if(command.equals("/boardWriteForm.bo")){
-			forward=new ActionForward();
-			forward.setPath("/qna_board_write.jsp");
-		}
 		
-		else if(command.equals("/SignPro.bo")){
+		// 회원가입, 로그인 -------------------------------------------------------------
+		if(command.equals("/SignPro.bo")){
 			action  = new SignProAction();
 			try {
 				forward=action.execute(request, response );
@@ -43,6 +39,11 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		// Honeytip 게시판 -----------------------------------------------------------------
+		else if(command.equals("/boardWriteForm.bo")){
+			forward=new ActionForward();
+			forward.setPath("/qna_board_write.jsp");
+		}
 		
 		else if(command.equals("/boardList.bo")){
 			System.out.println("와라");
@@ -54,7 +55,6 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		
-
 		else if(command.equals("/boardWritePro.bo")){
 			action  = new HT_BoardWriteAction();
 			try {
@@ -97,6 +97,18 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		
+		// 공지사항 게시판 ----------------------------------------------------------
+		else if(command.equals("/Notice_list.bo")){
+			action = new HT_BoardDeleteAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		
+		
 //		else if(command.equals("/boardReplyPro.bo")){
 //			action = new BoardReplyProAction();
 //			try{
