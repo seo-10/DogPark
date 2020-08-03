@@ -24,7 +24,7 @@
     <!-- CSS 사용 -->
     <link rel="stylesheet" type="text/css" href="css/main_css/main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -36,7 +36,7 @@
    
 </head>
 <body>
-    <div id="logout_dialog" title="logout">
+    <div id="logout_dialog" title="logout" style="width: auto; min-height: 0px; max-height: none; height: 80px;">
     	로그아웃 하시겠습니까?
     </div>
     <!-- 부트스트랩 아이콘 -->
