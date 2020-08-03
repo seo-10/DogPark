@@ -13,8 +13,8 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
-  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=1">
+  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
 </head>
 <body>
@@ -53,9 +53,9 @@
 	        </div>
 	    </div>
 
+<section id="ht_write">
 	<form name="myform" method="post" action="boardWritePro.bo">
 
-		<section id="ht_write">
 			<h1>Classic editor</h1>
 			<table>
 				<tr>
@@ -73,10 +73,8 @@
 			<p>
 				<input type="submit" value="글등록">
 			</p>
-
-		</section>
-
 	</form>
+</section>
 		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
  	<script>
 	 ClassicEditor
