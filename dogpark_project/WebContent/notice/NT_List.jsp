@@ -29,12 +29,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
-    <script type="text/javascript" src="../js/main_js/mainPage.js"></script>
+    <script type="text/javascript" src="../js/notice_js/notice.js"></script>
     
     
    
 </head>
 <body>
+<!-- noticeDto 객체설정 -->
+<% ArrayList<NoticeDto> dto = () %>
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
     </div>
@@ -64,10 +66,29 @@
     <!-- 로그아웃 다이얼로그 -->
     
     <!-- 공지사항 게시판 리스트 -->
-    	<section>
-    		<div>NOTICE 공지사항</div>
+    	<section id="notice_list">
+    		<a href="#">NOTICE 공지사항</a>
     		<hr />
-    		<article></article>
+    		<article id="notice_board_top">
+    			<ul>
+    				<li class="notice_board_No">No</li>
+    				<li class="notice_board_name">제목</li>
+    				<li class="notice_board_writer">글쓴이</li>
+    				<li class="notice_board_count">조회수</li>
+    				<li class="notice_board_date">작성일</li>
+    			</ul>
+    			<%for(int i=0;i<dto.size();i++){%>
+				<ul>
+					<li class="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
+					<li class="notice_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title());%></a></li>
+					<li class="notice_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
+					<li class="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
+					<li class="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
+				</ul>
+				<%} %>
+    			
+    		
+    		</article>
     		
     	</section>
 

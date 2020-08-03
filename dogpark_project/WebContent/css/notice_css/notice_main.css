@@ -329,4 +329,33 @@ a {
 	margin-top: 20px;
 }
 
-/* ------------------- ***** ------------------- */
+/* 섹션 부분 크기 조정 */
+#notice_list {
+	background-color:rgba(153,153,153,0.9);
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:150px;
+	margin:0; 
+	padding:20px;
+}
+
+#notice_list a {
+	font-size: 16pt;
+	color: blue;
+}
+
+#notice_board_top ul {
+	display: table-row-group;
+}
+
+#notice_board_top li {
+	display:inline;
+	text-align:center;
+	padding:7px 10px;
+	vertical-align: middle;
+	display: table-cell;
+	border-bottom:1px solid rgba(0,0,0,0.15);
+
+}
