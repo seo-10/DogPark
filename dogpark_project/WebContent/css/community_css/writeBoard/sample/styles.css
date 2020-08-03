@@ -23,8 +23,8 @@ main .ck-editor[role='application'] .ck.ck-content,
 .ck.ck-editor__editable[role='textbox'],
 /* Inline & Balloon build. */
 .ck.editor[role='textbox'] {
-	width: 734px;
-
+	width: 800px;
+	
 	font-size: 1em;
 	line-height: 1.6em;
 	min-height: var(--ck-sample-editor-min-height);

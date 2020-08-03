@@ -53,7 +53,7 @@
 	    </div>
  <section class="ht_board_contents">
 	  <article>
-		<span id="board_ph">꿀팁</span><input type="button" value="글쓰기" id="write_button1"/><input type="text" placeholder="Search" id="search_bar"/>
+		<span id="board_ph">꿀팁</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </article>
 <hr style="clear:both;" />
 	  <article class="honeytip_board">
@@ -77,7 +77,7 @@
 		<%} %>
 	  </article>
 	  <article>
-	  	<input type="button" value="글쓰기" id="write_button2" onClick="location.href='HT_Write.jsp'"/>
+	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='HT_Write.jsp'"/>
 	  </article>
 	  <nav class="paging-block">
 		  <ul class="pagination">

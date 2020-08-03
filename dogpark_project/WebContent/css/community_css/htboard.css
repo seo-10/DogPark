@@ -222,7 +222,7 @@
 		outline: none;
 		border: 2px solid rgba(0, 0, 0, 0.1);
 		width: 180px;
-		height:25px;
+		height:30px;
 		box-sizing: border-box;
 		margin-top:20px;
 		margin-bottom:10px;
@@ -236,20 +236,37 @@
 			background:#eee;
 			color:#222;
 }
-#write_button1{
+#ht_search_button{
 		float:right;
 		margin-top:20px;
 		margin-bottom:10px;
 		margin-left:10px;
 		width:60px;
-		height:25px;
-}
-#write_button2{
-		float:right;
-		margin-top:10px;
-		margin-bottom:10px;
-		width:60px;
 		height:30px;
+		background-color:rgba(50, 90, 80, 1);
+		color:white;
+}
+#write_button1{
+		float:right;
+		width: 60px;
+ 		height: 30px;
+  		font-size: 11px;
+  		text-transform: uppercase;
+  		letter-spacing: 2.5px;
+  		font-weight: 500;
+  		color: #000;
+  		background-color: #fff;
+  		border: none;
+  		border-radius: 45px;
+  		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  		transition: all 0.3s ease 0s;
+  		cursor: pointer;
+  		outline: none;
+}
+#write_button1:hover{
+	background-color: rgba(102,102,102,1);
+ 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  	color: #fff;
 }
 .paging-block {
     text-align: center;
@@ -285,4 +302,22 @@ ul.pagination li a {
 }
 ul.pagination li a:hover{
 	color:black;
+}
+#ht_write{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+#ht_update{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
 }
