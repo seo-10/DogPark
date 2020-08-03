@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("htboard_main.css");
 .honeytip_board ul {
 		display: table-row-group;
 	
