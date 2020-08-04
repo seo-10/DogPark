@@ -56,7 +56,7 @@
 <section id="dj_write">
 	<form name="myform" method="post" action="dj_boardWritePro.bo">
 
-			<h1 id="dj_category_font">꿀팁 커뮤니티 글작성</h1>
+			<h1 id="dj_category_font">반려견 자랑 커뮤니티 글작성</h1>
 			<table id="dj_write_table">
 				<tr>
 					<td>제목</td>
