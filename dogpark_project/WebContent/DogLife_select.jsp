@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/htboard.css?ver=1" />
- <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/DogLife_select.css?ver=1" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/Doglifeboard.css" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/DogLife_select.css" />
 </head>
 
 <body>
@@ -24,7 +24,7 @@
 	                <a href="#"><li>소개 및 공지</li></a>
 	                <a href="#"><li>강아지 분양</li></a>
 	                <a href="#"><li>훈련 및 정보</li></a>
-	                <a href="HT_btn.jsp"><li>커뮤니티</li></a>
+	                <a href="community_main.jsp"><li>커뮤니티</li></a>
 	                <a href="#"><li>애견용품</li></a>
 	                <a href="DogLife_select.jsp"><li>반려견 LIFE</li></a>
 	                
@@ -48,17 +48,17 @@
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">주변 애견카페 정보</Strong>
 				<li>
-					<a href="Cafeinfo.jsp"><img src="img/DogLife_select_img/cafegif.gif" style="width:649px; height:400px;"/></a>
+					<a href="Cafeinfo.jsp"><img src="img/DogLife_select_img/cafegif.gif" style="width:650px; height:650px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">반려견 호텔/캠핑 정보</Strong>
 				<li>
-					<a href="Hotelinfo.jsp"><img src="img/DogLife_select_img/hotelgif.gif" style="width:649px; height:400px;"/></a>
+					<a href="Hotelinfo.jsp"><img src="img/DogLife_select_img/hotelgif.gif" style="width:650px; height:650px;"/></a>
 				</li>
 			</ul>
-			<ul><Strong style="position:absolute; font-size:15pt;">브리딩</Strong>
+			<ul><Strong style="position:absolute; font-size:15pt; text-align:center;">브리딩</Strong>
 			<li>
-			<a href="#"><img src="img/DogLife_select_img/breeding.gif" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
+			<a href="Breeding.jsp"><img src="img/DogLife_select_img/breeding.gif" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
 			</li>
 			</ul>
 		</section>

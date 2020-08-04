@@ -41,7 +41,7 @@
         </script>
         
    		<!-- jquery 사용 -->
-    <script type="text/javascript" src="js/Hotel_detail_js/Hotel_detail.js"></script>
+    <script type="text/javascript" src="js/community_js/community.js"></script>
    		</head>
 		
 		

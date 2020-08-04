@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{
-	
+	border:1px solid yellow;
 	width:1300px; 
 	height:1000px; 
 	position:absolute;
@@ -338,4 +338,126 @@ ul.pagination li a:hover{
 	top:100px;
 	margin:0; 
 	padding:0;
+}
+/* -------- 반려견 자랑 게시판 내용 -----*/
+.dj_board_contents{
+	background-color:rgba(153,153,153,0.9);
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:20px;
+}
+.dogjarang_board {
+	border-top:3px solid black;
+	width:1100px;
+	margin:0 auto;
+	padding:0;
+}
+.dogjarang_board ul {
+		display: table-row-group;
+	
+}
+.dogjarang_board li{
+		display:inline;
+		text-align:center;
+		padding:7px 10px;
+		vertical-align: middle;
+		display: table-cell;
+		border-bottom:1px solid rgba(0,0,0,0.15);
+		
+}
+.dj_board_No{
+		
+		width:60px;
+}
+.dj_board_name{
+		width:670px;
+}
+.dj_board_writer{
+		width:100px;
+}
+.dj_board_like{
+		width:80px;
+}
+.dj_board_count{
+		width:80px;
+}
+.dj_board_date{
+		width:110px;
+}
+
+
+.dj_board_No_detail{
+		width:50px;
+		font-size:10pt;
+}
+
+.dj_board_name_detail{
+		width:660px;
+		font-size:10pt;
+}
+.dj_board_name_detail a{
+		text-decoration: none;
+		color:black;
+		font-size:10pt;
+}
+.dj_board_writer_detail{
+		width:80px;
+		font-size:10pt;
+}
+.dj_board_like_detail{
+		width:80px;
+		font-size:10pt;
+}
+.dj_board_count_detail{
+		width:80px;
+		font-size:10pt;
+}
+.dj_board_date_detail{
+		width:110px;
+		font-size:10pt;
+}
+/*반려견 커뮤니티 글작성*/
+#dj_write{
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+	background-color:rgba(153,153,153,0.9);
+}
+#dj_category_font{
+	text-align:center;
+	margin-bottom:30px;
+}
+#dj_write_table{
+	margin:0 auto;
+}
+#dj_writer{
+	margin-top:20px;
+	margin-left:200px;
+	float:left;
+}
+#dj_write_input_btn{
+	float:right;
+	margin-right:200px;
+}
+#dj_update{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+#breeding_title{
+	text-align:center;
+	color:white;
+	border:1px solid white;
 }
