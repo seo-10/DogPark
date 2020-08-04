@@ -55,7 +55,7 @@
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">반려견 자랑 커뮤니티</Strong>
 				<li>
-					<img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/>
+					<a href="dj_boardList.bo"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>

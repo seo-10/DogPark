@@ -109,7 +109,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		// 반려견 자랑 게시판--------------------------------------------------------
-		else if(command.equals("/boardReplyPro.bo")){
+		else if(command.equals("/dj_boardList.bo")){
 			action = new DJ_BoardListAction();
 			try{
 				forward=action.execute(request, response);
@@ -117,14 +117,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-//		else if(command.equals("/boardModifyForm.bo")){
-//			action = new BoardModifyFormAction();
-//			try{
-//				forward=action.execute(request, response);
-//			}catch(Exception e){
-//				e.printStackTrace();
-//			}
-//		}else if(command.equals("/boardModifyPro.bo")){
+		else if(command.equals("/dj_boardread.bo")){
+			action = new DJ_BoardReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+//			else if(command.equals("/boardModifyPro.bo")){
 //			action = new BoardModifyProAction();
 //			try{
 //				forward=action.execute(request, response);
