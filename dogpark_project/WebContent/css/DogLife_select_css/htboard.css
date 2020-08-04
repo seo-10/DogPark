@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/*-------커뮤니티 메인 내용--------*/
+.community_contents{
+	
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+.community_contents ul{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.community_contents li{
+	padding:0;
+	margin:0;
+}
+/* -------- 꿀팁 게시판 내용 -----*/
+.ht_board_contents{
+	background-color:rgba(153,153,153,0.9);
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:20px;
+}
+.honeytip_board {
+	border-top:3px solid black;
+	width:1100px;
+	margin:0 auto;
+	padding:0;
+}
+.honeytip_board ul {
+		display: table-row-group;
+	
+}
+.honeytip_board li{
+		display:inline;
+		text-align:center;
+		padding:7px 10px;
+		vertical-align: middle;
+		display: table-cell;
+		border-bottom:1px solid rgba(0,0,0,0.15);
+		
+}
+.honeytip_board_No{
+		
+		width:60px;
+}
+.honeytip_board_name{
+		width:670px;
+}
+.honeytip_board_writer{
+		width:100px;
+}
+.honeytip_board_like{
+		width:80px;
+}
+.honeytip_board_count{
+		width:80px;
+}
+.honeytip_board_date{
+		width:110px;
+}
+
+
+.honeytip_board_No_detail{
+		width:50px;
+		font-size:10pt;
+}
+
+.honeytip_board_name_detail{
+		width:660px;
+		font-size:10pt;
+}
+.honeytip_board_name_detail a{
+		text-decoration: none;
+		color:black;
+		font-size:10pt;
+}
+.honeytip_board_writer_detail{
+		width:80px;
+		font-size:10pt;
+}
+.honeytip_board_like_detail{
+		width:80px;
+		font-size:10pt;
+}
+.honeytip_board_count_detail{
+		width:80px;
+		font-size:10pt;
+}
+.honeytip_board_date_detail{
+		width:110px;
+		font-size:10pt;
+}
+/*꿀팁 게시판 상세 내용 css*/
+#ht_read{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+
+#ht_read_contents{
+	border-radius:10px;
+	height:900px;
+	width:1000px;
+	background-color:#f9f9f9;
+	margin-top:70px;
+	padding:20px;
+	
+}
+
+#ht_aside{
+	width:300px;
+	position: fixed;
+  	right: 80px;
+  	top: 170px;
+  	height: 300px;
+  	z-index: 2;
+  	border-radius:20px;
+  	background-color:#f9f9f9;
+  	box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.1);
+}
+#ht_read_title{
+	width:290px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:14pt;
+}
+#ht_read_writer{
+	margin-top:10px;
+	margin-bottom:5px;
+	font-size:11pt;
+	
+}
+#ht_read_date{
+	margin-bottom:10px;
+	font-size:11pt;
+	
+}
+#like_btn{
+	width:100px;
+	height:30px;
+	border-style:none;
+	padding:10px 0;
+	text-align:center;
+	border-radius:10px;
+	margin-left:100px;
+	background-color:white;
+	font-size:12pt;
+}
+#like_btn:hover{
+	background-color:red;
+}
+#like_count{
+	font-size:10pt;
+	text-align:center;
+}
+#heart_btn{
+	width:25px;
+	height:25px;
+}
+#ht_text_update{
+	width:90px;
+	height:40px;
+	margin-left:40px;
+	margin-top:20px;
+}
+#ht_text_delete{
+	width:90px;
+	height:40px;
+	margin-left:40px;
+	margin-top:20px;
+}
+#ht_comment_read{
+	clear:both;
+	border-radius:10px;
+	background-color:#f9f9f9;
+	width:1000px;
+	height:300px;
+	margin-top:30px;
+}
+#ht_comment_write{
+	border-radius:10px;
+	background-color:#f9f9f9;
+	width:890px;
+	height:100px;
+	margin-top:10px;
+	margin-bottom:50px;
+	float:left;
+}
+#ht_comment_btn{
+	width:100px;
+	height:50px;
+	margin-top:30px;
+	border-style:none;
+}
+#board_ph{
+		float:left;
+		font-size:15pt;
+		margin-top:20px;
+		margin-bottom:10px;
+
+}
+#search_bar{
+		float:right;
+		border-radius: 10px;
+		font-size: 16px;
+		outline: none;
+		border: 2px solid rgba(0, 0, 0, 0.1);
+		width: 180px;
+		height:30px;
+		box-sizing: border-box;
+		margin-top:20px;
+		margin-bottom:10px;
+		
+}
+#search_bar:hover {
+			border: 2px solid rgba(0, 0, 0, 0.1);
+		}
+#search_bar:focus {
+			border: 2px solid rgba(0, 0, 0, 1);
+			background:#eee;
+			color:#222;
+}
+#ht_search_button{
+		float:right;
+		margin-top:20px;
+		margin-bottom:10px;
+		margin-left:10px;
+		width:60px;
+		height:30px;
+		background-color:rgba(50, 90, 80, 1);
+		color:white;
+}
+#write_button1{
+		float:right;
+		width: 60px;
+ 		height: 30px;
+  		font-size: 11px;
+  		text-transform: uppercase;
+  		letter-spacing: 2.5px;
+  		font-weight: 500;
+  		color: #000;
+  		background-color: #fff;
+  		border: none;
+  		border-radius: 45px;
+  		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  		transition: all 0.3s ease 0s;
+  		cursor: pointer;
+  		outline: none;
+}
+#write_button1:hover{
+	background-color: rgba(102,102,102,1);
+ 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  	color: #fff;
+}
+.paging-block {
+    text-align: center;
+	clear:both;
+
+}
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+li:first-child, ul.pagination li:last-child {
+    margin: 0;
+
+}
+
+ul.pagination li {
+	display: inline-block;
+    margin: 0 3px;
+}
+ul.pagination li a {
+	color:rgba(0,0,0,0.2);
+	text-decoration:none;
+	display: inline-block;
+	height: 24px;
+	width: 24px;
+	border: none;
+	border-radius: 50%;
+	padding: 0;
+	line-height: 24px;
+	font-size: 14px;
+}
+ul.pagination li a:hover{
+	color:black;
+}
+/*꿀팁 커뮤니티 글작성*/
+#ht_write{
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+	background-color:rgba(153,153,153,0.9);
+}
+#ht_category_font{
+	text-align:center;
+	margin-bottom:30px;
+}
+#ht_write_table{
+	margin:0 auto;
+}
+#ht_writer{
+	margin-top:20px;
+	margin-left:200px;
+	float:left;
+}
+#ht_write_input_btn{
+	float:right;
+	margin-right:200px;
+}
+#ht_update{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}

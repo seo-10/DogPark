@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
- <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/htboard.css?ver=1" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/DogLife_select.css?ver=1" />
 </head>
 
 <body>
@@ -48,17 +48,17 @@
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">주변 애견카페 정보</Strong>
 				<li>
-					<a href="Cafeinfo.jsp"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+					<a href="Cafeinfo.jsp"><img src="img/DogLife_select_img/cafegif.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">반려견 호텔/캠핑 정보</Strong>
 				<li>
-					<a href="Hotelinfo.jsp"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
+					<a href="Hotelinfo.jsp"><img src="img/DogLife_select_img/hotelgif.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">브리딩</Strong>
 			<li>
-			<a href="#"><img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
+			<a href="#"><img src="img/DogLife_select_img/breeding.gif" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
 			</li>
 			</ul>
 		</section>
