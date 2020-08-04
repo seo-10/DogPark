@@ -456,3 +456,88 @@ ul.pagination li a:hover{
 	margin:0; 
 	padding:0;
 }
+/*꿀팁 게시판 상세 내용 css*/
+#dj_read{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+
+#dj_read_contents{
+	border-radius:10px;
+	height:900px;
+	width:1000px;
+	background-color:#f9f9f9;
+	margin-top:70px;
+	padding:20px;
+	
+}
+
+#dj_aside{
+	width:300px;
+	position: fixed;
+  	right: 80px;
+  	top: 170px;
+  	height: 300px;
+  	z-index: 2;
+  	border-radius:20px;
+  	background-color:#f9f9f9;
+  	box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.1);
+}
+#dj_read_title{
+	width:290px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	font-size:14pt;
+}
+#dj_read_writer{
+	margin-top:10px;
+	margin-bottom:5px;
+	font-size:11pt;
+	
+}
+#dj_read_date{
+	margin-bottom:10px;
+	font-size:11pt;
+	
+}
+#dj_text_update{
+	width:90px;
+	height:40px;
+	margin-left:40px;
+	margin-top:20px;
+}
+#dj_text_delete{
+	width:90px;
+	height:40px;
+	margin-left:40px;
+	margin-top:20px;
+}
+#dj_comment_read{
+	clear:both;
+	border-radius:10px;
+	background-color:#f9f9f9;
+	width:1000px;
+	height:300px;
+	margin-top:30px;
+}
+#dj_comment_write{
+	border-radius:10px;
+	background-color:#f9f9f9;
+	width:890px;
+	height:100px;
+	margin-top:10px;
+	margin-bottom:50px;
+	float:left;
+}
+#dj_comment_btn{
+	width:100px;
+	height:50px;
+	margin-top:30px;
+	border-style:none;
+}

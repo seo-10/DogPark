@@ -18,7 +18,7 @@ public class DJ_BoardModifyProAction implements Action {
 		// 코드 값과 내용을 가지고와서 출력 후 내용을 수정하고 수정된 값을 DB에 넣기 위한 액션
 		DogjarangDto dto =new DogjarangDto();
 		int code =Integer.parseInt(request.getParameter("code_no"));
-		String contents= request.getParameter("ht_read_contents");
+		String contents= request.getParameter("dj_read_contents");
 		dto.setCode_no(code);
 		dto.setDj_contents(contents);
 		DJ_BoardModifyProService boardmodifyproService = new DJ_BoardModifyProService();
@@ -29,7 +29,7 @@ public class DJ_BoardModifyProAction implements Action {
 		articleList=boardmodifyreadService.DJ_modifyselectService(code);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/HT_Read.jsp");
+  		forward.setPath("/DJ_Read.jsp");
 		return forward;
 	}
 

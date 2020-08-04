@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=3" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
 </head>
 <body>
@@ -26,7 +26,7 @@
 	                <a href="#"><li>소개 및 공지</li></a>
 	                <a href="#"><li>강아지 분양</li></a>
 	                <a href="#"><li>훈련 및 정보</li></a>
-	                <a href="HT_btn.jsp"><li>커뮤니티</li></a>
+	                <a href="community_main.jsp"><li>커뮤니티</li></a>
 	                <a href="#"><li>애견용품</li></a>
 	                <a href="DogLife_select.jsp"><li>반려견 LIFE</li></a>
 	                
@@ -46,24 +46,24 @@
 	            </a>
 	        </div>
 	    </div>
-<section id="ht_read">
-	<div name="ht_read_contents" id="ht_read_contents"><%out.println(dto.get(0).getDj_contents());%></div>
-	<article name="ht_comment_read" id="ht_comment_read">댓글</article>
-	<article name="ht_comment_write" id="ht_comment_write">댓글 입력 란</article><input type="button" value="댓글등록" id="ht_comment_btn"/>
+<section id="dj_read">
+	<div name="dj_read_contents" id="dj_read_contents"><%out.println(dto.get(0).getDj_contents());%></div>
+	<article name="dj_comment_read" id="dj_comment_read">댓글</article>
+	<article name="dj_comment_write" id="dj_comment_write">댓글 입력 란</article><input type="button" value="댓글등록" id="dj_comment_btn"/>
 </section>
-<aside id="ht_aside">
+<aside id="dj_aside">
 <aside><h3>꿀팁 커뮤니티</h3></aside>
 <div></div>
-<div id="ht_read_title">제목 : <%out.println(dto.get(0).getDj_title());%></div>
-<div name="ht_read_writer" id="ht_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></div>
-<div name="ht_read_date" id="ht_read_date">작성날짜 : <%out.println(dto.get(0).getDate());%></div>
+<div id="dj_read_title">제목 : <%out.println(dto.get(0).getDj_title());%></div>
+<div name="dj_read_writer" id="dj_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></div>
+<div name="dj_read_date" id="dj_read_date">작성날짜 : <%out.println(dto.get(0).getDate());%></div>
 <div id="like_btn">좋아요<img src="img/heart_btn.png"  id="heart_btn"/> </div>
 <div id=like_count>좋아요 수 : 10</div>
  
 <% if(session.getAttribute("id").equals(dto.get(0).getU_id())){
 %>
-<input type="button" value="수정" id="ht_text_update" onclick="location.href='boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
-<input type="button" value="삭제" id="ht_text_delete" onclick="location.href='ht_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
+<input type="button" value="수정" id="dj_text_update" onclick="location.href='dj_boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
+<input type="button" value="삭제" id="dj_text_delete" onclick="location.href='dj_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
 <%} %>
 
 </aside>
