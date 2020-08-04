@@ -48,7 +48,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from notice order by index DESC;
 	</select>
 	<!-- 브리딩 유저정보,강아지정보 전체조회 -->
-	<select id="BreedingSelect" resultType="">
+	<select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
 		select nickname ,phone_num ,dog_name ,dog_sex  from userinfo,doginfo where userinfo.id = doginfo.u_id;
 	</select>
 	<!-- 반려견 자랑 게시판 -->
