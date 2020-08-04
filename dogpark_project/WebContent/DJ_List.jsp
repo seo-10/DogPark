@@ -54,31 +54,24 @@
 	        </div>
 	    </div>
  <section class="dj_board_contents">
-	  <article>
+	  <div>
 		<span id="board_ph">반려견 자랑</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
-	  </article>
+	  </div>
 <hr style="clear:both;" />
-	  <article class="dogjarang_board">
-		<ul>
-			<li class="dj_board_No">No.</li>
-			<li class="dj_board_name">제목</li>
-			<li class="dj_board_writer">글쓴이</li>
-			<li class="dj_board_like">좋아요</li>
-			<li class="dj_board_count">조회수</li>
-			<li class="dj_board_date">작성시간</li>
-		</ul>
 		<%for(int i=0;i<dto.size();i++){%>
-				<ul>
-					<li class="dj_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="dj_board_name_detail"><a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getDj_title());%></a></li>
-					<li class="dj_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
-					<li class="dj_board_like_detail"><%out.println(dto.get(i).getDj_like());%> </li>
-					<li class="dj_board_count_detail"><%out.println(dto.get(i).getDj_view());%> </li>
-					<li class="dj_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
-				</ul>
+		<a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><div class="dj_box">
+			<img src="img/htboard_img/honeytip.gif" style="width:250px; height:250px; float:left; margin:0;padding:0;"/>
+			<ul class="dj_box_contents">
+				<li class="dj_board_No_detail">No.<%out.println(dto.get(i).getCode_no());%> </li>
+				<li class="dj_board_name_detail">제목:<%out.println(dto.get(i).getDj_title());%></li>
+				<li class="dj_board_writer_detail">작성자:<%out.println(dto.get(i).getU_id());%> </li>
+				<li class="dj_board_like_detail">좋아요 수:<%out.println(dto.get(i).getDj_like());%> </li>
+				<li class="dj_board_count_detail">조회수:<%out.println(dto.get(i).getDj_view());%> </li>
+				<li class="dj_board_date_detail">작성시간:<%out.println(dto.get(i).getDate());%> </li>
+			</ul>
+		</div></a>
 		<%} %>
-	  </article>
-	  <article>
+	  <article style="clear:both;">
 	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DJ_Write.jsp'"/>
 	  </article>
 	  <nav class="paging-block">

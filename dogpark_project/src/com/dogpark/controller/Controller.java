@@ -42,7 +42,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 		// Honeytip °Ô½ÃÆÇ -----------------------------------------------------------------
 		else if(command.equals("/boardWriteForm.bo")){
 			forward=new ActionForward();
-			forward.setPath("/qna_board_write.jsp");
+			forward.setPath("/HT_Write.jsp");
 		}
 		
 		else if(command.equals("/boardList.bo")){
