@@ -350,12 +350,15 @@ ul.pagination li a:hover{
 	margin:0; 
 	padding:20px;
 }
+
 .dj_box{
 	float:left;
-	padding:5px;
 	width:640px;
 	height:270px;
 	border:1px solid gray;
+	border-radius:10px;
+	padding-left:40px;
+	padding-top:20px;
 	margin-top:10px;
 	margin-right:20px;
 	margin-left:10px;
@@ -363,42 +366,50 @@ ul.pagination li a:hover{
 }
 .dj_box:hover{
 	border:1px solid black;
+	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+	}
+
+.dj_pro_img{
+	float:left;
+	border-radius:10px;
+	width:230px;
+	height:230px; 
 	}
 .dj_box_contents {
-	margin:0 auto;
-	padding:0;
-	width:350px;
-	height:250px;
-	line-height:2.5em;
 	float:left;
+	margin:10px;
+	padding:0;
+	width:300px;
+	height:230px;
+	line-height:2.0em;
 	list-style:none;
 }
 
 .dj_board_No_detail{
-		width:300px;
+		
 		font-size:12pt;
 }
 
 .dj_board_name_detail{
-		width:300px;
+		
 		color:black;
 		font-size:14pt;
 }
 
 .dj_board_writer_detail{
-		width:300px;
+		
 		font-size:11pt;
 }
 .dj_board_like_detail{
-		width:300px;
+		
 		font-size:11pt;
 }
 .dj_board_count_detail{
-		width:300px;
+		
 		font-size:11pt;
 }
 .dj_board_date_detail{
-		width:300px;
+		
 		font-size:11pt;
 }
 /*반려견 커뮤니티 글작성*/

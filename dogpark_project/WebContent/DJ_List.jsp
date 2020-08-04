@@ -59,17 +59,17 @@
 	  </div>
 <hr style="clear:both;" />
 		<%for(int i=0;i<dto.size();i++){%>
-		<a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><div class="dj_box">
-			<img src="img/htboard_img/honeytip.gif" style="width:250px; height:250px; float:left; margin:0;padding:0;"/>
-			<ul class="dj_box_contents">
-				<li class="dj_board_No_detail">No.<%out.println(dto.get(i).getCode_no());%> </li>
-				<li class="dj_board_name_detail">제목:<%out.println(dto.get(i).getDj_title());%></li>
-				<li class="dj_board_writer_detail">작성자:<%out.println(dto.get(i).getU_id());%> </li>
-				<li class="dj_board_like_detail">좋아요 수:<%out.println(dto.get(i).getDj_like());%> </li>
-				<li class="dj_board_count_detail">조회수:<%out.println(dto.get(i).getDj_view());%> </li>
-				<li class="dj_board_date_detail">작성시간:<%out.println(dto.get(i).getDate());%> </li>
-			</ul>
-		</div></a>
+		<a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"class="dj_box">
+				<img src="img/htboard_img/honeytip.gif" class="dj_pro_img"/>
+				<ul class="dj_box_contents">
+					<li class="dj_board_No_detail">No.<%out.println(dto.get(i).getCode_no());%> </li>
+					<li class="dj_board_name_detail">제목:<%out.println(dto.get(i).getDj_title());%></li>
+					<li class="dj_board_writer_detail">작성자:<%out.println(dto.get(i).getU_id());%> </li>
+					<li class="dj_board_like_detail">좋아요 수:<%out.println(dto.get(i).getDj_like());%> </li>
+					<li class="dj_board_count_detail">조회수:<%out.println(dto.get(i).getDj_view());%> </li>
+					<li class="dj_board_date_detail">작성시간:<%out.println(dto.get(i).getDate());%> </li>
+				</ul>
+		</a>
 		<%} %>
 	  <article style="clear:both;">
 	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DJ_Write.jsp'"/>
