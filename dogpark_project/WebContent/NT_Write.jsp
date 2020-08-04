@@ -54,22 +54,22 @@
 	    </div>
 
 <section id="ht_write">
-	<form name="myform" method="post" action="boardWritePro.bo">
+	<form name="myform" method="post" action="notice_WritePro.bo">
 
 			<h1 id="ht_category_font">공지사항 글쓰기</h1>
 			<table id="ht_write_table">
 				<tr>
 					<td>제목</td>
-					<td><input type="text" size="100px" name="ht_title"></td>
+					<td><input type="text" size="100px" name="nt_title"></td>
 				</tr>
 			</table>
 			<br>
 
-			<textarea name="ht_contents" id="editor">
+			<textarea name="nt_contents" id="editor">
 				내용
 			</textarea>
-			<div id="ht_writer">작성자 : <input type="text" name="ht_writer" readonly
-				value="<%out.println(session.getAttribute("id"));%>" /></div>
+			<div id="ht_writer">작성자 : <input type="text" name="u_id" readonly
+				value="admin" /></div>
 			<p>
 				<input type="submit" value="글등록" id="ht_write_input_btn">
 			</p>

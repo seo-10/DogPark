@@ -100,7 +100,6 @@ public class Controller extends javax.servlet.http.HttpServlet
 		
 		// 공지사항 게시판 ----------------------------------------------------------
 		else if(command.equals("/notice_list.bo")){
-			System.out.println("컨트롤 왔냐?");
 			action = new Nt_BoardListAction();
 			try{
 				forward=action.execute(request, response);
@@ -108,6 +107,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/notice_WritePro.bo")){
+			action  = new Nt_BoardWriteAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		// 반려견 자랑 게시판--------------------------------------------------------
 		else if(command.equals("/dj_boardList.bo")){
 			action = new DJ_BoardListAction();
@@ -158,6 +166,13 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		
+		
+		
+		
+		
+		
+		
 //			else if(command.equals("/boardDeleteForm.bo")){
 //			String nowPage = request.getParameter("page");
 //			request.setAttribute("page", nowPage);
