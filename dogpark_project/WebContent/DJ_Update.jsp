@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=3" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
 </head>
 <body>
@@ -26,7 +26,7 @@
 	                <a href="#"><li>소개 및 공지</li></a>
 	                <a href="#"><li>강아지 분양</li></a>
 	                <a href="#"><li>훈련 및 정보</li></a>
-	                <a href="HT_btn.jsp"><li>커뮤니티</li></a>
+	                <a href="community_main.jsp"><li>커뮤니티</li></a>
 	                <a href="#"><li>애견용품</li></a>
 	                <a href="#"><li>반려견 LIFE</li></a>
 	                
@@ -46,16 +46,16 @@
 	            </a>
 	        </div>
 	    </div>
-<form name="myform" method="post" action="ht_updateprocess.bo?code_no=<%=dto.get(0).getCode_no()%>">
-<section id="ht_update">
-	<textarea name="ht_read_contents" id="ht_read_contents"> <%out.println(dto.get(0).getDj_contents());%></textarea>
+<form name="myform" method="post" action="dj_updateprocess.bo?code_no=<%=dto.get(0).getCode_no()%>">
+<section id="dj_update">
+	<textarea name="dj_read_contents" id="dj_read_contents"> <%out.println(dto.get(0).getDj_contents());%></textarea>
 </section>
-<aside id="ht_aside">
+<aside id="dj_aside">
 <aside><h3>꿀팁 커뮤니티</h3></aside>
-<article id="ht_read_title">제목 : <%out.println(dto.get(0).getDj_title());%></article>
-<article name="ht_read_writer" id="ht_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></article>
-<article name="ht_read_date" id="ht_read_date">작성날짜 : <%out.println(dto.get(0).getDate());%></article>
-<input type="submit" value="수정 완료" id="ht_text_update"/>
+<article id="dj_read_title">제목 : <%out.println(dto.get(0).getDj_title());%></article>
+<article name="dj_read_writer" id="dj_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></article>
+<article name="dj_read_date" id="dj_read_date">작성날짜 : <%out.println(dto.get(0).getDate());%></article>
+<input type="submit" value="수정 완료" id="dj_text_update"/>
 </aside>
 </form>
 </body>

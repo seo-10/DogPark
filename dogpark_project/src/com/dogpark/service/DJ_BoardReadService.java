@@ -15,7 +15,7 @@ public class DJ_BoardReadService {
 		
 	}
 	public void viewarticle(int code) {
-		dao.viewUpArticle(code);
+		dao.DJ_viewUpArticle(code);
 		
 	}
 }
