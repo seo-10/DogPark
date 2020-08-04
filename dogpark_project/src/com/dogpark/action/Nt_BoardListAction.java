@@ -23,7 +23,7 @@ public class Nt_BoardListAction implements Action{
 		articleList=nt_boardlistService.ListService();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/notice/NT_List.jsp");
+  		forward.setPath("/NT_List.jsp");
 		
   		return forward;
 	}
