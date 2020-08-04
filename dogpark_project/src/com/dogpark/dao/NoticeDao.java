@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.Dto;
+import com.dogpark.dto.NoticeDto;
 
 public class NoticeDao {
 	static SqlSessionFactory sqlfactory;
@@ -64,8 +65,8 @@ public class NoticeDao {
 		return articleList;
 	}
 	
-	public List<BoardBean> boardlistarticle() {
-		List<BoardBean> articleList = null;
+	public List<NoticeDto> boardlistarticle() {
+		List<NoticeDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		articleList = sqlsession.selectList("superpowerselect");

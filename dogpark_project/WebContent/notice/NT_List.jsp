@@ -80,7 +80,7 @@
     			<%for(int i=0; i<dto.size(); i++) { %>
 				<ul>
 					<li class="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="notice_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title());%></a></li>
+					<li class="notice_board_name_detail"><a href="Notice_list.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title());%></a></li>
 					<li class="notice_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
 					<li class="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
 					<li class="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>

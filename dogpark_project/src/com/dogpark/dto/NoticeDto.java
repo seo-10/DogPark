@@ -2,17 +2,18 @@ package com.dogpark.dto;
 
 public class NoticeDto {
 	
-	int code_no;
+	int index;
 	String u_id;
 	String nt_title;
 	String nt_contents;
 	int nt_view;
 	String date;
-	public int getCode_no() {
-		return code_no;
+	
+	public int getIndex() {
+		return index;
 	}
-	public void setCode_no(int code_no) {
-		this.code_no = code_no;
+	public void setIndex(int index) {
+		this.index = index;
 	}
 	public String getU_id() {
 		return u_id;
@@ -44,6 +45,8 @@ public class NoticeDto {
 	public void setDate(String date) {
 		this.date = date;
 	}
+	
+	
 	
 	
 	

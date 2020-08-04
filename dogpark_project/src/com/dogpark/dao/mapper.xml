@@ -29,7 +29,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="ht_viewupdate" parameterType="com.dogpark.dto.BoardBean">
 		update honey_tip set ht_view=ht_view+1 where code_no=#{code_no};
 	</update>
-	
 	<insert id="signInsert"  parameterType="com.dogpark.dto.Dto">
 		insert into userinfo(id, pwd, nickname, email) values(#{id}, #{pwd}, #{nickname}, #{email});
 	</insert>
@@ -42,5 +41,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 로그인 아이디 비밀번호 일치 체크 -->
 	<select id="loginCheck" resultType="com.dogpark.dto.Dto" parameterType="String">
 		select id, pwd from userinfo where id=#{id};
+	</select>
+	
+	<!-- 공지사항 게시판 -->
+	<select id="noticeSelect" resultType="com.dogpark.dto.NoticeDto">
+		select * from notice order by index DESC;
 	</select>
 </mapper>
