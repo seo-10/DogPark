@@ -67,6 +67,7 @@ public class NoticeDao {
 	
 	public List<NoticeDto> nt_boardlistarticle() {
 		List<NoticeDto> articleList = null;
+		System.out.println("dao ¿Ô³Ä");
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		articleList = sqlsession.selectList("noticeSelect");
