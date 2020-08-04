@@ -55,26 +55,26 @@
 	    </div>
  <section class="ht_board_contents">
 	  <article>
-		<span id="board_ph">꿀팁</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
+		<span id="board_ph">반려견 자랑</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </article>
 <hr style="clear:both;" />
 	  <article class="honeytip_board">
 		<ul>
-			<li class="honeytip_board_No">No.</li>
-			<li class="honeytip_board_name">제목</li>
-			<li class="honeytip_board_writer">글쓴이</li>
-			<li class="honeytip_board_like">좋아요</li>
-			<li class="honeytip_board_count">조회수</li>
-			<li class="honeytip_board_date">작성시간</li>
+			<li class="dj_board_No">No.</li>
+			<li class="dj_board_name">제목</li>
+			<li class="dj_board_writer">글쓴이</li>
+			<li class="dj_board_like">좋아요</li>
+			<li class="dj_board_count">조회수</li>
+			<li class="dj_board_date">작성시간</li>
 		</ul>
 		<%for(int i=0;i<dto.size();i++){%>
 				<ul>
-					<li class="honeytip_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="honeytip_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getHt_title());%></a></li>
-					<li class="honeytip_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
-					<li class="honeytip_board_like_detail"><%out.println(dto.get(i).getHt_like());%> </li>
-					<li class="honeytip_board_count_detail"><%out.println(dto.get(i).getHt_view());%> </li>
-					<li class="honeytip_board_date_detail"><%out.println(dto.get(i).getDate11());%> </li>
+					<li class="dj_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
+					<li class="dj_board_name_detail"><a href="boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getHt_title());%></a></li>
+					<li class="dj_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
+					<li class="dj_board_like_detail"><%out.println(dto.get(i).getHt_like());%> </li>
+					<li class="dj_board_count_detail"><%out.println(dto.get(i).getHt_view());%> </li>
+					<li class="dj_board_date_detail"><%out.println(dto.get(i).getDate11());%> </li>
 				</ul>
 		<%} %>
 	  </article>

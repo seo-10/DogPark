@@ -108,16 +108,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-		
-		
-//		else if(command.equals("/boardReplyPro.bo")){
-//			action = new BoardReplyProAction();
-//			try{
-//				forward=action.execute(request, response);
-//			}catch(Exception e){
-//				e.printStackTrace();
-//			}
-//		}
+		// 반려견 자랑 게시판--------------------------------------------------------
+		else if(command.equals("/boardReplyPro.bo")){
+			action = new DJ_BoardListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //		else if(command.equals("/boardModifyForm.bo")){
 //			action = new BoardModifyFormAction();
 //			try{
