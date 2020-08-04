@@ -5,7 +5,7 @@ import java.util.List;
 import com.dogpark.dao.Dao;
 import com.dogpark.dto.BoardBean;
 
-public class DJ_BoardReadService2 {
+public class DJ_BoardReadService {
 	List<BoardBean> articleList = null;
 	Dao dao= new Dao();
 	public List<BoardBean> readarticle(int code){

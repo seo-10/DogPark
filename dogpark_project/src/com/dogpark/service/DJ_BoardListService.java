@@ -10,7 +10,7 @@ public class DJ_BoardListService {
 		List<BoardBean> articleList = null;
 		
 		public List<BoardBean> ListService(){
-		articleList=dao.boardlistarticle();
+		articleList=dao.dj_boardlistarticle();
 		return articleList;
 		}
 }

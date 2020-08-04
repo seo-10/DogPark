@@ -51,4 +51,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="BreedingSelect" resultType="">
 		select nickname,phone_num,dog_name,dog_sex,dbirth_year from userinfo,doginfo order by dbirth_year DESC;
 	</select>
+	<!-- 반려견 자랑 게시판 -->
+	<select id="dj_select" resultType="com.dogpark.dto.DogjarangDto">
+		select * from dog_jarang order by code_no DESC;
+	</select>
 </mapper>

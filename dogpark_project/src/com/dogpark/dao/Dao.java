@@ -127,5 +127,14 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+	//반려견 자랑 게시판---------------------------------------
+	public List<BoardBean> dj_boardlistarticle() {
+		List<BoardBean> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		articleList = sqlsession.selectList("superpowerselect");
+		sqlsession.close();
+		return articleList;
+	}
 }
 

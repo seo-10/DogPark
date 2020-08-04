@@ -9,6 +9,7 @@ import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.PageInfo;
 import com.dogpark.service.BoardListService;
+import com.dogpark.service.DJ_BoardListService;
 
 public class DJ_BoardListAction implements Action {
 
@@ -17,11 +18,11 @@ public class DJ_BoardListAction implements Action {
 		
 		System.out.println("액션부");
 		List<BoardBean> articleList=new ArrayList<BoardBean>();
-		BoardListService boardlistService = new BoardListService();
-		articleList=boardlistService.ListService();
+		DJ_BoardListService dj_boardlistService = new DJ_BoardListService();
+		articleList=dj_boardlistService.ListService();
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/HT_List.jsp");
+  		forward.setPath("/DJ_List.jsp");
 		
   		return forward;
 		
