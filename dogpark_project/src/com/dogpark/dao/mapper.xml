@@ -47,6 +47,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="noticeSelect" resultType="com.dogpark.dto.NoticeDto">
 		select * from notice;
 	</select>
+	<insert id="nt_boardinsert" parameterType="com.dogpark.dto.NoticeDto">
+		insert into honey_tip(code_no,ht_title, ht_contents, u_id, ht_view, date) values(default,#{ht_title}, #{ht_contents}, admin, 0, 0,now());
+	</insert>
 	<!-- 브리딩 유저정보,강아지정보 전체조회 -->
 	<select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
 		select nickname ,phone_num ,dog_name ,dog_sex  from userinfo,doginfo where userinfo.id = doginfo.u_id;

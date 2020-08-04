@@ -74,11 +74,11 @@ public class NoticeDao {
 		sqlsession.close();
 		return articleList;
 	}
-	public void boardwritearticle(BoardBean dto) {
+	public void boardwritearticle(NoticeDto dto) {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		sqlsession.insert("ht_boardinsert",dto);
+		sqlsession.insert("nt_boardinsert",dto);
 		sqlsession.commit();
 		sqlsession.close();
 	}
