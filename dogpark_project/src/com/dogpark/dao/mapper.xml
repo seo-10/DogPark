@@ -58,4 +58,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="dj_board_read_select" resultType="com.dogpark.dto.DogjarangDto" parameterType="com.dogpark.dto.DogjarangDto">
 		select * from dog_jarang where code_no=#{code_no};
 	</select>
+	<insert id="dj_boardinsert" parameterType="com.dogpark.dto.DogjarangDto">
+		insert into honey_tip(code_no,dj_title, dj_contents, dj_file, u_id, dj_view, dj_like,date) values(default,#{dj_title}, #{dj_contents}, #{dj_file}, #{u_id}, 0, 0,now());
+	</insert>
 </mapper>

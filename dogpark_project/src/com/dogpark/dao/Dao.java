@@ -148,5 +148,15 @@ public class Dao {
 		return articleList;
 		
 	}
+
+	public void DJ_boardwritearticle(DogjarangDto dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		sqlsession.insert("dj_boardinsert",dto);
+		sqlsession.commit();
+		sqlsession.close();
+		
+	}
 }
 

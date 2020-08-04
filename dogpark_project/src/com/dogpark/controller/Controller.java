@@ -125,14 +125,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-//			else if(command.equals("/boardModifyPro.bo")){
-//			action = new BoardModifyProAction();
-//			try{
-//				forward=action.execute(request, response);
-//			}catch(Exception e){
-//				e.printStackTrace();
-//			}
-//		}else if(command.equals("/boardDeleteForm.bo")){
+		else if(command.equals("/dj_boardWritePro.bo")){
+			action  = new DJ_BoardWriteAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+//			else if(command.equals("/boardDeleteForm.bo")){
 //			String nowPage = request.getParameter("page");
 //			request.setAttribute("page", nowPage);
 //			int board_num=Integer.parseInt(request.getParameter("board_num"));

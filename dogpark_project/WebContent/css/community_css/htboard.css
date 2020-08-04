@@ -420,3 +420,39 @@ ul.pagination li a:hover{
 		width:110px;
 		font-size:10pt;
 }
+/*반려견 커뮤니티 글작성*/
+#dj_write{
+	width:1300px; 
+	height:700px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+	background-color:rgba(153,153,153,0.9);
+}
+#dj_category_font{
+	text-align:center;
+	margin-bottom:30px;
+}
+#dj_write_table{
+	margin:0 auto;
+}
+#dj_writer{
+	margin-top:20px;
+	margin-left:200px;
+	float:left;
+}
+#dj_write_input_btn{
+	float:right;
+	margin-right:200px;
+}
+#dj_update{
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
