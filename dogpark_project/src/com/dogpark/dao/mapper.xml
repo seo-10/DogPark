@@ -51,6 +51,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
 		select nickname ,phone_num ,dog_name ,dog_sex  from userinfo,doginfo where userinfo.id = doginfo.u_id;
 	</select>
+	
 	<!-- 반려견 자랑 게시판 -->
 	<select id="dj_select" resultType="com.dogpark.dto.DogjarangDto">
 		select * from dog_jarang order by code_no DESC;
@@ -61,4 +62,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="dj_boardinsert" parameterType="com.dogpark.dto.DogjarangDto">
 		insert into dog_jarang(code_no,dj_title, dj_contents, dj_file, u_id, dj_view, dj_like,date) values(default,#{dj_title}, #{dj_contents}, #{dj_file}, #{u_id}, 0, 0,now());
 	</insert>
+	<select id="dj_board_modify_select" resultType="com.dogpark.dto.DogjarangDto" parameterType="com.dogpark.dto.DogjarangDto">
+		select * from dog_jarang where code_no=#{code_no};
+	</select>
+	<update id="dj_board_modify_update" parameterType="com.dogpark.dto.DogjarangDto">
+		update dog_jarang set dj_contents=#{dj_contents} where code_no=#{code_no};
+	</update>
+	<delete id="dj_board_delete" parameterType="com.dogpark.dto.DogjarangDto">
+		delete from dog_jarang where code_no=#{code_no};
+	</delete>
+	<update id="dj_viewupdate" parameterType="com.dogpark.dto.DogjarangDto">
+		update dog_jarang set dj_view=dj_view+1 where code_no=#{code_no};
+	</update>
 </mapper>

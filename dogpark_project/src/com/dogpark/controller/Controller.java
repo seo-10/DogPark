@@ -133,6 +133,31 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/dj_boardmodify.bo")){
+			System.out.println("컨트롤부 체크");
+			action = new DJ_BoardModifyReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/dj_updateprocess.bo")){
+			action = new DJ_BoardModifyProAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/dj_delete.bo")){
+			action = new DJ_BoardDeleteAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 //			else if(command.equals("/boardDeleteForm.bo")){
 //			String nowPage = request.getParameter("page");
 //			request.setAttribute("page", nowPage);

@@ -155,8 +155,42 @@ public class Dao {
 		
 		sqlsession.insert("dj_boardinsert",dto);
 		sqlsession.commit();
+		sqlsession.close();	
+	}
+	public List<DogjarangDto> DJ_modifyselectarticle(int code) {
+		List<DogjarangDto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("dj_board_modify_select", code);
+
 		sqlsession.close();
+		return articleList;
+	}
+	public void DJ_modifyarticle(DogjarangDto dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		sqlsession.update("dj_board_modify_update", dto);
+		sqlsession.commit();
 		
+		sqlsession.close();
+	}
+	public void DJ_deleteservice(int code) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		sqlsession.update("dj_board_delete", code);
+		sqlsession.commit();
+		sqlsession.close();
+	}
+	public void DJ_viewUpArticle(int code) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+	
+		sqlsession.update("dj_viewupdate", code);
+		sqlsession.commit();
+		sqlsession.close();
 	}
 }
 
