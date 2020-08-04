@@ -132,7 +132,7 @@ public class Dao {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		articleList = sqlsession.selectList("superpowerselect");
+		articleList = sqlsession.selectList("dj_select");
 		sqlsession.close();
 		return articleList;
 	}
