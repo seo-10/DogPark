@@ -10,7 +10,7 @@ public class Nt_BoardListService {
 	List<NoticeDto> articleList = null;
 	
 	public List<NoticeDto> ListService(){
-	articleList=dao.boardlistarticle();
+	articleList=dao.nt_boardlistarticle();
 	return articleList;
 	}
 

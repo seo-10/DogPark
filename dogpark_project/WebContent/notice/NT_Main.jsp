@@ -35,12 +35,10 @@
    
 </head>
 <body>
-<!-- noticeDto 객체설정 -->
-<% ArrayList<NoticeDto> dto = (ArrayList<NoticeDto>)request.getAttribute("articleList"); %>
-	<!-- 로그아웃 다이얼로그 -->
-	<div id="logout_dialog" title="logout"  >
-	로그아웃 하시겠습니까?
-	</div>
+	 <!-- 로그아웃 다이얼로그 -->
+    <div id="logout_dialog" title="logout"  >
+    	로그아웃 하시겠습니까?
+    </div>
     <!-- 부트스트랩 아이콘 -->
     <div id="dropdown">
         <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
@@ -64,31 +62,12 @@
     <div id="login_Ing">
     	<jsp:include page="../header/header.jsp" />
     </div>
+   
     
-    <!-- 공지사항 게시판 리스트 -->
-    	<section id="notice_list">
-    		<a href="#">NOTICE 공지사항</a>
-    		<hr />
-    		<article id="notice_board_top">
-    			<ul>
-    				<li class="notice_board_No">No</li>
-    				<li class="notice_board_title">제목</li>
-    				<li class="notice_board_writer">글쓴이</li>
-    				<li class="notice_board_count">조회수</li>
-    				<li class="notice_board_date">작성일</li>
-    			</ul>
-    			
-				<ul>
-					<li class="notice_board_No_detail"><%out.println(dto.get(0).getIndex());%> </li>
-					<li class="notice_board_title_detail"><%out.println(dto.get(0).getNt_title()); %></li>
-					<li class="notice_board_writer_detail"><%out.println(dto.get(0).getU_id());%> </li>
-					<li class="notice_board_count_detail"><%out.println(dto.get(0).getNt_view());%> </li>
-					<li class="notice_board_date_detail"><%out.println(dto.get(0).getDate());%> </li>
-				</ul>
-    		</article>
-    		
-    	</section>
-
+    <!-- 공지사항 게시판 이동 버튼 -->
+    <div>
+    	<input type="button" value="공지사항" id="" onclick="location.href='notice_list.bo'" />
+	</div>
 </body>
 
 </html>

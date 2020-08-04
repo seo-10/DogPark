@@ -65,11 +65,11 @@ public class NoticeDao {
 		return articleList;
 	}
 	
-	public List<NoticeDto> boardlistarticle() {
+	public List<NoticeDto> nt_boardlistarticle() {
 		List<NoticeDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		articleList = sqlsession.selectList("superpowerselect");
+		articleList = sqlsession.selectList("noticeSelect");
 		sqlsession.close();
 		return articleList;
 	}
