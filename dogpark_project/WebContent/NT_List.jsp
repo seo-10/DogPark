@@ -22,15 +22,15 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="notice_main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=1" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="../css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
-    <script type="text/javascript" src="notice.js"></script>
-
+    <script type="text/javascript" src="js/notice_js/notice.js"></script>
+   
    
 </head>
 <body>
@@ -61,7 +61,7 @@
     </div>
     <!-- 로그인 유지 -->
     <div id="login_Ing">
-    	<jsp:include page="../header/header.jsp" />
+    	<jsp:include page="header/header.jsp" />
     </div>
     
     <!-- 공지사항 게시판 리스트 -->

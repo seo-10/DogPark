@@ -22,14 +22,14 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="../css/notice_css/notice_main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=1" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="../css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
-    <script type="text/javascript" src="../js/notice_js/notice.js"></script>
+    <script type="text/javascript" src="js/notice_js/notice.js"></script>
     
     
    
@@ -44,7 +44,7 @@
         <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
         </svg>
-        <a href="#"><h1>DOG PARK</h1></a>
+        <a href="mainPage.html"><h1>DOG PARK</h1></a>
 
         <div id="menuBar">
             <ul>
@@ -59,13 +59,13 @@
     </div>
     <!-- 로그인 유지 -->
     <div id="login_Ing">
-    	<jsp:include page="../header/header.jsp" />
+    	<jsp:include page="header/header.jsp" />
     </div>
    
     
     <!-- 공지사항 게시판 이동 버튼 -->
     <div style="position:absolute; left:500px; top:500px;">
-    	<input type="button" value="공지사항" id="" onclick="location.href='../notice_list.bo'" />
+    	<input type="button" value="공지사항" id="" onclick="location.href='notice_list.bo'" />
 	</div>
 </body>
 
