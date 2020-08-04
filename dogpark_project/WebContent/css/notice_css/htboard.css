@@ -342,64 +342,83 @@ ul.pagination li a:hover{
 /* -------- 반려견 자랑 게시판 내용 -----*/
 .dj_board_contents{
 	background-color:rgba(153,153,153,0.9);
-	width:1400px; 
-	height:800px; 
+	width:1300px; 
+	height:700px; 
 	position:absolute;
-	left:440px; 
+	left:480px; 
 	top:100px;
 	margin:0; 
 	padding:20px;
 }
-.dj_box{
-	float:left;
-	padding:5px;
-	width:640px;
-	height:270px;
-	border:1px solid gray;
-	margin-top:10px;
-	margin-right:20px;
-	margin-left:10px;
-	margin-bottom:10px;
-}
-.dj_box:hover{
-	border:1px solid black;
-	}
-.dj_box_contents {
+.dogjarang_board {
+	border-top:3px solid black;
+	width:1100px;
 	margin:0 auto;
 	padding:0;
-	width:350px;
-	height:250px;
-	line-height:2.5em;
-	float:left;
-	list-style:none;
+}
+.dogjarang_board ul {
+		display: table-row-group;
+	
+}
+.dogjarang_board li{
+		display:inline;
+		text-align:center;
+		padding:7px 10px;
+		vertical-align: middle;
+		display: table-cell;
+		border-bottom:1px solid rgba(0,0,0,0.15);
+		
+}
+.dj_board_No{
+		
+		width:60px;
+}
+.dj_board_name{
+		width:670px;
+}
+.dj_board_writer{
+		width:100px;
+}
+.dj_board_like{
+		width:80px;
+}
+.dj_board_count{
+		width:80px;
+}
+.dj_board_date{
+		width:110px;
 }
 
+
 .dj_board_No_detail{
-		width:300px;
-		font-size:12pt;
+		width:50px;
+		font-size:10pt;
 }
 
 .dj_board_name_detail{
-		width:300px;
-		color:black;
-		font-size:14pt;
+		width:660px;
+		font-size:10pt;
 }
-
+.dj_board_name_detail a{
+		text-decoration: none;
+		color:black;
+		font-size:10pt;
+}
 .dj_board_writer_detail{
-		width:300px;
-		font-size:11pt;
+		width:80px;
+		font-size:10pt;
 }
 .dj_board_like_detail{
-		width:300px;
-		font-size:11pt;
+		width:80px;
+		font-size:10pt;
 }
 .dj_board_count_detail{
-		width:300px;
-		font-size:11pt;
+		width:80px;
+		font-size:10pt;
 }
 .dj_board_date_detail{
-		width:300px;
-		font-size:11pt;
+		width:110px;
+		font-size:10pt;
 }
 /*반려견 커뮤니티 글작성*/
 #dj_write{

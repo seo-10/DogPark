@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=3" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
@@ -85,7 +85,14 @@
 					<li class="notice_board_date_detail"><%out.println(dto.get(0).getDate());%> </li>
 				</ul>
     		</article>
-    		
+	   		
+	   		<span>
+	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+	   		</span>
+	   		<span>
+	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Main.jsp'" />
+	   		</span>
+  			
     	</section>
 
 </body>
