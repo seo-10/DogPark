@@ -4,12 +4,13 @@ import java.util.List;
 
 import com.dogpark.dao.Dao;
 import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.DogjarangDto;
 
 public class DJ_BoardReadService {
-	List<BoardBean> articleList = null;
+	List<DogjarangDto> articleList = null;
 	Dao dao= new Dao();
-	public List<BoardBean> readarticle(int code){
-		articleList=dao.boardreadarticle(code);
+	public List<DogjarangDto> readarticle(int code){
+		articleList=dao.DJ_boardreadarticle(code);
 		return articleList;
 		
 	}

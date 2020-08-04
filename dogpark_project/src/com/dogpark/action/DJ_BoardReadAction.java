@@ -11,21 +11,21 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.dogpark.dao.Dao;
 import com.dogpark.dto.ActionForward;
-import com.dogpark.dto.BoardBean;
-import com.dogpark.service.BoardReadService;
+import com.dogpark.dto.DogjarangDto;
+import com.dogpark.service.DJ_BoardReadService;
 
 public class DJ_BoardReadAction implements Action{
 	
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		int code = Integer.parseInt(request.getParameter("code_no"));
-		List<BoardBean> articlList=new ArrayList<BoardBean>();
-		BoardReadService RS = new BoardReadService();
+		List<DogjarangDto> articlList=new ArrayList<DogjarangDto>();
+		DJ_BoardReadService RS = new DJ_BoardReadService();
 		RS.viewarticle(code);
 		articlList=RS.readarticle(code);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/HT_Read.jsp");
+  		forward.setPath("/Dj_Read.jsp");
   		
 		return forward;
 	}

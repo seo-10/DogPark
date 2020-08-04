@@ -55,4 +55,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="dj_select" resultType="com.dogpark.dto.DogjarangDto">
 		select * from dog_jarang order by code_no DESC;
 	</select>
+	<select id="dj_board_read_select" resultType="com.dogpark.dto.DogjarangDto" parameterType="com.dogpark.dto.DogjarangDto">
+		select * from honey_tip where code_no=#{code_no};
+	</select>
 </mapper>

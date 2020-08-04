@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.DogjarangDto;
 import com.dogpark.dto.PageInfo;
 import com.dogpark.service.BoardListService;
 import com.dogpark.service.DJ_BoardListService;
@@ -17,7 +18,7 @@ public class DJ_BoardListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		System.out.println("액션부");
-		List<BoardBean> articleList=new ArrayList<BoardBean>();
+		List<DogjarangDto> articleList=new ArrayList<DogjarangDto>();
 		DJ_BoardListService dj_boardlistService = new DJ_BoardListService();
 		articleList=dj_boardlistService.ListService();
 		request.setAttribute("articleList", articleList);

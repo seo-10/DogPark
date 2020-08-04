@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.dogpark.dto.BoardBean"%>
+<%@page import="com.dogpark.dto.DogjarangDto"%>
 <%@page import="com.dogpark.dao.Dao"%>
 
 <%@page import="java.util.*"%>
@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
   <!-- JQuery UI 를 쓰기위한 스크립트 -->
    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
@@ -30,7 +30,7 @@
 <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
 </div>
-<%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
+<%ArrayList<DogjarangDto> dto = (ArrayList<DogjarangDto>)request.getAttribute("articleList"); %>
  <!-- 로그인 유지 -->
  <div id="login_Ing">
     	<jsp:include page="header/header.jsp" />
@@ -53,12 +53,12 @@
 	            </ul>
 	        </div>
 	    </div>
- <section class="ht_board_contents">
+ <section class="dj_board_contents">
 	  <article>
 		<span id="board_ph">반려견 자랑</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </article>
 <hr style="clear:both;" />
-	  <article class="honeytip_board">
+	  <article class="dogjarang_board">
 		<ul>
 			<li class="dj_board_No">No.</li>
 			<li class="dj_board_name">제목</li>
@@ -70,11 +70,11 @@
 		<%for(int i=0;i<dto.size();i++){%>
 				<ul>
 					<li class="dj_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="dj_board_name_detail"><a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getHt_title());%></a></li>
+					<li class="dj_board_name_detail"><a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getDj_title());%></a></li>
 					<li class="dj_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
-					<li class="dj_board_like_detail"><%out.println(dto.get(i).getHt_like());%> </li>
-					<li class="dj_board_count_detail"><%out.println(dto.get(i).getHt_view());%> </li>
-					<li class="dj_board_date_detail"><%out.println(dto.get(i).getDate11());%> </li>
+					<li class="dj_board_like_detail"><%out.println(dto.get(i).getDj_like());%> </li>
+					<li class="dj_board_count_detail"><%out.println(dto.get(i).getDj_view());%> </li>
+					<li class="dj_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
 				</ul>
 		<%} %>
 	  </article>

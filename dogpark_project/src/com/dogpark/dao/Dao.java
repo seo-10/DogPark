@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.DogjarangDto;
 import com.dogpark.dto.Dto;
 
 public class Dao {
@@ -128,13 +129,24 @@ public class Dao {
 		sqlsession.close();
 	}
 	//반려견 자랑 게시판---------------------------------------
-	public List<BoardBean> dj_boardlistarticle() {
-		List<BoardBean> articleList = null;
+	public List<DogjarangDto> dj_boardlistarticle() {
+		List<DogjarangDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		articleList = sqlsession.selectList("dj_select");
 		sqlsession.close();
 		return articleList;
+	}
+	public List<DogjarangDto> DJ_boardreadarticle(int code){
+		List<DogjarangDto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("dj_board_read_select", code);
+
+		sqlsession.close();
+		return articleList;
+		
 	}
 }
 
