@@ -6,12 +6,15 @@ import com.dogpark.dao.NoticeDao;
 import com.dogpark.dto.NoticeDto;
 
 public class Nt_BoardListService {
+	
 	NoticeDao dao= new NoticeDao();
 	List<NoticeDto> articleList = null;
 	
 	public List<NoticeDto> ListService(){
-	articleList=dao.nt_boardlistarticle();
-	return articleList;
+		
+		System.out.println("서비스 왔냐?");
+		articleList=dao.nt_boardlistarticle();
+		return articleList;
 	}
 
 }

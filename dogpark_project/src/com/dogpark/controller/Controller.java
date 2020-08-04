@@ -100,7 +100,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 		
 		// 공지사항 게시판 ----------------------------------------------------------
 		else if(command.equals("/notice_list.bo")){
-			System.out.println("왔냐?");
+			System.out.println("컨트롤 왔냐?");
 			action = new Nt_BoardListAction();
 			try{
 				forward=action.execute(request, response);
