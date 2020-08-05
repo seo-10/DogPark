@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=3" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
@@ -70,20 +70,21 @@
     		<hr />
     		<article id="notice_board_top">
     			<ul>
-    				<li class="notice_board_No">No</li>
-    				<li class="notice_board_title">제목</li>
-    				<li class="notice_board_writer">글쓴이</li>
-    				<li class="notice_board_count">조회수</li>
-    				<li class="notice_board_date">작성일</li>
+    				<li id="notice_board_No">No</li>
+    				<li id="notice_board_title">제목</li>
+    				<li id="notice_board_writer">글쓴이</li>
+    				<li id="notice_board_count">조회수</li>
+    				<li id="notice_board_date">작성일</li>
     			</ul>
-    			
+    			<%for(int i=0;i<dto.size();i++){%>
 				<ul>
-					<li class="notice_board_No_detail"><%out.println(dto.get(0).getIndex());%> </li>
-					<li class="notice_board_title_detail"><%out.println(dto.get(0).getNt_title()); %></li>
-					<li class="notice_board_writer_detail"><%out.println(dto.get(0).getU_id());%> </li>
-					<li class="notice_board_count_detail"><%out.println(dto.get(0).getNt_view());%> </li>
-					<li class="notice_board_date_detail"><%out.println(dto.get(0).getDate());%> </li>
+					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
+					<li id="notice_board_title_detail"><%out.println(dto.get(i).getNt_title()); %></li>
+					<li id="notice_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
+					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
+					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
 				</ul>
+				<%} %>
     		</article>
 	   		
 	   		<span>

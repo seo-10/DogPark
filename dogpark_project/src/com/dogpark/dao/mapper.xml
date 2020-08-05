@@ -45,7 +45,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 공지사항 게시판 -->
 	<select id="noticeSelect" resultType="com.dogpark.dto.NoticeDto">
-		select * from notice;
+		select * from notice order by code_no DESC;
 	</select>
 	<insert id="nt_boardinsert" parameterType="com.dogpark.dto.NoticeDto">
 		insert into notice(code_no, nt_title, nt_contents, u_id, nt_view, date) values(default,#{nt_title}, #{nt_contents}, 'admin', 0, now());
