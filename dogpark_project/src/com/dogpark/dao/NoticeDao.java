@@ -87,7 +87,7 @@ public class NoticeDao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		articleList = sqlsession.selectList("ht_board_read_select", code);
+		articleList = sqlsession.selectList("nt_board_read_select", code);
 
 		sqlsession.close();
 		return articleList;
