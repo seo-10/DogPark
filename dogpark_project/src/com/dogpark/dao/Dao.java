@@ -141,13 +141,24 @@ public class Dao {
 		sqlsession.close();
 	}
 	//반려견 자랑 게시판---------------------------------------
-	public List<DogjarangDto> dj_boardlistarticle() {
+	public List<DogjarangDto> dj_boardlistarticle(int page) {
 		List<DogjarangDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		articleList = sqlsession.selectList("dj_select");
+		int startrow=(page-1)*10;
+		articleList = sqlsession.selectList("dj_select",startrow);
 		sqlsession.close();
 		return articleList;
+	}
+	public int dj_selectListCount() {
+		int listCount= 0;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		listCount=sqlsession.selectOne("dj_select_count");
+		
+		sqlsession.close();
+		return listCount;
 	}
 	public List<DogjarangDto> DJ_boardreadarticle(int code){
 		List<DogjarangDto> articleList = null;
@@ -204,6 +215,7 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+
 
 }
 

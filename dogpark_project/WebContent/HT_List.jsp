@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
+ <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=3" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
   <!-- JQuery UI 를 쓰기위한 스크립트 -->
    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
@@ -101,17 +101,17 @@ if(dto != null && listCount > 0){
 
 		<%for(int a=startPage;a<=endPage;a++){
 				if(a==nowPage){%>
-		[<%=a %>]
+		<%=a %>
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=a %>">[<%=a %>]
-		</a>&nbsp;
+		<a href="boardList.bo?page=<%=a %>"id="pageNum"><%=a %>
+		</a>
 		<%} %>
 		<%} %>
 
 		<%if(nowPage>=maxPage){ %>
 		[다음]
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=nowPage+1 %>">[다음]</a>
+		<a href="boardList.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 		<%} %>
 	</section>
 	<%

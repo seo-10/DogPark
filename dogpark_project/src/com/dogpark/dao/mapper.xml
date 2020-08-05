@@ -50,6 +50,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="noticeSelect" resultType="com.dogpark.dto.NoticeDto">
 		select * from notice order by code_no DESC;
 	</select>
+	
 	<insert id="nt_boardinsert" parameterType="com.dogpark.dto.NoticeDto">
 		insert into notice(code_no, nt_title, nt_contents, u_id, nt_view, date) values(default,#{nt_title}, #{nt_contents}, 'admin', 0, now());
 	</insert>
@@ -63,8 +64,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!-- 반려견 자랑 게시판 -->
-	<select id="dj_select" resultType="com.dogpark.dto.DogjarangDto">
-		select * from dog_jarang order by code_no DESC;
+	<select id="dj_select" parameterType="Integer" resultType="com.dogpark.dto.DogjarangDto">
+		select * from dog_jarang order by code_no DESC limit ${value}, 4;
+	</select>
+	<select id="dj_select_count" resultType="Integer">
+		select count(*) from dog_jarang;
 	</select>
 	<select id="dj_board_read_select" resultType="com.dogpark.dto.DogjarangDto" parameterType="com.dogpark.dto.DogjarangDto">
 		select * from dog_jarang where code_no=#{code_no};
