@@ -80,16 +80,21 @@
     				<li id="notice_board_count">조회수</li>
     				<li id="notice_board_date">작성일</li>
     			</ul>
+				<% String idvalue = null; %>
     			<%for(int i=0;i<dto.size();i++){%>
+    				<% idvalue= "exampleModal"+Integer.toString(i); %>
 				<ul>
 					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>" data-toggle="modal" data-target="#exampleModal" ><%out.println(dto.get(i).getNt_title()); %></a></li>
+					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>" data-toggle="modal" data-target="#<%=idvalue%>" ><%out.println(dto.get(i).getNt_title()); %></a></li>
 					<li id="notice_board_writer_detail" ><%out.println(dto.get(i).getU_id());%> </li>
 					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
 					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
 				</ul>
+				<%} %>
+				<%for(int i=0;i<dto.size();i++){%>
+					<% idvalue= "exampleModal"+Integer.toString(i); %>
 				<!-- 공지사항 클릭시 내용 modal로 보이기  -->
-				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal fade" id="<%=idvalue%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div class="modal-dialog modal-dialog-centered">
 				    <div class="modal-content">
 				      <div class="modal-header">
@@ -110,7 +115,6 @@
 				  </div>
 				</div> 
 				<%} %>
-				
 
     		</article>
 	   		
