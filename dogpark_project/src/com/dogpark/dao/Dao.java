@@ -2,6 +2,7 @@ package com.dogpark.dao;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.io.Resources;
@@ -72,6 +73,16 @@ public class Dao {
 		articleList = sqlsession.selectList("superpowerselect");
 		sqlsession.close();
 		return articleList;
+	}
+	public int selectListCount() {
+		int listCount= 0;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		listCount=sqlsession.selectOne("ht_select_count");
+		
+		sqlsession.close();
+		return listCount;
 	}
 	public void boardwritearticle(BoardBean dto) {
 		SqlSessionFactory sqlfactory = Dao.getConn();
@@ -192,5 +203,6 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+
 }
 

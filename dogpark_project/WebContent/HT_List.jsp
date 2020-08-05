@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@page import="com.dogpark.dto.BoardBean"%>
 <%@page import="com.dogpark.dao.Dao"%>
-
+<%@page import="com.dogpark.dto.PageInfo"%>
 <%@page import="java.util.*"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
@@ -30,7 +30,14 @@
 <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
 </div>
-<%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>
+<%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList");
+ PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
+	int listCount=pageInfo.getListCount();
+	int nowPage=pageInfo.getPage();
+	int maxPage=pageInfo.getMaxPage();
+	int startPage=pageInfo.getStartPage();
+	int endPage=pageInfo.getEndPage();
+	%>
  <!-- 로그인 유지 -->
  <div id="login_Ing">
     	<jsp:include page="header/header.jsp" />
@@ -58,6 +65,9 @@
 		<span id="board_ph">꿀팁</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </article>
 <hr style="clear:both;" />
+<%
+if(dto != null && listCount > 0){
+%>
 	  <article class="honeytip_board">
 		<ul>
 			<li class="honeytip_board_No">No.</li>
@@ -81,21 +91,34 @@
 	  <article>
 	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='HT_Write.jsp'"/>
 	  </article>
-	  <nav class="paging-block">
-		  <ul class="pagination">
-			  <li><a href=""><input type="button" value="<"></a></li>
-			  <li><a href="">1</a></li>
-			  <li><a href="">2</a></li>
-			  <li><a href="">3</a></li>
-			  <li><a href="">4</a></li>
-			  <li><a href="">5</a></li>
-			  <li><a href="">6</a></li>
-			  <li><a href="">7</a></li>
-			  <li><a href="">8</a></li>
-			  <li><a href="">9</a></li>
-			  <li><a href=""><input type="button" value=">"></a></li>
-		  </ul>
-	  </nav>
+
+<section id="pageList">
+		<%if(nowPage<=1){ %>
+		[이전]&nbsp;
+		<%}else{ %>
+		<a href="boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+		<%} %>
+
+		<%for(int a=startPage;a<=endPage;a++){
+				if(a==nowPage){%>
+		[<%=a %>]
+		<%}else{ %>
+		<a href="boardList.bo?page=<%=a %>">[<%=a %>]
+		</a>&nbsp;
+		<%} %>
+		<%} %>
+
+		<%if(nowPage>=maxPage){ %>
+		[다음]
+		<%}else{ %>
+		<a href="boardList.bo?page=<%=nowPage+1 %>">[다음]</a>
+		<%} %>
+	</section>
+	<%
+    }else{
+	%>
+	<section id="emptyArea">등록된 글이 없습니다.</section>
+	<%}%>
   </section>
 </body>
 </html>

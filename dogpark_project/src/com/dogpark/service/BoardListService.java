@@ -6,11 +6,17 @@ import com.dogpark.dao.Dao;
 import com.dogpark.dto.BoardBean;
 
 public class BoardListService {
-		Dao dao= new Dao();
-		List<BoardBean> articleList = null;
-		
-		public List<BoardBean> ListService(){
-		articleList=dao.boardlistarticle();
-		return articleList;
+			Dao dao= new Dao();
+			List<BoardBean> articleList = null;
+			
+			public List<BoardBean> ListService(){
+			articleList=dao.boardlistarticle();
+			return articleList;
+		}
+
+		public int getListCount() {
+			int listCount = 0;
+			listCount = dao.selectListCount();
+			return listCount;
 		}
 }
