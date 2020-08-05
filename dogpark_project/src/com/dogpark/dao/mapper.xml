@@ -8,10 +8,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="young">
 	<!-- 꿀팁 게시판 -->
-	<select id="superpowerselect" resultType="com.dogpark.dto.BoardBean">
-		select * from honey_tip order by code_no DESC limit 15;
+	<select id="superpowerselect"  parameterType="Integer" resultType="com.dogpark.dto.BoardBean">
+		select * from honey_tip order by code_no DESC limit ${value}, 15;
 	</select>
-	<select id="ht_select_count" resultType="int">
+	<select id="ht_select_count" resultType="Integer">
 		select count(*) from honey_tip;
 	</select>
 	<select id="ht_board_read_select" resultType="com.dogpark.dto.BoardBean" parameterType="com.dogpark.dto.BoardBean">

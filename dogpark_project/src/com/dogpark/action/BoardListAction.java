@@ -25,7 +25,7 @@ public class BoardListAction implements Action {
 		}
 		BoardListService boardlistService = new BoardListService();
 		int listCount=boardlistService.getListCount();
-		articleList=boardlistService.ListService();
+		articleList=boardlistService.ListService(page);
 		int maxPage=(int)((double)listCount/limit+0.95); //0.95�� ���ؼ� �ø� ó��.
    		//���� �������� ������ ���� ������ ��(1, 11, 21 ��...)
    		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;

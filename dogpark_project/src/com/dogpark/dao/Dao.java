@@ -66,11 +66,12 @@ public class Dao {
 		return articleList;
 	}
 	
-	public List<BoardBean> boardlistarticle() {
+	public List<BoardBean> boardlistarticle(int page) {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		articleList = sqlsession.selectList("superpowerselect");
+		int startrow=(page-1)*10;
+		articleList = sqlsession.selectList("superpowerselect" , startrow);
 		sqlsession.close();
 		return articleList;
 	}

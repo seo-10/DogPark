@@ -9,8 +9,8 @@ public class BoardListService {
 			Dao dao= new Dao();
 			List<BoardBean> articleList = null;
 			
-			public List<BoardBean> ListService(){
-			articleList=dao.boardlistarticle();
+			public List<BoardBean> ListService(int page){
+			articleList=dao.boardlistarticle(page);
 			return articleList;
 		}
 
