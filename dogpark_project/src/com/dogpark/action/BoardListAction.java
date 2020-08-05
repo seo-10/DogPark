@@ -18,7 +18,7 @@ public class BoardListAction implements Action {
 		System.out.println("액션부");
 		List<BoardBean> articleList=new ArrayList<BoardBean>();
 		int page=1;
-		int limit=10;
+		int limit=15;
 		
 		if(request.getParameter("page")!=null){
 			page=Integer.parseInt(request.getParameter("page"));

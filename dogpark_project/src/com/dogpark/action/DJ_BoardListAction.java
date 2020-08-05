@@ -4,12 +4,9 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import com.dogpark.dto.ActionForward;
-import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.DogjarangDto;
 import com.dogpark.dto.PageInfo;
-import com.dogpark.service.BoardListService;
 import com.dogpark.service.DJ_BoardListService;
 
 public class DJ_BoardListAction implements Action {
@@ -20,7 +17,7 @@ public class DJ_BoardListAction implements Action {
 		System.out.println("액션부");
 		List<DogjarangDto> articleList=new ArrayList<DogjarangDto>();
 		int page=1;
-		int limit=10;
+		int limit=4;
 		
 		if(request.getParameter("page")!=null){
 			page=Integer.parseInt(request.getParameter("page"));

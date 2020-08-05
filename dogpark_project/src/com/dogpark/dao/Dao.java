@@ -70,7 +70,7 @@ public class Dao {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		int startrow=(page-1)*10;
+		int startrow=(page-1)*15;
 		articleList = sqlsession.selectList("superpowerselect" , startrow);
 		sqlsession.close();
 		return articleList;
@@ -145,7 +145,7 @@ public class Dao {
 		List<DogjarangDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		int startrow=(page-1)*10;
+		int startrow=(page-1)*4;
 		articleList = sqlsession.selectList("dj_select",startrow);
 		sqlsession.close();
 		return articleList;

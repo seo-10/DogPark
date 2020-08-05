@@ -85,18 +85,18 @@ if(dto != null && listCount > 0){
 	  <article style="clear:both;">
 	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DJ_Write.jsp'"/>
 	  </article>
-<section id="pageList">
+<section class="pageList">
 		<%if(nowPage<=1){ %>
 		[이전]&nbsp;
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+		<a href="dj_boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 		<%} %>
 
 		<%for(int a=startPage;a<=endPage;a++){
 				if(a==nowPage){%>
 		<%=a %>
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=a %>"id="pageNum"><%=a %>
+		<a href="dj_boardList.bo?page=<%=a %>"class="pageNum"><%=a %>
 		</a>
 		<%} %>
 		<%} %>
@@ -104,13 +104,13 @@ if(dto != null && listCount > 0){
 		<%if(nowPage>=maxPage){ %>
 		[다음]
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+		<a href="dj_boardList.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 		<%} %>
 	</section>
 	<%
     }else{
 	%>
-	<section id="emptyArea">등록된 글이 없습니다.</section>
+	<section class="emptyArea">등록된 글이 없습니다.</section>
 	<%}%>
   </section>
 </body>

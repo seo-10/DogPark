@@ -92,7 +92,7 @@ if(dto != null && listCount > 0){
 	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='HT_Write.jsp'"/>
 	  </article>
 
-<section id="pageList">
+<section class="pageList">
 		<%if(nowPage<=1){ %>
 		[이전]&nbsp;
 		<%}else{ %>
@@ -103,7 +103,7 @@ if(dto != null && listCount > 0){
 				if(a==nowPage){%>
 		<%=a %>
 		<%}else{ %>
-		<a href="boardList.bo?page=<%=a %>"id="pageNum"><%=a %>
+		<a href="boardList.bo?page=<%=a %>"class="pageNum"><%=a %>
 		</a>
 		<%} %>
 		<%} %>
@@ -117,7 +117,7 @@ if(dto != null && listCount > 0){
 	<%
     }else{
 	%>
-	<section id="emptyArea">등록된 글이 없습니다.</section>
+	<section class="emptyArea">등록된 글이 없습니다.</section>
 	<%}%>
   </section>
 </body>
