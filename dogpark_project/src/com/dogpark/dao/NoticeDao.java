@@ -82,8 +82,8 @@ public class NoticeDao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-	public List<BoardBean> boardreadarticle(int code){
-		List<BoardBean> articleList = null;
+	public List<NoticeDto> boardreadarticle(int code){
+		List<NoticeDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 

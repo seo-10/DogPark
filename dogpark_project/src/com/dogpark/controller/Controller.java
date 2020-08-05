@@ -115,6 +115,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/notice_boardread.bo")){
+			action = new Nt_BoardReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		// 반려견 자랑 게시판--------------------------------------------------------
 		else if(command.equals("/dj_boardList.bo")){

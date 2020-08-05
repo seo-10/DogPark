@@ -56,6 +56,11 @@ $(document).ready(function() {
             $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
         });
     });
-
+    
+    	// modal 창 띄우기
+    	$('#myModal').on('shown.bs.modal', function () {
+    	  $('#myInput').trigger('focus')
+    	})
 });
+
 

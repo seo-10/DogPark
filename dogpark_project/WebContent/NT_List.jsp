@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
@@ -69,7 +69,7 @@
     		<a href="#">NOTICE 공지사항</a>
     		<hr />
     		<article id="notice_board_top">
-    			<ul>
+    			<ul id="notice_board_subject">
     				<li id="notice_board_No">No</li>
     				<li id="notice_board_title">제목</li>
     				<li id="notice_board_writer">글쓴이</li>
@@ -79,12 +79,15 @@
     			<%for(int i=0;i<dto.size();i++){%>
 				<ul>
 					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li id="notice_board_title_detail"><%out.println(dto.get(i).getNt_title()); %></li>
+					<li id="notice_board_title_detail"><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title()); %></a></li>
 					<li id="notice_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
 					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
 					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
 				</ul>
 				<%} %>
+				<!-- 공지사항 클릭시 내용 modal로 보이기 -->
+				
+		    
     		</article>
 	   		
 	   		<span>
@@ -95,6 +98,7 @@
 	   		</span>
   			
     	</section>
+    	
 
 </body>
 

@@ -343,7 +343,8 @@ a {
 
 #notice_list a {
 	font-size: 16pt;
-	color: blue;
+	color: black;
+	text-decoration: none;
 }
 
 #notice_board_top {
@@ -367,4 +368,8 @@ a {
 
 #notice_board_title {
 	width: 800px;	
+}
+
+#notice_board_subject {
+	background-color: white !important;
 }
