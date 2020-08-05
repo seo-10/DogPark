@@ -83,7 +83,7 @@
 					<li id="notice_board_writer_detail"><%out.println(dto.get(i).getU_id());%> </li>
 					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
 					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
-					
+
 				</ul>
 				<%} %>
 				<!-- 공지사항 클릭시 내용 modal로 보이기 -->
