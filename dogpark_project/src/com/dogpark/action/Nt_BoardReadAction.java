@@ -21,7 +21,7 @@ public class Nt_BoardReadAction implements Action {
 		articlList=RS.readarticle(code);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/NT_list.jsp");
+  		forward.setPath("/NT_List.jsp");
   		
 		return forward;
 	}

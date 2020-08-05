@@ -16,12 +16,12 @@ import com.dogpark.dto.NoticeDto;
 public class NoticeDao {
 	static SqlSessionFactory sqlfactory;
 	// 싱글톤 패턴(관리) = 객체를 한번만 만들어 계속 사용가능 static이 필수로 붙어야함.
-	private static Dao instance;
+	private static NoticeDao instance;
 
-	public static Dao getinstance() {
+	public static NoticeDao getinstance() {
 		if (instance == null) {
-			synchronized (Dao.class) {
-				instance = new Dao();
+			synchronized (NoticeDao.class) {
+				instance = new NoticeDao();
 			}
 		}
 		return instance;
@@ -68,14 +68,14 @@ public class NoticeDao {
 	public List<NoticeDto> nt_boardlistarticle() {
 		List<NoticeDto> articleList = null;
 		System.out.println("dao 왔냐");
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		articleList = sqlsession.selectList("noticeSelect");
 		sqlsession.close();
 		return articleList;
 	}
 	public void boardwritearticle(NoticeDto dto) {
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
 		sqlsession.insert("nt_boardinsert",dto);
@@ -84,7 +84,7 @@ public class NoticeDao {
 	}
 	public List<NoticeDto> boardreadarticle(int code){
 		List<NoticeDto> articleList = null;
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
 		articleList = sqlsession.selectList("nt_board_read_select", code);
@@ -122,7 +122,7 @@ public class NoticeDao {
 		sqlsession.close();
 	}
 	public void viewUpArticle(int code) {
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 	
 		sqlsession.update("ht_viewupdate", code);
