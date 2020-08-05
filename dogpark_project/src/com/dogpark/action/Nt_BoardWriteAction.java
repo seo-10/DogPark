@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.NoticeDto;
-import com.dogpark.service.BoardWriteService;
+import com.dogpark.service.Nt_BoardWriteService;
 
 public class Nt_BoardWriteAction implements Action {
 	
@@ -19,11 +19,11 @@ public class Nt_BoardWriteAction implements Action {
 	dto.setNt_title(title);
 	dto.setNt_contents(contents);
 	
-	BoardWriteService BWS = new BoardWriteService();
+	Nt_BoardWriteService BWS = new Nt_BoardWriteService();
 	BWS.boardwritearticle(dto);
 
 	ActionForward forward= new ActionForward();
-	forward.setPath("boardList.bo");
+	forward.setPath("notice_list.bo");
 	return forward;
 	}
 
