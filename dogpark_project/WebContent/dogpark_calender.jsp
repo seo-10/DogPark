@@ -8,39 +8,34 @@
 <link rel="stylesheet" type="text/css"
 	href="css/inquiryofsale_css/inquiryofsale_main.css" />
 <link rel="stylesheet" href="css/inquiryofsale_css/monthly.css?ver=1">
+<!-- 시간선택css -->
+<link rel="stylesheet" type="text/css" href="css/inquiryofsale_css/jquery.datetimepicker.css"/>
 </head>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/jquery.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/monthly.js"></script>
+<!-- 시간선택 스크립트 -->
+<script type="text/javascript" src="js/inquiryofsale_js/jquery.datetimepicker.full.js"></script>
+<!-- 달력 스크립트 -->
 <script type="text/javascript">
-		$(window).load( function() {
+	$(window).load(function() {
+		$('#datetimepicker_dark').datetimepicker({theme:'dark'})
 
-			$('#mycalendar').monthly({
-				mode: 'event',
-				xmlUrl: 'events.xml'
-			});
-			
-			$('#mycalendar2').monthly({
-				mode: 'picker',
-				target: '#mytarget',
-				maxWidth: '250px',
-				startHidden: true,
-				showTrigger: '#mytarget',
-				stylePast: true,
-				disablePast: true
-			});
+		$('#mycalendar').monthly({
+			mode : 'event',
+			xmlUrl : 'events.xml'
+		});
 
-		switch(window.location.protocol) {
+		switch (window.location.protocol) {
 		case 'http:':
 		case 'https:':
-		// running on a server, should be good.
-		break;
+			// running on a server, should be good.
+			break;
 		case 'file:':
 		}
-
-		});
-	</script>
+	});
+</script>
 <body>
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
@@ -70,17 +65,14 @@
 	<section class="ios_contents">
 		<div id="calender_frame">
 			<pre>Reservation</pre>
-			<div style="width:800px; display: inline-block;">
+			<div style="width: 800px; display: inline-block;">
 				<div class="monthly" id="mycalendar">예약 현황</div>
 			</div>
 		</div>
 		<div id="calender_dateselect">
-			<pre>※원하는 날짜를 선택해주세요.※</pre>
-			<div style="display: inline-block; width: 250px;">
-				<input type="text" id="mytarget" value="Select Date">
-				<div class="monthly" id="mycalendar2"></div>
-			</div>
-			<a href="#" id="reservation_button">예약 등록</a>
+			<pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
+			<input type="text" id="datetimepicker_dark" value="Select Date and time" /> <a href="#"
+				id="reservation_button">예약 등록</a>
 		</div>
 	</section>
 </body>
