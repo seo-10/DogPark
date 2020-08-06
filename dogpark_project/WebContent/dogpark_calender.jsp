@@ -5,14 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css"
-	href="css/inquiryofsale_css/inquiryofsale_main.css" />
+<link rel="stylesheet" type="text/css" href="css/inquiryofsale_css/inquiryofsale_main.css?ver=1" />
 <link rel="stylesheet" href="css/inquiryofsale_css/monthly.css?ver=1">
 <!-- 시간선택css -->
 <link rel="stylesheet" type="text/css" href="css/inquiryofsale_css/jquery.datetimepicker.css"/>
 </head>
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/jquery.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/monthly.js"></script>
 <!-- 시간선택 스크립트 -->
