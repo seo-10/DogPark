@@ -54,8 +54,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="nt_boardinsert" parameterType="com.dogpark.dto.NoticeDto">
 		insert into notice(code_no, nt_title, nt_contents, u_id, nt_view, date) values(default,#{nt_title}, #{nt_contents}, 'admin', 0, now());
 	</insert>
+	
 	<select id="nt_board_read_select" resultType="com.dogpark.dto.NoticeDto" parameterType="com.dogpark.dto.NoticeDto">
 		select * from notice where code_no=#{code_no};
+	</select>
+	
+	<select id="nt_select_count" resultType="Integer">
+		select count(*) from honey_tip;
 	</select>
 	
 	<!-- 브리딩 유저정보,강아지정보 전체조회 -->
