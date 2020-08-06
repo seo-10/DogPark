@@ -1,12 +1,6 @@
+ 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
-<%@page import="com.dogpark.dto.BoardBean"%>
-<%@page import="com.dogpark.dao.Dao"%>
-
-<%@page import="java.util.*"%>
-<%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
-<%@page import="org.apache.ibatis.session.SqlSession"%>
-<%@page import="javax.servlet.http.HttpSession" %>
 
 
   	<a href="#"><%= session.getAttribute("id") %></a>님 환영합니다.

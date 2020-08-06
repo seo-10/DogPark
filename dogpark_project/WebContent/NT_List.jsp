@@ -19,8 +19,8 @@
 
     <!-- JQuery UI 를 쓰기위한 스크립트 -->
    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
-    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script> -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
     <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
@@ -125,14 +125,15 @@
 				<%} %>
 
     		</article>
-	   		
+    		
+	   		<article id="notice_board_bot">
 	   		<span>
 	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
 	   		</span>
 	   		<span>
 	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
 	   		</span>
-			<section class="pageList">
+			<span class="pageList">
 				<%if(nowPage<=1){ %>
 				[이전]&nbsp;
 				<%}else{ %>
@@ -153,12 +154,13 @@
 				<%}else{ %>
 				<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 				<%} %>
-			</section>
+			</span>
 			<%
 			}else{
 			%>
-			<section class="emptyArea">등록된 글이 없습니다.</section>
-			<%}%>	   
+			<span class="emptyArea">등록된 글이 없습니다.</span>
+			<%}%>
+			</article> 
     	</section>
  
 

@@ -348,8 +348,9 @@ a {
 }
 
 #notice_board_top {
-	width: 1100px;
-	height:600px;
+	width: 1200px;
+	height:550px;
+	margin-left: 30px;
 }
 
 #notice_board_top ul {
@@ -367,7 +368,7 @@ a {
 }
 
 #notice_board_title {
-	width: 800px;	
+	width: 900px;	
 }
 
 #notice_board_subject {
@@ -376,9 +377,8 @@ a {
 
 .pageList {
 	clear:both;
-	margin: auto;
-	margin-top:30px;
-	width: 500px;
+	margin-left: 300px;
+	width: 300px;
 	text-align: center;
 	font-size:12pt;
 }
@@ -392,4 +392,9 @@ a {
 	margin: auto;
 	width: 500px;
 	text-align: center;
+}
+
+#notice_board_bot {
+	width: 600px;
+	height:50px;
 }
