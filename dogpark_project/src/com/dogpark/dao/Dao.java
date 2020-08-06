@@ -215,7 +215,16 @@ public class Dao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-
+	//ºê¸®µù
+	public List<BoardBean> Breedinglistarticle(int page) {
+		List<BoardBean> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		int startrow=(page-1)*15;
+		articleList = sqlsession.selectList("BreedingSelect" , startrow);
+		sqlsession.close();
+		return articleList;
+	}
 
 }
 

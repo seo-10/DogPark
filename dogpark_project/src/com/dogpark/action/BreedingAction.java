@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.BoardBean;
+import com.dogpark.service.BreedingListService;
 import com.dogpark.service.BreedingService;
 
 public class BreedingAction implements Action {
@@ -15,9 +16,10 @@ public class BreedingAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		System.out.println("¾×¼ÇºÎ");
+		int pa = 0;
 		List<BoardBean> articleList=new ArrayList<BoardBean>();
-		BreedingService breedingservice = new BreedingService();
-		articleList=breedingservice.ListService();
+		BreedingListService breedingservice = new BreedingListService();
+		articleList=breedingservice.BreedingListService(pa);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/Breeding.jsp");

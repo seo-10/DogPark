@@ -44,11 +44,15 @@
 	            </a>
 	        </div>
 	    </div>
-	<form action="" method="post">
+	<form action="/Breeding.bo" method="post">
 		 <section class="community_contents">
 	   		<div id="breeding_title">
 	   			Breeding!!
+	   			
 	   		</div>
+	   			<div style="color:white;">
+	   				<% out.println(request.getParameter("")); %>
+	   			</div>
   		 </section>
   	</form>
 	
