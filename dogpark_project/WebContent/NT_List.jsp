@@ -2,6 +2,7 @@
 <%request.setCharacterEncoding("utf-8"); %>
 <%@page import="com.dogpark.dto.NoticeDto"%>
 <%@page import="com.dogpark.dao.NoticeDao"%>
+<%@page import="com.dogpark.dto.PageInfo"%>
 
 <%@page import="java.util.*"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
@@ -38,8 +39,15 @@
 </head>
 <body>
 <!-- noticeDto 객체설정 -->
-<% ArrayList<NoticeDto> dto = (ArrayList<NoticeDto>)request.getAttribute("articleList"); %>
-<% ArrayList<NoticeDto> dto1 = (ArrayList<NoticeDto>)request.getAttribute("articleList"); %>
+<% ArrayList<NoticeDto> dto = (ArrayList<NoticeDto>)request.getAttribute("articleList");
+	PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
+	int listCount=pageInfo.getListCount();
+	int nowPage=pageInfo.getPage();
+	int maxPage=pageInfo.getMaxPage();
+	int startPage=pageInfo.getStartPage();
+	int endPage=pageInfo.getEndPage();
+%>
+
 	<!-- 로그아웃 다이얼로그 -->
 	<div id="logout_dialog" title="logout"  >
 	로그아웃 하시겠습니까?
@@ -69,6 +77,7 @@
     </div>
     
     <!-- 공지사항 게시판 리스트 -->
+    <%if(dto != null && listCount > 0){%>
     	<section id="notice_list">
     		<a href="#">NOTICE 공지사항</a>
     		<hr />
@@ -109,7 +118,6 @@
 				      </div>
 				      <div class="modal-footer">
 				       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				        <button type="button" class="btn btn-primary">Save changes</button>
 				      </div>
 				    </div>
 				  </div>
@@ -124,12 +132,36 @@
 	   		<span>
 	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
 	   		</span>
-	   		<!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-			  Launch demo modal
-			</button>
-	   		
+			<section class="pageList">
+				<%if(nowPage<=1){ %>
+				[이전]&nbsp;
+				<%}else{ %>
+				<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+				<%} %>
+		
+				<%for(int a=startPage;a<=endPage;a++){
+						if(a==nowPage){%>
+				<%=a %>
+				<%}else{ %>
+				<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %>
+				</a>
+				<%} %>
+				<%} %>
+		
+				<%if(nowPage>=maxPage){ %>
+				[다음]
+				<%}else{ %>
+				<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+				<%} %>
+			</section>
+			<%
+			}else{
+			%>
+			<section class="emptyArea">등록된 글이 없습니다.</section>
+			<%}%>	   
     	</section>
+ 
+
     	
     <!-- 부트스트랩 modal css, js연결 -->    	
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

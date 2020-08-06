@@ -65,7 +65,7 @@ public class NoticeDao {
 		return articleList;
 	}
 	
-	public List<NoticeDto> nt_boardlistarticle() {
+	public List<NoticeDto> nt_boardlistarticle(int page) {
 		List<NoticeDto> articleList = null;
 		System.out.println("dao ¿Ô³Ä");
 		SqlSessionFactory sqlfactory = NoticeDao.getConn();
@@ -74,6 +74,18 @@ public class NoticeDao {
 		sqlsession.close();
 		return articleList;
 	}
+	
+	public int nt_selectListCount() {
+		int listCount= 0;
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		listCount=sqlsession.selectOne("nt_select_count");
+		
+		sqlsession.close();
+		return listCount;
+	}
+	
 	public void boardwritearticle(NoticeDto dto) {
 		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
