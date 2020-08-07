@@ -30,7 +30,7 @@ $(document).ready(function() {
 //로그아웃 dialog
    
     $(function(){
-    	var url = "mainPage.html";
+    	var url = "header/header_logout.jsp";
   
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게
@@ -44,6 +44,7 @@ $(document).ready(function() {
             buttons:{
                 "확인":function(){
                     //$(this).dialog("close");
+                	
                     $(location).attr('href', url);
                 },"취소":function(){
                     $(this).dialog("close");
