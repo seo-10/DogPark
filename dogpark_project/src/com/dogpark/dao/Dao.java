@@ -217,15 +217,7 @@ public class Dao {
 		sqlsession.close();
 	}
 	//ºê¸®µù
-	public List<BreedingDto> Breedinglistarticle(int page) {
-		List<BoardBean> articleList = null;
-		SqlSessionFactory sqlfactory = Dao.getConn();
-		SqlSession sqlsession = sqlfactory.openSession();
-		int startrow=(page-1)*15;
-		articleList = sqlsession.selectList("BreedingSelect" , startrow);
-		sqlsession.close();
-		return articleList;
-	}
+	
 
 }
 
