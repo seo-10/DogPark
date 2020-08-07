@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.DogjarangDto;
 import com.dogpark.dto.Dto;
 
@@ -216,7 +217,7 @@ public class Dao {
 		sqlsession.close();
 	}
 	//ºê¸®µù
-	public List<BoardBean> Breedinglistarticle(int page) {
+	public List<BreedingDto> Breedinglistarticle(int page) {
 		List<BoardBean> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
