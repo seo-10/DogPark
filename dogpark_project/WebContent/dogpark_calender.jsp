@@ -60,6 +60,7 @@
 			</ul>
 		</div>
 	</div>
+	<form action="reservation.bo" method="post">
 	<section class="ios_contents">
 		<div id="calender_frame">
 			<pre>Reservation</pre>
@@ -69,9 +70,10 @@
 		</div>
 		<div id="calender_dateselect">
 			<pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
-			<input type="text" id="datetimepicker_dark" value="Select Date and time" /> <a href="#"
-				id="reservation_button">예약 등록</a>
+			<input type="text" id="datetimepicker_dark" value="Select Date and time" />
+			<input type="button" id="reservation_button" value="예약등록"/>
 		</div>
 	</section>
+	</form>
 </body>
 </html>

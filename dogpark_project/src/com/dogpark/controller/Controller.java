@@ -174,6 +174,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		/* ¿¹¾à */
+		else if(command.equals("/ds_reservation.bo")){
+			action = new DS_ReservationAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		
 		
