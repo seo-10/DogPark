@@ -91,7 +91,7 @@ System.out.println(currMonth);
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
 	<div id="login_Ing">
-		<jsp:include page="js/notice_js/header.jsp" />
+		<jsp:include page="js/inquiryofsale_js/header.jsp" />
 	</div>
 	<div id="dropdown">
 		<svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16"
@@ -207,7 +207,7 @@ System.out.println(currMonth);
 				<pre>※<%=session.getAttribute("id")%>님 원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>
 				<input type="time" name="retime" value="10:00" min="10:00" max="19:00" step="1800" required/>
-				<input type="button" id="reservation_button" value="예약등록" />
+				<input type="submit" id="reservation_button" value="예약등록" />
 			</div>
 		</section>
 	</form>
