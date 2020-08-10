@@ -96,6 +96,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 강아지 분양 파트 -->
 	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
-		insert into calendar(date, time) values(#{date}, #{time});
+		insert into calendar(u_id, date, time) values(#{u_id}, #{date}, #{time});
 	</insert>
 </mapper>
