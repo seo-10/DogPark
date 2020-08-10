@@ -62,10 +62,10 @@ $(document).ready(function() {
         });
     });
     
-    	// modal 창 띄우기
-    	$('#myModal').on('shown.bs.modal', function () {
-    	  $('#myInput').trigger('focus')
-    	})
+
 });
+
+  
+
 
 
