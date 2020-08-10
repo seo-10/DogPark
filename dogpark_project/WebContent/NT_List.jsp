@@ -23,9 +23,9 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -74,9 +74,10 @@
 	
 	 
     <!-- 로그인 유지  -->
-    <div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
-    </div> 
+     <div id="login_Ing">
+     <% String id = (String)session.getAttribute("id");%>
+    	<jsp:include page="js/notice_js/header.jsp" />
+    </div>
     
     <!-- 공지사항 게시판 리스트 -->
     <%if(dto != null && listCount > 0){%>
@@ -104,54 +105,49 @@
 				<%} %>
     		</article>
     		
-	   		<article id="notice_board_bot">
-	   		<span>
-	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
-	   		</span>
-	   		<span>
-	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
-	   		</span>
-	   
+    		<article id="notice_board_bot">
+    		<% if(id == null || !id.equals("admin")){ %>
+		   		<span>
+		   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+		   		</span>
+	   		<%} else if(id.equals("admin")){%>
+	   			<span>
+		   			<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
+		   		</span>
+		   		<span>
+		   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+		   		</span>
+	   		<%} %>
 	   		<!-- <span>
 	   		<input type="button" value="글쓰기" id="signBtn" />
 	   		</span>  -->
 	   		
 			<span class="pageList">
 				<%if(nowPage<=1){ %>
-				[이전]&nbsp;
+					[이전]&nbsp;
 				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+					<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 				<%} %>
 		
 				<%for(int a=startPage;a<=endPage;a++){
 						if(a==nowPage){%>
-				<%=a %>
-				<%}else{ %>
-				<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %>
-				</a>
-				<%} %>
+							<%=a %>
+							<%}else{ %>
+								<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %></a>
+							<%} %>
 				<%} %>
 		
 				<%if(nowPage>=maxPage){ %>
 				[다음]
 				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+					<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 				<%} %>
 			</span>
-			<%
-			}else{
-			%>
+			<% }else{ %>
 			<span class="emptyArea">등록된 글이 없습니다.</span>
 			<%}%>
 			</article> 
-    	</section>
- 
-
-
-    <!-- 부트스트랩 modal css, js연결 -->    	
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    	</section>	
 </body>
 
 </html>

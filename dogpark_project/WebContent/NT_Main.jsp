@@ -59,7 +59,11 @@
     </div>
     <!-- 로그인 유지 -->
      <div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
+    <% if(session.getAttribute("id") == null) { %>
+    	<jsp:include page="js/notice_js/header_logout.jsp" />
+    	<%} else { %>
+    	<jsp:include page="js/notice_js/header.jsp" />
+    	<% } %>
     </div>
    
     
