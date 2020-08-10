@@ -90,11 +90,6 @@
 	   		<span>
 	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
 	   		</span>
-	   		<span>
-	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
-	   		</span>
-	   
-	   		
 			</article> 
     	</section>
 
