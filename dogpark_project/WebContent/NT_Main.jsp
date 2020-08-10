@@ -2,7 +2,6 @@
 <%request.setCharacterEncoding("utf-8"); %>
 <%@page import="com.dogpark.dto.NoticeDto"%>
 <%@page import="com.dogpark.dao.NoticeDao"%>
-<%@page import="com.dogpark.dto.PageInfo"%>
 
 <%@page import="java.util.*"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
@@ -23,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=1" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
@@ -32,27 +31,14 @@
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/notice_js/notice.js"></script>
     
-    <!-- 부트스트랩 modal css, js연결 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     
    
 </head>
 <body>
-
-<!-- noticeDto 객체설정 -->
-<% ArrayList<NoticeDto> dto = (ArrayList<NoticeDto>)request.getAttribute("articleList");
-	PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
-	int listCount=pageInfo.getListCount();
-	int nowPage=pageInfo.getPage();
-	int maxPage=pageInfo.getMaxPage();
-	int startPage=pageInfo.getStartPage();
-	int endPage=pageInfo.getEndPage();
-%>
-
-	<!-- 로그아웃 다이얼로그 -->
-	<div id="logout_dialog" title="logout"  >
-	로그아웃 하시겠습니까?
-	</div>
+	 <!-- 로그아웃 다이얼로그 -->
+    <div id="logout_dialog" title="logout"  >
+    	로그아웃 하시겠습니까?
+    </div>
     <!-- 부트스트랩 아이콘 -->
     <div id="dropdown">
         <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
@@ -69,112 +55,18 @@
                 <a href="#"><li>애견용품</li></a>
                 <a href="#"><li>반려견 LIFE</li></a>
             </ul>
-	     </div>
-	</div>
-	
-	 
-    <!-- 로그인 유지  -->
-    <div id="login_Ing">
+        </div>
+    </div>
+    <!-- 로그인 유지 -->
+     <div id="login_Ing">
     	<jsp:include page="header/header.jsp" />
-    </div> 
+    </div>
+   
     
-    <!-- 공지사항 게시판 리스트 -->
-    <%if(dto != null && listCount > 0){%>
-    	<section id="notice_list">
-    		<a href="#">NOTICE 공지사항</a>
-    		<hr />
-    		<article id="notice_board_top">
-    			<ul id="notice_board_subject">
-    				<li id="notice_board_No">No</li>
-    				<li id="notice_board_title">제목</li>
-    				<li id="notice_board_writer">글쓴이</li>
-    				<li id="notice_board_count">조회수</li>
-    				<li id="notice_board_date">작성일</li>
-    			</ul>
-				<% String idvalue = null; %>
-    			<%for(int i=0;i<dto.size();i++){%>
-    				<% idvalue= "exampleModal"+Integer.toString(i); %>
-				<ul>
-					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>" data-toggle="modal" data-target="#<%=idvalue%>" ><%out.println(dto.get(i).getNt_title()); %></a></li>
-					<li id="notice_board_writer_detail" ><%out.println(dto.get(i).getU_id());%> </li>
-					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
-					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
-				</ul>
-				<%} %>
-				<%for(int i=0;i<dto.size();i++){%>
-					<% idvalue= "exampleModal"+Integer.toString(i); %>
-				<!-- 공지사항 클릭시 내용 modal로 보이기  -->
-				<div class="modal fade" id="<%=idvalue%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div class="modal-dialog modal-dialog-centered">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLabel"><%out.println(dto.get(i).getNt_title()); %></h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-         				<span aria-hidden="true">&times;</span>
-        				</button>
-						</div>
-				      
-				      <div class="modal-body">
-				        <%out.println(dto.get(i).getNt_contents()); %>
-				      </div>
-				      <div class="modal-footer">
-				       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-				<%} %>
-    		</article>
-    		
-	   		<article id="notice_board_bot">
-	   		<span>
-	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
-	   		</span>
-	   		<span>
-	   		<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
-	   		</span>
-	   
-	   		<!-- <span>
-	   		<input type="button" value="글쓰기" id="signBtn" />
-	   		</span>  -->
-	   		
-			<span class="pageList">
-				<%if(nowPage<=1){ %>
-				[이전]&nbsp;
-				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
-				<%} %>
-		
-				<%for(int a=startPage;a<=endPage;a++){
-						if(a==nowPage){%>
-				<%=a %>
-				<%}else{ %>
-				<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %>
-				</a>
-				<%} %>
-				<%} %>
-		
-				<%if(nowPage>=maxPage){ %>
-				[다음]
-				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
-				<%} %>
-			</span>
-			<%
-			}else{
-			%>
-			<span class="emptyArea">등록된 글이 없습니다.</span>
-			<%}%>
-			</article> 
-    	</section>
- 
-
-
-    <!-- 부트스트랩 modal css, js연결 -->    	
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    <!-- 공지사항 게시판 이동 버튼 -->
+    <div style="position:absolute; left:500px; top:500px;">
+    	<input type="button" value="공지사항" id="" onclick="location.href='notice_list.bo'" />
+	</div>
 </body>
 
 </html>
