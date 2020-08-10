@@ -51,19 +51,6 @@
 	   			
 	   		</div>
 	   			<div style="color:white;">
-	   				<%
-if(dto != null && listCount > 0){
-%>
-		<%for(int i=0;i<dto.size();i++){%>
-				<ul class="dj_box_contents">
-					<li class="Breeding_id">No.<%out.println(dto.get(i).());%> </li>
-					<li class="Breeding_nickname">제목:<%out.println(dto.get(i).getDj_title());%></li>
-					<li class="Breeding_phonenum">작성자:<%out.println(dto.get(i).getU_id());%> </li>
-					<li class="Breeding_dog_year">좋아요 수:<%out.println(dto.get(i).getDj_like());%> </li>
-					<li class="dj_board_count_detail">조회수:<%out.println(dto.get(i).getDj_view());%> </li>
-					<li class="dj_board_date_detail">작성시간:<%out.println(dto.get(i).getDate());%> </li>
-				</ul>
-		
 	   			</div>
   		 </section>
   	</form>
