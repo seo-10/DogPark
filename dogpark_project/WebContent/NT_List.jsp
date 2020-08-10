@@ -19,7 +19,7 @@
 
     <!-- JQuery UI 를 쓰기위한 스크립트 -->
    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js" ></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
@@ -35,7 +35,6 @@
     <!-- 부트스트랩 modal css, js연결 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     
-  
    
 </head>
 <body>
@@ -97,7 +96,7 @@
     				<% idvalue= "exampleModal"+Integer.toString(i); %>
 				<ul>
 					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
-					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"><%out.println(dto.get(i).getNt_title()); %></a></li>
+					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>" data-toggle="modal" data-target="#<%=idvalue%>" ><%out.println(dto.get(i).getNt_title()); %></a></li>
 					<li id="notice_board_writer_detail" ><%out.println(dto.get(i).getU_id());%> </li>
 					<li id="notice_board_count_detail"><%out.println(dto.get(i).getNt_view());%> </li>
 					<li id="notice_board_date_detail"><%out.println(dto.get(i).getDate());%> </li>
@@ -106,8 +105,24 @@
 				<%for(int i=0;i<dto.size();i++){%>
 					<% idvalue= "exampleModal"+Integer.toString(i); %>
 				<!-- 공지사항 클릭시 내용 modal로 보이기  -->
-				<div id="<%=idvalue%>" title="<%out.println(dto.get(i).getNt_title()); %>" >
-				    <%out.println(dto.get(i).getNt_contents()); %>
+				<div class="modal fade" id="<%=idvalue%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div class="modal-dialog modal-dialog-centered">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <h5 class="modal-title" id="exampleModalLabel"><%out.println(dto.get(i).getNt_title()); %></h5>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         				<span aria-hidden="true">&times;</span>
+        				</button>
+						</div>
+				      
+				      <div class="modal-body">
+				        <%out.println(dto.get(i).getNt_contents()); %>
+				      </div>
+				      <div class="modal-footer">
+				       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				      </div>
+				    </div>
+				  </div>
 				</div>
 				<%} %>
     		</article>
@@ -156,6 +171,10 @@
  
 
 
+    <!-- 부트스트랩 modal css, js연결 -->    	
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 </body>
 
 </html>
