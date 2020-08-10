@@ -15,6 +15,7 @@ public class DateData {
 	String db_startDate = "";
 	String db_endDate = "";	
 	ScheduleDto[] schedule_data_arr = new ScheduleDto[4];
+	s
 
 	public String getYear() {
 		return year;
