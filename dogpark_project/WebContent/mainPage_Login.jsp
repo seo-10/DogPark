@@ -60,7 +60,7 @@
     </div>
     <!-- 로그인 유지 -->
     <div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
+    	<jsp:include page="js/main_js/header.jsp" />
     </div>
 
 </body>

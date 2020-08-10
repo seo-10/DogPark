@@ -1,5 +1,5 @@
 <% 
 session.getAttribute("id");
 session.invalidate();
-response.sendRedirect("../../NT_List.html");
+response.sendRedirect("../../mainPage.html");
 %>

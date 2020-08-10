@@ -35,7 +35,7 @@ $(document).ready(function() {
 //로그아웃 dialog
    
     $(function(){
-    	var url = "header_logout.jsp";
+    	var url = "js/notice_js/header_logout.jsp";
   
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게
