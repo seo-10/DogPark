@@ -104,7 +104,7 @@ System.out.println(currMonth);
 		<div id="menuBar">
 			<ul>
 				<a href="NT_Main.jsp"><li>소개 및 공지</li></a>
-				<a href="#"><li>강아지 분양</li></a>
+				<a href="DogSale.jsp"><li>강아지 분양</li></a>
 				<a href="#"><li>훈련 및 정보</li></a>
 				<a href="community_main.jsp"><li>커뮤니티</li></a>
 				<a href="#"><li>애견용품</li></a>
