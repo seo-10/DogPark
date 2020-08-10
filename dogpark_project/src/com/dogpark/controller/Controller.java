@@ -183,15 +183,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-		/* ºê¸®µù */
-		else if(command.equals("/Breeding.bo")) {
-			action = new BreedingAction();
-			try {
-				forward=action.execute(request, response);
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-		}
+		
 		
 		
 		
