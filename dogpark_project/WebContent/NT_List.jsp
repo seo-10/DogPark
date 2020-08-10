@@ -23,9 +23,9 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
@@ -74,8 +74,9 @@
 	
 	 
     <!-- 로그인 유지  -->
-   <div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
+     <div id="login_Ing">
+     <% String id = (String)session.getAttribute("id");%>
+    	<jsp:include page="js/notice_js/header.jsp" />
     </div>
     
     <!-- 공지사항 게시판 리스트 -->
@@ -103,14 +104,19 @@
 				</ul>
 				<%} %>
     		</article>
+    		
     		<article id="notice_board_bot">
-	   		<span>
-	   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
-	   		</span>
-    		<% if(session.getAttribute("id").equals("admin")){ %>
-	   		<span>
-	   			<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
-	   		</span>
+    		<% if(id == null || !id.equals("admin")){ %>
+		   		<span>
+		   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+		   		</span>
+	   		<%} else if(id.equals("admin")){%>
+	   			<span>
+		   			<input type="button" value="글쓰기" id="" onclick="location.href='NT_Write.jsp'" />
+		   		</span>
+		   		<span>
+		   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+		   		</span>
 	   		<%} %>
 	   		<!-- <span>
 	   		<input type="button" value="글쓰기" id="signBtn" />
@@ -118,29 +124,26 @@
 	   		
 			<span class="pageList">
 				<%if(nowPage<=1){ %>
-				[이전]&nbsp;
+					[이전]&nbsp;
 				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+					<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 				<%} %>
 		
 				<%for(int a=startPage;a<=endPage;a++){
 						if(a==nowPage){%>
-				<%=a %>
-				<%}else{ %>
-				<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %>
-				</a>
-				<%} %>
+							<%=a %>
+							<%}else{ %>
+								<a href="notice_list.bo?page=<%=a %>"class="pageNum"><%=a %></a>
+							<%} %>
 				<%} %>
 		
 				<%if(nowPage>=maxPage){ %>
 				[다음]
 				<%}else{ %>
-				<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+					<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 				<%} %>
 			</span>
-			<%
-			}else{
-			%>
+			<% }else{ %>
 			<span class="emptyArea">등록된 글이 없습니다.</span>
 			<%}%>
 			</article> 
