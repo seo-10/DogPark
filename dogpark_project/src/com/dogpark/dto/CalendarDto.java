@@ -1,6 +1,6 @@
 package com.dogpark.dto;
 
-public class CalenderDto {
+public class CalendarDto {
 	String u_id;
 	String date;
 	String time;

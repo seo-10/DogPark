@@ -82,42 +82,16 @@ System.out.println(currMonth);
 <link rel="stylesheet" type="text/css"
 	href="css/inquiryofsale_css/inquiryofsale_main.css?ver=1" />
 <link rel="stylesheet" href="css/inquiryofsale_css/monthly.css?ver=4">
-<!-- 시간선택css -->
-<link rel="stylesheet" type="text/css"
-	href="css/inquiryofsale_css/jquery.datetimepicker.css" />
 </head>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/jquery.js"></script>
-<script type="text/javascript" src="js/inquiryofsale_js/monthly.js"></script>
-<!-- 시간선택 스크립트 -->
-<script type="text/javascript"
-	src="js/inquiryofsale_js/jquery.datetimepicker.full.js"></script>
-<!-- 달력 스크립트 -->
-<script type="text/javascript">
-	$(window).load(function() {
-		$('#datetimepicker_dark').datetimepicker({theme:'dark'})
-
-		$('#mycalendar').monthly({
-			mode : 'event',
-			xmlUrl : 'events.xml'
-		});
-
-		switch (window.location.protocol) {
-		case 'http:':
-		case 'https:':
-			// running on a server, should be good.
-			break;
-		case 'file:':
-		}
-	});
-</script>
 <body>
 	<% String id= (String)session.getAttribute("id"); %>
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
 	<div id="login_Ing">
-		<jsp:include page="header/header.jsp" />
+		<jsp:include page="js/notice_js/header.jsp" />
 	</div>
 	<div id="dropdown">
 		<svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16"
@@ -139,18 +113,18 @@ System.out.println(currMonth);
 			</ul>
 		</div>
 	</div>
-	<form action="reservation.bo" method="post">
+	<form action="ds_reservation.bo" method="post">
 		<section class="ios_contents">
-			<table border='0' width='900' celpadding='0' cellspacing='0'>
+			<table border='1' width='800' celpadding='0' cellspacing='0'>
 				<tr>
 					<td width='150' align='right' valign='middle'><a
-						href="ios_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0">
+						href="dogpark_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0">
 							<font size="2">◁◁</font>
 					</a></td>
 					<td width='260' align='center' valign='middle'><b><%= getTitle(cal)%></b>
 					</td>
 					<td width='173' align='left' valign='middle'><a
-						href="ios_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1">
+						href="dogpark_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1">
 							<font size="2">▷▷</font>
 					</a></td>
 				</tr>
@@ -231,9 +205,9 @@ System.out.println(currMonth);
 			</table>
 			<div id="calender_dateselect">
 				<pre>※<%=session.getAttribute("id")%>님 원하는 날짜와 시간을 선택해주세요.※</pre>
-				<input type="text" id="datetimepicker_dark" name=DnT
-					value="Select Date and time" /> <input type="button"
-					id="reservation_button" value="예약등록" />
+				<input type="date" name="redate"/>
+				<input type="time" name="retime" value="10:00" min="10:00" max="19:00" step="1800" required/>
+				<input type="button" id="reservation_button" value="예약등록" />
 			</div>
 		</section>
 	</form>

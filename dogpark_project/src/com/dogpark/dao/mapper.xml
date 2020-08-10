@@ -93,4 +93,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<update id="dj_viewupdate" parameterType="com.dogpark.dto.DogjarangDto">
 		update dog_jarang set dj_view=dj_view+1 where code_no=#{code_no};
 	</update>
+	
+	<!-- 강아지 분양 파트 -->
+	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
+		insert into calendar(date, time) values(#{date}, #{time});
+	</insert>
 </mapper>
