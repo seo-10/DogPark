@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("utf-8");%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,6 +36,7 @@
 	});
 </script>
 <body>
+<% String id= (String)session.getAttribute("id"); %>
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
 	<div id="login_Ing">
@@ -69,8 +71,8 @@
 			</div>
 		</div>
 		<div id="calender_dateselect">
-			<pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
-			<input type="text" id="datetimepicker_dark" value="Select Date and time" />
+			<pre>※<%=session.getAttribute("id")%>님 원하는 날짜와 시간을 선택해주세요.※</pre>
+			<input type="text" id="datetimepicker_dark" name=DnT value="Select Date and time" />
 			<input type="button" id="reservation_button" value="예약등록"/>
 		</div>
 	</section>
