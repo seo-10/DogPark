@@ -80,8 +80,8 @@ System.out.println(currMonth);
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
-	href="css/inquiryofsale_css/inquiryofsale_main.css?ver=1" />
-<link rel="stylesheet" href="css/inquiryofsale_css/monthly.css?ver=4">
+	href="css/Dogsale_css/inquiryofsale_main.css?ver=1" />
+<link rel="stylesheet" href="css/Dogsale_css/dogsale.css?ver=1">
 </head>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -204,7 +204,7 @@ System.out.println(currMonth);
 				</tr>
 			</table>
 			<div id="calender_dateselect">
-				<pre>※<%=id%>님 원하는 날짜와 시간을 선택해주세요.※</pre>
+				<pre class="ds_ph" name=id>※<%=id%></pre><pre class="ds_ph">님 원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>
 				<input type="time" name="retime" value="10:00" min="10:00" max="19:00" step="1800" required/>
 				<input type="submit" id="reservation_button" value="예약등록" />

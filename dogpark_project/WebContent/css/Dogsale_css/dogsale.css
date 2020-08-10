@@ -43,11 +43,11 @@
         background-color: #6C7EAA;
     }
 
-#calender_dateselect{
-	float:left;
-	margin-left:50px;	
+#calender_dateselect{	
 }
 #reservation_button{
 	border:1px solid red;
 }
-
+.ds_ph{
+	display:inline;
+}
