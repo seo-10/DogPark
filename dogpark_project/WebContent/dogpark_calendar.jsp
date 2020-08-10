@@ -204,7 +204,7 @@ System.out.println(currMonth);
 				</tr>
 			</table>
 			<div id="calender_dateselect">
-				<pre class="ds_ph" name=id>※<%=id%></pre><pre class="ds_ph">님 원하는 날짜와 시간을 선택해주세요.※</pre>
+				<input type="hidden" name="id" value="<%=id%>"/><pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>
 				<input type="time" name="retime" value="10:00" min="10:00" max="19:00" step="1800" required/>
 				<input type="submit" id="reservation_button" value="예약등록" />
