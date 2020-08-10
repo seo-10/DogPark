@@ -35,6 +35,7 @@
    
 </head>
 <body>
+	<!-- 로그아웃 다이얼로그 -->
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
     </div>
@@ -59,13 +60,8 @@
     </div>
     <!-- 로그인 유지 -->
     <div id="login_Ing">
-    <% if(session.getAttribute("id") == null) { %>
-    	<jsp:include page="header/header_logout.jsp" />
-    	<%} else { %>
     	<jsp:include page="header/header.jsp" />
-    	<% } %>
     </div>
-    <!-- 로그아웃 다이얼로그 -->
 
 </body>
 

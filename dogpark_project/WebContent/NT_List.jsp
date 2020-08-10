@@ -72,7 +72,6 @@
 	     </div>
 	</div>
 	
-	 
     <!-- 로그인 유지  -->
      <div id="login_Ing">
     	<jsp:include page="js/notice_js/header.jsp" />
@@ -94,7 +93,6 @@
     			</ul>
 			
     			<%for(int i=0;i<dto.size();i++){%>
-    				
 				<ul>
 					<li id="notice_board_No_detail"><%out.println(dto.get(i).getCode_no());%> </li>
 					<li id="notice_board_title_detail" ><a href="notice_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>" ><%out.println(dto.get(i).getNt_title()); %></a></li>

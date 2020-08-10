@@ -57,7 +57,10 @@
             </ul>
         </div>
     </div>
-   
+     <!-- 로그인 유지  -->
+     <div id="login_Ing">
+    	<jsp:include page="js/notice_js/header.jsp" />
+    </div>
    
     
     <!-- 공지사항 게시판 이동 버튼 -->
