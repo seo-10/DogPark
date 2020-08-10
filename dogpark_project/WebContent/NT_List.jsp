@@ -75,11 +75,11 @@
 	 
     <!-- 로그인 유지  -->
      <div id="login_Ing">
-     <% String id = (String)session.getAttribute("id");%>
     	<jsp:include page="js/notice_js/header.jsp" />
     </div>
     
     <!-- 공지사항 게시판 리스트 -->
+   
     <%if(dto != null && listCount > 0){%>
     	<section id="notice_list">
     		<a href="#">NOTICE 공지사항</a>
@@ -106,6 +106,7 @@
     		</article>
     		
     		<article id="notice_board_bot">
+    		<% String id = (String)session.getAttribute("id");%>
     		<% if(id == null || !id.equals("admin")){ %>
 		   		<span>
 		   			<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />

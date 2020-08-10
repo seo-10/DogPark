@@ -57,14 +57,7 @@
             </ul>
         </div>
     </div>
-    <!-- 로그인 유지 -->
-     <div id="login_Ing">
-    <% if(session.getAttribute("id") == null) { %>
-    	<jsp:include page="js/notice_js/header_logout.jsp" />
-    	<%} else { %>
-    	<jsp:include page="js/notice_js/header.jsp" />
-    	<% } %>
-    </div>
+   
    
     
     <!-- 공지사항 게시판 이동 버튼 -->
