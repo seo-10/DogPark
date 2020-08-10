@@ -11,7 +11,5 @@
         </svg>
     </a>
 	<% } else {%>
-	<% session.getAttribute("id");
-	session.invalidate(); %>
 	<a href="#">로그인해주세요</a>
 	<% } %>

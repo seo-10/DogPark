@@ -76,7 +76,7 @@
      <div id="login_Ing">
     	<jsp:include page="js/notice_js/header.jsp" />
     </div>
-    
+    <% System.out.println("session!!!" + session.getAttribute("id")); %>
     <!-- 공지사항 게시판 리스트 -->
    
     <%if(dto != null && listCount > 0){%>

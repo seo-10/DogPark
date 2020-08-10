@@ -51,7 +51,7 @@
                 <a href="#"><li>소개 및 공지</li></a>
                 <a href="#"><li>강아지 분양</li></a>
                 <a href="#"><li>훈련 및 정보</li></a>
-                <a href="HT_btn.jsp"><li>커뮤니티</li></a>
+                <a href="community_main.jsp"><li>커뮤니티</li></a>
                 <a href="#"><li>애견용품</li></a>
                 <a href="#"><li>반려견 LIFE</li></a>
             </ul>
@@ -65,7 +65,7 @@
     
     <!-- 공지사항 게시판 이동 버튼 -->
     <div style="position:absolute; left:500px; top:500px;">
-    	<input type="button" value="공지사항" id="" onclick="location.href='notice_list.bo'" />
+    	<input type="button" value="공지사항"  onclick="location.href='notice_list.bo'" />
 	</div>
 </body>
 
