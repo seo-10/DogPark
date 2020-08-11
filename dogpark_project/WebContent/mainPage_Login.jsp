@@ -46,7 +46,6 @@
   		<jsp:include page="mainMenu_Left.jsp" />
 	</div>
 	
-
     <!-- 로그인 유지 -->
     <div id="login_Ing">
     	<jsp:include page="js/main_js/header.jsp" />
