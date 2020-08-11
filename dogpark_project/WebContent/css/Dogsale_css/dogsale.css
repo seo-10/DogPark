@@ -2,7 +2,7 @@
 .ios_contents{
 	background-color:rgba(153,153,153,0.9);
 	width:1300px; 
-	height:850px; 
+	height:1000px; 
 	position:absolute;
 	left:480px; 
 	top:100px;
@@ -43,9 +43,13 @@
         background-color: #6C7EAA;
     }
 
-#calender_dateselect{	
+#calender_dateselect{
+	float:left;
+	width:400px;
+	
+	margin-left:50px;
 }
 #reservation_button{
-	border:1px solid red;
+	
 }
 

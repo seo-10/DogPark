@@ -47,4 +47,16 @@ public class DogSaleDao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
+
+	public List<CalendarDto> DateSelectarticle() {
+		List<CalendarDto> calendarList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		sqlsession.selectList("ds_dateselect");
+		
+		sqlsession.close();
+		return calendarList;
+		
+	}
 }

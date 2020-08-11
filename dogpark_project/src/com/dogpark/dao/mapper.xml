@@ -98,4 +98,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
 		insert into calendar(u_id, date, time) values(#{u_id}, #{date}, #{time});
 	</insert>
+	<select id="ds_dateselect" parameterType="com.dogpark.dto.CalendarDto" resultType="com.dogpark.dto.CalendarDto">
+		select * from calendar;
+	</select>
 </mapper>

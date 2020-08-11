@@ -4,7 +4,8 @@
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Calendar"%>
-
+<%@page import="java.util.*"%>
+<%@page import="com.dogpark.dto.CalendarDto"%>
 <%
 int action = 0; //up(1) down(0)
 int currYear = 0;
@@ -81,12 +82,13 @@ System.out.println(currMonth);
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
 	href="css/Dogsale_css/inquiryofsale_main.css?ver=1" />
-<link rel="stylesheet" href="css/Dogsale_css/dogsale.css?ver=1">
+<link rel="stylesheet" href="css/Dogsale_css/dogsale.css?ver=2">
 </head>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/jquery.js"></script>
 <body>
+<%ArrayList<CalenderDto> dto = (ArrayList<Calendar>)request.getAttribute("articleList");%>
 	<% String id= (String)session.getAttribute("id"); %>
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
@@ -115,7 +117,7 @@ System.out.println(currMonth);
 	</div>
 	<form action="ds_reservation.bo" method="post">
 		<section class="ios_contents">
-			<table border='1' width='800' celpadding='0' cellspacing='0'>
+			<table border='0' width='800' celpadding='0' cellspacing='0' style="float:left;">
 				<tr>
 					<td width='150' align='right' valign='middle'><a
 						href="dogpark_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0">
@@ -129,7 +131,7 @@ System.out.println(currMonth);
 					</a></td>
 				</tr>
 			</table>
-			<table>
+			<table style="float:left;">
 				<tr>
 					<td>
 						<table id="calendarTable">
@@ -181,7 +183,14 @@ System.out.println(currMonth);
                              todayColor = "";
                          }
 %>
-								<td <%=todayColor%>><%=dispDay%><br></td>
+								<td id="2020-08-<%=dispDay%>"<%=todayColor%>><%=dispDay%>일<br>
+								10:00<br>
+								11:00<br>
+								12:00<br>
+								13:00<br>
+								14:00<br>
+								15:00<br>
+								16:00<br></td>
 								<%
                          count += 1;
                          dispDay += 1;
@@ -203,12 +212,12 @@ System.out.println(currMonth);
 					</td>
 				</tr>
 			</table>
-			<div id="calender_dateselect">
+			<aside id="calender_dateselect">
 				<input type="hidden" name="id" value="<%=id%>"/><pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>
 				<input type="time" name="retime" value="10:00" min="10:00" max="19:00" step="1800" required/>
 				<input type="submit" id="reservation_button" value="예약등록" />
-			</div>
+			</aside>
 		</section>
 	</form>
 </body>
