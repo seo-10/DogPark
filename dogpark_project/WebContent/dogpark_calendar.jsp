@@ -6,6 +6,8 @@
 <%@page import="java.util.Calendar"%>
 <%@page import="java.util.*"%>
 <%@page import="com.dogpark.dto.CalendarDto"%>
+<%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
 <%
 int action = 0; //up(1) down(0)
 int currYear = 0;
@@ -88,7 +90,7 @@ System.out.println(currMonth);
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/inquiryofsale_js/jquery.js"></script>
 <body>
-<%ArrayList<CalenderDto> dto = (ArrayList<Calendar>)request.getAttribute("articleList");%>
+<%ArrayList<CalendarDto> calendarList = (ArrayList<CalendarDto>)request.getAttribute("calendarList");%>
 	<% String id= (String)session.getAttribute("id"); %>
 	<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 	<!-- 로그인 유지 -->
@@ -186,11 +188,7 @@ System.out.println(currMonth);
 								<td id="2020-08-<%=dispDay%>"<%=todayColor%>><%=dispDay%>일<br>
 								10:00<br>
 								11:00<br>
-								12:00<br>
-								13:00<br>
-								14:00<br>
-								15:00<br>
-								16:00<br></td>
+								</td>
 								<%
                          count += 1;
                          dispDay += 1;
@@ -212,6 +210,7 @@ System.out.println(currMonth);
 					</td>
 				</tr>
 			</table>
+			
 			<aside id="calender_dateselect">
 				<input type="hidden" name="id" value="<%=id%>"/><pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>

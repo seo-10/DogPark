@@ -11,22 +11,16 @@ import com.dogpark.dto.CalendarDto;
 import com.dogpark.service.DS_ReservationService;
 import com.dogpark.service.DS_SelectDateService;
 
-public class DS_ReservationAction implements Action {
+public class DS_SelectDateAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
-		String redate = request.getParameter("redate");
-		String retime = request.getParameter("retime");
-		String id= request.getParameter("id");
+		String date=request.getParameter("2018-08-12");
+		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
 		
-		CalendarDto dto = new CalendarDto();
-		dto.setDate(redate);
-		dto.setTime(retime);
-		dto.setU_id(id);
-		System.out.println(id);
-		DS_ReservationService ds_reservation = new DS_ReservationService();
-		ds_reservation.Reservationinsert(dto);
-		
+		DS_SelectDateService selectDate = new DS_SelectDateService();
+		calendarList=selectDate.SelectDate(date);
+		request.setAttribute("calendarList", calendarList);
 		ActionForward forward= new ActionForward();
-		forward.setPath("ds_selectdate.bo");
+		forward.setPath("dogpark_calendar.jsp");
 		return forward;
 		
 	}

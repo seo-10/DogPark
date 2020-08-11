@@ -48,12 +48,12 @@ public class DogSaleDao {
 		sqlsession.close();
 	}
 
-	public List<CalendarDto> DateSelectarticle() {
+	public List<CalendarDto> DateSelectarticle(String date) {
 		List<CalendarDto> calendarList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		sqlsession.selectList("ds_dateselect");
+		sqlsession.selectList("ds_dateselect",date);
 		
 		sqlsession.close();
 		return calendarList;
