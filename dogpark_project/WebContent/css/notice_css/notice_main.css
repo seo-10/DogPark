@@ -1,7 +1,7 @@
 body {
-	background-image: url(../../img/notice_img/power123.jpg);
+	background-image: url(../../img/main_img/mainPage.png);
 	background-repeat: no-repeat;
-	background-position: 20% 30%;
+	
 	
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
@@ -328,6 +328,9 @@ a {
 .button {
 	margin-top: 20px;
 }
+
+/* ------------------- ***** ------------------- */
+
 
 /* 섹션 부분 크기 조정 */
 #notice_list {

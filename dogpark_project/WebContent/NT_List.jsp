@@ -23,7 +23,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css" />
+    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -32,10 +32,6 @@
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/notice_js/notice.js"></script>
     
-    <!-- 부트스트랩 modal css, js연결 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-    
-   
 </head>
 <body>
 	<form name="form" method="post">
