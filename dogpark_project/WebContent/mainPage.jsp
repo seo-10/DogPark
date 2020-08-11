@@ -1,20 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Î©îÏù∏ÌéòÏù¥ÏßÄ</title>
+    <title>∏ﬁ¿Œ∆‰¿Ã¡ˆ</title>
 
-    <!-- ÏûêÎ∞î Ïä§ÌÅ¨Î¶ΩÌä∏ ÏÇ¨Ïö© -->
+    <!-- ¿⁄πŸ Ω∫≈©∏≥∆Æ ªÁøÎ -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/main_js/mainPage.js"></script>
-    <!-- CSS ÏÇ¨Ïö© -->
+    <!-- CSS ªÁøÎ -->
     <link rel="stylesheet" type="text/css" href="css/main_css/main.css?ver=2" />
 
-    <!-- Î∂ÄÌä∏Ïä§Ìä∏Îû© cdn -->
+    <!-- ∫Œ∆ÆΩ∫∆Æ∑¶ cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <!-- Î°úÍ∑∏Ïù∏ Ï∞ΩÏùÑ ÏúÑÌïú Ïä§ÌÅ¨Î¶ΩÌä∏ -->
+    <!-- ∑Œ±◊¿Œ √¢¿ª ¿ß«— Ω∫≈©∏≥∆Æ -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
@@ -22,11 +24,12 @@
 </head>
 <body>
 	<form name="form" method="post">
-	    <!--  <img src="img/main_img/mainPage.jpg" id="mainImg" alt="" />-->
-	    <!-- Î∂ÄÌä∏Ïä§Ìä∏Îû© ÏïÑÏù¥ÏΩò -->
-	    <div id="login_Ing">
+	
+		<!-- ∏ﬁ¥∫ øﬁ¬  µÂ∑”¥ŸøÓ -->
+	    <div id="dropdown">
     		<jsp:include page="mainMenu_Left.jsp" />
     	</div>
+    	
     </form>
 </body>
 
