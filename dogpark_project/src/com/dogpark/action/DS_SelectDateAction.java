@@ -13,6 +13,11 @@ import com.dogpark.service.DS_SelectDateService;
 
 public class DS_SelectDateAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
+		ArrayList<String> arr=new ArrayList<String>();
+		for(int i=1; i<=31; i++) {
+		arr.add("2020-08-"+Integer.toString(i));
+		}
+		System.out.println(arr);
 		String date="2020-08-12";
 		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
 		
