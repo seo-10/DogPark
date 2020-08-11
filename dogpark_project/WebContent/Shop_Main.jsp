@@ -65,7 +65,7 @@
     
     <!-- 공지사항 게시판 이동 버튼 -->
     <div style="position:absolute; left:500px; top:500px;">
-    	<input type="button" value="공지사항"  onclick="location.href='notice_list.bo'" />
+    	<input type="button" value="사료"  onclick="location.href='notice_list.bo'" />
 	</div>
 </body>
 

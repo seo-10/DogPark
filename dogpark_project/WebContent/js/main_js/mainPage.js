@@ -1,6 +1,6 @@
 // 부트스트랩 아이콘 마우스엔터시 좌측 menuBar 보이기
 $(document).ready(function() { 
-    $("#menuBar").hide();
+	$("#menuBar").hide();
     $("#dropdown").mouseenter(function() {
         $("#menuBar").stop().fadeIn(400);
         $("#svg1").css("fill", "yellow");

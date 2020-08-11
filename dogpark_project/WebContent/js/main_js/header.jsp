@@ -11,5 +11,5 @@
         </svg>
     </a>
 	<% } else {%>
-	<a href="#">로그인해주세요</a>
+	<a href="../../mainPage.html">로그인해주세요</a>
 	<% } %>
