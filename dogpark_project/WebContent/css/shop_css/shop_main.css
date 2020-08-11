@@ -1,8 +1,5 @@
 body {
-	background-color: black;
-	background-repeat: no-repeat;
-	background-position: 20% 30%;
-	
+	background-color: black;	
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -402,6 +399,8 @@ a {
     position: relative;
     margin-top: 10px;
     background-color: rgba(255, 255, 255, 0.267);
+    width:1000px;
+    left: 16%
 }
 .category p {
     display: inline;
@@ -417,7 +416,7 @@ a {
 .for_center {
     float: right;
     position: relative;
-    left: -55%;
+    left: -44%;
 }
 .shopping_nav {
     float: left;
@@ -447,7 +446,7 @@ a {
 section {
     float: left;
     position: relative;
-    left: 50%;
+    left: 30%;
     background-color: rgba(189, 67, 67, 0);
     width: 1100px;
     margin-top: 20px;
@@ -461,7 +460,8 @@ section article {
     width: 230px;
     height: 380px;
     text-align: left;
-    transition: border 0.5s
+    transition: border 0.5s;
+    background-color:#c5c549;
 }
 section article:hover {
     border-radius: 5px;
@@ -471,7 +471,7 @@ section article:hover {
 section article img {
     width: 200px;
     height: 230px;
-    margin: 1px 0 2px 15px;
+    margin: 3px 0 8px 0px;
 }
 article ul{
     margin-left: -40px;
@@ -492,9 +492,12 @@ article ul li img {
     font-weight: lighter;
     font-size: 10pt;
     color: black;
+    text-decoration: none;
+    
 }
 .foodName {
     height: 55px;
+    line-height: 116%
 }
 .foodPrice a{
     font-weight: bolder;

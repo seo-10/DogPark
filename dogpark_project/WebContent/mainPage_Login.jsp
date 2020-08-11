@@ -49,11 +49,11 @@
 
         <div id="menuBar">
             <ul>
-                <a href="NT_Main.jsp"><li>소개 및 공지</li></a>
+                <a href="notice_list.bo"><li>소개 및 공지</li></a>
                 <a href="DogSale.jsp"><li>강아지 분양</li></a>
                 <a href="#"><li>훈련 및 정보</li></a>
                 <a href="community_main.jsp"><li>커뮤니티</li></a>
-                <a href="#"><li>애견용품</li></a>
+                <a href="Shop_Main.jsp"><li>애견용품</li></a>
                 <a href="DogLife_select.jsp"><li>반려견 LIFE</li></a>
             </ul>
 			
