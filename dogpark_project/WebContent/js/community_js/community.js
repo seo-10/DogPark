@@ -20,6 +20,11 @@ $(document).ready(function() {
     $('#svg_join').click(function(){
         $("#loginBox").show();
     });
+    
+//로그인해주세요 눌렀을때 회원가입 창 보이기
+    $('#pleaseSign').click(function(){
+        $("#loginBox").show();
+    });
 
 //X 눌렀을때 로그인 창 닫기
     $('#closeBtn').click(function(){
@@ -30,7 +35,7 @@ $(document).ready(function() {
 //로그아웃 dialog
    
     $(function(){
-    	var url = "mainPage.html";
+    	var url = "js/community_js/header_logout.jsp";
   
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게

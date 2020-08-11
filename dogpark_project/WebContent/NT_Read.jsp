@@ -32,10 +32,7 @@
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/notice_js/notice.js"></script>
     
-    <!-- 부트스트랩 modal css, js연결 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
     
-   
 </head>
 <body>
 

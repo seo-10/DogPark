@@ -13,13 +13,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/notice_css/writeBoard/sample/styles.css?ver=2">
-  <link rel="stylesheet" type="text/css" href="css/notice_css/htboard.css?ver=1" />
- <link rel="stylesheet" type="text/css" href="css/notice_css/community_main.css?ver=2" />
+ 
+  <!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<!-- jquery 사용 -->
+    <script type="text/javascript" src="js/notice_js/notice.js"></script>
+	
+	<!-- css 사용 -->
+ 	<link rel="stylesheet" type="text/css" href="css/notice_css/writeBoard/sample/styles.css?ver=2">
+  	<link rel="stylesheet" type="text/css" href="css/notice_css/htboard.css?ver=1" />
+ 	<link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=2" />
+ 	
+ 	<!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
+	<!-- 부트스트랩 cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+ 
 </head>
 <body>
+<form name="form" method="post" action="notice_WritePro.bo">
 	
-	<form name="form" method="post">
 	<!-- 로그아웃 다이얼로그 -->
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
@@ -35,11 +52,11 @@
     <div id="login_Ing">
     	<jsp:include page="js/main_js/header.jsp" />
     </div>
-    </form>
+ 
 	
 
 <section id="ht_write">
-	<form name="myform" method="post" action="notice_WritePro.bo">
+	
 
 			<h1 id="ht_category_font">공지사항 글쓰기</h1>
 			<table id="ht_write_table">
@@ -58,7 +75,7 @@
 			<p>
 				<input type="submit" value="글등록" id="ht_write_input_btn">
 			</p>
-	</form>
+	
 </section>
 		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
  	<script>
@@ -71,6 +88,6 @@
 		 console.error( error );
 	 } );
 	</script>
-
+</form>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@page import="com.dogpark.dao.Dao"%>
 <%@page import="com.dogpark.dto.Dto"%>
@@ -13,48 +12,46 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
-  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
- <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+
+	<!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<!-- css 사용 -->
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css">
+  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css" />
+ 	
+ 	<!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
+	<!-- 부트스트랩 cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- jquery 사용 -->
+    <script type="text/javascript" src="js/community_js/community.js"></script>
+    
 </head>
 <body>
- <div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
+<form name="form" method="post" action="boardWritePro.bo">
+ 	<!-- 로그아웃 다이얼로그 -->
+    <div id="logout_dialog" title="logout"  >
+    	로그아웃 하시겠습니까?
     </div>
-		<div id="dropdown">
-	        <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
-	            <path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"/>
-	        </svg>
-	        <a href="#"><h1>DOG PARK</h1></a>
+    
+	<!-- 메뉴 왼쪽 드롭다운 -->
+    <div id="dropdown">
+  		<jsp:include page="mainMenu_Left.jsp" />
+	</div>
 	
-	        <div id="menuBar">
-	            <ul>
-	                <a href="NT_Main.jsp"><li>소개 및 공지</li></a>
-	                <a href="#"><li>강아지 분양</li></a>
-	                <a href="#"><li>훈련 및 정보</li></a>
-	                <a href="community_main.jsp"><li>커뮤니티</li></a>
-	                <a href="#"><li>애견용품</li></a>
-	                <a href="DogLife_select.jsp"><li>반려견 LIFE</li></a>
-	                
-	            </ul>
-	
-	            <a href="#">
-	                <svg id="svg_login" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-door-closed-fill"  xmlns="http://www.w3.org/2000/svg">
-	                <path fill-rule="evenodd" d="M4 1a1 1 0 0 0-1 1v13H1.5a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2a1 1 0 0 0-1-1H4zm2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-	                </svg>
-	            </a>
-	            
-	            <a href="#">
-	                <svg id="svg_join" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-plus-fill"  xmlns="http://www.w3.org/2000/svg">
-	                <path fill-rule="evenodd" d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.5-3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-	                <path fill-rule="evenodd" d="M13 7.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0v-2z"/>
-	                </svg>
-	            </a>
-	        </div>
-	    </div>
+    <!-- 로그인 유지 -->
+    <div id="login_Ing">
+    	<jsp:include page="js/community_js/header.jsp" />
+    </div>
 
 <section id="ht_write">
-	<form name="myform" method="post" action="boardWritePro.bo">
+	
 
 			<h1 id="ht_category_font">꿀팁 커뮤니티 글작성</h1>
 			<table id="ht_write_table">
@@ -73,7 +70,7 @@
 			<p>
 				<input type="submit" value="글등록" id="ht_write_input_btn">
 			</p>
-	</form>
+	
 </section>
 		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
  	<script>
@@ -86,6 +83,6 @@
 		 console.error( error );
 	 } );
 	</script>
-
+</form>
 </body>
 </html>
