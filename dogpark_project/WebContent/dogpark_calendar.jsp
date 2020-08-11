@@ -185,9 +185,10 @@ System.out.println(currMonth);
                              todayColor = "";
                          }
 %>
-								<td id="2020-08-<%=dispDay%>"<%=todayColor%>><%=dispDay%>일<br>
-								10:00<br>
-								11:00<br>
+								<td <%=todayColor%>><%=dispDay%>일<br>
+								<%for(int i=0;i<calendarList.size();i++) {%>
+								<%out.println(calendarList.get(i).getTime()); 
+								}%>
 								</td>
 								<%
                          count += 1;
@@ -210,7 +211,6 @@ System.out.println(currMonth);
 					</td>
 				</tr>
 			</table>
-			
 			<aside id="calender_dateselect">
 				<input type="hidden" name="id" value="<%=id%>"/><pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate"/>

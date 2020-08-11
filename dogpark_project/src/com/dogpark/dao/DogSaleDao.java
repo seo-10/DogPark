@@ -53,7 +53,7 @@ public class DogSaleDao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		sqlsession.selectList("ds_dateselect",date);
+		calendarList=sqlsession.selectList("ds_dateselect",date);
 		
 		sqlsession.close();
 		return calendarList;

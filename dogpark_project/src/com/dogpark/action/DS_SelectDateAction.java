@@ -13,7 +13,7 @@ import com.dogpark.service.DS_SelectDateService;
 
 public class DS_SelectDateAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
-		String date=request.getParameter("2018-08-12");
+		String date="2020-08-12";
 		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
 		
 		DS_SelectDateService selectDate = new DS_SelectDateService();
