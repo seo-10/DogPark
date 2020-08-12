@@ -454,20 +454,24 @@ section {
     height: 2500px;
 }
 section article {
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     margin: -3px 10px 5px 15px;
     padding: 2px 2px 0px 15px;
     width: 230px;
-    height: 380px;
+    height: 365px;
     text-align: left;
     transition: border 0.5s;
-    background-color:#c5c549;
-}
-section article:hover {
+    background-color: black;
+    
     border-radius: 5px;
     border: 1px solid rgba(216, 15, 15, 0.404);
     box-shadow: 0 5px 10px rgba(161, 14, 14, 0.842);
 }
+/*section article:hover {
+    border-radius: 5px;
+    border: 1px solid rgba(216, 15, 15, 0.404);
+    box-shadow: 0 5px 10px rgba(161, 14, 14, 0.842);
+}*/
 section article img {
     width: 200px;
     height: 230px;
@@ -491,7 +495,7 @@ article ul li img {
 .foodName a{
     font-weight: lighter;
     font-size: 10pt;
-    color: black;
+    color: #b08787;
     text-decoration: none;
     
 }
@@ -499,10 +503,15 @@ article ul li img {
     height: 55px;
     line-height: 116%
 }
+
+.foodPrice {
+	margin-top: -5px;
+}
+
 .foodPrice a{
     font-weight: bolder;
     font-size: 14pt;
-    color: rgb(158, 29, 29);
+    color: red;
 }
 
 aside {
@@ -515,9 +524,8 @@ aside {
 
 
 .starRev {
-    margin-top: 10px;
-    margin-left: -5px;
-    
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
 .starR1{
@@ -540,6 +548,13 @@ aside {
 }
 .starR1.on{background-position:0 0;}
 .starR2.on{background-position:-15px 0;}
+
+.bottomHr {
+	border: 1px solid rgba(150, 141, 141, 0.452);
+    clear: both;
+    width: 1004px;
+    margin-left: 10px;
+}
 
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{

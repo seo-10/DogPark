@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
@@ -74,10 +74,10 @@
 	    		%>
 	    			
 	            <article style="float: left;">
-	                <img src="img/shopping_img/<% out.println(dto.get(i).getPd_name()); %>">
+	                <img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>">
 	                <ul>
 	                    <li class="foodName"><a href="#"><% out.println(dto.get(i).getPd_desc()); %></a></li>
-	                    <li class="foodPrice"><a href="#"><% out.println(priceComma); %>￦</a></li>
+	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
 	                </ul>
 	                <div class="starRev">
 	                    <span class="starR1 on">별1_왼쪽</span>
@@ -94,7 +94,7 @@
 	            </article>
 	        <% } %>
       <% } %>
-            <hr style="border:1px solid rgba(150, 141, 141, 0.452); clear:both;"/>
+            <hr class="bottomHr"/>
         </section>
 	</form>
 </body>
