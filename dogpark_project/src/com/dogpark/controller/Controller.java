@@ -174,6 +174,19 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		
+		// 쇼핑(사료) 게시판---------------------------------------------------
+		else if(command.equals("/shop_list.bo")){
+			action = new Shop_BoardListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		
+		
+		
 		/* 예약 */
 		else if(command.equals("/ds_reservation.bo")){
 			action = new DS_ReservationAction();

@@ -30,6 +30,7 @@
 
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/shop_js/shop.js"></script>
+     <script type="text/javascript" src="js/shop_js/script.js"></script>
    
    
 </head>

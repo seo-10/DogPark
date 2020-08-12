@@ -55,7 +55,7 @@
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">사료</Strong>
 				<li>
-					<a href="Shop_List.jsp"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+					<a href="shop_list.bo"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">애견용품</Strong>

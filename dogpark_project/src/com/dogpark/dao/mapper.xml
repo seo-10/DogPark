@@ -101,4 +101,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="ds_dateselect" resultType="com.dogpark.dto.CalendarDto">
 		select * from calendar where date=#{date};
 	</select>
+	
+	<!-- 쇼핑 게시판(사료) 파트 -->
+	<select id="shopSelect" resultType="com.dogpark.dto.NoticeDto">
+		select * from product order by pd_name ASC;
+	</select>
+	
+	<select id="shop_select_count" resultType="Integer">
+		select count(*) from product;
+	</select>
+	
+	
+	
 </mapper>
