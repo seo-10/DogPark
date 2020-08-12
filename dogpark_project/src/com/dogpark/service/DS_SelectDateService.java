@@ -14,5 +14,11 @@ public class DS_SelectDateService {
 		calendarList=dao.DateSelectarticle(date);
 			return calendarList;
 	}
+	public List<Integer> SelectReservationcount(){
+		List<Integer> count;
+		DogSaleDao dao= new DogSaleDao();
+		count=dao.DateCountarticle();
+			return count;
+	}
 
 }

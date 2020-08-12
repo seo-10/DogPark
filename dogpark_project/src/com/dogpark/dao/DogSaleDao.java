@@ -59,4 +59,15 @@ public class DogSaleDao {
 		return calendarList;
 		
 	}
+
+	public List<Integer> DateCountarticle() {
+		List<Integer> count;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		count=sqlsession.selectList("ds_datecount");
+		
+		sqlsession.close();
+		return count;
+	}
 }
