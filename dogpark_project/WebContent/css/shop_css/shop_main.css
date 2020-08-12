@@ -540,3 +540,25 @@ aside {
 }
 .starR1.on{background-position:0 0;}
 .starR2.on{background-position:-15px 0;}
+
+/*-------커뮤니티 메인 내용--------*/
+.community_contents{
+	border:1px solid red;
+	width:1300px; 
+	height:1000px; 
+	position:absolute;
+	left:480px; 
+	top:100px;
+	margin:0; 
+	padding:0;
+}
+.community_contents ul{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.community_contents li{
+	padding:0;
+	margin:0;
+}

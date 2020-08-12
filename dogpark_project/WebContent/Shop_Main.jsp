@@ -22,14 +22,14 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/notice_css/notice_main.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=1" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
-    <script type="text/javascript" src="js/notice_js/notice.js"></script>
+    <script type="text/javascript" src="js/shop_js/shop.js"></script>
     
     
    
@@ -52,10 +52,19 @@
 	    </div>
 	   
 	    
-	    <!-- 공지사항 게시판 이동 버튼 -->
-	    <div style="position:absolute; left:500px; top:500px;">
-	    	<input type="button" value="사료"  onclick="location.href='Shop_List.jsp'" />
-		</div>
+		<section class="community_contents">
+			<ul><Strong style="position:absolute; font-size:15pt;">사료</Strong>
+				<li>
+					<a href="Shop_List.jsp"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+				</li>
+			</ul>
+			<ul><Strong style="position:absolute; font-size:15pt;">애견용품</Strong>
+				<li>
+					<a href="#"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
+				</li>
+			</ul>
+			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>
+		</section>
 		
 	</form>
 </body>

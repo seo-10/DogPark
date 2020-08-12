@@ -7,8 +7,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=2" />
- <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+ 	
+ 	<!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<!-- css 사용 -->
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css">
+  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css" />
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css" />
+ 	
+ 	<!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
+	<!-- 부트스트랩 cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- jquery 사용 -->
+    <script type="text/javascript" src="js/community_js/community.js"></script>
+ 	
+ 	
 </head>
 <body>
  <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList"); %>

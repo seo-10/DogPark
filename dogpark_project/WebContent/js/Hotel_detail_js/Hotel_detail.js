@@ -1,5 +1,5 @@
 // 부트스트랩 아이콘 마우스엔터시 좌측 menuBar 보이기
-$(document).ready(function() { 
+$(document).ready(function() {
 //    $("#menuBar").hide();
 //    $("#dropdown").mouseenter(function() {
 //        $("#menuBar").stop().fadeIn(400);
@@ -20,7 +20,18 @@ $(document).ready(function() {
     $('#svg_join').click(function(){
         $("#loginBox").show();
     });
-
+    
+//로그인해주세요 눌렀을때 회원가입 창 보이기
+    $('#pleaseSign').click(function(){
+        $("#loginBox").show();
+    });
+    
+    
+//글쓰기버튼 눌렀을때 회원가입 창 보이기
+    $('#signBtn').click(function(){
+        $("#loginBox").show();
+    });
+    
 //X 눌렀을때 로그인 창 닫기
     $('#closeBtn').click(function(){
         $("#loginBox").hide();
@@ -30,7 +41,7 @@ $(document).ready(function() {
 //로그아웃 dialog
    
     $(function(){
-    	var url = "mainPage.html";
+    	var url = "js/notice_js/header_logout.jsp";
   
         $("#logout_dialog").dialog({
             autoOpen:false, //자동으로 열리지않게
@@ -56,6 +67,11 @@ $(document).ready(function() {
             $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
         });
     });
+    
 
 });
+
+  
+
+
 

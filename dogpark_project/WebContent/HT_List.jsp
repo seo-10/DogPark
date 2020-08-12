@@ -33,7 +33,7 @@
  	
 </head>
 <body>
-
+<form name="form" method="post">
 <%ArrayList<BoardBean> dto = (ArrayList<BoardBean>)request.getAttribute("articleList");
  PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
 	int listCount=pageInfo.getListCount();
@@ -123,5 +123,6 @@ if(dto != null && listCount > 0){
 	<section class="emptyArea">등록된 글이 없습니다.</section>
 	<%}%>
   </section>
+  </form>
 </body>
 </html>

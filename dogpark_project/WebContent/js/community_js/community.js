@@ -12,15 +12,15 @@ $(document).ready(function() {
 
 //svg 문짝 눌렀을때 로그인 창 보이기
     $("#loginBox").hide();
-    $('#svg_login').click(function(){
-        $("#loginBox").show();
-    });
-    
-//svg 사람 눌렀을때 회원가입 창 보이기
-    $('#svg_join').click(function(){
-        $("#loginBox").show();
-    });
-    
+//    $('#svg_login').click(function(){
+//        $("#loginBox").show();
+//    });
+//    
+////svg 사람 눌렀을때 회원가입 창 보이기
+//    $('#svg_join').click(function(){
+//        $("#loginBox").show();
+//    });
+//    
 //로그인해주세요 눌렀을때 회원가입 창 보이기
     $('#pleaseSign').click(function(){
         $("#loginBox").show();
