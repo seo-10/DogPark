@@ -103,7 +103,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<!-- 쇼핑 게시판(사료) 파트 -->
-	<select id="shopSelect" resultType="com.dogpark.dto.NoticeDto">
+	<select id="shopSelect" resultType="com.dogpark.dto.ShopDto">
 		select * from product order by pd_name ASC;
 	</select>
 	
