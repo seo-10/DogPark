@@ -68,7 +68,7 @@
 <% System.out.println(id); %>
 <% String dtoId = dto.get(0).getU_id(); %>
 <% if(id==null || !id.equals(dtoId)){%>
-
+s
 <% } else {%>
 	<input type="button" value="수정" id="ht_text_update" onclick="location.href='boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
 	<input type="button" value="삭제" id="ht_text_delete" onclick="location.href='ht_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
