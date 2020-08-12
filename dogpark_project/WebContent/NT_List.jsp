@@ -61,8 +61,8 @@
     	<jsp:include page="js/notice_js/header.jsp" />
     </div>
     <% System.out.println("session!!!" + session.getAttribute("id")); %>
+    
     <!-- 공지사항 게시판 리스트 -->
-   
     <%if(dto != null && listCount > 0){%>
     	<section id="notice_list">
     		<a href="#">NOTICE 공지사항</a>

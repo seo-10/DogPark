@@ -57,7 +57,7 @@
      <div id="login_Ing">
     	<jsp:include page="js/community_js/header.jsp" />
     </div>
- 
+ 	<% System.out.println("session!!!" + session.getAttribute("id")); %>
  
  <section class="ht_board_contents">
 	  <article>
