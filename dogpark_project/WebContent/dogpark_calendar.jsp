@@ -191,7 +191,7 @@ ArrayList<Integer> re_count=(ArrayList<Integer>)request.getAttribute("count");
 %>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li>예약 건수:<%=re_count.get(1) %></li>
+										<li>예약 건수:<%=re_count.get(0) %></li>
 										
 										<li><%=calendarList.get(0).getTime()%></li>
 									</ul>
