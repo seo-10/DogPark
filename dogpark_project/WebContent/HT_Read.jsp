@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%request.setCharacterEncoding("utf-8"); %>
 <%@page import="java.util.*"%>
 <%@page import="com.dogpark.dto.BoardBean"%>
 <!DOCTYPE html>
@@ -64,15 +65,13 @@
 <div id=like_count>좋아요 수 : 10</div>
 
 <% String id = (String)session.getAttribute("id");%>
+<% System.out.println(id); %>
 <% String dtoId = dto.get(0).getU_id(); %>
-<% if(id.equals(dtoId)){%>
+<% if(id==null || !id.equals(dtoId)){%>
+
+<% } else {%>
 	<input type="button" value="수정" id="ht_text_update" onclick="location.href='boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
 	<input type="button" value="삭제" id="ht_text_delete" onclick="location.href='ht_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
-<%} else if((session.getAttribute("id") == (dto.get(0).getU_id()))) { %>
-	<input type="button" value="수정" id="ht_text_update" onclick="location.href='boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
-	<input type="button" value="삭제" id="ht_text_delete" onclick="location.href='ht_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
-<% } else if(session.getAttribute("id") == null) {%>
-	널
 <% } %>
 
 </aside>
