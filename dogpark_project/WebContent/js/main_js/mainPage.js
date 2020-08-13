@@ -21,6 +21,11 @@ $(document).ready(function() {
         $("#loginBox").show();
     });
 
+//로그인해주세요 눌렀을때 회원가입 창 보이기
+    $('#pleaseSign').click(function(){
+        $("#loginBox").show();
+    });
+    
 //X 눌렀을때 로그인 창 닫기
     $('#closeBtn').click(function(){
         $("#loginBox").hide();

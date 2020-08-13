@@ -1,35 +1,56 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("utf-8"); %>
+<%@page import="com.dogpark.dto.BoardBean"%>
+<%@page import="com.dogpark.dao.Dao"%>
+
+<%@page import="java.util.*"%>
+<%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
+<%@page import="javax.servlet.http.HttpSession" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ธÞภฮฦไภฬม๖</title>
-
-    <!-- ภฺนู ฝบลฉธณฦฎ ป็ฟ๋ -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main_js/mainPage.js"></script>
-    <!-- CSS ป็ฟ๋ -->
-    <link rel="stylesheet" type="text/css" href="css/main_css/main.css?ver=2" />
-
-    <!-- บฮฦฎฝบฦฎทฆ cdn -->
+    <title>๋ฉ”์ธํ์ด์ง€</title>
+	
+	<!-- JQuery UI ๋ฅผ ์“ฐ๊ธฐ์ํ• ์คํฌ๋ฆฝํธ -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	
+	<!-- ๋ฉ”์ธ์ธ๋ฑ์ค CSS ์ฌ์ฉ -->
+    <link rel="stylesheet" type="text/css" href="css/main_css/main.css" />
+    <!-- ๋ก๊ทธ์•์ ๋ค์ด์–ผ๋ก๊ทธ CSS ์—ฐ๊ฒฐ -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<!-- ๋ถ€ํธ์คํธ๋ฉ cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
-    <!-- ทฮฑืภฮ รขภป ภงวั ฝบลฉธณฦฎ -->
-    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	
+    
+	<!-- jquery ์ฌ์ฉ -->
+    <script type="text/javascript" src="js/main_js/mainPage.js"></script>
 
 </head>
 <body>
 	<form name="form" method="post">
-	
-		<!-- ธÞดบ ฟÞยส ตๅทำดูฟ๎ -->
+		<!-- ๋ก๊ทธ์•์ ๋ค์ด์–ผ๋ก๊ทธ -->
+	    <div id="logout_dialog" title="logout"  >
+	    	๋ก๊ทธ์•์ ํ•์๊ฒ ์ต๋๊น?
+	    </div>
+    
+		<!-- ๋ฉ”๋ด ์ผ์ชฝ ๋“๋กญ๋ค์ด -->
 	    <div id="dropdown">
-    		<jsp:include page="mainMenu_Left.jsp" />
-    	</div>
-    	
+	  		<jsp:include page="mainMenu_Left.jsp" />
+		</div>
+		
+	    <!-- ๋ก๊ทธ์ธ ์ ์ง€ -->
+	    <div id="login_Ing">
+	    <%if(session.getAttribute("id") !=null) { %>
+	    	<jsp:include page="js/main_js/header.jsp" />
+	    </div>
+	    <%} else { %>
+	    <%} %>
     </form>
 </body>
 
