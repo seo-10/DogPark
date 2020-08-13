@@ -1,5 +1,6 @@
 <% 
 session.getAttribute("id");
 session.invalidate();
-response.sendRedirect("../../NT_List.html");
+String before_address = request.getHeader("referer");
+response.sendRedirect(before_address);
 %>

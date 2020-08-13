@@ -1,5 +1,6 @@
 <% 
 session.getAttribute("id");
 session.invalidate();
-response.sendRedirect("../../mainPage_Login.jsp");
+String before_address = request.getHeader("referer");
+response.sendRedirect(before_address);
 %>
