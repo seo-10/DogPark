@@ -26,7 +26,8 @@ public class LoginProAction implements Action {
 		String id = request.getParameter("login_id");
 		dto.setId(id);
 		String pw = request.getParameter("login_pw");
-		
+		//현재페이지
+		String before_address = request.getHeader("referer");
 		
 		
 		LoginProService loginProService = new LoginProService();
@@ -55,7 +56,7 @@ public class LoginProAction implements Action {
 			
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setPath("mainPage_Login.jsp");
+			forward.setPath(before_address);
 			
 		}
 			return forward;

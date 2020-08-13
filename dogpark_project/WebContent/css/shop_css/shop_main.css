@@ -132,7 +132,7 @@ body {
     padding: 90px 70px 50px 70px;
     border-radius: 10px;
     /*background: rgba(20, 20, 20, 0.9);*/
-    background: rgba(211, 211, 211, 0.671);
+    background: rgba(211, 211, 211);
 }
 
 #closeBtn {
@@ -551,8 +551,8 @@ aside {
 .bottomHr {
 	border: 1px solid rgba(150, 141, 141, 0.452);
     clear: both;
-    width: 1004px;
-    margin-left: -20px;
+    width: 1200px;
+    margin-left: 0px;
 }
 
 /* 장바구니 카트 담기 */
@@ -575,8 +575,6 @@ aside {
 .kart_icon {
 	fill: gray;
 }
-
-
 
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{

@@ -25,6 +25,12 @@ $(document).ready(function() {
     $('#pleaseSign').click(function(){
         $("#loginBox").show();
     });
+    
+//쇼핑 메뉴의 장바구니 클릭시 로그인 안했으면 로그인창 보이기
+    $('.pleaseLogin').click(function(){
+    	alert('로그인 해주세요');
+    	$("#loginBox").show();
+    });    
 
 //X 눌렀을때 로그인 창 닫기
     $('#closeBtn').click(function(){
@@ -61,19 +67,6 @@ $(document).ready(function() {
             $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
         });
     });
-
-// 장바구니 border hover 시 kart 색상도 변경
-    
-    $(".kartMandu").mouseover(function(){
-    	//console.log($(this));
-    	$(".kart_icon").css("fill", "white");
-    });
-    
-    $(".kartMandu").mouseleave(function(){
-    	$(".kart_icon").css("fill", "gray");
-    });
-    
-    
     
 });
 
