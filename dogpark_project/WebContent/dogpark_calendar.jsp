@@ -196,8 +196,8 @@
 									</ul></td>
 								<%
 									count += 1;
-														dispDay += 1;
-													} else {
+									dispDay += 1;
+								} else {
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
@@ -206,15 +206,15 @@
 									</ul></td>
 								<%
 									count += 1;
-														dispDay += 1;
+									dispDay += 1;
 													}
-												} else {
+								} else {
 								%>
 								<td class="empty">&nbsp;</td>
 								<%
-									}
-											}
-										}
+							}
+						}
+					}
 								%>
 							</tr>
 							<%
