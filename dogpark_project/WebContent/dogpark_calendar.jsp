@@ -199,7 +199,7 @@
 									dispDay += 1;
 								} else {
 								%>
-								<td <%=todayColor%>><%=dispDay%>일
+								<td <%=todayColor%>><%=dispDay%>일1
 									<ul>
 										<li>예약 건수:<%=countList.get(0).getCount()%>건
 										</li>
