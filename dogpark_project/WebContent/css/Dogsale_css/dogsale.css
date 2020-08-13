@@ -2,11 +2,11 @@
 .ios_contents{
 	background-color:rgba(153,153,153,0.9);
 	width:1300px; 
-	height:1000px; 
+	height:850px; 
 	position:absolute;
 	left:480px; 
 	top:100px;
-	margin:0; 
+	margin:0;
 	padding:20px;
 }
  #calendarTable, #calendarTable th, #calendarTable td   {
@@ -16,14 +16,20 @@
     
     #calendarTable {
         border:2px solid #000;
-        width:800px;
+        width:900px;
+    }
+    #calendarTable ul{
+    	list-style: none;
+    	color:white;
+    	padding:0;
+    	margin:0;
     }
     
     #calendarTable th, #calendarTable td {
-        width: 100px;
-        border:1px solid #000;        
+        width: 130px;
+        border:1px solid #000;
         border-collapse: collapse;
-        padding: 5px;        
+        
     }
     
     #calendarTable th {        
@@ -33,6 +39,7 @@
     }    
     #calendarTable td {        
         height: 100px;
+        
     }
     
     #calendarTable td.empty {
@@ -45,9 +52,9 @@
 
 #calender_dateselect{
 	float:left;
-	width:400px;
+	width:300px;
 	
-	margin-left:50px;
+	margin-left:30px;
 }
 #reservation_button{
 	

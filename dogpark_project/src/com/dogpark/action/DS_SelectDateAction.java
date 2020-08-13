@@ -1,6 +1,7 @@
 package com.dogpark.action;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,15 +28,20 @@ public class DS_SelectDateAction implements Action {
 		System.out.println(arr.get(11));
 		List<CalendarDto> countList=new ArrayList<CalendarDto>();
 		countList= selectDate.SelectReservationcount();
-		for(int i =0; i<countList.size();i++) {
-		System.out.println(countList.get(i).getCount());
-		System.out.println(countList.get(i).getDate());
+		
+		HashMap<Integer,Integer> countmap=new HashMap<Integer,Integer>();
+		for(int i=0; i< countList.size();i++) {
+		countmap.put(Integer.parseInt(countList.get(i).getDate()), countList.get(i).getCount());
 		}
+		System.out.println(countmap);
+		System.out.println(countmap.containsKey(11));
+		System.out.println(countmap.get(11));
 		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
 		calendarList=selectDate.SelectDate(date);
 		
 		request.setAttribute("calendarList", calendarList);
 		request.setAttribute("countList", countList);
+		request.setAttribute("countmap", countmap);
 		
 		ActionForward forward= new ActionForward();
 		forward.setPath("dogpark_calendar.jsp");

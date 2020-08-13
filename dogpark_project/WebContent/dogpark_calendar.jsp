@@ -109,7 +109,7 @@
 	<form action="ds_reservation.bo" method="post" name="form">
 		<%
 			ArrayList<CalendarDto> calendarList = (ArrayList<CalendarDto>) request.getAttribute("calendarList");
-			ArrayList<CalendarDto> countList = (ArrayList<CalendarDto>) request.getAttribute("countList");
+			HashMap<Integer,Integer> countmap= (HashMap<Integer,Integer>)request.getAttribute("countmap");
 		%>
 		<%
 			String id = (String) session.getAttribute("id");
@@ -128,7 +128,7 @@
 		</div>
 
 		<section class="ios_contents">
-			<table border='0' width='800' celpadding='0' cellspacing='0'
+			<table border='0' width='900' celpadding='0' cellspacing='0'
 				style="float: left;">
 				<tr>
 					<td width='150' align='right' valign='middle'><a
@@ -188,37 +188,41 @@
 													}
 								%>
 								<%
-									if (dispDay != Integer.parseInt(countList.get(0).getDate())) {
+									
+								if (countmap.containsKey(dispDay)) 
+								{
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li>예약 건수:예약이 없습니다.</li>
+										<li>예약 건수:<%=countmap.get(dispDay)%>건</li>
 									</ul></td>
 								<%
-									count += 1;
-									dispDay += 1;
+								count += 1;
+								dispDay += 1;
 								} else {
 								%>
-								<td <%=todayColor%>><%=dispDay%>일1
+								
+								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li>예약 건수:<%=countList.get(0).getCount()%>건
+										<li>예약이 없습니다.
 										</li>
 									</ul></td>
-								<%
-									count += 1;
-									dispDay += 1;
-													}
+								<%	
+								count += 1;
+								dispDay += 1;
+								}
+								
 								} else {
 								%>
 								<td class="empty">&nbsp;</td>
 								<%
-							}
+								}
 						}
 					}
 								%>
 							</tr>
 							<%
-								}
+				}
 							%>
 						</table>
 					</td>
