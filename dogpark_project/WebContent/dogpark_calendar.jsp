@@ -194,7 +194,7 @@
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li>예약 건수:<%=countmap.get(dispDay)%>건</li>
+										<li>예약 수:<%=countmap.get(dispDay)%>건</li>
 									</ul></td>
 								<%
 								count += 1;
