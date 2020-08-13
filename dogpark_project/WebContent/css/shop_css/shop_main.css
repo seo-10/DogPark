@@ -444,12 +444,11 @@ a {
 }
 
 section {
-    float: left;
     position: relative;
-    left: 30%;
+    left: 23%;
     background-color: rgba(189, 67, 67, 0);
-    width: 1100px;
-    margin-top: 20px;
+    width: 1190px;
+    margin-top: 10px;
     margin-bottom: 10px;
     height: 2500px;
 }
@@ -461,7 +460,7 @@ section article {
     height: 365px;
     text-align: left;
     transition: border 0.5s;
-    background-color: #515a24;
+    background-color: white;
     
     border-radius: 5px;
     border: 1px solid rgba(216, 15, 15, 0.404);
@@ -500,12 +499,12 @@ article ul li img {
     
 }
 .foodName {
-    height: 55px;
+    height: 49px;
     line-height: 116%
 }
 
 .foodPrice {
-	margin-top: -5px;
+	margin-top: 1px;
 }
 
 .foodPrice a{
@@ -524,15 +523,15 @@ aside {
 
 
 .starRev {
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: -20px;
+    margin-left: 0px;
 }
 
 .starR1{
-    background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat -52px 0;
+    background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat -35px 0;
     background-size: auto 100%;
-    width: 15px;
-    height: 30px;
+    width: 10px;
+    height: 20px;
     float:left;
     text-indent: -9999px;
     cursor: pointer;
@@ -540,14 +539,14 @@ aside {
 .starR2{
     background: url('http://miuu227.godohosting.com/images/icon/ico_review.png') no-repeat right 0;
     background-size: auto 100%;
-    width: 15px;
-    height: 30px;
+    width: 10px;
+    height: 20px;
     float:left;
     text-indent: -9999px;
     cursor: pointer;
 }
 .starR1.on{background-position:0 0;}
-.starR2.on{background-position:-15px 0;}
+.starR2.on{background-position:-10px 0;}
 
 .bottomHr {
 	border: 1px solid rgba(150, 141, 141, 0.452);
@@ -555,6 +554,29 @@ aside {
     width: 1004px;
     margin-left: -20px;
 }
+
+/* 장바구니 카트 담기 */
+.kartMandu {
+	float: right;
+    border: 1px solid #e5e5e5;
+    border-radius: 21px;
+    margin-top: 12px;
+    margin-right: 8px;
+    width: 50px;
+    padding-left: 8px;
+}
+
+.kartMandu:hover {
+	border-color: #0674ea;
+    background-color: #067dfd;
+    outline: none;
+}
+
+.kart_icon {
+	fill: gray;
+}
+
+
 
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{
@@ -577,3 +599,15 @@ aside {
 	padding:0;
 	margin:0;
 }
+
+
+
+
+
+
+
+
+
+
+
+

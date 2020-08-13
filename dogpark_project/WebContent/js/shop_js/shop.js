@@ -62,5 +62,17 @@ $(document).ready(function() {
         });
     });
 
+// 장바구니 border hover 시 kart 색상도 변경
+    
+    $(".kartMandu").mouseenter(function(){
+    	$(".kart_icon").css("fill", "white");
+    });
+    
+    $(".kartMandu").mouseleave(function(){
+    	$(".kart_icon").css("fill", "gray");
+    });
+    
+    
+    
 });
 

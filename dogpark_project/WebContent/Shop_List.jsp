@@ -9,7 +9,7 @@
 <%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@page import="javax.servlet.http.HttpSession" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,16 +22,15 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/shop_js/shop.js"></script>
-     <script type="text/javascript" src="js/shop_js/script.js"></script>
-   
+    <script type="text/javascript" src="js/shop_js/script.js"></script>
    
 </head>
 <body>
@@ -74,23 +73,30 @@
 	    		%>
 	    			
 	            <article style="float: left;">
-	                <img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>">
+	                <a href="#"><img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>"></a>
 	                <ul>
 	                    <li class="foodName"><a href="#"><% out.println(dto.get(i).getPd_desc()); %></a></li>
 	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
 	                </ul>
 	                <div class="starRev">
 	                    <span class="starR1 on">별1_왼쪽</span>
-	                    <span class="starR2">별1_오른쪽</span>
-	                    <span class="starR1">별2_왼쪽</span>
-	                    <span class="starR2">별2_오른쪽</span>
-	                    <span class="starR1">별3_왼쪽</span>
-	                    <span class="starR2">별3_오른쪽</span>
+	                    <span class="starR2 on">별1_오른쪽</span>
+	                    <span class="starR1 on">별2_왼쪽</span>
+	                    <span class="starR2 on">별2_오른쪽</span>
+	                    <span class="starR1 on">별3_왼쪽</span>
+	                    <span class="starR2 on">별3_오른쪽</span>
 	                    <span class="starR1">별4_왼쪽</span>
 	                    <span class="starR2">별4_오른쪽</span>
 	                    <span class="starR1">별5_왼쪽</span>
 	                    <span class="starR2">별5_오른쪽</span>
 	                </div>
+	                
+	               	<div class="kartMandu">
+	               		<svg class="kart_icon" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart2"  xmlns="http://www.w3.org/2000/svg">
+  							<path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+						</svg>
+	               	</div>
+	                
 	            </article>
 	        <% } %>
       <% } %>
