@@ -1,7 +1,9 @@
 package com.dogpark.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.dogpark.dao.DogSaleDao;
 import com.dogpark.dto.BoardBean;
@@ -14,11 +16,11 @@ public class DS_SelectDateService {
 		calendarList=dao.DateSelectarticle(date);
 			return calendarList;
 	}
-	public List<Integer> SelectReservationcount(){
-		List<Integer> count;
+	public List<CalendarDto> SelectReservationcount(){
+		List<CalendarDto> countList;
 		DogSaleDao dao= new DogSaleDao();
-		count=dao.DateCountarticle();
-			return count;
+		countList=dao.DateCountarticle();
+			return countList;
 	}
 
 }

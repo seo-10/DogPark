@@ -101,8 +101,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="ds_dateselect" resultType="com.dogpark.dto.CalendarDto">
 		select * from calendar where date=#{date};
 	</select>
-	<select id="ds_datecount" resultType="Integer">
-		SELECT count(*), date FROM dogpark.calendar group by date;
+	<select id="ds_datecount" resultType="com.dogpark.dto.CalendarDto">
+		SELECT count(*) as count, day(date) as date FROM calendar group by date;
 	</select>
 	
 	<!-- 쇼핑 게시판(사료) 파트 -->

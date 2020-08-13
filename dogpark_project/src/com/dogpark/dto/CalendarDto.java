@@ -5,6 +5,14 @@ public class CalendarDto {
 	String date;
 	String time;
 	String action;
+	int count;
+	
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	public String getU_id() {
 		return u_id;
 	}

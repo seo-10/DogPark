@@ -3,7 +3,9 @@ package com.dogpark.dao;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -60,14 +62,14 @@ public class DogSaleDao {
 		
 	}
 
-	public List<Integer> DateCountarticle() {
-		List<Integer> count;
+	public List<CalendarDto> DateCountarticle() {
+		List<CalendarDto> countList;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		count=sqlsession.selectList("ds_datecount");
+		countList=sqlsession.selectList("ds_datecount");
 		
 		sqlsession.close();
-		return count;
+		return countList;
 	}
 }

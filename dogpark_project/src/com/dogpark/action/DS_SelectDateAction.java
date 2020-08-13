@@ -8,12 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.CalendarDto;
-import com.dogpark.service.DS_ReservationService;
 import com.dogpark.service.DS_SelectDateService;
 
 public class DS_SelectDateAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
-		List<Integer> count= new ArrayList<Integer>();
 		DS_SelectDateService selectDate = new DS_SelectDateService();
 		
 		ArrayList<String> arr=new ArrayList<String>();
@@ -27,14 +25,18 @@ public class DS_SelectDateAction implements Action {
 		System.out.println(arr);
 		String date=arr.get(10);
 		System.out.println(arr.get(11));
-		
-		count= selectDate.SelectReservationcount();
-		System.out.println(count);
+		List<CalendarDto> countList=new ArrayList<CalendarDto>();
+		countList= selectDate.SelectReservationcount();
+		for(int i =0; i<countList.size();i++) {
+		System.out.println(countList.get(i).getCount());
+		System.out.println(countList.get(i).getDate());
+		}
 		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
-		
 		calendarList=selectDate.SelectDate(date);
+		
 		request.setAttribute("calendarList", calendarList);
-		request.setAttribute("count", count);
+		request.setAttribute("countList", countList);
+		
 		ActionForward forward= new ActionForward();
 		forward.setPath("dogpark_calendar.jsp");
 		return forward;
