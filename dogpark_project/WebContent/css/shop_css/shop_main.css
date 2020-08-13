@@ -1,5 +1,5 @@
 body {
-	background-color: black;	
+	background-color: black;
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -455,13 +455,13 @@ section {
 }
 section article {
     /*border: 1px solid white;*/
-    margin: -3px 10px 5px 15px;
+    margin: -3px -11px 9px 15px;
     padding: 2px 2px 0px 15px;
     width: 230px;
     height: 365px;
     text-align: left;
     transition: border 0.5s;
-    background-color: black;
+    background-color: #515a24;
     
     border-radius: 5px;
     border: 1px solid rgba(216, 15, 15, 0.404);
@@ -553,7 +553,7 @@ aside {
 	border: 1px solid rgba(150, 141, 141, 0.452);
     clear: both;
     width: 1004px;
-    margin-left: 10px;
+    margin-left: -20px;
 }
 
 /*-------커뮤니티 메인 내용--------*/
