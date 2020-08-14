@@ -572,9 +572,14 @@ aside {
     outline: none;
 }
 
+.kartMandu:hover a svg {
+	fill: white;
+}
+
 .kart_icon {
 	fill: gray;
 }
+
 
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{
