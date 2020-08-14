@@ -34,7 +34,8 @@ public class SignProAction implements Action {
 		SignProService signProService = new SignProService();
 		
 		String signId = signProService.checkInfo(dto);
-
+		//현재페이지
+		String before_address = request.getHeader("referer");
 		
 		if(id.equals(signId)) {
 			System.out.println("중복");
@@ -52,7 +53,7 @@ public class SignProAction implements Action {
 		
 		forward = new ActionForward();
 		forward.setRedirect(true);
-		forward.setPath("mainPage.html");
+		forward.setPath(before_address);
 		}
 		
 		return forward;
