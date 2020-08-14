@@ -55,7 +55,7 @@
 	                                    <div class="group"> <label for="pass" class="label">Repeat Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
 	                                    <div class="group"> <label for="pass" class="label">Email Address</label> <input id="pass" type="text" class="input" placeholder="Enter your email address" name="u_email"> </div>
 	                                    <div class="group"> <label for="pass" class="label">nickname</label> <input id="pass" type="text" class="input"  placeholder="Create your nickname" name="u_nickname"> </div>
-	                                    <div class="group"> <input type="submit" class="button" value="Sign Up" onclick="javascript: form.action='o';" /> </div>
+	                                    <div class="group"> <input type="submit" class="button" value="Sign Up" onclick="javascript: form.action='SignPro.bo';" /> </div>
 	                                    <div class="hr"></div>
 	                                    <div class="foot"> <label for="tab-1">Already Member?</label> </div>
 	                                </div>
