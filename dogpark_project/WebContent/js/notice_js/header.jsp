@@ -11,5 +11,5 @@
         </svg>
     </a>
 	<% } else {%>
-	<span id="pleaseSign"><a href="#">로그인해주세요</a></span>
+	<span id="pleaseSign"><a href="#">sign in</a></span>
 	<%} %>
