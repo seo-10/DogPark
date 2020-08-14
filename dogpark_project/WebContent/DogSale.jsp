@@ -56,7 +56,7 @@
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">방문 예약</Strong>
 				<li>
-					<a href="ds_selectdate.bo"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
+					<a href="ds_countList.bo"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>

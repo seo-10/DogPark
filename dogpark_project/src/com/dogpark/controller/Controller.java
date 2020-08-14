@@ -196,6 +196,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/ds_countList.bo")){
+			action = new DS_CountListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		else if(command.equals("/ds_selectdate.bo")){
 			action = new DS_SelectDateAction();
 			try{

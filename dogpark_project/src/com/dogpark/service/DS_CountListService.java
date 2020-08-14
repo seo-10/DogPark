@@ -9,12 +9,12 @@ import com.dogpark.dao.DogSaleDao;
 import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.CalendarDto;
 
-public class DS_SelectDateService {
-	public List<CalendarDto> SelectDate(String date){
-		List<CalendarDto> calendarList = null;
+public class DS_CountListService {
+	public List<CalendarDto> SelectReservationcount(){
+		List<CalendarDto> countList;
 		DogSaleDao dao= new DogSaleDao();
-		calendarList=dao.DateSelectarticle(date);
-			return calendarList;
+		countList=dao.DateCountarticle();
+			return countList;
 	}
 
 }
