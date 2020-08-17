@@ -14,7 +14,6 @@ public class Shop_Aside_BoardReadService {
 		// TODO Auto-generated method stub
 		articleList=dao.boardreadarticle(code);
 		return articleList;
-		
 	}
 
 	public List<ShopDto> readarticle(int code) {
