@@ -185,6 +185,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		
+		else if(command.equals("/shop_boardread_aside.bo")){
+			action = new Shop_Aside_BoardReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		
 		
 		
 		/* ¿¹¾à */

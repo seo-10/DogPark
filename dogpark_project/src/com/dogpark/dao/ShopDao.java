@@ -96,16 +96,16 @@ public class ShopDao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-	public List<NoticeDto> boardreadarticle(int code){
-		List<NoticeDto> articleList = null;
-		SqlSessionFactory sqlfactory = NoticeDao.getConn();
+	
+	public List<ShopDto> boardreadarticle(int code){
+		List<ShopDto> articleList = null;
+		SqlSessionFactory sqlfactory = ShopDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
 		articleList = sqlsession.selectList("nt_board_read_select", code);
 
 		sqlsession.close();
 		return articleList;
-		
 	}
 
 	public List<BoardBean> modifyselectarticle(int code) {

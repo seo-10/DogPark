@@ -27,12 +27,15 @@
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+    
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/shop_js/shop.js"></script>
     <script type="text/javascript" src="js/shop_js/shop2.js"></script>
     <script type="text/javascript" src="js/shop_js/script.js"></script>
-   
+    
+   	<!-- 마이페이지 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/goingMypg_css/goingMypg.css" />
+   	    
 </head>
 <body>
 
@@ -61,12 +64,16 @@
 	    	<jsp:include page="js/notice_js/header.jsp" />
 	    </div>
 	   
+	    <!-- 마이페이지로 가는 다이얼로그 -->
+	    <div id="goingMypg_dialog" title="이동"  >
+	    	장바구니에 상품을 담았습니다.
+	    </div>
+	    
     <div style="height:100px;">
     </div>
     <% System.out.println(dto.get(0).getPd_name()); %>
     <%if(dto != null && listCount > 0){%>
     	<section>
-    	
     		<% String divId = null; %>
     		<% String svgId = null; %>
 	    	<%for(int i=0;i<dto.size();i++){%>
@@ -117,10 +124,11 @@
 	            </article>
 	        <% } %>
       <% } %>
-            <hr class="bottomHr"/>
+            <hr class="bottomHr" />
         </section>
+        
         <aside class="shopping_basket">
-        	
+			<a href=""><img src="img/shopping_img/<% out.println(dto.get(0).getPd_name());%>" width="100px" height="100px"></a>
         </aside>
         
 	</form>

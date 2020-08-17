@@ -1,8 +1,8 @@
 
-#logout_dialog {
+#goingMypg_dialog {
 	font-size: 12pt;
 	height: 66px !important;
-	padding-left: 52px;
+	padding-left: 30px;
 	padding-top: 20px;
 }
 
@@ -11,12 +11,6 @@
 	border-top-left-radius: 13px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius: 0px;
-}
-
-#svg_logout {
-	position: absolute;
-	fill: white;
-	z-index: 31;
 }
 
 .ui-dialog {
@@ -112,7 +106,7 @@
     margin: 0px;
     margin-right:10px;
     cursor: pointer;
-    height: 23px;
+    height: 28px;
     width: 85px;
     font-size: 10pt;
     border: 1px;
@@ -124,7 +118,7 @@
 .ui-dialog .ui-dialog-buttonpane button:nth-child(2) {
     margin: 0px;
     cursor: pointer;
-    height: 23px;
+    height: 28px;
     width: 85px;
     font-size: 10pt;
     border: 1px;
@@ -132,4 +126,3 @@
     background-color: #c0c0c0;
     color: white;
 }
-
