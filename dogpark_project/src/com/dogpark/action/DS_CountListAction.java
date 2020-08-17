@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.CalendarDto;
-import com.dogpark.service.DS_SelectDateService;
+import com.dogpark.service.DS_CountListService;
 
-public class DS_SelectDateAction implements Action {
+public class DS_CountListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
-		DS_SelectDateService selectDate = new DS_SelectDateService();
-//		String date1= request.getParameter("date");
-//		System.out.println(date1);
+		DS_CountListService selectcount = new DS_CountListService();
+		
 		ArrayList<String> arr=new ArrayList<String>();
 		
 		for(int i=1; i<=9; i++) {
@@ -27,13 +26,19 @@ public class DS_SelectDateAction implements Action {
 		System.out.println(arr);
 		String date=arr.get(10);
 		System.out.println(arr.get(11));
+		List<CalendarDto> countList=new ArrayList<CalendarDto>();
+		countList= selectcount.SelectReservationcount();
 		
-		
-		
-		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
-		calendarList=selectDate.SelectDate(date);
-		
-		request.setAttribute("calendarList", calendarList);
+		HashMap<Integer,Integer> countmap=new HashMap<Integer,Integer>();
+		for(int i=0; i< countList.size();i++) {
+		countmap.put(Integer.parseInt(countList.get(i).getDate()), countList.get(i).getCount());
+		}
+		System.out.println(countmap);
+		System.out.println(countmap.containsKey(11));
+		System.out.println(countmap.get(11));
+	
+		request.setAttribute("countList", countList);
+		request.setAttribute("countmap", countmap);
 		
 		ActionForward forward= new ActionForward();
 		forward.setPath("dogpark_calendar.jsp");

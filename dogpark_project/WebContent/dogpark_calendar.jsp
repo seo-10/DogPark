@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
-	request.setCharacterEncoding("utf-8");
-%>
+<%request.setCharacterEncoding("utf-8");%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Calendar"%>
@@ -87,7 +85,7 @@
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
 <!-- jquery 사용 -->
-<script type="text/javascript" src="js/community_js/community.js"></script>
+<script type="text/javascript" src="js/dogsale_js/dogsale.js"></script>
 
 <!-- css 사용 -->
 <link rel="stylesheet" type="text/css"
@@ -104,6 +102,17 @@
 <!-- 부트스트랩 cdn -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	function selecttime(){
+		alert("클릭했냐?");
+		var	date = $(this, "#date").val();	
+		alert(date);
+	}
+	
+	
+	</script>
+
 </head>
 <body>
 	<form action="ds_reservation.bo" method="post" name="form">
@@ -126,6 +135,23 @@
 		<div id="login_Ing">
 			<jsp:include page="js/community_js/header.jsp" />
 		</div>
+		 <!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+                <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">예약 현황</span></b></span></p>
+                <p style="text-align: center; line-height: 1.5;"><br />블라블라블라</p>
+                <p><br /></p>
+            <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" id="close_pop">
+                <span class="pop_bt" style="font-size: 13pt;" >
+                     닫기
+                </span>
+            </div>
+      </div>
+ 
+    </div>
+        <!--End Modal-->
 
 		<section class="ios_contents">
 			<table border='0' width='900' celpadding='0' cellspacing='0'
@@ -194,7 +220,7 @@
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li>예약 수:<%=countmap.get(dispDay)%>건</li>
+										<li><a onclick="selecttime()">예약 수:<%=countmap.get(dispDay)%>건<input type="hidden" id="date" class="classdate" value="<%=dispDay%>"/></a></li>
 									</ul></td>
 								<%
 								count += 1;
