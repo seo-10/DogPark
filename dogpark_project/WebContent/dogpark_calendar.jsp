@@ -210,7 +210,7 @@
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li><a href="ds_selectdate.bo?dateday=<%=dispDay%>">예약 수:<%=countmap.get(dispDay)%>건<input type="hidden" id="date" class="classdate" value="<%=dispDay%>"/></a></li>
+										<li><a href="ds_selectdate.bo?dateday=<%=dispDay%>">예약 수:<%=countmap.get(dispDay)%>건</a></li>
 									</ul></td>
 								<%
 								count += 1;

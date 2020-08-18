@@ -26,7 +26,7 @@ public class DS_ReservationAction implements Action {
 		ds_reservation.Reservationinsert(dto);
 		
 		ActionForward forward= new ActionForward();
-		forward.setPath("ds_selectdate.bo");
+		forward.setPath("ds_countList.bo");
 		return forward;
 		
 	}
