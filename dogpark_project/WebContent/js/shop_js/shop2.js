@@ -52,7 +52,7 @@ $(document).ready(function() {
 	
     // 로그인 중 div 클릭시 background 변경 색 유지
     $(".Logintnks").on('click', function(){
-    	alert("선택한거맞제?");
+    	alert("장바구니");
     	$(this).children().css("fill", "white");
     	$(this).closest("div").css({
     		'border-color': '#0674ea',

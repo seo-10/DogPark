@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.dto.ShopDto;
-import com.dogpark.service.Shop_Aside_BoardReadService;
+import com.dogpark.service.Shop_BoardReadService;
 
-public class Shop_Aside_BoardReadAction implements Action {
+public class Shop_BoardReadAction implements Action {
 	
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String pd_name = request.getParameter("pd_name");
 		List<ShopDto> articlList=new ArrayList<ShopDto>();
-		Shop_Aside_BoardReadService RS = new Shop_Aside_BoardReadService();
+		Shop_BoardReadService RS = new Shop_BoardReadService();
 		RS.readarticle(pd_name);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/Shop_List.jsp");
+  		forward.setPath("/Shop_Read.jsp");
   		
 		return forward;
 	}

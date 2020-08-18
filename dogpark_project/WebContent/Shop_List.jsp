@@ -85,7 +85,7 @@
 	    		%>
 	    			
 	            <article style="float: left;">
-	                <a href="shop_boardread_aside.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>"></a>
+	                <a href="shop_boardread.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>"></a>
 	                <ul>
 	                    <li class="foodName"><a href="#"><% out.println(dto.get(i).getPd_desc()); %></a></li>
 	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
@@ -128,7 +128,7 @@
         </section>
         
         <aside class="shopping_basket">
-			<a href="#"><img src="img/shopping_img/<% out.println(dto.get(0).getPd_name());%>" width="100px" height="100px"></a>
+			<a href="#"><img src="img/shopping_img/<% out.println(dto_aside.get(0).getPd_name());%>" width="100px" height="100px"></a>
         </aside>
         
 	</form>

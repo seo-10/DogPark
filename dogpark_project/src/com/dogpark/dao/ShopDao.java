@@ -98,13 +98,13 @@ public class ShopDao {
 	
 	public List<ShopDto> boardreadarticle(String pd_name){
 		List<ShopDto> articleList = null;
-		SqlSessionFactory sqlfactory_aside = ShopDao.getConn();
-		SqlSession sqlsession_aside = sqlfactory_aside.openSession();
-		System.out.println("shop aside DAO");
+		SqlSessionFactory sqlfactory = ShopDao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		System.out.println("shop read DAO");
 
-		articleList = sqlsession_aside.selectList("shop_aside_board_read_select", pd_name);
+		articleList = sqlsession.selectList("shop_board_read_select", pd_name);
 
-		sqlsession_aside.close();
+		sqlsession.close();
 		return articleList;
 	}
 

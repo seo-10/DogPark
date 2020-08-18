@@ -118,7 +118,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select count(*) from product;
 	</select>
 	
-	<select id="shop_aside_board_read_select" resultType="com.dogpark.dto.ShopDto" parameterType="com.dogpark.dto.NoticeDto">
+	<select id="shop_board_read_select" resultType="com.dogpark.dto.ShopDto" parameterType="com.dogpark.dto.NoticeDto">
 		select * from product where pd_name=#{pd_name};
 	</select>
 	

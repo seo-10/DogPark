@@ -185,8 +185,8 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		/* aside 장바구니 */
-		else if(command.equals("/shop_boardread_aside.bo")){
-			action = new Shop_Aside_BoardReadAction();
+		else if(command.equals("/shop_boardread.bo")){
+			action = new Shop_BoardReadAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){
