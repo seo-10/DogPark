@@ -63,6 +63,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select count(*) from honey_tip;
 	</select>
 	
+	<update id="nt_viewupdate" parameterType="com.dogpark.dto.NoticeDto">
+		update notice set nt_view=nt_view+1 where code_no=#{code_no};
+	</update>
+	
 	<!-- 브리딩 유저정보,강아지 성별반대 정보 전체조회 -->
 	<select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
 		select nickname,dog_name,dbirth_year,dog_sex,dog_classify from userinfo,doginfo where not dog_sex='m'<!-- 성별부분 변경할것 --> and userinfo.id = doginfo.u_id ;

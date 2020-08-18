@@ -137,7 +137,7 @@ public class NoticeDao {
 		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 	
-		sqlsession.update("ht_viewupdate", code);
+		sqlsession.update("nt_viewupdate", code);
 		sqlsession.commit();
 		sqlsession.close();
 	}

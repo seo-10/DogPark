@@ -18,7 +18,6 @@ public class Shop_BoardListAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("쇼핑 액션 실행 완료");
 		List<ShopDto> articleList=new ArrayList<ShopDto>();
 		int page=1;
 		int limit=15;
