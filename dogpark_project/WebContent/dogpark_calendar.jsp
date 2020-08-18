@@ -102,16 +102,7 @@
 <!-- 부트스트랩 cdn -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	
-	<script type="text/javascript">
-	function selecttime(){
-		alert("클릭했냐?");
-		var	date = $(this, "#date").val();	
-		alert(date);
-	}
-	
-	
-	</script>
+
 
 </head>
 <body>
