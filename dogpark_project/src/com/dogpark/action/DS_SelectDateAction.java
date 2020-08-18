@@ -14,20 +14,8 @@ import com.dogpark.service.DS_SelectDateService;
 public class DS_SelectDateAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		DS_SelectDateService selectDate = new DS_SelectDateService();
-//		String date1= request.getParameter("date");
-//		System.out.println(date1);
-		ArrayList<String> arr=new ArrayList<String>();
-		
-		for(int i=1; i<=9; i++) {
-		arr.add("2020-08-0"+Integer.toString(i));
-		}
-		for(int i=10; i<=31; i++) {
-			arr.add("2020-08-"+Integer.toString(i));
-		 }
-		System.out.println(arr);
-		String date=arr.get(10);
-		System.out.println(arr.get(11));
-		
+		String date= request.getParameter("dateday");
+		System.out.println(date);
 		
 		
 		List<CalendarDto> calendarList=new ArrayList<CalendarDto>();
@@ -36,7 +24,7 @@ public class DS_SelectDateAction implements Action {
 		request.setAttribute("calendarList", calendarList);
 		
 		ActionForward forward= new ActionForward();
-		forward.setPath("dogpark_calendar.jsp");
+		forward.setPath("selectdatedetail.jsp");
 		return forward;
 		
 	}

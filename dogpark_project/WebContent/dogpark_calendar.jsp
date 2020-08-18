@@ -103,7 +103,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-
 </head>
 <body>
 	<form action="ds_reservation.bo" method="post" name="form">
@@ -211,7 +210,7 @@
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li><a onclick="selecttime()">예약 수:<%=countmap.get(dispDay)%>건<input type="hidden" id="date" class="classdate" value="<%=dispDay%>"/></a></li>
+										<li><a href="ds_selectdate.bo?dateday=<%=dispDay%>">예약 수:<%=countmap.get(dispDay)%>건<input type="hidden" id="date" class="classdate" value="<%=dispDay%>"/></a></li>
 									</ul></td>
 								<%
 								count += 1;
