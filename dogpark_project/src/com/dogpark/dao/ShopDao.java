@@ -100,7 +100,6 @@ public class ShopDao {
 		List<ShopDto> articleList = null;
 		SqlSessionFactory sqlfactory = ShopDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		System.out.println("shop read DAO");
 
 		articleList = sqlsession.selectList("shop_board_read_select", pd_name);
 

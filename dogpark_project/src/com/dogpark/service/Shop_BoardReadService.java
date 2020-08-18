@@ -11,9 +11,7 @@ public class Shop_BoardReadService {
 	ShopDao dao= new ShopDao();
 	
 	public List<ShopDto> readarticle(String pd_name) {
-		System.out.println("shop service");
 		articleList=dao.boardreadarticle(pd_name);
-		System.out.println(pd_name);
 		return articleList;
 	}
 	

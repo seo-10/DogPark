@@ -71,7 +71,7 @@
 	    
     <div style="height:100px;">
     </div>
-    <% System.out.println(dto.get(0).getPd_name()); %>
+   
     <%if(dto != null && listCount > 0){%>
     	<section>
     		<% String divId = null; %>
@@ -128,7 +128,7 @@
         </section>
         
         <aside class="shopping_basket">
-			<a href="#"><img src="img/shopping_img/<% out.println(dto_aside.get(0).getPd_name());%>" width="100px" height="100px"></a>
+			<a href="#"><img src="img/shopping_img/<% out.println(dto.get(0).getPd_name());%>" width="100px" height="100px"></a>
         </aside>
         
 	</form>

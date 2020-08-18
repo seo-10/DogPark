@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
+import com.dogpark.dto.Dto;
 import com.dogpark.dto.ShopDto;
 import com.dogpark.service.Shop_BoardReadService;
 
@@ -17,10 +18,12 @@ public class Shop_BoardReadAction implements Action {
 		String pd_name = request.getParameter("pd_name");
 		List<ShopDto> articlList=new ArrayList<ShopDto>();
 		Shop_BoardReadService RS = new Shop_BoardReadService();
-		RS.readarticle(pd_name);
+		articlList=RS.readarticle(pd_name);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/Shop_Read.jsp");
+  		System.out.println("¾ßÈ£");
+  		System.out.println(articlList);
   		
 		return forward;
 	}

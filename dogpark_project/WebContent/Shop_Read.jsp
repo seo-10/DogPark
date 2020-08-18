@@ -51,12 +51,45 @@
   		<jsp:include page="mainMenu_Left.jsp" />
 	</div>
 	
-
     <!-- 로그인 유지 -->
     <div id="login_Ing">
     	<jsp:include page="js/main_js/header.jsp" />
     </div>
     
     </form>
+    
+    <div>
+    	<% System.out.println(dto.get(0).getPd_name()); %>
+    	<img src="img/shopping_img/<% out.println(dto.get(0).getPd_name());%>">
+    </div>
+    <div>
+    	<!-- 가격 천단위 컴마 찍기 -->
+	    		<% 
+	    			int price = dto.get(0).getPd_price();
+	    			String priceComma = String.format("%, d", price);
+	    		%>
+	    			
+	   
+	                <ul>
+	                    <li class="foodName"><a href="#"><% out.println(dto.get(0).getPd_desc()); %></a></li>
+	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
+	                </ul>
+	                <div class="starRev">
+	                    <span class="starR1 on">별1_왼쪽</span>
+	                    <span class="starR2 on">별1_오른쪽</span>
+	                    <span class="starR1 on">별2_왼쪽</span>
+	                    <span class="starR2 on">별2_오른쪽</span>
+	                    <span class="starR1 on">별3_왼쪽</span>
+	                    <span class="starR2 on">별3_오른쪽</span>
+	                    <span class="starR1">별4_왼쪽</span>
+	                    <span class="starR2">별4_오른쪽</span>
+	                    <span class="starR1">별5_왼쪽</span>
+	                    <span class="starR2">별5_오른쪽</span>
+	                </div>
+	                
+	     
+    </div>
+    
+    
 </body>
 </html>
