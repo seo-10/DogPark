@@ -184,7 +184,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-		
+		/* aside 장바구니 */
 		else if(command.equals("/shop_boardread_aside.bo")){
 			action = new Shop_Aside_BoardReadAction();
 			try{
@@ -199,14 +199,6 @@ public class Controller extends javax.servlet.http.HttpServlet
 		/* 예약 */
 		else if(command.equals("/ds_reservation.bo")){
 			action = new DS_ReservationAction();
-			try{
-				forward=action.execute(request, response);
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		}
-		else if(command.equals("/ds_countList.bo")){
-			action = new DS_CountListAction();
 			try{
 				forward=action.execute(request, response);
 			}catch(Exception e){

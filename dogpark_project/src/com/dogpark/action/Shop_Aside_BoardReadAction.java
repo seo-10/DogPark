@@ -14,11 +14,10 @@ public class Shop_Aside_BoardReadAction implements Action {
 	
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		int code = Integer.parseInt(request.getParameter("code_no"));
+		String pd_name = request.getParameter("pd_name");
 		List<ShopDto> articlList=new ArrayList<ShopDto>();
 		Shop_Aside_BoardReadService RS = new Shop_Aside_BoardReadService();
-		RS.viewarticle(code);
-		articlList=RS.readarticle(code);
+		RS.readarticle(pd_name);
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/Shop_List.jsp");

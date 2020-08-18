@@ -10,17 +10,14 @@ public class Shop_Aside_BoardReadService {
 	List<ShopDto> articleList = null;
 	ShopDao dao= new ShopDao();
 	
-	public List<ShopDto> viewarticle(int code) {
-		// TODO Auto-generated method stub
-		articleList=dao.boardreadarticle(code);
+	public List<ShopDto> readarticle(String pd_name) {
+		articleList=dao.boardreadarticle(pd_name);
 		return articleList;
 	}
-
-	public List<ShopDto> readarticle(int code) {
-		// TODO Auto-generated method stub
-		dao.viewUpArticle(code);
-		return null;
-	}
-
+	
+	
+//	public void viewarticle(String pd_name) {
+//		dao.viewUpArticle(pd_name);		
+//	}
 
 }

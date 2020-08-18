@@ -18,12 +18,12 @@ public class ShopDao {
 	
 	static SqlSessionFactory sqlfactory;
 	// 싱글톤 패턴(관리) = 객체를 한번만 만들어 계속 사용가능 static이 필수로 붙어야함.
-	private static NoticeDao instance;
+	private static ShopDao instance;
 
-	public static NoticeDao getinstance() {
+	public static ShopDao getinstance() {
 		if (instance == null) {
 			synchronized (NoticeDao.class) {
-				instance = new NoticeDao();
+				instance = new ShopDao();
 			}
 		}
 		return instance;
@@ -97,12 +97,12 @@ public class ShopDao {
 		sqlsession.close();
 	}
 	
-	public List<ShopDto> boardreadarticle(int code){
+	public List<ShopDto> boardreadarticle(String pd_name){
 		List<ShopDto> articleList = null;
 		SqlSessionFactory sqlfactory = ShopDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		articleList = sqlsession.selectList("nt_board_read_select", code);
+		articleList = sqlsession.selectList("shop_aside_board_read_select", pd_name);
 
 		sqlsession.close();
 		return articleList;
@@ -135,13 +135,13 @@ public class ShopDao {
 		sqlsession.commit();
 		sqlsession.close();
 	}
-	public void viewUpArticle(int code) {
-		SqlSessionFactory sqlfactory = NoticeDao.getConn();
-		SqlSession sqlsession = sqlfactory.openSession();
-	
-		sqlsession.update("ht_viewupdate", code);
-		sqlsession.commit();
-		sqlsession.close();
-	}
+//	public void viewUpArticle(String code) {
+//		SqlSessionFactory sqlfactory = ShopDao.getConn();
+//		SqlSession sqlsession = sqlfactory.openSession();
+//	
+//		sqlsession.update("ht_viewupdate", code);
+//		sqlsession.commit();
+//		sqlsession.close();
+//	}
 }
 
