@@ -57,7 +57,11 @@
 	margin-left:30px;
 }
 #reservation_button{
-	
+	background-color:#ffc88a;
+	width:260px;
+	height:60px;
+	border-radius:20px;
+	border-style:none;
 }
         /* The Modal (background) */
         .modal {
