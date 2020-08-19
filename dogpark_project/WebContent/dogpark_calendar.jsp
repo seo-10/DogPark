@@ -102,12 +102,10 @@
 <!-- 부트스트랩 cdn -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 </head>
 <body>
 	<form action="ds_reservation.bo" method="post" name="form">
 		<%
-			ArrayList<CalendarDto> calendarList = (ArrayList<CalendarDto>) request.getAttribute("calendarList");
 			HashMap<Integer,Integer> countmap= (HashMap<Integer,Integer>)request.getAttribute("countmap");
 		%>
 		<%
@@ -131,7 +129,7 @@
       <!-- Modal content -->
       <div class="modal-content">
                 <p style="text-align: center;"><span style="font-size: 14pt;"><b><span style="font-size: 24pt;">예약 현황</span></b></span></p>
-                <p style="text-align: center; line-height: 1.5;"><br />블라블라블라</p>
+                <p style="text-align: center; line-height: 1.5;" id="time_contents"><br /></p>
                 <p><br /></p>
             <div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" id="close_pop">
                 <span class="pop_bt" style="font-size: 13pt;" >
@@ -144,17 +142,18 @@
         <!--End Modal-->
 
 		<section class="ios_contents">
+		<div id="text"></div>
 			<table border='0' width='900' celpadding='0' cellspacing='0'
 				style="float: left;">
 				<tr>
 					<td width='150' align='right' valign='middle'><a
-						href="dogpark_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=0">
+						href="ds_countList.bo?month=<%=currMonth%>&year=<%=currYear%>&action=0">
 							<font size="2">◁◁</font>
 					</a></td>
 					<td width='260' align='center' valign='middle'><b><%=getTitle(cal)%></b>
 					</td>
 					<td width='173' align='left' valign='middle'><a
-						href="dogpark_calendar.jsp?month=<%=currMonth%>&year=<%=currYear%>&action=1">
+						href="ds_countList.bo?month=<%=currMonth%>&year=<%=currYear%>&action=1">
 							<font size="2">▷▷</font>
 					</a></td>
 				</tr>
@@ -210,7 +209,7 @@
 								%>
 								<td <%=todayColor%>><%=dispDay%>일
 									<ul>
-										<li><a href="ds_selectdate.bo?dateday=<%=dispDay%>">예약 수:<%=countmap.get(dispDay)%>건</a></li>
+										<li><a onclick="dateday(<%=dispDay%>)">예약 수:<%=countmap.get(dispDay)%>건</a></li>
 									</ul></td>
 								<%
 								count += 1;
@@ -254,5 +253,23 @@
 			</aside>
 		</section>
 	</form>
+	<script>	
+function dateday(dispDay) {
+    $.ajax({
+          type:"post",
+          url:"selectdatedetail.jsp",
+          
+		  data:{'re_time':dispDay},
+          success : function(data) {
+        	 $('#myModal').show();
+        	 $('#time_contents').html(data);
+          },
+          error : function(request, status, error) {
+        	  alert("실패");
+          }
+    });
+}
+
+</script>
 </body>
 </html>

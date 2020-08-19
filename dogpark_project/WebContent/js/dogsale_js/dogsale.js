@@ -62,9 +62,6 @@ $(document).ready(function() {
 		});
 	});
 
-	$(".dayday").on("click", function() {
-		$('#myModal').show();
-	});
 	//팝업 Close 기능
 	$("#close_pop").on("click", function() {
 		$('#myModal').hide();
