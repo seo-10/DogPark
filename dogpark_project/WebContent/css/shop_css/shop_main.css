@@ -515,7 +515,7 @@ article ul li img {
 .shopping_basket {
 	position: fixed;
 	z-index: 50;
-    height: 400px;
+    height: 500px;
     width: 160px;
     top:30%;
     left: 86%;
@@ -523,7 +523,17 @@ article ul li img {
     background-color: white;
 }
 
+.shopping_basket div {
+	background-color: greenyellow;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+}
 
+.shopping_basket img{
+	margin-top: 10px;
+	margin-left: 30px;
+}
 .starRev {
     margin-top: -20px;
     margin-left: 0px;

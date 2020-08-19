@@ -35,7 +35,10 @@
     
    	<!-- 마이페이지 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/goingMypg_css/goingMypg.css" />
-   	    
+   	
+   	
+
+   
 </head>
 <body>
 
@@ -48,6 +51,15 @@
 	int endPage=pageInfo.getEndPage();
 
 %>
+
+   	<script>
+		function kartAside(i) {
+			//$('#kartItemPic').attr('src','img/shopping_img/dogfood'+i+'.png');
+			$('#kartItemPics').append('<img id="kartItemPic" src="img/shopping_img/dogfood'+(i+1)+'.png" width="100px" height="100px">');
+			$('#kartItemPics').append('<p>아이스아메리카노'+i+'</p>');
+		}
+	</script>
+	
 <form name="form" method="post">
 		 <!-- 로그아웃 다이얼로그 -->
 	    <div id="logout_dialog" title="logout"  >
@@ -85,9 +97,9 @@
 	    		%>
 	    			
 	            <article style="float: left;">
-	                <a href="shop_boardread.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/<% out.println(dto.get(i).getPd_name());%>"></a>
+	                <a href="shop_boardread.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/dogfood<% out.println(dto.get(i).getIndex());%>.png"></a>
 	                <ul>
-	                    <li class="foodName"><a href="#"><% out.println(dto.get(i).getPd_desc()); %></a></li>
+	                    <li class="foodName"><a href="javascript:void(0);"><% out.println(dto.get(i).getPd_desc()); %></a></li>
 	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
 	                </ul>
 	                <div class="starRev">
@@ -104,15 +116,19 @@
 	                </div>
 	                
 					<% divId = "kartMandu"+Integer.toString(i); %>
-					<% svgId = "kart_icon"+Integer.toString(i); %>
+					<% svgId = "dogfood"+Integer.toString(i)+".png"; %>
+					
+					
 	               	<div class="kartMandu" id="<%=divId %>" >
 	               		<% String id = (String)session.getAttribute("id");%>
     					<% if(id != null) { %>
-	               			<a href="#" class="Logintnks">
+	               			<a href="javascript:void(0);"  class="Logintnks" onclick="kartAside(<%=i%>)">
 		               			<svg class="kart_icon" id="<%=svgId %>" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart2"  xmlns="http://www.w3.org/2000/svg">
 	  								<path fill-rule="evenodd" d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
 								</svg>
-						</a>
+							</a>
+				
+							
 						<% } else {%>
 							<a href="#" class="pleaseLogin">
 								<svg class="kart_icon" id="<%=svgId %>" width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-cart2"  xmlns="http://www.w3.org/2000/svg">
@@ -123,12 +139,12 @@
 	               	</div>
 	            </article>
 	        <% } %>
-      <% } %>
-            <hr class="bottomHr" />
+	       <hr class="bottomHr" />
         </section>
-        
-        <aside class="shopping_basket">
-			<a href="#"><img src="img/shopping_img/<% out.println(dto.get(0).getPd_name());%>" width="100px" height="100px"></a>
+      <% } %>
+		<aside class="shopping_basket">
+			<div>최근 본 상품</div>
+			<a href="javascript:void(0);" id="kartItemPics"></a>
         </aside>
         
 	</form>

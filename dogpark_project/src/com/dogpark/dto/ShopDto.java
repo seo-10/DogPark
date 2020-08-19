@@ -2,12 +2,20 @@ package com.dogpark.dto;
 
 public class ShopDto {
 	
+	int index;
 	String pd_name;
 	String pd_desc;
 	int pd_price;
 	int pd_stock;
 	int pd_rate;
 	
+	
+	public int getIndex() {
+		return index;
+	}
+	public void setIndex(int index) {
+		this.index = index;
+	}
 	public String getPd_name() {
 		return pd_name;
 	}
@@ -38,6 +46,7 @@ public class ShopDto {
 	public void setPd_rate(int pd_rate) {
 		this.pd_rate = pd_rate;
 	}
+	
 	
 	
 	
