@@ -79,7 +79,7 @@ public class DogSaleDao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		int startrow=(page-1)*4;
-		articleList = sqlsession.selectList("dj_select",startrow);
+		articleList = sqlsession.selectList("dsb_select",startrow);
 		sqlsession.close();
 		return articleList;
 	}
@@ -89,7 +89,7 @@ public class DogSaleDao {
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		listCount=sqlsession.selectOne("dj_select_count");
+		listCount=sqlsession.selectOne("dsb_select_count");
 		
 		sqlsession.close();
 		return listCount;

@@ -99,6 +99,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</update>
 	
 	<!-- 강아지 분양 파트 -->
+	<select id="dsb_select" parameterType="Integer" resultType="com.dogpark.dto.DogjarangDto">
+		select * from dog_jarang order by code_no DESC limit ${value}, 4;
+	</select>
+	<select id="dsb_select_count" resultType="Integer">
+		select count(*) from dog_jarang;
+	</select>
 	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
 		insert into calendar(u_id, date, time) values(#{u_id}, #{date}, #{time});
 	</insert>
