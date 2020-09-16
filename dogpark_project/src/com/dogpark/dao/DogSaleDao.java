@@ -15,6 +15,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.CalendarDto;
+import com.dogpark.dto.DogjarangDto;
 
 public class DogSaleDao {
 	static SqlSessionFactory sqlfactory;
@@ -71,5 +72,26 @@ public class DogSaleDao {
 		
 		sqlsession.close();
 		return countList;
+	}
+	//문양 게시판
+	public List<DogjarangDto> dbs_boardlistarticle(int page) {
+		List<DogjarangDto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		int startrow=(page-1)*4;
+		articleList = sqlsession.selectList("dj_select",startrow);
+		sqlsession.close();
+		return articleList;
+	}
+
+	public int dbs_selectListCount() {
+		int listCount= 0;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		listCount=sqlsession.selectOne("dj_select_count");
+		
+		sqlsession.close();
+		return listCount;
 	}
 }

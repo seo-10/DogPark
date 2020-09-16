@@ -214,6 +214,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		/* 분양 문의 게시판*/
+		else if(command.equals("/dsb_boardList.bo")){
+			action = new DSB_BoardListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		
 		

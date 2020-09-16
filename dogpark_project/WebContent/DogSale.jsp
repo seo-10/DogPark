@@ -51,7 +51,7 @@
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">분양 문의 게시판</Strong>
 				<li>
-					<a href=""><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+					<a href="dsb_boardList.bo"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">방문 예약</Strong>
