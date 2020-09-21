@@ -43,7 +43,7 @@ public class DSB_BoardListAction implements Action {
 		request.setAttribute("pageInfo", pageInfo);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/DSB_saleboard.jsp");
+  		forward.setPath("/DSB_saleboard_middle.jsp");
 		
   		return forward;
 		

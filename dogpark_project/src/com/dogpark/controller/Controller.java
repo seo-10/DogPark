@@ -223,7 +223,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-		
+		/*
+		else if(command.equals("/dsb_boardread.bo")){
+			action = new DSB_BoardReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}*/
 		
 		
 		

@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.dogpark.dto.DogjarangDto"%>
+<%@page import="com.dogpark.dto.Dogpark_dogsDto"%>
 <%@page import="com.dogpark.dto.PageInfo"%>
 <%@page import="com.dogpark.dao.Dao"%>
 
@@ -31,7 +31,7 @@
 <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
 </div>
-<%ArrayList<DogjarangDto> dto = (ArrayList<DogjarangDto>)request.getAttribute("articleList");
+<%ArrayList<Dogpark_dogsDto> dto = (ArrayList<Dogpark_dogsDto>)request.getAttribute("articleList");
  PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
 	int listCount=pageInfo.getListCount();
 	int nowPage=pageInfo.getPage();
@@ -63,22 +63,21 @@
 	    </div>
  <section class="dj_board_contents">
 	  <div>
-		<span id="board_ph">반려견 자랑</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
+		<span id="board_ph">분양 문의 게시판</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </div>
 <hr style="clear:both;" />
+<h1 style="text-align:center;">중형견</h1>
 <%
 if(dto != null && listCount > 0){
 %>
 		<%for(int i=0;i<dto.size();i++){%>
-		<a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"class="dj_box">
+		<a href="dsb_boardread.bo?dpd_name=<%out.println(dto.get(i).getDpd_name());%>"class="dj_box">
 				<img src="img/htboard_img/honeytip.gif" class="dj_pro_img"/>
 				<ul class="dj_box_contents">
-					<li class="dj_board_No_detail">No.<%out.println(dto.get(i).getCode_no());%> </li>
-					<li class="dj_board_name_detail">제목:<%out.println(dto.get(i).getDj_title());%></li>
-					<li class="dj_board_writer_detail">작성자:<%out.println(dto.get(i).getU_id());%> </li>
-					<li class="dj_board_like_detail">좋아요 수:<%out.println(dto.get(i).getDj_like());%> </li>
-					<li class="dj_board_count_detail">조회수:<%out.println(dto.get(i).getDj_view());%> </li>
-					<li class="dj_board_date_detail">작성시간:<%out.println(dto.get(i).getDate());%> </li>
+					<li class="dj_board_No_detail">이름:<%out.println(dto.get(i).getDpd_name());%> </li>
+					<li class="dj_board_name_detail">생년월일:<%out.println(dto.get(i).getDpd_year());%>-<%out.println(dto.get(i).getDpd_month());%>-<%out.println(dto.get(i).getDpd_day());%> </li>
+					<li class="dj_board_count_detail"><%out.println(dto.get(i).getDpd_character());%> </li>
+					<li class="dj_board_date_detail">성별:<%out.println(dto.get(i).getDpd_sex());%> </li>
 				</ul>
 		</a>
 		<%} %>
