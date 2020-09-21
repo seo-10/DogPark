@@ -105,6 +105,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="dsb_select_count" resultType="Integer">
 		select count(*) from dogpark_dogs;
 	</select>
+	<insert id="dsb_boardinsert" parameterType="com.dogpark.dto.DogjarangDto">
+		insert into dog_jarang(code_no,dj_title, dj_contents, dj_file, u_id, dj_view, dj_like,date) values(default,#{dj_title}, #{dj_contents}, #{dj_file}, #{u_id}, 0, 0,now());
+	</insert>
+	
 	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
 		insert into calendar(u_id, date, time) values(#{u_id}, #{date}, #{time});
 	</insert>

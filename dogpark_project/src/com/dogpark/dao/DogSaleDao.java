@@ -16,6 +16,7 @@ import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.CalendarDto;
 import com.dogpark.dto.DogjarangDto;
+import com.dogpark.dto.Dogpark_dogsDto;
 
 public class DogSaleDao {
 	static SqlSessionFactory sqlfactory;
@@ -82,6 +83,14 @@ public class DogSaleDao {
 		articleList = sqlsession.selectList("dsb_select",startrow);
 		sqlsession.close();
 		return articleList;
+	}
+	public void dsb_boardwritearticle(Dogpark_dogsDto dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+		
+		sqlsession.insert("dsb_boardinsert",dto);
+		sqlsession.commit();
+		sqlsession.close();	
 	}
 
 	public int dbs_selectListCount() {
