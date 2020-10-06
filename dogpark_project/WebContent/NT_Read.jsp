@@ -74,7 +74,7 @@
     		
 	   		<article id="notice_board_bot">
 	   		<span>
-	   		<input type="button" value="목록" id="" onclick="location.href='NT_Main.jsp'" />
+	   		<input type="button" value="목록" id="" onclick="location.href='javascript:history.back()'" />
 	   		</span>
 			</article> 
     	</section>

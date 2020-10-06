@@ -37,14 +37,14 @@ public class LoginProAction implements Action {
 		if(!id.equals(articleList.get(0).getId())) {
 		
 			out.print("<script>");
-			out.print("alert('id를 확인해주세요');");
+			out.print("alert('Please check your ID');");
 			out.print("history.back();");
 			out.print("</script>");
 		}
 		else if(!pw.equals(articleList.get(0).getPwd())) {
 			
 			out.print("<script>");
-			out.print("alert('비밀번호를 확인해주세요');");
+			out.print("alert('Please check your Password');");
 			out.print("history.back();");
 			out.print("</script>");
 		}
