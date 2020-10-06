@@ -2,7 +2,6 @@ body {
 	background-image: url(../../img/main_img/mainPage.png);
 	background-repeat: no-repeat;
 	
-	
     font: 600 16px/18px 'Open Sans', sans-serif;
 }
 
@@ -101,7 +100,7 @@ body {
     width: 500px;
     z-index: 40;
 }
-/*------------------- ∑Œ±◊¿Œ ¿Ø¡ˆ øÏ√¯ ªÛ¥‹ -------------------*/
+/*------------------- Î°úÍ∑∏Ïù∏ Ïú†ÏßÄ Ïö∞Ï∏° ÏÉÅÎã® -------------------*/
 #login_Ing {
 	position: absolute;
     display: block;
@@ -119,7 +118,7 @@ body {
 	fill: white;
 }
 
-/*------------------- ∑Œ±◊¿Œ √¢------------------- */
+/*------------------- Î°úÍ∑∏Ïù∏ Ï∞Ω------------------- */
 .login-box {
     width: 100%;
     margin: auto;
@@ -332,74 +331,3 @@ a {
 }
 
 /* ------------------- ***** ------------------- */
-
-
-/* ºΩº« ∫Œ∫– ≈©±‚ ¡∂¡§ */
-#notice_list {
-	background-color:rgba(153,153,153,0.9);
-	width:1300px; 
-	height:700px; 
-	position:absolute;
-	left:480px; 
-	top:150px;
-	margin:0; 
-	padding:20px;
-}
-
-#notice_list a {
-	font-size: 16pt;
-	color: black;
-	text-decoration: none;
-}
-
-#notice_board_top {
-	width: 1200px;
-	height:550px;
-	margin-left: 30px;
-}
-
-#notice_board_top ul {
-	display: table-row-group;
-}
-
-#notice_board_top li {
-	display:inline;
-	text-align:center;
-	padding:7px 10px;
-	vertical-align: middle;
-	display: table-cell;
-	border-bottom:1px solid rgba(0,0,0,0.15);
-
-}
-
-#notice_board_title {
-	width: 900px;	
-}
-
-#notice_board_subject {
-	background-color: white !important;
-}
-
-.pageList {
-	clear:both;
-	margin-left: 300px;
-	width: 300px;
-	text-align: center;
-	font-size:12pt;
-}
-.pageNum{
-	font-size:11pt;
-}
-.pageNum:hover{
-	color:white;
-}
-.emptyArea {
-	margin: auto;
-	width: 500px;
-	text-align: center;
-}
-
-#notice_board_bot {
-	width: 600px;
-	height:50px;
-}

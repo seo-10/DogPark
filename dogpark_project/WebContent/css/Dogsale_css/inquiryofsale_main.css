@@ -100,7 +100,7 @@ body {
     width: 500px;
     z-index: 40;
 }
-/*------------------- 濡쒓렇�씤 �쑀吏� �슦痢� �긽�떒 -------------------*/
+/*------------------- 嚥≪뮄�젃占쎌뵥 占쎌�筌욑옙 占쎌뒭筌ο옙 占쎄맒占쎈뼊 -------------------*/
 #login_Ing {
 	position: absolute;
     display: block;
@@ -118,7 +118,7 @@ body {
 	fill: white;
 }
 
-/*------------------- 濡쒓렇�씤 李�------------------- */
+/*------------------- 嚥≪뮄�젃占쎌뵥 筌∽옙------------------- */
 .login-box {
     width: 100%;
     margin: auto;
@@ -134,10 +134,11 @@ body {
     padding: 90px 70px 50px 70px;
     border-radius: 10px;
     /*background: rgba(20, 20, 20, 0.9);*/
-    background: rgba(211, 211, 211, 0.671);
+    background: black;
 }
 
 #closeBtn {
+	color: white;
     position: relative;
     top: -70px;
     left: 395px;
@@ -168,6 +169,7 @@ body {
 }
 
 .login-snip .tab {
+	color: #7f6c6c;
     font-size: 22px;
     margin-right: 15px;
     padding-bottom: 5px;

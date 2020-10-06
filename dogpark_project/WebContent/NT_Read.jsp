@@ -73,9 +73,20 @@
     		</article>
     		
 	   		<article id="notice_board_bot">
-	   		<span>
-	   		<input type="button" value="목록" id="" onclick="location.href='javascript:history.back()'" />
-	   		</span>
+	   		<% String id = (String)session.getAttribute("id");%>
+    		<% if(id == null || !id.equals("admin")){ %>
+		   		<span>
+		   			<input type="button" value="목록" id="" onclick="location.href='javascript:history.back()'" />
+		   		</span>
+	   		<%} else if(id.equals("admin")){%>
+	   			<span>
+		   			<input type="button" value="삭제" id="" onclick="location.href='NT_Write.jsp'" />
+		   		</span>
+				<span>
+	   				<input type="button" value="목록" id="" onclick="location.href='javascript:history.back()'" />
+	   			</span>
+	   		<%} %>
+	   		
 			</article> 
     	</section>
 
