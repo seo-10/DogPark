@@ -138,6 +138,7 @@ body {
 }
 
 #closeBtn {
+	color: white;
     position: relative;
     top: -70px;
     left: 395px;
