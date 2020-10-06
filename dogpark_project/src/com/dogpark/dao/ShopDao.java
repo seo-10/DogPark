@@ -106,6 +106,17 @@ public class ShopDao {
 		sqlsession.close();
 		return articleList;
 	}
+	
+	public List<ShopDto> boardbuyarticle(String pd_name){
+		List<ShopDto> articleList = null;
+		SqlSessionFactory sqlfactory = ShopDao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("shop_board_buy_select", pd_name);
+
+		sqlsession.close();
+		return articleList;
+	}
 
 	public List<BoardBean> modifyselectarticle(int code) {
 		List<BoardBean> articleList = null;
@@ -141,6 +152,7 @@ public class ShopDao {
 //		sqlsession.update("ht_viewupdate", code);
 //		sqlsession.commit();
 //		sqlsession.close();
+	
 //	}
 }
 

@@ -184,6 +184,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/shop_buy.bo")){
+			action = new Shop_BuyAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		/* aside 장바구니 */
 		else if(command.equals("/shop_boardread.bo")){
 			action = new Shop_BoardReadAction();

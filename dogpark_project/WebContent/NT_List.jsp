@@ -91,7 +91,7 @@
     		<% String id = (String)session.getAttribute("id");%>
     		<% if(id == null || !id.equals("admin")){ %>
 		   		<span>
-		   			<input type="button" value="목록" id="" onclick="location.href='NT_List.jsp'" />
+		   			<input type="button" value="목록" id="" onclick="location.href='javascript:location.reload()'" />
 		   		</span>
 	   		<%} else if(id.equals("admin")){%>
 	   			<span>

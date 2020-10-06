@@ -144,6 +144,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from product where pd_name=#{pd_name};
 	</select>
 	
+	<select id="shop_board_buy_select" resultType="com.dogpark.dto.ShopDto" parameterType="com.dogpark.dto.ShopDto">
+		select * from product where pd_name=#{pd_name};
+	</select>
+	
 	<!-- 댓글 입력 -->
 	<insert id="insertReply" parameterType="com.dogpark.dto.ReplyDto">
 		insert into ex_reply values(seq_reply_no.nextval, #{board_no}, #{id}, now(), #{reply_content})

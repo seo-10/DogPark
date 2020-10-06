@@ -73,7 +73,7 @@
 	    
 	     <!-- 로그인 유지  -->
 	     <div id="login_Ing">
-	    	<jsp:include page="js/notice_js/header.jsp" />
+	    	<jsp:include page="js/main_js/header.jsp" />
 	    </div>
 	   
 	    <!-- 마이페이지로 가는 다이얼로그 -->
@@ -97,7 +97,7 @@
 	    		%>
 	    			
 	            <article style="float: left;">
-	                <a href="shop_boardread.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/dogfood<% out.println(dto.get(i).getIndex());%>.png"></a>
+	                <a href="shop_buy.bo?pd_name=<%out.println(dto.get(i).getPd_name());%>"><img src="img/shopping_img/dogfood<% out.println(dto.get(i).getIndex());%>.png"></a>
 	                <ul>
 	                    <li class="foodName"><a href="javascript:void(0);"><% out.println(dto.get(i).getPd_desc()); %></a></li>
 	                    <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>

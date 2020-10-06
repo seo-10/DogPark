@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_buy.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -60,49 +60,8 @@
     </div>
     
     <section>
-    <div>
-    	<% System.out.println(dto.get(0).getPd_name()); %>
-    	<img src="img/shopping_img/dogfood<% out.println(dto.get(0).getIndex());%>.png">
-    </div>
-    	<!-- 가격 천단위 컴마 찍기 -->
-	   		<% 
-	   			int price = dto.get(0).getPd_price();
-	   			String priceComma = String.format("%, d", price);
-	   		%>
-	   		<div>
-               <ul style="list-style-type: none;">
-                   <li class="foodName"><a href="#"><% out.println(dto.get(0).getPd_desc()); %></a></li>
-                   <li class="foodPrice" style="float: right;"><a href="#"><% out.println(priceComma); %>￦</a></li>
-               </ul>
-            </div>
-            
-            <!-- 별점 
-               <div class="starRev">
-                   <span class="starR1 on">별1_왼쪽</span>
-                   <span class="starR2 on">별1_오른쪽</span>
-                   <span class="starR1 on">별2_왼쪽</span>
-                   <span class="starR2 on">별2_오른쪽</span>
-                   <span class="starR1 on">별3_왼쪽</span>
-                   <span class="starR2 on">별3_오른쪽</span>
-                   <span class="starR1">별4_왼쪽</span>
-                   <span class="starR2">별4_오른쪽</span>
-                   <span class="starR1">별5_왼쪽</span>
-                   <span class="starR2">별5_오른쪽</span>
-               </div>
-             -->
-             
-               <div style="clear: both; margin-top:10px">
-              		<ul style="list-style-type: none;">
-              			<li><a href="#">장바구니 추가</a></li>
-              			<% String id = (String)session.getAttribute("id");%>
-    					<% if(id != null) { %>
-              				<li><a href="shop_buy.bo?pd_name=<%out.println(dto.get(0).getPd_name());%>">구매하기</a></li>
-              			<% } else {%>
-              				<li><a href="#" class="pleaseLogin">구매하기</a></li>
-              				<%} %>
-              		</ul>
-               </div>
+   		<h1>구매내역</h1>
     </section>
-     </form>
+</form>
 </body>
-</html>
+</html>    
