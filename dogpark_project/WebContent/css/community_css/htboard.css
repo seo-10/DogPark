@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /*-------커뮤니티 메인 내용--------*/
 .community_contents{
-	border:1px solid red;
 	width:1300px; 
 	height:1000px; 
 	position:absolute;
@@ -114,8 +113,8 @@
 
 #ht_read_contents{
 	border-radius:10px;
-	height:900px;
-	width:1000px;
+	height:600px;
+	width:800px;
 	background-color:#f9f9f9;
 	margin-top:70px;
 	padding:20px;

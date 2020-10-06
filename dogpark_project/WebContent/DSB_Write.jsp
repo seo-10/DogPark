@@ -16,6 +16,10 @@
  <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
   <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+ 
+  <!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
 </head>
 <body>
  

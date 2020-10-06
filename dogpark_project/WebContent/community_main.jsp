@@ -13,8 +13,8 @@
 	
 	<!-- css 사용 -->
  	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css">
-  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css" />
- 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css" />
+  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=4" />
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=4" />
  	
  	<!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />

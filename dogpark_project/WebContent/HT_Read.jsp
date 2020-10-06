@@ -16,8 +16,8 @@
 	
 	<!-- css 사용 -->
  	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css">
-  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css" />
- 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css" />
+  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=4" />
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=4" />
  	
  	<!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
@@ -52,8 +52,6 @@
 
 <section id="ht_read">
 	<div name="ht_read_contents" id="ht_read_contents"><%out.println(dto.get(0).getHt_contents());%></div>
-	<article name="ht_comment_read" id="ht_comment_read">댓글</article>
-	<article name="ht_comment_write" id="ht_comment_write">댓글 입력 란</article><input type="button" value="댓글등록" id="ht_comment_btn"/>
 </section>
 <aside id="ht_aside">
 <aside><h3>꿀팁 커뮤니티</h3></aside>
