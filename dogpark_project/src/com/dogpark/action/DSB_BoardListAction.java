@@ -5,9 +5,8 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.dogpark.dto.ActionForward;
-import com.dogpark.dto.DogjarangDto;
+import com.dogpark.dto.Dogpark_dogsDto;
 import com.dogpark.dto.PageInfo;
-import com.dogpark.service.DJ_BoardListService;
 import com.dogpark.service.DSB_BoardListService;
 
 public class DSB_BoardListAction implements Action {
@@ -16,7 +15,7 @@ public class DSB_BoardListAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		System.out.println("액션부");
-		List<DogjarangDto> articleList=new ArrayList<DogjarangDto>();
+		List<Dogpark_dogsDto> articleList=new ArrayList<Dogpark_dogsDto>();
 		int page=1;
 		int limit=4;
 		

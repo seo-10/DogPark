@@ -66,7 +66,7 @@
 		<span id="board_ph">분양 문의 게시판</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </div>
 <hr style="clear:both;" />
-<h1 style="text-align:center;">중형견</h1>
+<h1 style="text-align:center;"><a href="">중형견</a> <a href="">대형견</a></h1>
 <%
 if(dto != null && listCount > 0){
 %>
@@ -82,20 +82,20 @@ if(dto != null && listCount > 0){
 		</a>
 		<%} %>
 	  <article style="clear:both;">
-	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DJ_Write.jsp'"/>
+	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DSB_Write.jsp'"/>
 	  </article>
 <section class="pageList">
 		<%if(nowPage<=1){ %>
 		[이전]&nbsp;
 		<%}else{ %>
-		<a href="dj_boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+		<a href="dsb_boardList.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 		<%} %>
 
 		<%for(int a=startPage;a<=endPage;a++){
 				if(a==nowPage){%>
 		<%=a %>
 		<%}else{ %>
-		<a href="dj_boardList.bo?page=<%=a %>"class="pageNum"><%=a %>
+		<a href="dsb_boardList.bo?page=<%=a %>"class="pageNum"><%=a %>
 		</a>
 		<%} %>
 		<%} %>
@@ -103,13 +103,16 @@ if(dto != null && listCount > 0){
 		<%if(nowPage>=maxPage){ %>
 		[다음]
 		<%}else{ %>
-		<a href="dj_boardList.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+		<a href="dsb_boardList.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 		<%} %>
 	</section>
 	<%
     }else{
 	%>
-	<section class="emptyArea">등록된 글이 없습니다.</section>
+	<section class="emptyArea">등록된 글이 없습니다.
+	 <article style="clear:both;">
+	  	<input type="button" value="글쓰기" id="write_button1" onClick="location.href='DSB_Write.jsp'"/>
+	  </article></section>
 	<%}%>
   </section>
 </body>

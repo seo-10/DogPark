@@ -17,6 +17,7 @@ import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.CalendarDto;
 import com.dogpark.dto.DogjarangDto;
 import com.dogpark.dto.Dogpark_dogsDto;
+import com.dogpark.dto.ReplyDto;
 
 public class DogSaleDao {
 	static SqlSessionFactory sqlfactory;
@@ -75,8 +76,8 @@ public class DogSaleDao {
 		return countList;
 	}
 	//문양 게시판
-	public List<DogjarangDto> dbs_boardlistarticle(int page) {
-		List<DogjarangDto> articleList = null;
+	public List<Dogpark_dogsDto> dbs_boardlistarticle(int page) {
+		List<Dogpark_dogsDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		int startrow=(page-1)*4;
@@ -92,6 +93,25 @@ public class DogSaleDao {
 		sqlsession.commit();
 		sqlsession.close();	
 	}
+	public List<Dogpark_dogsDto> DSB_boardreadarticle(String dpd_name){
+		List<Dogpark_dogsDto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("dsb_board_read_select", dpd_name);
+
+		sqlsession.close();
+		return articleList; 
+		
+	}
+	public void DSB_deleteservice(String dpd_name) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		sqlsession.update("dsb_board_delete", dpd_name);
+		sqlsession.commit();
+		sqlsession.close();
+	}
 
 	public int dbs_selectListCount() {
 		int listCount= 0;
@@ -102,5 +122,34 @@ public class DogSaleDao {
 		
 		sqlsession.close();
 		return listCount;
+	}
+	public List<Dogpark_dogsDto> DSB_modifyselectarticle(String dpd_name) {
+		List<Dogpark_dogsDto> articleList = null;
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		articleList = sqlsession.selectList("dsb_board_modify_select", dpd_name);
+
+		sqlsession.close();
+		return articleList;
+	}
+	public void DSB_modifyarticle(Dogpark_dogsDto dto) {
+		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSession sqlsession = sqlfactory.openSession();
+
+		sqlsession.update("dsb_board_modify_update", dto);
+		sqlsession.commit();
+		
+		sqlsession.close();
+	}
+	public void insertReply(ReplyDto dto){
+		try {
+			SqlSessionFactory sqlfactory = Dao.getConn();
+			SqlSession sqlsession = sqlfactory.openSession();
+			sqlsession.insert("reply.insertReply", dto);
+		} catch (Exception e) {
+			System.out.println("insertReply : " + e);
+			e.printStackTrace();
+		}
 	}
 }

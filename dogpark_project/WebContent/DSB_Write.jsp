@@ -54,38 +54,118 @@
 	    </div>
 
 <section id="dj_write">
-	<form name="myform" method="post" action="dj_boardWritePro.bo">
+	<form name="myform" method="post" action="dsb_boardWritePro.bo">
 
-			<h1 id="dj_category_font">반려견 자랑 커뮤니티 글작성</h1>
+			<h1 id="dj_category_font">강아지 정보 등록</h1>
 			<table id="dj_write_table">
 				<tr>
-					<td>제목</td>
-					<td><input type="text" size="100px" name="dj_title"></td>
+					<td>이름</td>
+					<td><input type="text" size="30px" name="dsb_dpd_name"></td>
+				</tr>
+				<tr>
+					<td>견종</td>
+					<td>
+						<select name="dsb_dpd_species">
+						<option>골든 리트리버</option>
+						<option>웰시코기</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>견분류</td>
+					<td>
+						<select name="dsb_dpd_classify">
+						<option>중형견</option>
+						<option>대형견</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td>
+						<select name="dsb_dpd_sex">
+						<option>남아</option>
+						<option>여아</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>년</td>
+					<td>
+						<select name="dsb_dpd_year">
+						<option>2020</option>
+						<option>2019</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>월</td>
+					<td>
+						<select name="dsb_dpd_month">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>일</td>
+					<td>
+						<select name="dsb_dpd_day">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+						<option>16</option>
+						<option>17</option>
+						<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+						<option>26</option>
+						<option>27</option>
+						<option>28</option>
+						<option>29</option>
+						<option>30</option>
+						<option>31</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+				<td>특징</td>
+				<td><textarea name="dsb_dpd_character" style="width:300px; height:200px;">
+			</textarea></td>
 				</tr>
 			</table>
-			<br>
-
-			<textarea name="dj_contents" id="editor">
-				내용
-			</textarea>
-			<div id="dj_writer">작성자 : <input type="text" name="dj_writer" readonly
-				value="<%out.println(session.getAttribute("id"));%>" /></div>
 			<p>
 				<input type="submit" value="글등록" id="dj_write_input_btn">
 			</p>
 	</form>
 </section>
-		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
- 	<script>
-	 ClassicEditor
-	 .create(document.querySelector('#editor'))
-	 .then( editor => {
-		 console.log( editor );
-	 } )
-	 .catch( error => {
-		 console.error( error );
-	 } );
-	</script>
 
 </body>
 </html>

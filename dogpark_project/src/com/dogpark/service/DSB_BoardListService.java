@@ -2,16 +2,15 @@ package com.dogpark.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.dogpark.dao.Dao;
 import com.dogpark.dao.DogSaleDao;
 import com.dogpark.dto.BoardBean;
-import com.dogpark.dto.DogjarangDto;
+import com.dogpark.dto.Dogpark_dogsDto;
 
 public class DSB_BoardListService {
 		DogSaleDao dao= new DogSaleDao();
-		List<DogjarangDto> articleList = null;
+		List<Dogpark_dogsDto> articleList = null;
 		
-		public List<DogjarangDto> ListService(int page){
+		public List<Dogpark_dogsDto> ListService(int page){
 		articleList=dao.dbs_boardlistarticle(page);
 		return articleList;
 		}

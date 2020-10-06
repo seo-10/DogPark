@@ -105,9 +105,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="dsb_select_count" resultType="Integer">
 		select count(*) from dogpark_dogs;
 	</select>
-	<insert id="dsb_boardinsert" parameterType="com.dogpark.dto.DogjarangDto">
-		insert into dog_jarang(code_no,dj_title, dj_contents, dj_file, u_id, dj_view, dj_like,date) values(default,#{dj_title}, #{dj_contents}, #{dj_file}, #{u_id}, 0, 0,now());
+	<insert id="dsb_boardinsert" parameterType="com.dogpark.dto.Dogpark_dogsDto">
+		insert into dogpark_dogs(dpd_name, dpd_species, dpd_classify, dpd_sex, dpd_year, dpd_month, dpd_day,dpd_img,dpd_character)
+		values(#{dpd_name},#{dpd_species},#{dpd_classify},#{dpd_sex},#{dpd_year},#{dpd_month},#{dpd_day},#{dpd_img},#{dpd_character});
 	</insert>
+	<select id="dsb_board_read_select" resultType="com.dogpark.dto.Dogpark_dogsDto" parameterType="com.dogpark.dto.Dogpark_dogsDto">
+		select * from dogpark_dogs where dpd_name=#{dpd_name};
+	</select>
+	<delete id="dsb_board_delete" parameterType="com.dogpark.dto.Dogpark_dogsDto">
+		delete from dogpark_dogs where dpd_name=#{dpd_name};
+	</delete>
+	<select id="dsb_board_modify_select" resultType="com.dogpark.dto.Dogpark_dogsDto" parameterType="com.dogpark.dto.DogjarangDto">
+		select * from dogpark_dogs where dpd_name=#{dpd_name};
+	</select>
+	<update id="dsb_board_modify_update" parameterType="com.dogpark.dto.Dogpark_dogsDto">
+		update dogpark_dogs set dpd_character=#{dpd_character} where dpd_name=#{dpd_name};
+	</update>
+	
 	
 	<insert id="ds_reservationinsert" parameterType="com.dogpark.dto.CalendarDto">
 		insert into calendar(u_id, date, time) values(#{u_id}, #{date}, #{time});
@@ -130,6 +144,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from product where pd_name=#{pd_name};
 	</select>
 	
+	<!-- 댓글 입력 -->
+	<insert id="insertReply" parameterType="com.dogpark.dto.ReplyDto">
+		insert into ex_reply values(seq_reply_no.nextval, #{board_no}, #{id}, now(), #{reply_content})
+	</insert>
 	
 	
 </mapper>

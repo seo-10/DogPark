@@ -223,7 +223,14 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
-		/*
+		else if(command.equals("/dsb_boardWritePro.bo")){
+			action  = new DSB_BoardWriteAction();
+			try {
+				forward=action.execute(request, response );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		else if(command.equals("/dsb_boardread.bo")){
 			action = new DSB_BoardReadAction();
 			try{
@@ -231,10 +238,41 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}catch(Exception e){
 				e.printStackTrace();
 			}
-		}*/
-		
-		
-		
+		}
+		else if(command.equals("/dsb_boardmodify.bo")){
+			System.out.println("컨트롤부 체크");
+			action = new DSB_BoardModifyReadAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/dsb_updateprocess.bo")){
+			action = new DSB_BoardModifyProAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/dsb_delete.bo")){
+			action = new DSB_BoardDeleteAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		//댓글 기능
+		else if (command.equals("/ReplyWriteAction.bo")) {
+			action = new DSB_ReplyWriteAction();
+			try {
+				action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		
 		
 		

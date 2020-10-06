@@ -49,6 +49,7 @@
 	    <%if(session.getAttribute("id") !=null) { %>
 	    	<jsp:include page="js/main_js/header.jsp" />
 	    </div>
+	    
 	    <%} else { %>
 	    <%} %>
     </form>
