@@ -1,14 +1,14 @@
 // 부트스트랩 아이콘 마우스엔터시 좌측 menuBar 보이기
 $(document).ready(function() { 
-//    $("#menuBar").hide();
-//    $("#dropdown").mouseenter(function() {
-//        $("#menuBar").stop().fadeIn(400);
-//        $("#svg1").css("fill", "yellow");
-//    });
-//    $("#dropdown").mouseleave(function() {
-//        $("#menuBar").stop().fadeOut(300);
-//        $("#svg1").css("fill", "gray");
-//    });
+    $("#menuBar").hide();
+    $("#dropdown").mouseenter(function() {
+        $("#menuBar").stop().fadeIn(400);
+        $("#svg1").css("fill", "yellow");
+    });
+    $("#dropdown").mouseleave(function() {
+        $("#menuBar").stop().fadeOut(300);
+        $("#svg1").css("fill", "gray");
+    });
 
 //svg 문짝 눌렀을때 로그인 창 보이기
     $("#loginBox").hide();

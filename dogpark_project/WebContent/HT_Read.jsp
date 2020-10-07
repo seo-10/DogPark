@@ -16,8 +16,8 @@
 	
 	<!-- css 사용 -->
  	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css">
-  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css" />
- 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css" />
+  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=4" />
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=4" />
  	
  	<!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
@@ -27,6 +27,8 @@
 	
 	<!-- jquery 사용 -->
     <script type="text/javascript" src="js/community_js/community.js"></script>
+    
+    
 
 </head>
 <body>
@@ -49,29 +51,28 @@
 
 
 
-
+<nav style=" position:absolute; margin:0; padding:0;top:100px; width:1890px; height:300px;"><img src="img/htboard_img/mainPageA.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 <section id="ht_read">
+	<span style=" margin:0; padding:0;font-size:25pt; border-bottom:1px solid black;">꿀팁 커뮤니티</span><span style="margin-left:10px; padding:0; font-size:10pt;">유용한 정보를 모아모아</span>
+	<div style=" margin-top:15px; font-size:18pt; background-color:#EAEAEA; width:900px; height:50px; padding-top:20px; border-bottom:1px dotted black; border-top:2px solid black;"><%out.println(dto.get(0).getHt_title()); %></div>
+	<div style="width:900px; border-bottom:1px solid black;"><span style=""><%out.println(dto.get(0).getU_id());%></span><span style="float:right;"><%out.println(dto.get(0).getDate11());%></span></div>
 	<div name="ht_read_contents" id="ht_read_contents"><%out.println(dto.get(0).getHt_contents());%></div>
-	<article name="ht_comment_read" id="ht_comment_read">댓글</article>
-	<article name="ht_comment_write" id="ht_comment_write">댓글 입력 란</article><input type="button" value="댓글등록" id="ht_comment_btn"/>
 </section>
 <aside id="ht_aside">
-<aside><h3>꿀팁 커뮤니티</h3></aside>
-<div></div>
-<div id="ht_read_title">제목 : <%out.println(dto.get(0).getHt_title());%></div>
-<div name="ht_read_writer" id="ht_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></div>
-<div name="ht_read_date" id="ht_read_date">작성날짜 : <%out.println(dto.get(0).getDate11());%></div>
-<div id="like_btn">좋아요<img src="img/heart_btn.png"  id="heart_btn"/> </div>
-<div id=like_count>좋아요 수 : 10</div>
-
+<h3 style="text-align:center;">프로필</h3>
+<div><img src="img/htboard_img/ht_banner1.jpg" style="width:250px; height:100px;"/></div>
 <% String id = (String)session.getAttribute("id");%>
-<% System.out.println(id); %>
+<div name="ht_read_writer" id="ht_read_writer"><%out.println(id);%></div>
+
 <% String dtoId = dto.get(0).getU_id(); %>
 <% if(id==null || !id.equals(dtoId)){%>
-
+	<input type="button" value="목록" id="ht_text_list" onclick="location.href='boardList.bo'"/>
 <% } else {%>
+	<input type="button" value="목록" id="ht_text_list" onclick="location.href='boardList.bo'"/>
+	<br/>
 	<input type="button" value="수정" id="ht_text_update" onclick="location.href='boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
 	<input type="button" value="삭제" id="ht_text_delete" onclick="location.href='ht_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'"/>
+	
 <% } %>
 
 </aside>
