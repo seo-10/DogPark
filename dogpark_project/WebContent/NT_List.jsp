@@ -107,7 +107,7 @@
 	   		
 			<span class="pageList">
 				<%if(nowPage<=1){ %>
-					[이전]&nbsp;
+					<a href="#">[이전]</a>&nbsp;
 				<%}else{ %>
 					<a href="notice_list.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 				<%} %>
@@ -121,7 +121,7 @@
 				<%} %>
 		
 				<%if(nowPage>=maxPage){ %>
-				[다음]
+				<a href="#">[다음]</a>
 				<%}else{ %>
 					<a href="notice_list.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 				<%} %>

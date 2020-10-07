@@ -106,30 +106,31 @@ public class NoticeDao {
 		
 	}
 
-	public List<BoardBean> modifyselectarticle(int code) {
-		List<BoardBean> articleList = null;
+	public List<NoticeDto> NTmodifyReadtService(int code) {
+		System.out.println("¿À³Ä?");
+		List<NoticeDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		articleList = sqlsession.selectList("ht_board_modify_select", code);
+		articleList = sqlsession.selectList("nt_board_modify_select", code);
 
 		sqlsession.close();
 		return articleList;
 	}
-	public void modifyarticle(BoardBean dto) {
-		SqlSessionFactory sqlfactory = Dao.getConn();
+	public void modifyarticle(NoticeDto dto) {
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		sqlsession.update("ht_board_modify_update", dto);
+		sqlsession.update("nt_board_modify_update", dto);
 		sqlsession.commit();
 		
 		sqlsession.close();
 	}
 	public void deleteservice(int code) {
-		SqlSessionFactory sqlfactory = Dao.getConn();
+		SqlSessionFactory sqlfactory = NoticeDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 
-		sqlsession.update("ht_board_delete", code);
+		sqlsession.update("nt_board_delete", code);
 		sqlsession.commit();
 		sqlsession.close();
 	}

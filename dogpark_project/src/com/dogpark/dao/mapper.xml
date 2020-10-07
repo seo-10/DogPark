@@ -63,6 +63,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select count(*) from honey_tip;
 	</select>
 	
+	<delete id="nt_board_delete" parameterType="com.dogpark.dto.NoticeDto">
+		delete from notice where code_no=#{code_no};
+	</delete>
+	
+	<select id="nt_board_modify_select"  resultType="com.dogpark.dto.NoticeDto" parameterType="com.dogpark.dto.NoticeDto">
+		select * from notice where code_no=#{code_no};
+	</select>
+	
+	<update id="nt_board_modify_update" parameterType="com.dogpark.dto.NoticeDto">
+		update notice set nt_title=#{nt_title},nt_contents=#{nt_contents} where code_no=#{code_no};
+	</update>
+	
 	<update id="nt_viewupdate" parameterType="com.dogpark.dto.NoticeDto">
 		update notice set nt_view=nt_view+1 where code_no=#{code_no};
 	</update>

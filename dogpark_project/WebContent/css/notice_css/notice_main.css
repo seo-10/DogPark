@@ -382,11 +382,13 @@ a {
 
 .pageList {
 	clear:both;
-	margin-left: 300px;
+	margin-left: 500px;
 	width: 300px;
 	text-align: center;
 	font-size:12pt;
 }
+
+
 .pageNum{
 	font-size:11pt;
 }
@@ -400,6 +402,6 @@ a {
 }
 
 #notice_board_bot {
-	width: 600px;
+	width: 1080px;
 	height:50px;
 }

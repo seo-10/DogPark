@@ -55,7 +55,7 @@
     <div id="login_Ing">
     	<jsp:include page="js/main_js/header.jsp" />
     </div>
-    </form>
+   
     
    
     	<section id="notice_list">
@@ -80,16 +80,19 @@
 		   		</span>
 	   		<%} else if(id.equals("admin")){%>
 	   			<span>
-		   			<input type="button" value="삭제" id="" onclick="location.href='NT_Write.jsp'" />
+		   			<input type="button" value="수정" id="" onclick="location.href='notice_modify.bo?code_no=<%=dto.get(0).getCode_no()%>'" />
+		   		</span>
+	   			<span>
+		   			<input type="button" value="삭제" id="" onclick="location.href='notice_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'" />
 		   		</span>
 				<span>
-	   				<input type="button" value="목록" id="" onclick="location.href='javascript:history.back()'" />
+	   				<input type="button" value="목록" id="" onclick="location.href='notice_list.bo'" />
 	   			</span>
 	   		<%} %>
 	   		
 			</article> 
     	</section>
-
+ </form>
 </body>
 
 </html>

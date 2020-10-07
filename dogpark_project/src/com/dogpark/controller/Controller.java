@@ -123,6 +123,30 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/notice_delete.bo")){
+			action = new Nt_BoardDeleteAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/notice_modify.bo")){
+			action = new Nt_BoardModifyAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/notice_UpdatePro.bo")){
+			action = new Nt_BoardModifyProAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		
 		// 반려견 자랑 게시판--------------------------------------------------------
 		else if(command.equals("/dj_boardList.bo")){
