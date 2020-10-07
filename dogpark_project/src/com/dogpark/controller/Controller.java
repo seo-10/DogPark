@@ -98,7 +98,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 			}
 		}
 		
-		// 공지사항 게시판 ----------------------------------------------------------
+		// //공지사항 게시판 ----------------------------------------------------------
 		else if(command.equals("/notice_list.bo")){
 			action = new Nt_BoardListAction();
 			try{
