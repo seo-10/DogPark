@@ -9,6 +9,15 @@
 <title>Insert title here</title>
  <link rel="stylesheet" type="text/css" href="css/Dogsale_css/dsbboard.css?ver=4" />
  <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
+ <!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+ 
+  <!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	<!-- jquery 사용 -->
+    <script type="text/javascript" src="js/main_js/mainPage.js"></script>
 </head>
 <script
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
