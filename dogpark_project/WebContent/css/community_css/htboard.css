@@ -106,7 +106,7 @@
 	height:1000px; 
 	position:absolute;
 	left:430px; 
-	top:410px;
+	top:450px;
 	margin:0; 
 	padding:0;
 }
@@ -125,7 +125,7 @@
 	width:250px;
 	position: fixed;
   	right: 200px;
-  	top: 170px;
+  	top: 470px;
   	height: 300px;
   	z-index: 2;
   	border-radius:20px;
@@ -333,7 +333,7 @@
 .dj_board_contents{
 	background-color:rgba(153,153,153,0.9);
 	width:1400px; 
-	height:800px; 
+	height:1100px; 
 	position:absolute;
 	left:440px; 
 	top:100px;

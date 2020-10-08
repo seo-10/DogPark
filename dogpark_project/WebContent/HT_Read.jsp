@@ -51,7 +51,7 @@
 
 
 
-<nav style=" position:absolute; margin:0; padding:0;top:100px; width:1890px; height:300px;"><img src="img/htboard_img/mainPageA.jpg" style="clear:both;width:100%; height:100%;"/></nav>
+<nav style=" position:absolute; margin:0; padding:0; width:1890px; height:400px;"><img src="img/htboard_img//wellsi_banner.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 <section id="ht_read">
 	<span style=" margin:0; padding:0;font-size:25pt; border-bottom:1px solid black;">꿀팁 커뮤니티</span><span style="margin-left:10px; padding:0; font-size:10pt;">유용한 정보를 모아모아</span>
 	<div style=" margin-top:15px; font-size:18pt; background-color:#EAEAEA; width:900px; height:50px; padding-top:20px; border-bottom:1px dotted black; border-top:2px solid black;"><%out.println(dto.get(0).getHt_title()); %></div>
@@ -60,7 +60,7 @@
 </section>
 <aside id="ht_aside">
 <h3 style="text-align:center;">프로필</h3>
-<div><img src="img/htboard_img/ht_banner1.jpg" style="width:250px; height:100px;"/></div>
+<div><img src="img/htboard_img/wellsi_banner.jpg" style="width:250px; height:100px;"/></div>
 <% String id = (String)session.getAttribute("id");%>
 <div name="ht_read_writer" id="ht_read_writer"><%out.println(id);%></div>
 
