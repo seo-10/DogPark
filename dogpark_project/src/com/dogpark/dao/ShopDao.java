@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.dogpark.dto.BoardBean;
+import com.dogpark.dto.BuyListDto;
 import com.dogpark.dto.Dto;
 import com.dogpark.dto.NoticeDto;
 import com.dogpark.dto.ShopDto;
@@ -87,11 +88,11 @@ public class ShopDao {
 		return listCount;
 	}
 	
-	public void boardwritearticle(NoticeDto dto) {
-		SqlSessionFactory sqlfactory = NoticeDao.getConn();
+	public void buyListInsert_article(BuyListDto dto) {
+		SqlSessionFactory sqlfactory = ShopDao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
 		
-		sqlsession.insert("nt_boardinsert",dto);
+		sqlsession.insert("shop_buyList_Insert",dto);
 		sqlsession.commit();
 		sqlsession.close();
 	}

@@ -23,8 +23,6 @@ public class Shop_BuyAction implements Action {
 		request.setAttribute("articleList", articlList);
 		ActionForward forward= new ActionForward();
   		forward.setPath("/Shop_Buy.jsp");
-  		System.out.println("구매페이지");
-  		System.out.println(articlList);
   		
 		return forward;
 	}

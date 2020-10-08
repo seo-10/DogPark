@@ -84,7 +84,12 @@
            		<td class="foodPrice"><a href="#"><% out.println(priceComma); %>￦</a></td>
            	</tr>
        </table>
+       <% String id = (String)session.getAttribute("id");%>
+    		<% if(id != null ){ %>
+    		
+    		<input type="hidden" name="cart_name" value="<%= dto.get(0).getPd_name()%>"/>
        <input type="submit" value="결제하기" />
+       <%} %>
     </span>
             
             
