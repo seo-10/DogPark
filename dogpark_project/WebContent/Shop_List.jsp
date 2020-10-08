@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -55,8 +55,9 @@
    	<script>
 		function kartAside(i) {
 			//$('#kartItemPic').attr('src','img/shopping_img/dogfood'+i+'.png');
-			$('#kartItemPics').append('<img id="kartItemPic" src="img/shopping_img/dogfood'+(i+1)+'.png" width="100px" height="100px">');
-			$('#kartItemPics').append('<p>아이스아메리카노'+i+'</p>');
+			$('#kartItemPics').append('<img id="kartItemPic" src="img/shopping_img/dogfood'+(i+1)+'.png" width="110px" height="100px">');
+			$('#kartItemName').append(dto.get(i).getPd_desc());
+			
 		}
 	</script>
 	
@@ -142,9 +143,17 @@
 	       <hr class="bottomHr" />
         </section>
       <% } %>
+      
 		<aside class="shopping_basket">
 			<div>최근 본 상품</div>
-			<a href="javascript:void(0);" id="kartItemPics"></a>
+			<span style="float:left;">
+				<a href="javascript:void(0);" id="kartItemPics"></a>
+			</span>
+			
+			<span>
+				<a href="javascript:void(0);" id="kartItemName"></a>
+			</span>
+			
         </aside>
         
 	</form>

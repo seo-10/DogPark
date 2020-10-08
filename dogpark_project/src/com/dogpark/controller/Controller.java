@@ -216,6 +216,15 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		/* 구매하기 클릭시 db에 user, 상품명, 수량 저장 */
+		else if(command.equals("/buyList_Insert.bo")){
+			action = new Shop_BuyListAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 		/* aside 장바구니 */
 		else if(command.equals("/shop_boardread.bo")){
 			action = new Shop_BoardReadAction();

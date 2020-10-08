@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
 <%@page import="com.dogpark.dto.ShopDto"%>
+<%@page import="com.dogpark.dto.BuyListDto"%>
 <%@page import="com.dogpark.dao.ShopDao"%>
 <%@page import="com.dogpark.dto.PageInfo"%>
 
@@ -39,8 +40,10 @@
 </head>
 <body>
 	<% ArrayList<ShopDto> dto = (ArrayList<ShopDto>)request.getAttribute("articleList"); %>
+	<% ArrayList<BuyListDto> list_dto = (ArrayList<BuyListDto>)request.getAttribute("articleBuyList"); %>
 	
-	<form name="form" method="post" name="form">
+	
+	<form name="form" method="post" name="form" action="buyList_Insert.bo">
 	<!-- 로그아웃 다이얼로그 -->
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
@@ -81,6 +84,7 @@
            		<td class="foodPrice"><a href="#"><% out.println(priceComma); %>￦</a></td>
            	</tr>
        </table>
+       <input type="submit" value="결제하기" />
     </span>
             
             
