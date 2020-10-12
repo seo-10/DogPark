@@ -1,8 +1,9 @@
 /*---------------´Þ·Â Æ²--------------*/
 .ios_contents{
-	background-color:rgba(153,153,153,0.9);
+	background-color:white;
+	border:1px solid black;
 	width:1300px; 
-	height:850px; 
+	height:800px; 
 	position:absolute;
 	left:480px; 
 	top:100px;
@@ -20,7 +21,7 @@
     }
     #calendarTable ul{
     	list-style: none;
-    	color:white;
+    	color:black;
     	padding:0;
     	margin:0;
     }

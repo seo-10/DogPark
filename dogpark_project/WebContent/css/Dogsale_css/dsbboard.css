@@ -325,21 +325,21 @@
 	padding:0;
 }
 /* -------- 반려견 자랑 게시판 내용 -----*/
-.dj_board_contents{
-	background-color:rgba(153,153,153,0.9);
+.dsb_board_contents{
+	background-color:white;
 	width:1400px; 
 	height:800px; 
 	position:absolute;
 	left:440px; 
-	top:100px;
+	top:500px;
 	margin:0; 
 	padding:20px;
 }
 
-.dj_box{
+.dsb_box{
 	float:left;
-	width:640px;
-	height:270px;
+	width:310px;
+	height:400px;
 	border:1px solid gray;
 	border-radius:10px;
 	padding-left:40px;
@@ -349,19 +349,18 @@
 	margin-left:10px;
 	margin-bottom:10px;
 }
-.dj_box:hover{
+.dsb_box:hover{
 	border:1px solid black;
 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 	}
 
-.dj_pro_img{
-	float:left;
+.dsb_pro_img{
 	border-radius:10px;
 	width:230px;
 	height:230px; 
 	}
-.dj_box_contents {
-	float:left;
+.dsb_box_contents {
+	
 	margin:10px;
 	padding:0;
 	width:300px;
@@ -370,30 +369,30 @@
 	list-style:none;
 }
 
-.dj_board_No_detail{
+.dsb_board_No_detail{
 		
 		font-size:12pt;
 }
 
-.dj_board_name_detail{
+.dsb_board_name_detail{
 		
 		color:black;
 		font-size:14pt;
 }
 
-.dj_board_writer_detail{
+.dsb_board_writer_detail{
 		
 		font-size:11pt;
 }
-.dj_board_like_detail{
+.dsb_board_like_detail{
 		
 		font-size:11pt;
 }
-.dj_board_count_detail{
+.dsb_board_count_detail{
 		
 		font-size:11pt;
 }
-.dj_board_date_detail{
+.dsb_board_date_detail{
 		
 		font-size:11pt;
 }

@@ -23,7 +23,7 @@
 	
 	<!-- css 사용 -->
 
-  	<link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
+  	<link rel="stylesheet" type="text/css" href="css/Dogsale_css/dsbboard.css?ver=1" />
  	<link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
  	
  	<!-- 로그아웃 다이얼로그 CSS 연결 -->
@@ -60,8 +60,8 @@
     	<jsp:include page="js/community_js/header.jsp" />
     </div>
     
-
- <section class="dj_board_contents">
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img//wellsi_banner.jpg" style="clear:both;width:100%; height:100%;"/></nav>
+ <section class="dsb_board_contents">
 	  <div>
 		<span id="board_ph">분양 문의 게시판</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </div>
@@ -71,13 +71,13 @@
 if(dto != null && listCount > 0){
 %>
 		<%for(int i=0;i<dto.size();i++){%>
-		<a href="dsb_boardread.bo?dpd_name=<%out.println(dto.get(i).getDpd_name());%>"class="dj_box">
-				<img src="img/htboard_img/honeytip.gif" class="dj_pro_img"/>
-				<ul class="dj_box_contents">
-					<li class="dj_board_No_detail">이름:<%out.println(dto.get(i).getDpd_name());%> </li>
-					<li class="dj_board_name_detail">생년월일:<%out.println(dto.get(i).getDpd_year());%>-<%out.println(dto.get(i).getDpd_month());%>-<%out.println(dto.get(i).getDpd_day());%> </li>
-					<li class="dj_board_count_detail"><%out.println(dto.get(i).getDpd_character());%> </li>
-					<li class="dj_board_date_detail">성별:<%out.println(dto.get(i).getDpd_sex());%> </li>
+		<a href="dsb_boardread.bo?dpd_name=<%out.println(dto.get(i).getDpd_name());%>"class="dsb_box">
+				<img src="img/Dogsale_img/<%out.println(dto.get(i).getDpd_img());%>" class="dsb_pro_img"/>
+				<ul class="dsb_box_contents">
+					<li class="dsb_board_No_detail">이름:<%out.println(dto.get(i).getDpd_name());%> </li>
+					<li class="dsb_board_name_detail">생년월일:<%out.println(dto.get(i).getDpd_year());%>-<%out.println(dto.get(i).getDpd_month());%>-<%out.println(dto.get(i).getDpd_day());%> </li>
+					<li class="dsb_board_count_detail"><%out.println(dto.get(i).getDpd_character());%> </li>
+					<li class="dsb_board_date_detail">성별:<%out.println(dto.get(i).getDpd_sex());%> </li>
 				</ul>
 		</a>
 		<%} %>

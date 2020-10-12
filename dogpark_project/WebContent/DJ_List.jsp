@@ -61,6 +61,8 @@
 	            </ul>
 	        </div>
 	    </div>
+	    
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img//wellsi_banner.jpg" style="clear:both;width:100%; height:100%;"/></nav>
  <section class="dj_board_contents">
 	  <div>
 		<span id="board_ph">반려견 자랑</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
@@ -71,7 +73,7 @@ if(dto != null && listCount > 0){
 %>
 		<%for(int i=0;i<dto.size();i++){%>
 		<a href="dj_boardread.bo?code_no=<%out.println(dto.get(i).getCode_no());%>"class="dj_box">
-				<img src="img/htboard_img/honeytip.gif" class="dj_pro_img"/>
+				<img src="img/htboard_img/<%out.println(dto.get(i).getDj_file());%>" class="dj_pro_img"/>
 				<ul class="dj_box_contents">
 					<li class="dj_board_No_detail">No.<%out.println(dto.get(i).getCode_no());%> </li>
 					<li class="dj_board_name_detail">제목:<%out.println(dto.get(i).getDj_title());%></li>
