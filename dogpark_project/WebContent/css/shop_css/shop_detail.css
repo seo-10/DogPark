@@ -327,11 +327,7 @@ a {
 .button {
 	margin-top: 20px;
 }
-/* 상세페이지 이미지 확대 */
-#detail_img img{
-	height: 340px !important;
-	width: 300px !important;
-}
+
 /* 섹션 부분 크기 조정 */
 #notice_list {
 	background-color:rgba(153,153,153,0.9);
@@ -416,6 +412,41 @@ section {
     height: 2500px;
     padding-top: 30px;
 }
+
+/* 섹션부 컨텐츠 */
+#detail_img {
+	float:left !important;
+}
+
+/* 상세페이지 이미지 확대 */
+#detail_img img{
+	height: 340px !important;
+	width: 300px !important;
+}
+
+#pd_detail {
+	background-color: gray;
+	width: 600px;
+	margin-left:350px;
+	margin-top: 19px;
+	padding-top: 2px;
+}
+
+#pd_detail div {
+	margin-left: 10px;
+	width: 555px;
+}
+
+#pd_detail div:nth-child(1) {
+	color:white;
+}
+
+#pd_detail div:nth-child(2) span {
+	font-size: 16pt;
+	font-weight: bold;
+	color: black;
+}
+
 /* 가격 테이블 */
 #pd_detail table{
 	height: 135px;

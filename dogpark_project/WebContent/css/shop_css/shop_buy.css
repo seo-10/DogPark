@@ -327,11 +327,7 @@ a {
 .button {
 	margin-top: 20px;
 }
-/* 상세페이지 이미지 확대 */
-#detail_img img{
-	height: 340px !important;
-	width: 300px !important;
-}
+
 /* 섹션 부분 크기 조정 */
 #notice_list {
 	background-color:rgba(153,153,153,0.9);
@@ -404,4 +400,15 @@ section {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 2500px;
+}
+
+/* 섹션부 컨텐츠 */
+#detail_img {
+	float:left !important;
+}
+
+/* 상세페이지 이미지 확대 */
+#detail_img img{
+	height: 340px !important;
+	width: 300px !important;
 }

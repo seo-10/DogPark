@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%request.setCharacterEncoding("utf-8"); %>
-<%@page import="com.dogpark.dto.ShopDto"%>
+<%@page import="com.dogpark.dto.BuyListDto"%>
 <%@page import="com.dogpark.dao.ShopDao"%>
 <%@page import="com.dogpark.dto.PageInfo"%>
 
@@ -38,7 +38,7 @@
    	    
 </head>
 <body>
-	<% ArrayList<ShopDto> dto = (ArrayList<ShopDto>)request.getAttribute("articleList"); %>
+	<% ArrayList<BuyListDto> dto = (ArrayList<BuyListDto>)request.getAttribute("articleList"); %>
 	
 	<form name="form" method="post" name="form">
 	<!-- 로그아웃 다이얼로그 -->
@@ -61,6 +61,17 @@
     
     <section>
    		<h1>구매내역</h1>
+   		<table>
+   			<tr>
+   				<th>상품명</th>
+   				<th>수량</th>
+   			</tr>
+   			<tr>
+   			<% String cart_name =  request.getParameter("cart_name"); %>
+   				<td><%= cart_name%></td>
+   				<td>2</td>
+   			</tr>
+   		</table>
     </section>
 </form>
 </body>

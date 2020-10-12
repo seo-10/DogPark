@@ -23,7 +23,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css?ver=1" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -40,10 +40,10 @@
 </head>
 <body>
 	<% ArrayList<ShopDto> dto = (ArrayList<ShopDto>)request.getAttribute("articleList"); %>
-	<% ArrayList<BuyListDto> list_dto = (ArrayList<BuyListDto>)request.getAttribute("articleBuyList"); %>
+	<% ArrayList<BuyListDto> list_dto = (ArrayList<BuyListDto>)request.getAttribute("articleList"); %>
 	
 	
-	<form name="form" method="post" name="form" action="buyList_Insert.bo">
+	<form name="form" method="post" name="form" action="buyList_Insert.bo?cart_name=<%out.println(dto.get(0).getPd_name());%>">
 	<!-- 로그아웃 다이얼로그 -->
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
@@ -66,7 +66,7 @@
 	<h1 id="toph1">구매페이지</h1>
 	<section>
 	
-    <span style="float:left;" id="detail_img">
+    <span id="detail_img">
     	<img src="img/shopping_img/dogfood<% out.println(dto.get(0).getIndex());%>.png">
     </span>
     	<!-- 가격 천단위 컴마 찍기 -->
@@ -74,7 +74,33 @@
 	   			int price = dto.get(0).getPd_price();
 	   			String priceComma = String.format("%, d", price);
 	   		%>
-	<span id="pd_detail">
+	<div id="pd_detail">
+		
+		<div>
+			<h1><a href="#"><% out.println(dto.get(0).getPd_desc()); %></a></h1>
+		</div>
+		
+		<div>
+			<span>가격</span>
+			<span><a href="#"><% out.println(priceComma); %> ￦</a></span>
+		</div>
+		
+		<div style="border-top:1px solid white;">
+			<ul style="list-style:none;">
+				<li style="float:left;">수량</li>
+				<li>
+					<ul style="list-style:none;">
+						<li style="float:left;">-</li>
+						<li><input type="number" name="" value="0" readonly /></li>
+						<li>+</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+		
+		<!--  테이블 형식 -->
+		<!-- 
 		<table border="10" bordercolor="gray" cellspacing="5">
 			<tr>
 				<th style="color:white;" colspan="2" class="foodName"><a href="#"><% out.println(dto.get(0).getPd_desc()); %></a></th>
@@ -84,13 +110,14 @@
            		<td class="foodPrice"><a href="#"><% out.println(priceComma); %>￦</a></td>
            	</tr>
        </table>
+        -->
        <% String id = (String)session.getAttribute("id");%>
     		<% if(id != null ){ %>
     		
     		<input type="hidden" name="cart_name" value="<%= dto.get(0).getPd_name()%>"/>
        <input type="submit" value="결제하기" />
        <%} %>
-    </span>
+    </div>
             
             
 	</section>

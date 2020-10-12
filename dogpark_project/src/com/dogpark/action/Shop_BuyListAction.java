@@ -26,7 +26,7 @@ public class Shop_BuyListAction implements Action {
 		shopBuyList.buyListInsert_article(dto);
 
 		ActionForward forward= new ActionForward();
-		forward.setPath("shop_list.bo");
+		forward.setPath("Buy_List.jsp");
 		return forward;
 		}
 
