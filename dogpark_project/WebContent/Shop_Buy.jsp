@@ -23,7 +23,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -85,39 +85,29 @@
 			<span><a href="#"><% out.println(priceComma); %> ￦</a></span>
 		</div>
 		
-		<div style="border-top:1px solid white;">
-			<ul style="list-style:none;">
-				<li style="float:left;">수량</li>
-				<li>
-					<ul style="list-style:none;">
-						<li style="float:left;">-</li>
+		<div>
+			<ul id="amount_box">
+				<li id="amount">수량</li>
+				<li style="padding-top:4px;">
+					<ul id="count_box">
+						<li>-</li>
 						<li><input type="number" name="" value="0" readonly /></li>
 						<li>+</li>
 					</ul>
 				</li>
 			</ul>
 		</div>
-		
-		
-		<!--  테이블 형식 -->
-		<!-- 
-		<table border="10" bordercolor="gray" cellspacing="5">
-			<tr>
-				<th style="color:white;" colspan="2" class="foodName"><a href="#"><% out.println(dto.get(0).getPd_desc()); %></a></th>
-           	</tr>
-           	<tr>
-           		<td style="width:121px;">수량</td>
-           		<td class="foodPrice"><a href="#"><% out.println(priceComma); %>￦</a></td>
-           	</tr>
-       </table>
-        -->
+
+       </div>
        <% String id = (String)session.getAttribute("id");%>
     		<% if(id != null ){ %>
-    		
     		<input type="hidden" name="cart_name" value="<%= dto.get(0).getPd_name()%>"/>
-       <input type="submit" value="결제하기" />
-       <%} %>
-    </div>
+	    <ul id="buyCartBtn">
+	       <li id="cartBtn"><input type="button" value="장바구니" /></li>
+	       <li id="buyBtn"><input type="submit" value="결제하기" /></li>
+	    </ul>
+	    <%} %>
+
             
             
 	</section>
