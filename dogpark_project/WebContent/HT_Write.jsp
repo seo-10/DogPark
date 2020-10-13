@@ -72,6 +72,9 @@
 			</p>
 	
 </section>
+  <div>
+		<jsp:include page="footer/footer.jsp" />
+  </div>
 		<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
  	<script>
 	 ClassicEditor

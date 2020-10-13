@@ -50,16 +50,20 @@
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">꿀팁 커뮤니티</Strong>
 				<li>
-					<a href="boardList.bo"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+					<a href="boardList.bo"><img src="img/htboard_img/honeytip2.jpg" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt;">반려견 자랑 커뮤니티</Strong>
 				<li>
-					<a href="dj_boardList.bo"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
+					<a href="dj_boardList.bo"><img src="img/htboard_img/jarang2.jpg" style="width:649px; height:400px;"/></a>
 				</li>
 			</ul>
 			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>
 		</section>
+		
+	<div>
+		<jsp:include page="footer/footer.jsp" />
+	</div>
 	</form>
 </body>
 </html>

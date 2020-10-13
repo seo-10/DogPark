@@ -58,12 +58,15 @@
 	<textarea name="ht_read_contents" id="ht_read_contents"> <%out.println(dto.get(0).getHt_contents());%></textarea>
 </section>
 <aside id="ht_aside">
-<aside><h3>꿀팁 커뮤니티</h3></aside>
-<article id="ht_read_title">제목 : <%out.println(dto.get(0).getHt_title());%></article>
-<article name="ht_read_writer" id="ht_read_writer">작성자 : <%out.println(dto.get(0).getU_id());%></article>
-<article name="ht_read_date" id="ht_read_date">작성날짜 : <%out.println(dto.get(0).getDate11());%></article>
-<input type="submit" value="수정 완료" id="ht_text_update"/>
+<h3 style="text-align:center;">프로필</h3>
+<div><img src="img/htboard_img/wellsi_banner.jpg" style="width:250px; height:100px;"/></div>
+<% String id = (String)session.getAttribute("id");%>
+<div name="ht_read_writer" id="ht_read_writer"><%out.println(id);%></div>
+<input type="submit" value="수정 완료" id="ht_text_update2"/>
 </aside>
+  <div>
+		<jsp:include page="footer/footer.jsp" />
+  </div>
 </form>
 </body>
 </html>
