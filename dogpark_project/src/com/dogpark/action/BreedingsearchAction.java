@@ -4,15 +4,14 @@ import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dogpark.dto.ActionForward;
-import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.PageInfo;
-import com.dogpark.service.BoardListService;
-import com.dogpark.service.BreedingListService;
+import com.dogpark.service.BreedingsearchListService;
 
-public class BreedingAction implements Action {
+public class BreedingsearchAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -20,18 +19,23 @@ public class BreedingAction implements Action {
 		System.out.println("액션");
 		List<BreedingDto> articleList=new ArrayList<BreedingDto>();
 		int page=1;
-		int limit=8;
+		int limit=15;
 		
 		if(request.getParameter("page")!=null){
 			page=Integer.parseInt(request.getParameter("page"));
 		}
-		BreedingListService breedingListservice = new BreedingListService();
-		int listCount=breedingListservice.getListCount();
-		articleList=breedingListservice.BreedingListService(page);
-		int maxPage=(int)((double)listCount/limit + 0.95); 
+		BreedingsearchListService breedingsearchListservice = new BreedingsearchListService();
+		int listCount=breedingsearchListservice.getListCount();
+		
+		HttpSession session = request.getSession();
+		String id=(String)session.getAttribute("id");
+		System.out.println("액션아이디값"+id);
+		
+		articleList=breedingsearchListservice.BreedingsearchListService(page,id);
+		int maxPage=(int)((double)listCount/limit+0.95); 
    		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
    	    int endPage = startPage+10-1;
-
+   	    System.out.println("action"+articleList.get(0).getU_id());
    		if (endPage> maxPage) endPage= maxPage;
 
    		PageInfo pageInfo = new PageInfo();
@@ -43,7 +47,7 @@ public class BreedingAction implements Action {
 		request.setAttribute("pageInfo", pageInfo);
 		request.setAttribute("articleList", articleList);
 		ActionForward forward= new ActionForward();
-  		forward.setPath("/Breeding.jsp");
+  		forward.setPath("/Breedingsearch_result.jsp");
 		
   		return forward;
 		
