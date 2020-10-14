@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dogpark.dto.ActionForward;
 import com.dogpark.action.*;
@@ -314,6 +315,39 @@ public class Controller extends javax.servlet.http.HttpServlet
 				e.printStackTrace();
 			}
 		}
+		/*브리딩*/
+		else if(command.equals("/Breeding.bo")){
+			System.out.println("브리딩");
+			action = new BreedingAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/Breedingsearch.bo")){
+			System.out.println("브리딩");
+			//String id = (String)session.getAttribute("id");
+			HttpSession session = request.getSession();
+			String id = (String)session.getAttribute("id");
+			System.out.println(id);
+			action = new BreedingsearchAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+		/*카페*/
+		else if(command.equals("/Cafedetail.bo")){
+			System.out.println("카페");
+			action = new Cafe_detailAction();
+			try{
+				forward=action.execute(request, response);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+
 		
 		
 		

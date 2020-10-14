@@ -1,14 +1,37 @@
 package com.dogpark.dto;
 
 public class BreedingDto {
+	int code_num;
+	
 	String u_id;
 	String nickname;
 	String phone_num;
-	String dog_name;
-	String dog_classify;
-	String dog_species;
-	String dbirth_year;
+	String d_sex;
+	String d_name;
+	String d_classify;
+	String d_species;
+	String d_birth_year;
+	String d_img;
 	
+	public String getD_sex() {
+		return d_sex;
+	}
+	public void setD_sex(String d_sex) {
+		this.d_sex = d_sex;
+	}
+	public String getD_img() {
+		return d_img;
+	}
+	public void setD_img(String d_img) {
+		this.d_img = d_img;
+	}
+	
+	public int getCode_num() {
+		return code_num;
+	}
+	public void setCode_num(int code_num) {
+		this.code_num = code_num;
+	}
 	public String getU_id() {
 		return u_id;
 	}
@@ -27,29 +50,31 @@ public class BreedingDto {
 	public void setPhone_num(String phone_num) {
 		this.phone_num = phone_num;
 	}
-	public String getDog_name() {
-		return dog_name;
+	public String getD_name() {
+		return d_name;
 	}
-	public void setDog_name(String dog_name) {
-		this.dog_name = dog_name;
+	public void setD_name(String d_name) {
+		this.d_name = d_name;
 	}
-	public String getDog_classify() {
-		return dog_classify;
+	public String getD_classify() {
+		return d_classify;
 	}
-	public void setDog_classify(String dog_classify) {
-		this.dog_classify = dog_classify;
+	public void setD_classify(String d_classify) {
+		this.d_classify = d_classify;
 	}
-	public String getDog_species() {
-		return dog_species;
+	public String getD_species() {
+		return d_species;
 	}
-	public void setDog_species(String dog_species) {
-		this.dog_species = dog_species;
+	public void setD_species(String d_species) {
+		this.d_species = d_species;
 	}
-	public String getDbirth_year() {
-		return dbirth_year;
+	public String getD_birth_year() {
+		return d_birth_year;
 	}
-	public void setDbirth_year(String dbirth_year) {
-		this.dbirth_year = dbirth_year;
+	public void setD_birth_year(String d_birth_year) {
+		this.d_birth_year = d_birth_year;
 	}
+	
+	
 	
 }

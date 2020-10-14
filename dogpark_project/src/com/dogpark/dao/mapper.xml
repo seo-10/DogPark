@@ -79,10 +79,23 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		update notice set nt_view=nt_view+1 where code_no=#{code_no};
 	</update>
 	
-	<!-- 브리딩 유저정보,강아지 성별반대 정보 전체조회 -->
-	<select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
-		select nickname,dog_name,dbirth_year,dog_sex,dog_classify from userinfo,doginfo where not dog_sex='m'<!-- 성별부분 변경할것 --> and userinfo.id = doginfo.u_id ;
-	</select>
+	<!-- 브리딩 전체유저 정보 조회 -->
+   <select id="BreedingSelect" resultType="com.dogpark.dto.BreedingDto">
+      select d_img,nickname,phone_num,d_name,d_birth_year,d_sex,d_classify from userinfo,doginfo where  userinfo.id = doginfo.u_id limit ${value},8;
+   </select>
+      <!-- 브리딩 유저정보,강아지 성별반대 정보 전체조회 -->
+   <select id="BreedingSearch" resultType="com.dogpark.dto.BreedingDto" parameterType="String">
+      select u_id,d_img,nickname,phone_num,d_name,d_birth_year,d_sex,d_classify from userinfo,doginfo where  userinfo.id = doginfo.u_id and d_sex not like (select d_sex from doginfo where u_id like (select u_id from doginfo where u_id=#{id})); 
+   </select>
+   <select id="Breedingcount" resultType="Integer">
+      select count(*) from doginfo;
+   </select>
+   
+   <!-- 카페 상세보기 -->
+   <select id="CafeDetailSelect" resultType="com.dogpark.dto.CafeDto">
+      select   * from cafe where cafe_name = #{cafe_name};
+   </select>
+
 	
 	<!-- 반려견 자랑 게시판 -->
 	<select id="dj_select" parameterType="Integer" resultType="com.dogpark.dto.DogjarangDto">
