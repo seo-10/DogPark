@@ -53,7 +53,7 @@
 		</div>
 
 		<nav
-			style="position: absolute; left: 0; top: 0; right: 0; margin: 0; padding: 0; width: 100%; height: 400px;">
+			style="position:absolute; left: 0; top: 0; right: 0; margin: 0; padding: 0; width: 100%; height: 400px;">
 			<img src="img/htboard_img/dogparkTopBanner2.jpg"
 				style="clear: both; width: 100%; height: 100%;" />
 		</nav>
