@@ -124,9 +124,11 @@ if(dto != null && listCount > 0){
 	<section class="emptyArea">등록된 글이 없습니다.</section>
 	<%}%>
   </section>
+  
   <div>
 		<jsp:include page="footer/footer.jsp" />
   </div>
+  
   </form>
 </body>
 </html>

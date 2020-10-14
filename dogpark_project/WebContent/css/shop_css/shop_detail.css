@@ -405,11 +405,11 @@ a {
 section {
     position: relative;
     left: 26%;
-    background-color: #6f5252;
+    background-color: #302f34;
     width: 1190px;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 2500px;
+    height: auto;
     padding-top: 30px;
     padding-left: 83px;
 }
@@ -546,8 +546,59 @@ section {
 #cartBtn input {
     background-color: #fff;
     border: 2px solid #672121;
-    color: #f7bc79;
+    font-weight: bold;
+    color: #672121;
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
+
+#productDetail_list {
+	float: right;
+    margin-right: 152px;
+    font-size: 10pt;
+    color: white;
+}
+
+#productDetail_img {
+	margin-top: 30px;
+	clear: both;
+    margin-left: 144px;
+}
+
+/*-------------------- footer -------------------*/
+#footermenu{
+	position:absolute;
+	left:0px;
+	right:0px;
+	background-color: #747474;
+	width:100%;
+	height:250px;
+	color:white;
+	text-align:center;
+	font-size:16px;
+}
+#footermenu ul{
+	padding: 30px 0;
+}
+#footermenu ul li{
+	position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+#footermenu ul li:first-child {
+    padding-left: 0;
+}
+.footer_info{
+	padding-bottom: 70px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ccc;
+}
+address, em {
+    font-style: normal;
+}
+#footermenu .footer_info p {
+    margin-top: 10px;
+}
+/* ------------------- ***** ------------------- */

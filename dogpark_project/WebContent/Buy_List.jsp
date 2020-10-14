@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_buy.css?ver=2" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -59,8 +59,9 @@
     <div style="height:100px;">
     </div>
     
+    <h1 id="toph1">주문내역</h1>
     <section>
-   		<h1>구매내역</h1>
+   		
    		<table>
    			<tr>
    				<th>상품명</th>

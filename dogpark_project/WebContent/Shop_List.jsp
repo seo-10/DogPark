@@ -56,8 +56,7 @@
 		function kartAside(i) {
 			//$('#kartItemPic').attr('src','img/shopping_img/dogfood'+i+'.png');
 			$('#kartItemPics').append('<img id="kartItemPic" src="img/shopping_img/dogfood'+(i+1)+'.png" width="110px" height="100px">');
-			$('#kartItemName').append(dto.get(i).getPd_desc());
-			
+			$('#kartItemName').append('dogfood'+(i+1));
 		}
 	</script>
 	
@@ -153,8 +152,11 @@
 			<span>
 				<a href="javascript:void(0);" id="kartItemName"></a>
 			</span>
-			
         </aside>
+        
+        <div>
+			<jsp:include page="footer/footer.jsp" />
+  		</div>
         
 	</form>
 </body>

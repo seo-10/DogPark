@@ -67,7 +67,35 @@ $(document).ready(function() {
             $("#logout_dialog").dialog("open"); //다이얼로그창 오픈                
         });
     });
-        
+
+// 수량 카운트 up donw
+    $(function(){
+    	$('#decreaseQuantity').click(function(e){
+    	e.preventDefault();
+    	var stat = $('#numberUpDown').text();
+    	var num = parseInt(stat,10);
+    	num--;
+    	if(num<=0){
+    	alert('더이상 줄일수 없습니다.');
+    	num =1;
+    	}
+    	$('#numberUpDown').text(num);
+    	});
+    	$('#increaseQuantity').click(function(e){
+    	e.preventDefault();
+    	var stat = $('#numberUpDown').text();
+    	var num = parseInt(stat,10);
+    	num++;
+
+    	if(num>100){
+    	alert('더이상 늘릴수 없습니다.');
+    	num=5;
+    	}
+    	$('#numberUpDown').text(num);
+    	});
+    	});
+    
+    
     
 });
 

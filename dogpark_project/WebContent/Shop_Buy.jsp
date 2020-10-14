@@ -23,7 +23,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_detail.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -41,6 +41,7 @@
 <body>
 	<% ArrayList<ShopDto> dto = (ArrayList<ShopDto>)request.getAttribute("articleList"); %>
 	<% ArrayList<BuyListDto> list_dto = (ArrayList<BuyListDto>)request.getAttribute("articleList"); %>
+	
 	
 	
 	<form name="form" method="post" name="form" action="buyList_Insert.bo?cart_name=<%out.println(dto.get(0).getPd_name());%>">
@@ -90,9 +91,10 @@
 				<li id="amount">수량</li>
 				<li style="padding-top:4px;">
 					<ul id="count_box">
-						<li>-</li>
-						<li><input type="number" name="" value="0" readonly /></li>
-						<li>+</li>
+						<li><a href="javascript:void(0);" id="decreaseQuantity">-</a></li>
+						<li><span id="numberUpDown">1</span></li>
+						<!-- <li><input type="text" id="numberUpDown" value="1" readonly /></li>  -->
+						<li><a href="javascript:void(0);" id="increaseQuantity">+</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -107,10 +109,31 @@
 	       <li id="buyBtn"><input type="submit" value="결제하기" /></li>
 	    </ul>
 	    <%} %>
-
-            
-            
+	
+	<hr />
+	    
+	<article id="productDetail_list">
+		<ul>
+			<li>유통기한: 2020-12-28 이후인 상품</li>
+			<li>수량: 1개</li>
+			<li>기능: 일반사료</li>
+			<li>맛: 본상품선택</li>
+			<li>입자크기: 보통(8~13mm)</li>
+		</ul>
+	</article>
+	
+	<hr style="clear:both;"/>
+	
+	<article id="productDetail_img">
+		<img src="img/productDetail_img/ANF1.jpg" />
+		<img src="img/productDetail_img/ANF2.jpg" />
+		<img src="img/productDetail_img/ANF3.jpg" />
+	</article> 
+           
 	</section>
-</form>	
+	<div>
+		<jsp:include page="footer/footer.jsp" />
+  </div>
+</form>
 </body>
 </html>
