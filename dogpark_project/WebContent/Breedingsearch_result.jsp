@@ -11,20 +11,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.1" />
+<link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.1" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breeding_profile.css?ver=3" />
  <script type="text/javascript" src="js/Breeding_js/Breeding.js?ver=1.1"></script>
 </head>
-	
+
 <body>
-<div id="login_Ing">
-    	<jsp:include page="header/header.jsp" />
-    </div>
-<script>
-</script>
-<%ArrayList<BreedingDto> dto = (ArrayList<BreedingDto>)request.getAttribute("articleList");
- PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
+	<%ArrayList<BreedingDto> dto = (ArrayList<BreedingDto>)request.getAttribute("articleList");
+ 	PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
 	int listCount=pageInfo.getListCount();
 	int nowPage=pageInfo.getPage();
 	int maxPage=pageInfo.getMaxPage();
@@ -32,6 +27,7 @@
 	int endPage=pageInfo.getEndPage();
 	%>
 	<div id="login_Ing">
+    	<jsp:include page="header/header.jsp" />
     </div>
 		<div id="dropdown">
 	        <svg id="svg1" width="3em" height="3em" viewBox="0 0 16 16" class="bi bi-grid-fill" xmlns="http://www.w3.org/2000/svg">
@@ -64,39 +60,42 @@
 	            </a>
 	        </div>
 	    </div>
-	<form action="Breedingsearch.bo" method="post">
+	<form action="/Breeding.bo" method="post">
 		 <section class="community_contents">
 	   		<div id="breeding_title">
-	   			DogPark User
-	   			
+	   			브리딩 가능한 반려견들
 	   			
 	   		</div>
+	   			<div style="color:white; float:left; width:1298px; height:700px; text-align: center;">
+	   			
+	   				
 	   				<%
 					if(dto != null && listCount > 0){
 					%>
 	   				<%for(int i=0;i<dto.size();i++){%>
 	   				
-	   		<figure class="snip1344"><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>"  class="background"/><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>" class="profile"/>
-  		<figcaption>
-    		<h3><%out.println(dto.get(i).getD_name());%><span><%out.println(dto.get(i).getNickname());%><hr><%out.println(dto.get(i).getD_sex()); %></span></h3>
-    		<div class="icons"><a href="javascript:alert('<%=dto.get(i).getPhone_num()%>')"> <i class="ion-social-vimeo-outline"></i></a></div>
-  		</figcaption>
-			</figure>
+	   			<figure class="snip1344"><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>"  class="background"/><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>" class="profile"/>
+ 				 <figcaption>
+    			<h3><%out.println(dto.get(i).getD_name());%><span><%out.println(dto.get(i).getNickname());%><br><%out.println(dto.get(i).getD_sex()); %></span></h3>
+    			<div class="icons"><a href="javascript:alert('<%=dto.get(i).getPhone_num()%>')"> <i class="ion-social-vimeo-outline"></i></a></div>
+  				</figcaption>
+				</figure>
 
 					<%} %>
-	   		<input type="submit" value="반려견 조회" style="width:150px; height:50px; position:absolute; left:575px; top:750px;">
-	   		<div style="color:white; position:absolute; top:830px; left:570px;">
+	   				 
+	   				</div>
+	   				<div style="color:white; position:absolute; top:830px; left:570px;">
 				<%if(nowPage<=1){ %>
 				[이전]&nbsp;
 				<%}else{ %>
-				<a href="Breeding.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
+				<a href="Breedingsearch.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
 				<%} %>
 
 				<%for(int a=startPage;a<=endPage;a++){
 				if(a==nowPage){%>
 				<%=a %>
 				<%}else{ %>
-				<a href="Breeding.bo?page=<%=a %>"class="pageNum"><%=a %>
+				<a href="Breedingsearch.bo?page=<%=a %>"class="pageNum"><%=a %>
 				</a>
 				<%} %>
 				<%} %>
@@ -104,7 +103,7 @@
 				<%if(nowPage>=maxPage){ %>
 						[다음]
 				<%}else{ %>
-				<a href="Breeding.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
+				<a href="Breedingsearch.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
 				<%} %>
 				</section>	 
 				<%
@@ -112,8 +111,8 @@
 				%>
 				<section class="emptyArea">등록된 글이 없습니다.</section>
 				<%}%>
-  				
-  		 </div>
+				
+  		</div>
   	</form>
 	
 </body>

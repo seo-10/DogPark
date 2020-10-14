@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.dogpark.dto.BreedingDto" %>
-<%@page import="com.dogpark.dto.PageInfo"%>
+<%@page import="com.dogpark.dto.CafeDto" %>
 
 <%@page import="java.util.*"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
@@ -23,14 +22,7 @@
     </div>
 <script>
 </script>
-<%ArrayList<BreedingDto> dto = (ArrayList<BreedingDto>)request.getAttribute("articleList");
- PageInfo pageInfo = (PageInfo)request.getAttribute("pageInfo");
-	int listCount=pageInfo.getListCount();
-	int nowPage=pageInfo.getPage();
-	int maxPage=pageInfo.getMaxPage();
-	int startPage=pageInfo.getStartPage();
-	int endPage=pageInfo.getEndPage();
-	%>
+
 	<div id="login_Ing">
     </div>
 		<div id="dropdown">
@@ -64,56 +56,31 @@
 	            </a>
 	        </div>
 	    </div>
+	<%ArrayList<CafeDto> cafedto = (ArrayList<CafeDto>)request.getAttribute("cafename");%>
 	<form action="Breedingsearch.bo" method="post">
 		 <section class="community_contents">
 	   		<div id="breeding_title">
-	   			DogPark User
-	   			
+	   			<!-- 애견카페명 불러오기 -->
+	   			<%
+					if(cafedto != null){
+					%>
+	   				<%for(int i=0;i<cafedto.size();i++){%>
+	   				<h3>카페명 : <%out.println(cafedto.get(i).getCafe_name()); %></h3>
+	   				<div id="ImgBox" style="">
+	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img1()); %>"></span>
+	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img2()); %>"></span>
+	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img3()); %>"></span></div>
+	   				<h3>영업 시간 : <%out.println(cafedto.get(i).getCafe_hours()); %></h3>
+	   				<h5>카페 정보 : <%out.println(cafedto.get(i).getCafe_info()); %></h5>
+	   				<h5>주소 : <%out.println(cafedto.get(i).getCafe_adr()); %></h5>
+	   				<h5>전화번호 : <%out.println(cafedto.get(i).getCafe_tel()); %></h5>
+	   				
+	   				<%} }%>
 	   			
 	   		</div>
-	   				<%
-					if(dto != null && listCount > 0){
-					%>
-	   				<%for(int i=0;i<dto.size();i++){%>
 	   				
-	   		<figure class="snip1344"><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>"  class="background"/><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>" class="profile"/>
-  		<figcaption>
-    		<h3><%out.println(dto.get(i).getD_name());%><span><%out.println(dto.get(i).getNickname());%><hr><%out.println(dto.get(i).getD_sex()); %></span></h3>
-    		<div class="icons"><a href="javascript:alert('<%=dto.get(i).getPhone_num()%>')"> <i class="ion-social-vimeo-outline"></i></a></div>
-  		</figcaption>
-			</figure>
-
-					<%} %>
-	   		<input type="submit" value="반려견 조회" style="width:150px; height:50px; position:absolute; left:575px; top:750px;">
-	   		<div style="color:white; position:absolute; top:830px; left:570px;">
-				<%if(nowPage<=1){ %>
-				[이전]&nbsp;
-				<%}else{ %>
-				<a href="Breeding.bo?page=<%=nowPage-1 %>">[이전]</a>&nbsp;
-				<%} %>
-
-				<%for(int a=startPage;a<=endPage;a++){
-				if(a==nowPage){%>
-				<%=a %>
-				<%}else{ %>
-				<a href="Breeding.bo?page=<%=a %>"class="pageNum"><%=a %>
-				</a>
-				<%} %>
-				<%} %>
-
-				<%if(nowPage>=maxPage){ %>
-						[다음]
-				<%}else{ %>
-				<a href="Breeding.bo?page=<%=nowPage+1 %>">&nbsp;[다음]</a>
-				<%} %>
-				</section>	 
-				<%
-				}else{
-				%>
-				<section class="emptyArea">등록된 글이 없습니다.</section>
-				<%}%>
-  				
-  		 </div>
+	   		
+	   		</section>
   	</form>
 	
 </body>
