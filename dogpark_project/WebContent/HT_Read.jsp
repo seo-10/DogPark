@@ -76,7 +76,7 @@
 <% } %>
 
 </aside>
-  <div>
+  <div style="clear:both;">
 		<jsp:include page="footer/footer.jsp" />
   </div>
 </form>
