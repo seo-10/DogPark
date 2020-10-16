@@ -73,11 +73,14 @@
 					%>
 				</span>
 			</div>
-			<div name="ht_read_contents" id="dj_read_contents">
-			<img src="img/Dogsale_img/<%out.println(dto.get(0).getDpd_img());%>"/>
+			<div name="ht_read_contents" id="dsb_read_contents">
+			<img src="img/Dogsale_img/dogprofile.jpg" style="width:100%"/>
+			<img src="img/Dogsale_img/dogprofile2.jpg" style="width:100%"/>
+			<div>
 				<%
 					out.println(dto.get(0).getDpd_character());
 				%>
+			</div>
 			</div>
 
 </section>
