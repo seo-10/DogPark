@@ -80,7 +80,7 @@ public class DogSaleDao {
 		List<Dogpark_dogsDto> articleList = null;
 		SqlSessionFactory sqlfactory = Dao.getConn();
 		SqlSession sqlsession = sqlfactory.openSession();
-		int startrow=(page-1)*4;
+		int startrow=(page-1)*16;
 		articleList = sqlsession.selectList("dsb_select",startrow);
 		sqlsession.close();
 		return articleList;

@@ -17,7 +17,7 @@ public class DSB_BoardListAction implements Action {
 		System.out.println("액션부");
 		List<Dogpark_dogsDto> articleList=new ArrayList<Dogpark_dogsDto>();
 		int page=1;
-		int limit=4;
+		int limit=16;
 		
 		if(request.getParameter("page")!=null){
 			page=Integer.parseInt(request.getParameter("page"));
