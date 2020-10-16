@@ -116,7 +116,7 @@
 		   </article>
 
 		</div>
-		 <div id="bestlist">
+		 <!--  <div id="bestlist">
 		 <h2>추천 숙박시설 TOP 10</h2>
 		 <ul>
 		 <li><a href="#">1순위</a></li>
@@ -130,7 +130,7 @@
 		 <li><a href="#">9순위</a></li>
 		 <li><a href="#">10순위</a></li>
 		 </ul>
-		 </div>
+		 </div>-->
 		 <div  class="accordion2">
 		 
 		   <article>

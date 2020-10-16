@@ -14,7 +14,7 @@ public class BreedingsearchListService  {
 	DogLifeDao dao= new DogLifeDao();
 	List<BreedingDto> articleList = null;
 	
-	public List<BreedingDto> BreedingsearchListService(int page, String id){
+	public List<BreedingDto> BreedingsearchListService1(int page, String id){
 		
 		System.out.println("서비스부분"+id);
 	

@@ -58,7 +58,7 @@
 			</ul>
 			<ul><Strong style="position:absolute; font-size:15pt; text-align:center;">브리딩</Strong>
 			<li>
-			<a href="Breeding.jsp"><img src="img/DogLife_select_img/breeding.gif" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
+			<a href="Breeding.bo"><img src="img/DogLife_select_img/breeding.gif" style="width:1300px; height:500px; margin:0; padding:0;"/></a>
 			</li>
 			</ul>
 		</section>
