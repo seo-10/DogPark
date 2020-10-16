@@ -1,9 +1,10 @@
 @charset "UTF-8";
 /*-------커뮤니티 메인 내용--------*/
+
 .community_contents{
-	border:1px solid yellow;
+	
 	width:1300px; 
-	height:1000px; 
+	height:850px; 
 	position:absolute;
 	left:480px; 
 	top:100px;
@@ -458,6 +459,12 @@ ul.pagination li a:hover{
 }
 #breeding_title{
 	text-align:center;
+	color:white;
+	margin:10px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#left_box{
 	color:white;
 	border:1px solid white;
 }

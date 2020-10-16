@@ -31,7 +31,7 @@ public class BreedingsearchAction implements Action {
 		String id=(String)session.getAttribute("id");
 		System.out.println("액션아이디값"+id);
 		
-		articleList=breedingsearchListservice.BreedingsearchListService(page,id);
+		articleList=breedingsearchListservice.BreedingsearchListService1(page,id);
 		int maxPage=(int)((double)listCount/limit+0.95); 
    		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
    	    int endPage = startPage+10-1;
