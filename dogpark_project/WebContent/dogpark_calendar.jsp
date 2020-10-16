@@ -85,13 +85,11 @@
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
 <!-- jquery 사용 -->
-<script type="text/javascript" src="js/dogsale_js/dogsale.js"></script>
+<script type="text/javascript" src="js/community_js/community.js"></script>
 
 <!-- css 사용 -->
 <link rel="stylesheet" type="text/css"
 	href="css/Dogsale_css/dogsale.css">
-<link rel="stylesheet" type="text/css"
-	href="css/community_css/htboard.css?ver=1" />
 <link rel="stylesheet" type="text/css"
 	href="css/community_css/community_main.css?ver=2" />
 
@@ -111,18 +109,20 @@
 		<%
 			String id = (String) session.getAttribute("id");
 		%>
-		<!-- 로그아웃 다이얼로그 -->
-		<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
+	<!-- 로그아웃 다이얼로그 -->
+	<div id="logout_dialog" title="logout"  >
+	로그아웃 하시겠습니까?
+	</div>
 
-		<!-- 메뉴 왼쪽 드롭다운 -->
-		<div id="dropdown">
-			<jsp:include page="mainMenu_Left.jsp" />
-		</div>
-
-		<!-- 로그인 유지  -->
-		<div id="login_Ing">
-			<jsp:include page="js/community_js/header.jsp" />
-		</div>
+    <!-- 메뉴 왼쪽 드롭다운 -->
+	    <div id="dropdown">
+    		<jsp:include page="mainMenu_Left.jsp" />
+    	</div>
+	
+    <!-- 로그인 유지  -->
+     <div id="login_Ing">
+    	<jsp:include page="js/community_js/header.jsp" />
+    </div>
 		 <!-- The Modal -->
     <div id="myModal" class="modal">
  
@@ -140,7 +140,7 @@
  
     </div>
         <!--End Modal-->
-
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img/dogparkTopBanner1.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 		<section class="ios_contents">
 		<div id="text"></div>
 			<table border='0' width='900' celpadding='0' cellspacing='0'
@@ -243,15 +243,19 @@
 					</td>
 				</tr>
 			</table>
-			<aside id="calender_dateselect">
+			<div id="calender_dateselect">
 				<input type="hidden" name="id" value="<%=id%>" />
 				<pre>※원하는 날짜와 시간을 선택해주세요.※</pre>
 				<input type="date" name="redate" /> <input type="time"
 					name="retime" value="10:00" min="10:00" max="19:00" step="1800"
 					required /> <input type="submit" id="reservation_button"
 					value="예약등록" />
-			</aside>
+			</div>
+			<img src="img/Dogsale_img/inquarybanner2.jpg" style="width:350px; height:200px; margin-top:50px;"/>
 		</section>
+		<div>
+			<jsp:include page="footer/footer.jsp" />
+		</div>
 	</form>
 	<script>	
 function dateday(dispDay) {

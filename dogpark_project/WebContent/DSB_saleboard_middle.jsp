@@ -65,6 +65,8 @@
 	  <div>
 		<span id="board_ph">분양 문의 게시판</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </div>
+	  <hr style="clear:both;" />
+	  <img src="img/Dogsale_img/inquarybanner.jpg" style="width:100%;"/>
 <hr style="clear:both;" />
 <h1 style="text-align:center;"><a href="">중형견</a> <a href="">대형견</a></h1>
 <%
@@ -115,6 +117,9 @@ if(dto != null && listCount > 0){
 	  </article></section>
 	<%}%>
   </section>
+  		<div>
+			<jsp:include page="footer/footer.jsp" />
+		</div>
   </form>
 </body>
 </html>

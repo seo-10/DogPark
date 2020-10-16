@@ -47,20 +47,23 @@
     </div>
     
 	
-
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img/dogparkTopBanner1.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 		<section class="community_contents">
-			<ul><Strong style="position:absolute; font-size:15pt;">분양 문의 게시판</Strong>
+			<ul>
 				<li>
-					<a href="dsb_boardList.bo"><img src="img/htboard_img/honeytip.gif" style="width:649px; height:400px;"/></a>
+					<a href="dsb_boardList.bo"><img src="img/Dogsale_img/inquaryofsalebutton.jpg" style="width:600px; height:400px;"/></a>
 				</li>
 			</ul>
-			<ul><Strong style="position:absolute; font-size:15pt;">방문 예약</Strong>
+			<ul>
 				<li>
-					<a href="ds_countList.bo"><img src="img/htboard_img/jarang.gif" style="width:649px; height:400px;"/></a>
+					<a href="ds_countList.bo"><img src="img/Dogsale_img/reservation.jpg" style="width:600px; height:400px;"/></a>
 				</li>
 			</ul>
-			<img src="img/htboard_img/ht_banner1.jpg" style="width:1300px; height:500px; margin:0; padding:0;"/>
+			<img src="img/Dogsale_img/inquarybanner2.jpg" style="width:1200px; height:500px; margin:0; padding:0;"/>
 		</section>
+				<div>
+			<jsp:include page="footer/footer.jsp" />
+		</div>
 	</form>
 </body>
 </html>

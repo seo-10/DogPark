@@ -94,7 +94,7 @@
 			<%
 				String id = (String) session.getAttribute("id");
 			%>
-			<div name="ht_read_writer" id="ht_read_writer">
+			<div name="ht_read_writer" id="dj_read_writer">
 				<%
 					out.println(id);
 				%>
@@ -106,16 +106,16 @@
 			<%
 				if (id == null || !id.equals(dtoId)) {
 			%>
-			<input type="button" value="목록" id="ht_text_list"
+			<input type="button" value="목록" id="dj_text_list"
 				onclick="location.href='dj_boardList.bo'" />
 			<%
 				} else {
 			%>
-			<input type="button" value="목록" id="ht_text_list"
+			<input type="button" value="목록" id="dj_text_list"
 				onclick="location.href='dj_boardList.bo'" /> <br /> <input
-				type="button" value="수정" id="ht_text_update"
+				type="button" value="수정" id="dj_text_update"
 				onclick="location.href='dj_boardmodify.bo?code_no=<%=dto.get(0).getCode_no()%>'" />
-			<input type="button" value="삭제" id="ht_text_delete"
+			<input type="button" value="삭제" id="dj_text_delete"
 				onclick="location.href='dj_delete.bo?code_no=<%=dto.get(0).getCode_no()%>'" />
 
 			<% } %>

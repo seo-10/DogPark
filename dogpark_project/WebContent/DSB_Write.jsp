@@ -13,44 +13,54 @@
 <head>
 <meta charset="utf-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
-  <link rel="stylesheet" type="text/css" href="css/community_css/htboard.css?ver=1" />
- <link rel="stylesheet" type="text/css" href="css/community_css/community_main.css?ver=2" />
- <!-- JQuery UI 를 쓰기위한 스크립트 -->
+	<!-- JQuery UI 를 쓰기위한 스크립트 -->
    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
- 
-  <!-- 로그아웃 다이얼로그 CSS 연결 -->
-	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
 	<!-- jquery 사용 -->
-    <script type="text/javascript" src="js/main_js/mainPage.js"></script>
+    <script type="text/javascript" src="js/community_js/community.js"></script>
+	
+	<!-- css 사용 -->
+ 	<link rel="stylesheet" type="text/css" href="css/community_css/writeBoard/sample/styles.css?ver=2">
+  	<link rel="stylesheet" type="text/css" href="css/Dogsale_css/dsbboard.css?ver=4" />
+ 	<link rel="stylesheet" type="text/css" href="css/Dogsale_css/inquiryofsale_main.css?ver=4" />
+ 	
+ 	<!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
+	
+	<!-- 부트스트랩 cdn -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <!-- jquery 사용 -->
+	<script type="text/javascript" src="js/dogsale_js/dogsale.js"></script>
 	
 </head>
 <body>
- 
- <form name="form" method="post">
+ <form name="myform" method="post" action="dsb_boardWritePro.bo">
 	<!-- 로그아웃 다이얼로그 -->
-	<div id="logout_dialog" title="logout"  >
-	로그아웃 하시겠습니까?
-	</div>
+		<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 
-    <!-- 메뉴 왼쪽 드롭다운 -->
-	    <div id="dropdown">
-    		<jsp:include page="mainMenu_Left.jsp" />
-    	</div>
+		<!-- 메뉴 왼쪽 드롭다운 -->
+		<div id="dropdown">
+			<jsp:include page="mainMenu_Left.jsp" />
+		</div>
+
+		<!-- 로그인 유지  -->
+		<div id="login_Ing">
+			<jsp:include page="js/notice_js/header.jsp" />
+		</div>
+
+ <nav style="position:absolute; left: 0; top: 0; right: 0; margin: 0; padding: 0; width: 100%; height: 400px;">
+			<img src="img/htboard_img/dogparkTopBanner2.jpg"
+				style="clear: both; width: 100%; height: 100%;" />
+		</nav>
+
+<section id="dsb_write">
 	
-    <!-- 로그인 유지  -->
-     <div id="login_Ing">
-    	<jsp:include page="js/community_js/header.jsp" />
-    </div>
-    </form>
 
-<section id="dj_write">
-	<form name="myform" method="post" action="dsb_boardWritePro.bo">
-
-			<h1 id="dj_category_font">강아지 정보 등록</h1>
-			<table id="dj_write_table">
+			<h1 id="dsb_category_font">강아지 정보 등록</h1>
+			<table id="dsb_write_table">
 				<tr>
 					<td>이름</td>
 					<td><input type="text" size="30px" name="dsb_dpd_name"></td>
@@ -155,10 +165,12 @@
 				</tr>
 			</table>
 			<p>
-				<input type="submit" value="글등록" id="dj_write_input_btn">
+				<input type="submit" value="글등록" id="dsb_write_input_btn">
 			</p>
-	</form>
 </section>
-
+		<div>
+			<jsp:include page="footer/footer.jsp" />
+		</div>
+</form>
 </body>
 </html>

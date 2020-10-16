@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#ht_aside{
+#dj_aside{
 	width:250px;
 	position: fixed;
   	right: 200px;
@@ -10,94 +10,50 @@
   	background-color:#f9f9f9;
   	box-shadow: 0px 2px 5px 0 rgba(0,0,0,0.1);
 }
-#ht_read_title{
+#dj_read_title{
 	width:290px;
 	text-overflow:ellipsis;
 	white-space:nowrap;
 	overflow:hidden;
 	font-size:14pt;
 }
-#ht_read_writer{
+#dj_read_writer{
 	margin-top:10px;
 	margin-bottom:5px;
 	font-size:11pt;
 	
 }
-#ht_read_date{
+#dj_read_date{
 	margin-bottom:10px;
 	font-size:11pt;
 	
 }
 
-#like_btn{
-	width:100px;
-	height:30px;
-	border-style:none;
-	padding:10px 0;
-	text-align:center;
-	border-radius:10px;
-	margin-left:100px;
-	background-color:white;
-	font-size:12pt;
-}
-#like_btn:hover{
-	background-color:red;
-}
-#like_count{
-	font-size:10pt;
-	text-align:center;
-}
-#heart_btn{
-	width:25px;
-	height:25px;
-}
-#ht_text_update{
+#dj_text_update{
 	width:50px;
 	height:25px;
 	margin-left:25px;
 	margin-top:20px;
 }
-#ht_text_update2{
+#dj_text_update2{
 	width:100px;
 	height:25px;
 	margin-left:75px;
 	margin-top:20px;
 }
-#ht_text_delete{
+#dj_text_delete{
 	width:50px;
 	height:25px;
 	margin-left:80px;
 	margin-top:20px;
 }
-#ht_text_list{
+#dj_text_list{
 	width:80px;
 	height:25px;
 	margin-left:80px;
 	margin-top:20px;
 }
-#ht_comment_read{
-	clear:both;
-	border-radius:10px;
-	background-color:#f9f9f9;
-	width:1000px;
-	height:300px;
-	margin-top:30px;
-}
-#ht_comment_write{
-	border-radius:10px;
-	background-color:#f9f9f9;
-	width:890px;
-	height:100px;
-	margin-top:10px;
-	margin-bottom:50px;
-	float:left;
-}
-#ht_comment_btn{
-	width:100px;
-	height:50px;
-	margin-top:30px;
-	border-style:none;
-}
+
 #board_ph{
 		float:left;
 		font-size:15pt;
@@ -253,13 +209,12 @@
 /*반려견 커뮤니티 글작성*/
 #dj_write{
 	width:1300px; 
-	height:700px; 
-	position:absolute;
-	left:480px; 
-	top:500px;
-	margin:0; 
-	padding:0;
-	background-color:rgba(153,153,153,0.9);
+	height:auto; 
+	position:relative;
+	left:480px;
+	padding-top:400px;
+	margin:0;
+	padding-bottom:70px;
 }
 #dj_category_font{
 	text-align:center;
@@ -279,12 +234,12 @@
 }
 #dj_update{
 	width:1300px; 
-	height:1000px; 
-	position:absolute;
-	left:480px; 
-	top:100px;
-	margin:0; 
-	padding:0;
+	height:auto; 
+	position:relative;
+	left:480px;
+	padding-top:400px;
+	margin:0;
+	padding-bottom:70px;
 }
 /*꿀팁 게시판 상세 내용 css*/
 
@@ -298,19 +253,20 @@
 }
 
 #dj_read_contents{
-	border-radius:10px;
-	height:900px;
-	width:1000px;
+	height:500px;
+	width:900px;
 	background-color:#f9f9f9;
+	margin-top:0px;
 	padding:20px;
+	border-bottom:1px solid black;
 	
 }
 
 #dj_aside{
-	width:300px;
+	width:250px;
 	position: fixed;
-  	right: 80px;
-  	top: 500px;
+  	right: 200px;
+  	top: 470px;
   	height: 300px;
   	z-index: 2;
   	border-radius:20px;
@@ -336,14 +292,26 @@
 	
 }
 #dj_text_update{
-	width:90px;
-	height:40px;
-	margin-left:40px;
+	width:50px;
+	height:25px;
+	margin-left:25px;
+	margin-top:20px;
+}
+#dj_text_update2{
+	width:100px;
+	height:25px;
+	margin-left:75px;
 	margin-top:20px;
 }
 #dj_text_delete{
-	width:90px;
-	height:40px;
-	margin-left:40px;
+	width:50px;
+	height:25px;
+	margin-left:80px;
+	margin-top:20px;
+}
+#dj_text_list{
+	width:80px;
+	height:25px;
+	margin-left:80px;
 	margin-top:20px;
 }

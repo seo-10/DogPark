@@ -7,6 +7,7 @@
 	left:480px;
 	padding-top:400px;
 	margin:0; 
+	padding-bottom:70px;
 }
 .community_contents ul{
 	float:left;
@@ -26,6 +27,7 @@
 	left:480px;
 	padding-top:400px;
 	margin:0;
+	padding-bottom:70px;
 }
 .honeytip_board {
 	border-top:3px solid black;
@@ -105,6 +107,7 @@
 	left:480px;
 	padding-top:400px;
 	margin:0;
+	padding-bottom:70px;
 }
 
 #ht_read_contents{
@@ -146,28 +149,7 @@
 	font-size:11pt;
 	
 }
-#like_btn{
-	width:100px;
-	height:30px;
-	border-style:none;
-	padding:10px 0;
-	text-align:center;
-	border-radius:10px;
-	margin-left:100px;
-	background-color:white;
-	font-size:12pt;
-}
-#like_btn:hover{
-	background-color:red;
-}
-#like_count{
-	font-size:10pt;
-	text-align:center;
-}
-#heart_btn{
-	width:25px;
-	height:25px;
-}
+
 #ht_text_update{
 	width:50px;
 	height:25px;
@@ -298,13 +280,12 @@
 /*꿀팁 커뮤니티 글작성*/
 #ht_write{
 	width:1300px; 
-	height:700px; 
-	position:absolute;
-	left:480px; 
-	top:100px;
-	margin:0; 
-	padding:0;
-	background-color:rgba(153,153,153,0.9);
+	height:auto; 
+	position:relative;
+	left:480px;
+	padding-top:400px;
+	margin:0;
+	padding-bottom:70px;
 }
 #ht_category_font{
 	text-align:center;
@@ -324,10 +305,9 @@
 }
 #ht_update{
 	width:1300px; 
-	height:1000px; 
-	position:absolute;
-	left:480px; 
-	top:100px;
-	margin:0; 
-	padding:0;
+	height:auto; 
+	position:relative;
+	left:480px;
+	padding-top:400px;
+	margin:0;
 }

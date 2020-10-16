@@ -49,7 +49,7 @@
     <div id="login_Ing">
     	<jsp:include page="js/community_js/header.jsp" />
     </div>
-
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img//wellsi_banner.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 <section id="ht_write">
 	
 

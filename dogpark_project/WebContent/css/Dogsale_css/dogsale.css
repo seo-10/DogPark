@@ -1,14 +1,12 @@
 /*---------------´Þ·Â Æ²--------------*/
 .ios_contents{
-	background-color:white;
-	border:1px solid black;
 	width:1300px; 
-	height:800px; 
-	position:absolute;
-	left:480px; 
-	top:100px;
-	margin:0;
-	padding:20px;
+	height:1300px; 
+	position:relative;
+	left:480px;
+	padding-top:500px;
+	margin:0; 
+	padding-bottom:70px;
 }
  #calendarTable, #calendarTable th, #calendarTable td   {
         border-collapse: collapse;
@@ -54,7 +52,6 @@
 #calender_dateselect{
 	float:left;
 	width:300px;
-	
 	margin-left:30px;
 }
 #reservation_button{
