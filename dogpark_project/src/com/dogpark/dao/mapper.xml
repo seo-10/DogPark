@@ -158,19 +158,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 쇼핑 게시판(사료) 파트 -->
 	<select id="shopSelect" resultType="com.dogpark.dto.ShopDto">
-		select * from product order by pd_name ASC;
+		select * from product1 order by pd_name ASC;
 	</select>
 	
 	<select id="shop_select_count" resultType="Integer">
-		select count(*) from product;
+		select count(*) from product1;
 	</select>
 	
 	<select id="shop_board_read_select" resultType="com.dogpark.dto.ShopDto" parameterType="com.dogpark.dto.ShopDto">
-		select * from product where pd_name=#{pd_name};
+		select * from product1 where pd_name=#{pd_name};
 	</select>
 	
 	<select id="shop_board_buy_select" resultType="com.dogpark.dto.ShopDto" parameterType="com.dogpark.dto.ShopDto">
-		select * from product where pd_name=#{pd_name};
+		select * from product1 where pd_name=#{pd_name};
 	</select>
 	
 	<insert id="shop_buyList_Insert"  parameterType="com.dogpark.dto.BuyListDto">

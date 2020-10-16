@@ -163,6 +163,10 @@
 				<td><textarea name="dsb_dpd_character" style="width:300px; height:200px;">
 			</textarea></td>
 				</tr>
+				<tr>
+				<td>사진첨부</td>
+				<td><input type="file"/></td>
+				</tr>
 			</table>
 			<p>
 				<input type="submit" value="글등록" id="dsb_write_input_btn">
