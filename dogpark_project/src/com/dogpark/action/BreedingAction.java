@@ -6,10 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.dogpark.dto.ActionForward;
-import com.dogpark.dto.BoardBean;
 import com.dogpark.dto.BreedingDto;
 import com.dogpark.dto.PageInfo;
-import com.dogpark.service.BoardListService;
 import com.dogpark.service.BreedingListService;
 
 public class BreedingAction implements Action {
