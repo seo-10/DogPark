@@ -11,7 +11,7 @@ public class BreedingListService  {
 	DogLifeDao dao= new DogLifeDao();
 	List<BreedingDto> articleList = null;
 	
-	public List<BreedingDto> BreedingListService(int page){
+	public List<BreedingDto> BreedingListService1(int page){
 	articleList=dao.breedingdao(page);
 	return articleList;
 }

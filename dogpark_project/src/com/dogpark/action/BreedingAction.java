@@ -17,7 +17,7 @@ public class BreedingAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
-		System.out.println("¾×¼Ç");
+		System.out.println("ï¿½×¼ï¿½");
 		List<BreedingDto> articleList=new ArrayList<BreedingDto>();
 		int page=1;
 		int limit=8;
@@ -27,7 +27,7 @@ public class BreedingAction implements Action {
 		}
 		BreedingListService breedingListservice = new BreedingListService();
 		int listCount=breedingListservice.getListCount();
-		articleList=breedingListservice.BreedingListService(page);
+		articleList=breedingListservice.BreedingListService1(page);
 		int maxPage=(int)((double)listCount/limit + 0.95); 
    		int startPage = (((int) ((double)page / 10 + 0.9)) - 1) * 10 + 1;
    	    int endPage = startPage+10-1;
