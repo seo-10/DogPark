@@ -22,7 +22,7 @@
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 
     <!-- 메인인덱스 CSS 사용 -->
-    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css" />
+    <link rel="stylesheet" type="text/css" href="css/shop_css/shop_main.css?ver=2" />
     <!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
     <!-- 부트스트랩 cdn -->
@@ -56,7 +56,7 @@
 		function kartAside(i) {
 			//$('#kartItemPic').attr('src','img/shopping_img/dogfood'+i+'.png');
 			$('#kartItemPics').append('<img id="kartItemPic" src="img/shopping_img/dogfood'+(i+1)+'.png" width="110px" height="100px">');
-			$('#kartItemName').append('dogfood'+(i+1));
+			//$('#kartItemName').append('dogfood'+(i+1));
 		}
 	</script>
 	
@@ -85,6 +85,7 @@
     </div>
    
     <%if(dto != null && listCount > 0){%>
+    <h1 id="toph1">애견사료</h1>
     	<section>
     		<% String divId = null; %>
     		<% String svgId = null; %>

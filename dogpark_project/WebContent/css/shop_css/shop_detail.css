@@ -428,6 +428,7 @@ section {
 #pd_detail {
 	background-color: gray;
 	width: 600px;
+	height: 310px;
 	margin-left:350px;
 	margin-top: 19px;
 	padding-top: 2px;
@@ -485,8 +486,6 @@ section {
 	display:inline-flex;	
 }
 
-
-
 #count_box input{
 	border:1px solid #0000007a;
 	width:48px;
@@ -507,6 +506,17 @@ section {
 	padding: 0px;
 	height:30px;
 }
+
+#count_box li:nth-child(2n) {
+	border:1px solid #0000007a;
+	background-color:white;
+	height: 25px;
+	width:40px;
+	cursor:pointer;
+	font-size: 14px;
+    padding-top: 1px;
+}
+
 #count_box li:nth-child(2n-1) {
 	border:1px solid #0000007a;
 	background-color:white;
@@ -514,6 +524,8 @@ section {
 	width:25px;
 	cursor:pointer;
 }
+
+
 
 /* 장바구니 결제 버튼*/
 #buyCartBtn {
@@ -530,6 +542,7 @@ section {
 	width: 299px;
     height: 60px;
 }
+
 
 #buyBtn input {
 	background-color: #672121;
@@ -564,6 +577,10 @@ section {
 	margin-top: 30px;
 	clear: both;
     margin-left: 144px;
+}
+#priceDisplay h1{
+	text-align: right;
+	color: #672121;
 }
 
 /*-------------------- footer -------------------*/

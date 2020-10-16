@@ -445,6 +445,15 @@ a {
     border-bottom: 1.5px solid rgba(150, 141, 141, 0.452);
 }
 
+#toph1 {
+	color: white;
+	margin-bottom:40px;
+	position: relative;
+    left: 26%;
+    width: 1080px;
+	
+}
+
 section {
     position: relative;
     left: 23%;

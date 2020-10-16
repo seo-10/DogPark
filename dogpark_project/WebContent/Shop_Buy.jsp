@@ -44,7 +44,7 @@
 	
 	
 	
-	<form name="form" method="post" name="form" action="buyList_Insert.bo?cart_name=<%out.println(dto.get(0).getPd_name());%>">
+	<form name="form" method="post" name="form" action="buyList_Insert.bo?cart_name=<%out.println(dto.get(0).getPd_name());%>" method="get">
 	<!-- 로그아웃 다이얼로그 -->
     <div id="logout_dialog" title="logout"  >
     	로그아웃 하시겠습니까?
@@ -93,11 +93,14 @@
 					<ul id="count_box">
 						<li><a href="javascript:void(0);" id="decreaseQuantity">-</a></li>
 						<li><span id="numberUpDown">1</span></li>
-						<!-- <li><input type="text" id="numberUpDown" value="1" readonly /></li>  -->
+						<!-- <li><input type="text" value="1" readonly /></li>  -->
 						<li><a href="javascript:void(0);" id="increaseQuantity">+</a></li>
 					</ul>
 				</li>
 			</ul>
+		</div>
+		<div id="priceDisplay" >
+			<h1><%= price * 3 %> ￦</h1>
 		</div>
 
        </div>
@@ -109,6 +112,7 @@
 	       <li id="buyBtn"><input type="submit" value="결제하기" /></li>
 	    </ul>
 	    <%} %>
+	    
 	
 	<hr />
 	    
