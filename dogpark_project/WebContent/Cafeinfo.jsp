@@ -10,9 +10,9 @@
         
 <title>DogParkCafeInfo</title>
         <link rel="stylesheet" type="text/css" href="css/doglife_css/dogpark.css" media="all">
-		<link rel="stylesheet" type="text/css" href="css/doglife_css/cafeinfo.css" media="all">
+		<link rel="stylesheet" type="text/css" href="css/doglife_css/cafeinfo.css?ver=1.1" media="all">
 		 <!-- CSS 사용 -->
-   		<link rel="stylesheet" type="text/css" href="css/doglife_css/cafem.css" />
+   		<link rel="stylesheet" type="text/css" href="css/doglife_css/cafem.css?ver=1.3" />
 	    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
 		 <!-- 자바 스크립트 사용 -->
     	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>

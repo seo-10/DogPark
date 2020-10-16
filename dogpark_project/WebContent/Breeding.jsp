@@ -12,9 +12,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.1" />
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css" />
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breeding_profile.css?ver=3" />
+ <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.3" />
+ <link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css?ver=1.2" />
+ <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breeding_profile.css?ver=2" />
  <script type="text/javascript" src="js/Breeding_js/Breeding.js?ver=1.1"></script>
 </head>
 	
@@ -67,8 +67,8 @@
 	    </div>
 	<form action="Breedingsearch.bo" method="post">
 		 <section class="community_contents">
-	   		<div id="breeding_title">
-	   			DogPark User
+	   		<div id="breeding_title1">
+	   			<img src="img/DogLife_select_img/breedingtitle.png">
 	   			
 	   			
 	   		</div>

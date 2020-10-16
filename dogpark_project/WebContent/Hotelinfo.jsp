@@ -12,7 +12,12 @@
   <link rel="stylesheet" type="text/css" href="css/hotelinfo_css/hotelinfo1.css" media="all">
   <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
    		<!-- CSS 사용 -->
-   		<link rel="stylesheet" type="text/css" href="css/doglife_css/cafem.css" />
+   		<link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css?ver=1.4" />
+   		
+   		
+   		<!-- 로그아웃 다이얼로그 CSS 연결 -->
+		<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
+		
 		<!-- 자바 스크립트 사용 -->
     	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     	<script type="text/javascript" src="js/Hotel_detail_js/Hotel_detail.js"></script>
@@ -27,7 +32,8 @@
         <script src="lib/mootools/mootools-1.2.4.4-more-assets.js" type="text/javascript"></script>
 
  		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		
+		<!-- jquery 사용 -->
+    	<script type="text/javascript" src="js/notice_js/notice.js"></script>
 
    </head>
  <body id="wrap">
