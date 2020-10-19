@@ -1,9 +1,11 @@
 
 
 section { 
-		width:1900px;
-		margin:0 auto;
-		text-align: center;
+	width:1900px;
+	height:auto;
+	position:relative;
+	text-align:center;
+	padding-bottom:70px;
 }
 
 .accordion {
