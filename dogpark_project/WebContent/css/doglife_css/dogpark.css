@@ -242,6 +242,8 @@ color:black;
 }
 #topbt{
 display:scroll;
+width:30px;
+height:30px;
 position:fixed;
 bottom:10px;
 right:10px;

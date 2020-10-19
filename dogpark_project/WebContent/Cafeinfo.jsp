@@ -21,7 +21,7 @@
 	<!-- css 사용 -->
     <link rel="stylesheet" type="text/css" href="css/doglife_css/dogpark.css" media="all">
 	<link rel="stylesheet" type="text/css" href="css/doglife_css/cafeinfo.css?ver=1.1" media="all">
-	<link rel="stylesheet" type="text/css" href="css/doglife_css/cafem.css?ver=1.3" />
+	<link rel="stylesheet" type="text/css" href="css/doglife_css/cafem.css?ver=1.4" />
  	
  	<!-- 로그아웃 다이얼로그 CSS 연결 -->
 	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2" />
@@ -90,7 +90,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=아이러브퍼피(ILOVEPUPPY)"><h3>아이러브퍼피(ILOVEPUPPY)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=아이러브퍼피(ILOVEPUPPY)"><h3>아이러브퍼피(ILOVEPUPPY)</h3></a>
 		<img src='img/doglife_cafe_img/ilovepuppy.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ilovepuppy1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ilovepuppy2.jpg' class='swGradientLightbox'/>
@@ -114,7 +114,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=숲,숨(Forest,breath)"><h3>숲,숨(Forest,breath)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=숲,숨(Forest,breath)"><h3>숲,숨(Forest,breath)</h3></a>
 		<img src='img/doglife_cafe_img/ssum3.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ssum1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ssum2.png' class='swGradientLightbox'/>
@@ -144,7 +144,7 @@
 <br>
 		
 		<div id="yylogo"><a name="gi"><h1><u>경기도</u></h1></a></div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=더 드림핑(DREAMPING)"><h3>더 드림핑(DREAMPING)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=더 드림핑(DREAMPING)"><h3>더 드림핑(DREAMPING)</h3></a>
 		<img src='img/doglife_cafe_img/dreamping1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dreamping2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dreamping3.jpg' class='swGradientLightbox'/>
@@ -168,7 +168,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=나무휴식(NAMUHYUSIK)"><h3>나무휴식(NAMUHYUSIK)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=나무휴식(NAMUHYUSIK)"><h3>나무휴식(NAMUHYUSIK)</h3></a>
 		<img src='img/doglife_cafe_img/namu2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/namu1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/namu3.png' class='swGradientLightbox'/>
@@ -192,7 +192,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=도그맥스(DogMax)"><h3>도그맥스(DogMax)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=도그맥스(DogMax)"><h3>도그맥스(DogMax)</h3></a>
 		<img src='img/doglife_cafe_img/dogmax1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dogmax2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dogmax3.png' class='swGradientLightbox'/>
@@ -220,7 +220,7 @@
 		 
 <br>
 		<div id="yylogo"><a name="choong"><h1><u>충청도</u></h1></a></div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=니니니(NININI)"><h3>니니니(NININI)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=니니니(NININI)"><h3>니니니(NININI)</h3></a>
 		<img src='img/doglife_cafe_img/ninini1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ninini2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ninini3.png' class='swGradientLightbox'/>
@@ -243,7 +243,7 @@
 		<dd class="sub1">-</dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=에유(AEW)"><h3>에유(AEW)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=에유(AEW)"><h3>에유(AEW)</h3></a>
 		<img src='img/doglife_cafe_img/aew1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/aew2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/aew3.jpg' class='swGradientLightbox'/>
@@ -268,7 +268,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=바라겔(BARACHEL)"><h3>바라겔(BARACHEL)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=바라겔(BARACHEL)"><h3>바라겔(BARACHEL)</h3></a>
 		<img src='img/doglife_cafe_img/baragel1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/baragel2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/baragel3.jpg' class='swGradientLightbox'/>
@@ -297,7 +297,7 @@
 		 
 <br>
 		<div id="yylogo"><a name="gyung"><h1><u>경상도</u></h1></a></div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=디어마이프렌드(DEARMYFRIEND)"><h3>디어마이프렌드(DEARMYFRIEND)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=디어마이프렌드(DEARMYFRIEND)"><h3>디어마이프렌드(DEARMYFRIEND)</h3></a>
 		<img src='img/doglife_cafe_img/dmf1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dmf2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/dmf3.jpg' class='swGradientLightbox'/>
@@ -322,7 +322,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=산책가까(ILOVEPUPPY)"><h3>산책가까(ILOVEPUPPY)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=산책가까(ILOVEPUPPY)"><h3>산책가까(ILOVEPUPPY)</h3></a>
 		<img src='img/doglife_cafe_img/scgg1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/scgg2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/scgg3.jpg' class='swGradientLightbox'/>
@@ -347,7 +347,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=도그휴(DOGHUE)"><h3>도그휴(DOGHUE)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=도그휴(DOGHUE)"><h3>도그휴(DOGHUE)</h3></a>
 		<img src='img/doglife_cafe_img/doghew1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/doghew2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/doghew3.jpg' class='swGradientLightbox'/>
@@ -376,7 +376,7 @@
 		 
 <br>
 		<div id="yylogo"><a name="jeon"><h1><u>전라도</u></h1></a></div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=쿠치로(CUCCILO)"><h3>쿠치로(CUCCILO)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=쿠치로(CUCCILO)"><h3>쿠치로(CUCCILO)</h3></a>
 		<img src='img/doglife_cafe_img/cuciro1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/cuciro2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/cuciro3.jpg' class='swGradientLightbox'/>
@@ -401,7 +401,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=판 갤러리카페(PANN)"><h3>판 갤러리카페(PANN)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=판 갤러리카페(PANN)"><h3>판 갤러리카페(PANN)</h3></a>
 		<img src='img/doglife_cafe_img/pann1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/pann2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/pann3.jpg' class='swGradientLightbox'/>
@@ -426,7 +426,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=독타곤(DOGTAGON)"><h3>독타곤(DOGTAGON)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=독타곤(DOGTAGON)"><h3>독타곤(DOGTAGON)</h3></a>
 		<img src='img/doglife_cafe_img/doctagon1.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/doctagon2.jpg' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/doctagon3.jpg' class='swGradientLightbox'/>
@@ -455,7 +455,7 @@
 		 
 <br>
 		<div id="yylogo"><a name="jeju"><h1><u>제주도</u></h1></a></div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=그초록(THE GREEN)"><h3>그초록(THE GREEN)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=그초록(THE GREEN)"><h3>그초록(THE GREEN)</h3></a>
 		<img src='img/doglife_cafe_img/green1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/green2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/green3.png' class='swGradientLightbox'/>
@@ -475,12 +475,12 @@
 		<dd class="sub1">-</dd>
 		<dt class="sub1">
 		<i class="xi-maker"></i>
-		<img src="images/bus.jpg" id="icon1"><div class="stitle">버스 이용시</div></dt>
+		<img src="img/doglife_cafe_img/bus.jpg" id="icon1"><div class="stitle">버스 이용시</div></dt>
 		<dd class="sub1">금산목: 201 도보 7분
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=니나노 제주(NINANO JEJU)"><h3>니나노 제주(NINANO JEJU)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=니나노 제주(NINANO JEJU)"><h3>니나노 제주(NINANO JEJU)</h3></a>
 		<img src='img/doglife_cafe_img/ninano1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ninano2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/ninano3.png' class='swGradientLightbox'/>
@@ -504,7 +504,7 @@
 </dd>
 		</dl>
 		</div>
-		<div id="seoul"><a href="Cafedetail.bo?cafe_name=월정리콧수염(MUSTACHE)"><h3>월정리콧수염(MUSTACHE)</h3>
+		<div id="seoul"><a href="Cafedetail.bo?cafe_name=월정리콧수염(MUSTACHE)"><h3>월정리콧수염(MUSTACHE)</h3></a>
 		<img src='img/doglife_cafe_img/cot1.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/cot2.png' class='swGradientLightbox'/>
 		<img src='img/doglife_cafe_img/cot3.png' class='swGradientLightbox'/>
