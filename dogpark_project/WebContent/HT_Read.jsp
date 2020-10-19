@@ -51,7 +51,7 @@
 
 
 
-<nav style=" position:absolute; left:0; top:0; right:0; margin:0; padding:0; width:100%; height:400px;"><img src="img/htboard_img/dogparkTopBanner2.jpg" style="clear:both;width:100%; height:100%;"/></nav>
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 <section id="ht_read">
 	<span style=" margin:0; padding:0;font-size:25pt; border-bottom:1px solid black;">꿀팁 커뮤니티</span><span style="margin-left:10px; padding:0; font-size:10pt;">유용한 정보를 모아모아</span>
 	<div style=" margin-top:15px; font-size:18pt; background-color:#EAEAEA; width:900px; height:50px; padding-top:20px; border-bottom:1px dotted black; border-top:2px solid black;"><%out.println(dto.get(0).getHt_title()); %></div>

@@ -51,10 +51,7 @@
 			<jsp:include page="js/notice_js/header.jsp" />
 		</div>
 
- <nav style="position:absolute; left: 0; top: 0; right: 0; margin: 0; padding: 0; width: 100%; height: 400px;">
-			<img src="img/htboard_img/dogparkTopBanner2.jpg"
-				style="clear: both; width: 100%; height: 100%;" />
-		</nav>
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 
 <section id="dsb_write">
 	

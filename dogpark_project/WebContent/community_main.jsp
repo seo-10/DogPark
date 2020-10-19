@@ -46,7 +46,7 @@
     	<jsp:include page="js/community_js/header.jsp" />
     </div>
 
-<nav style="position:absolute;top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img/dogparkTopBanner1.jpg" style="clear:both;width:100%; height:100%;"/></nav>
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 		<section class="community_contents">
 			<ul><Strong style="position:absolute; font-size:15pt;">꿀팁 커뮤니티</Strong>
 				<li>

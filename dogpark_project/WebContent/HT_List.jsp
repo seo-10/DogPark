@@ -59,12 +59,13 @@
     </div>
  	<% System.out.println("session!!!" + session.getAttribute("id")); %>
 
-<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:400px;"><img src="img/htboard_img/dogparkTopBanner1.jpg" style="clear:both;width:100%; height:100%;"/></nav> 
+<nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
  <section class="ht_board_contents">
 	  <article>
 		<span id="board_ph">꿀팁 커뮤니티</span><input type="button" value="검색" id="ht_search_button"/><input type="text" placeholder="Search" id="search_bar"/>
 	  </article>
 <hr style="clear:both;" />
+<img src="img/htboard_img/honeytipbanner.jpg" style="width:100%;"/>
 <%
 if(dto != null && listCount > 0){
 %>
