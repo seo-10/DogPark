@@ -533,9 +533,6 @@
 		 </section>
 	<a  href="#" title="맨위로" id="topbt"><img src="img/doglife_cafe_img/topbt.png"></a>
 <br id= "cl"/> 
-  <div>
-		<jsp:include page="footer/footer.jsp" />
-  </div>
  		</form>
     </body>
 </html>
