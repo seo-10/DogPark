@@ -35,7 +35,7 @@
 		margin-left:10px;
 		width:60px;
 		height:30px;
-		background-color:rgba(50, 90, 80, 1);
+		background-color:#ffc88a;
 		color:white;
 }
 #write_button1{
@@ -47,7 +47,7 @@
   		letter-spacing: 2.5px;
   		font-weight: 500;
   		color: #000;
-  		background-color: #fff;
+  		background-color: #ffc88a;
   		border: none;
   		border-radius: 45px;
   		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -93,40 +93,40 @@
 
 .dsb_box{
 	float:left;
-	width:310px;
-	height:400px;
-	border:1px solid gray;
-	border-radius:10px;
-	padding-left:40px;
-	padding-top:20px;
-	margin-top:10px;
-	margin-right:20px;
-	margin-left:10px;
-	margin-bottom:10px;
+	width:300px;
+	height:365px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	margin-top:15px;
+	margin-left:40px;
+	margin-bottom:15px;
 }
 .dsb_box:hover{
 	border:1px solid black;
 	box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+	transition: .2s ease-in-out;
 	}
 
 .dsb_pro_img{
-	border-radius:10px;
-	width:230px;
+	margin:0;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	width:100%;
 	height:230px; 
 	}
 .dsb_box_contents {
-	
-	margin:10px;
-	padding:0;
-	width:300px;
-	height:230px;
+	border:1px solid #c0c0c0;
+	margin:0px;
+	padding:0px;
+	width:auto;
+	height:auto;
 	line-height:2.0em;
 	list-style:none;
 }
 
-.dsb_board_No_detail{
+.dsb_board_birth_detail{
 		
-		font-size:12pt;
+		font-size:11pt;
 }
 
 .dsb_board_name_detail{

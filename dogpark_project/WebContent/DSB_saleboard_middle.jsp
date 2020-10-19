@@ -75,12 +75,12 @@ if(dto != null && listCount > 0){
 		<%for(int i=0;i<dto.size();i++){%>
 		<a href="dsb_boardread.bo?dpd_name=<%out.println(dto.get(i).getDpd_name());%>"class="dsb_box">
 				<img src="img/Dogsale_img/<%out.println(dto.get(i).getDpd_img());%>" class="dsb_pro_img"/>
-				<ul class="dsb_box_contents">
-					<li class="dsb_board_name_detail"><%out.println(dto.get(i).getDpd_name());%> </li>
-					<li class="dsb_board__detail"><%out.println(dto.get(i).getDpd_year());%>년<%out.println(dto.get(i).getDpd_month());%>월<%out.println(dto.get(i).getDpd_day());%>일 </li>
-					<li class="dsb_board_count_detail"><%out.println(dto.get(i).getDpd_species());%> </li>
-					<li class="dsb_board_date_detail"><%out.println(dto.get(i).getDpd_sex());%> </li>
-				</ul>
+				<div class="dsb_box_contents">
+					<div class="dsb_board_name_detail"><%out.println(dto.get(i).getDpd_name());%> </div>
+					<div class="dsb_board_birth_detail"><%out.println(dto.get(i).getDpd_year());%>년<%out.println(dto.get(i).getDpd_month());%>월<%out.println(dto.get(i).getDpd_day());%>일 </div>
+					<div class="dsb_board_count_detail"><%out.println(dto.get(i).getDpd_species());%> </div>
+					<div class="dsb_board_date_detail"><%out.println(dto.get(i).getDpd_sex());%> </div>
+				</div>
 		</a>
 		<%} %>
 	  <article style="clear:both;">
