@@ -5,8 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/Doglifeboard.css" />
- <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/DogLife_select.css" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/Doglifeboard.css?ver=1.2" />
+ <link rel="stylesheet" type="text/css" href="css/DogLife_select_css/DogLife_select.css?ver=1.2" />
 </head>
 
 <body>
