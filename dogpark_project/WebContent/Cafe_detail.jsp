@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.1" />
+ <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.6" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breeding_profile.css?ver=3" />
  <script type="text/javascript" src="js/Breeding_js/Breeding.js?ver=1.1"></script>
@@ -65,15 +65,15 @@
 					if(cafedto != null){
 					%>
 	   				<%for(int i=0;i<cafedto.size();i++){%>
-	   				<h3>카페명 : <%out.println(cafedto.get(i).getCafe_name()); %></h3>
+	   				<h1 style="font-family:bold; font-size:30px;"><%out.println(cafedto.get(i).getCafe_name()); %></h1><hr>
 	   				<div id="ImgBox" style="">
 	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img1()); %>"></span>
 	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img2()); %>"></span>
 	   				<span><img src="img/doglife_cafe_img/<%out.println(cafedto.get(i).getCafe_img3()); %>"></span></div>
-	   				<h3>영업 시간 : <%out.println(cafedto.get(i).getCafe_hours()); %></h3>
-	   				<h5>카페 정보 : <%out.println(cafedto.get(i).getCafe_info()); %></h5>
-	   				<h5>주소 : <%out.println(cafedto.get(i).getCafe_adr()); %></h5>
-	   				<h5>전화번호 : <%out.println(cafedto.get(i).getCafe_tel()); %></h5>
+	   				<h3>영업 시간 : <%out.println(cafedto.get(i).getCafe_hours()); %></h3><hr>
+	   				<h3 style="line-height:30px;">카페 정보 : <%out.println(cafedto.get(i).getCafe_info()); %></h3><hr>
+	   				<h3>주소 : <%out.println(cafedto.get(i).getCafe_adr()); %></h3><hr>
+	   				<h3>전화번호 : <%out.println(cafedto.get(i).getCafe_tel()); %></h3>
 	   				
 	   				<%} }%>
 	   			

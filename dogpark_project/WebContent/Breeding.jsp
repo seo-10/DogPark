@@ -12,7 +12,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.3" />
+ <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breedingboard.css?ver=1.4" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css?ver=1.2" />
  <link rel="stylesheet" type="text/css" href="css/Breeding_css/Breeding_profile.css?ver=2" />
  <script type="text/javascript" src="js/Breeding_js/Breeding.js?ver=1.1"></script>
@@ -69,7 +69,7 @@
 		 <section class="community_contents">
 	   		<div id="breeding_title1">
 	   			<img src="img/DogLife_select_img/breedingtitle.png">
-	   			
+	   			<hr>가입한 유저들의 반려견들
 	   			
 	   		</div>
 	   				<%
@@ -85,8 +85,8 @@
 			</figure>
 
 					<%} %>
-	   		<input type="submit" value="반려견 조회" style="width:150px; height:50px; position:absolute; left:575px; top:750px;">
-	   		<div style="color:white; position:absolute; top:830px; left:570px;">
+	   		<input type="submit" value="반려견 조회" style="width:150px; background-color:black; border-radius:20px; color:white; height:50px; position:absolute; left:575px; top:900px;">
+	   		<div style="color:black; position:absolute; top:850px; left:595px;">
 				<%if(nowPage<=1){ %>
 				[이전]&nbsp;
 				<%}else{ %>

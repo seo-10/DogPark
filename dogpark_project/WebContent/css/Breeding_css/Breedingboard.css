@@ -25,13 +25,16 @@
 }
 
 #breeding_title{
+	
+}
+#breeding_title1{
 	text-align:center;
-	color:white;
-	margin:10px;
-	font-size: 30px;
-	font-weight: bold;
+	
 }
 #left_box{
 	color:white;
 	
+}
+#Imgbox h3{
+	padding:5px;
 }
