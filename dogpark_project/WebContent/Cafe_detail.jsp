@@ -79,8 +79,9 @@
 	   			
 	   		</div>
 	   				
-	   		
+	   		<a href="Cafeinfo.jsp"><input type="button" value="뒤로가기" style="width:150px; background-color:black; border-radius:20px; color:white; height:50px; position:absolute; left:575px; top:930px;"></a>
 	   		</section>
+	   		
   	</form>
 	
 </body>
