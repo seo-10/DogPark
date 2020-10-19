@@ -1,41 +1,47 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%request.setCharacterEncoding("utf-8"); %>
 <%@page import="com.dogpark.dto.BoardBean"%>
 <%@page import="com.dogpark.dao.Dao"%>
 
 <%@page import="java.util.*"%>
 <%@page import="org.apache.ibatis.session.SqlSessionFactory"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
+<%@page import="javax.servlet.http.HttpSession" %>
 <html lang="en">
  <head>
-  <title>DogPark calender</title>
-  <link rel="stylesheet" type="text/css" href="css/hotelinfo_css/hotelinfo1.css" media="all">
-  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
-   		<!-- CSS 사용 -->
-   		<link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css?ver=1.4" />
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>DogPark calender</title>
+ 	
+ 	<!-- JQuery UI 를 쓰기위한 스크립트 -->
+   	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+ 	
+ 	
+  	<link rel="stylesheet" type="text/css" href="css/hotelinfo_css/hotelinfo1.css" media="all">
+  	 
+  	 
+  	 
+ 	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+ 	
+   	<!-- CSS 사용 -->
+   	<link rel="stylesheet" type="text/css" href="css/Breeding_css/breedingm.css?ver=1.4" />
    		
-   		
-   		<!-- 로그아웃 다이얼로그 CSS 연결 -->
-		<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css" />
+   	<!-- 로그아웃 다이얼로그 CSS 연결 -->
+	<link rel="stylesheet" type="text/css" href="css/logoutDialog_css/logoutDialog.css?ver=2"/>
+	
+	<!-- jquery 사용 -->	
+    <script type="text/javascript" src="js/Hotel_detail_js/Hotel_detail.js"></script>
+	<!-- 부트스트랩 cdn -->
+   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+   	
+   	
+   	
 		
-		<!-- 자바 스크립트 사용 -->
-    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    	<script type="text/javascript" src="js/Hotel_detail_js/Hotel_detail.js"></script>
-		<!-- 부트스트랩 cdn -->
-   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-   		<!-- 로그인 창을 위한 스크립트 -->
-    	<link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
-    	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
-    	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-   		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script src="lib/mootools/mootools-1.2.4-core-jm.js" type="text/javascript"></script>
-        <script src="lib/mootools/mootools-1.2.4.4-more-assets.js" type="text/javascript"></script>
 
- 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<!-- jquery 사용 -->
-    	<script type="text/javascript" src="js/notice_js/notice.js"></script>
-
-   </head>
+  </head>
  <body id="wrap">
 	<form name="form" method="post">
 	   
