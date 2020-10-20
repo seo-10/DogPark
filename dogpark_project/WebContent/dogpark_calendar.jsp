@@ -142,7 +142,8 @@
         <!--End Modal-->
 <nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 		<section class="ios_contents">
-		<div id="text"></div>
+		<div id="text">방문 예약</div>
+		<div id="text2">Reservation</div>
 			<table border='0' width='900' celpadding='0' cellspacing='0'
 				style="float: left;">
 				<tr>
@@ -251,7 +252,7 @@
 					required /> <input type="submit" id="reservation_button"
 					value="예약등록" />
 			</div>
-			<img src="img/Dogsale_img/inquarybanner2.jpg" style="width:350px; height:200px; margin-top:50px;"/>
+			<img src="img/Dogsale_img/inquarybanner2.jpg" style="width:350px; height:300px; margin-top:50px;"/>
 		</section>
 		<div>
 			<jsp:include page="footer/footer.jsp" />

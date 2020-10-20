@@ -308,7 +308,7 @@ public class Controller extends javax.servlet.http.HttpServlet
 		}
 		//´ñ±Û ±â´É
 		else if (command.equals("/ReplyWriteAction.bo")) {
-			action = new DSB_ReplyWriteAction();
+			action = new BoardReplyProAction();
 			try {
 				action.execute(request, response);
 			} catch (Exception e) {
