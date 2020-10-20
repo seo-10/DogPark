@@ -80,7 +80,7 @@
 	   		<figure class="snip1344"><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>"  class="background"/><img src="img/userpet_img/<%out.println(dto.get(i).getD_img()); %>" class="profile"/>
   		<figcaption>
     		<h3><%out.println(dto.get(i).getD_name());%><span><%out.println(dto.get(i).getNickname());%><hr><%out.println(dto.get(i).getD_sex()); %></span></h3>
-    		<div class="icons"><a href="javascript:alert('<%=dto.get(i).getPhone_num()%>')"> <i class="ion-social-vimeo-outline"></i></a></div>
+    		<div class="icons"><a href="javascript:alert('<%=dto.get(i).getNickname()%>'+'님의'+'연락처 :'+'<%=dto.get(i).getPhone_num()%>')"> <i class="ion-social-vimeo-outline"></i></a></div>
   		</figcaption>
 			</figure>
 
