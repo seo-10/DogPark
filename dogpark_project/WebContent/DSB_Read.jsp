@@ -82,7 +82,7 @@
 			</div>
 			</div>
 			
-                       <div style=" width:900px; background-color:#f9f9f9;">	
+                       <div style=" width:900px; background-color:#f9f9f9;">
                               <input type="text" name="user_id" value="<%out.println(session.getAttribute("id"));%>" readonly style="border-style: none; padding:5px;"/>
                               <input type="text" name="reply_content" style="width:750px; height:90px;"/>
                               <input type="submit" VALUE=" 댓글 등록" style="border:1px solid gray; width:130px; height:90px;">
