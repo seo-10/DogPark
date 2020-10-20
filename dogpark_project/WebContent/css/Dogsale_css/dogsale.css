@@ -8,6 +8,16 @@
 	margin:0; 
 	padding-bottom:70px;
 }
+#text{
+	font-size:18pt;
+	padding-bottom:20px;
+	text-align:center;
+}
+#text2{
+	font-size:18pt;
+	text-align:center;
+	padding-bottom:40px;
+}
  #calendarTable, #calendarTable th, #calendarTable td   {
         border-collapse: collapse;
                     
@@ -61,6 +71,14 @@
 	margin-top:30px;
 	border-radius:20px;
 	border-style:none;
+}
+#reservation_button:hover{
+	background-color:white;
+	width:260px;
+	height:60px;
+	margin-top:30px;
+	border-radius:20px;
+	border:3px solid #ffc88a;
 }
         /* The Modal (background) */
         .modal {

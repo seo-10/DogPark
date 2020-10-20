@@ -142,14 +142,29 @@ public class DogSaleDao {
 		
 		sqlsession.close();
 	}
-	public void insertReply(ReplyDto dto){
+	public int insertReply(ReplyDto dto){
+		
+			SqlSessionFactory sqlfactory = Dao.getConn();
+			SqlSession sqlsession = sqlfactory.openSession();
+			int a=sqlsession.insert("insertReply", dto);
+			sqlsession.commit();
+			
+			sqlsession.close();
+		
+		return a;
+	}
+	public List<ReplyDto> selectreply(){
+		List<ReplyDto> replyList=null;
 		try {
 			SqlSessionFactory sqlfactory = Dao.getConn();
 			SqlSession sqlsession = sqlfactory.openSession();
-			sqlsession.insert("reply.insertReply", dto);
+			replyList=sqlsession.selectList("selectReply");
+			
+			sqlsession.close();
 		} catch (Exception e) {
 			System.out.println("insertReply : " + e);
 			e.printStackTrace();
 		}
+		return replyList;
 	}
 }

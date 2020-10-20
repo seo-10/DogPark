@@ -180,8 +180,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<!-- 댓글 입력 -->
 	<insert id="insertReply" parameterType="com.dogpark.dto.ReplyDto">
-		insert into ex_reply values(seq_reply_no.nextval, #{board_no}, #{id}, now(), #{reply_content})
+		insert into ex_reply(reply_no, user_id, ex_date, reply_content) values(default, #{user_id}, now(), #{reply_content});
 	</insert>
+	<select id="selectReply" resultType="com.dogpark.dto.ReplyDto">
+		select * from ex_reply order by reply_no DESC;
+	</select>
 	
 	
 </mapper>

@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@page import="java.util.*"%>
 <%@page import="com.dogpark.dto.Dogpark_dogsDto"%>
+<%@page import="com.dogpark.dto.ReplyDto"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +34,9 @@
 
 <body>
 <%ArrayList<Dogpark_dogsDto> dto = (ArrayList<Dogpark_dogsDto>)request.getAttribute("articleList"); %>
+<%ArrayList<ReplyDto> replyList = (ArrayList<ReplyDto>)request.getAttribute("replyList"); %>
 
-	<form name="form" method="post">
+	<form action="ReplyWriteAction.bo" method="post">
 		<!-- 로그아웃 다이얼로그 -->
 		<div id="logout_dialog" title="logout">로그아웃 하시겠습니까?</div>
 
@@ -46,12 +49,8 @@
 		<div id="login_Ing">
 			<jsp:include page="js/notice_js/header.jsp" />
 		</div>
-    </form>
     
-    <nav style="position:absolute; left: 0; top: 0; right: 0; margin: 0; padding: 0; width: 100%; height: 400px;">
-			<img src="img/htboard_img/dogparkTopBanner2.jpg"
-				style="clear: both; width: 100%; height: 100%;" />
-		</nav>
+    <nav style=" position:absolute; top:0; left:0; right:0; margin:0; padding:0; height:300px; border-bottom:1px solid gray;"><img src="img/headerbanner/dogparkbannerheader.jpg" style="clear:both;width:100%; height:100%;"/></nav>
 		
 <section id="dsb_read">
 <span
@@ -82,8 +81,22 @@
 				%>
 			</div>
 			</div>
+			
+                       <div style=" width:900px; background-color:#f9f9f9;">
+                              <input type="text" name="user_id" value="<%out.println(session.getAttribute("id"));%>" readonly style="border-style: none; padding:5px;"/>
+                              <input type="text" name="reply_content" style="width:750px; height:90px;"/>
+                              <input type="submit" VALUE=" 댓글 등록" style="border:1px solid gray; width:130px; height:90px;">
+                       </div>
+               
+               <%for(int i=0;i<replyList.size();i++){%>
+				<div style=" width:900px; background-color:#f9f9f9;">
+					<article style="padding:5px;"><%out.println(replyList.get(i).getReply_no());%> <%out.println(replyList.get(i).getUser_id());%> </article>
+					 <input type="text" value="<%out.println(replyList.get(i).getReply_content());%>" style="width:750px; height:90px;"readonly/>
+				</div>
+		<%} %>
 
 </section>
+</form>
 <aside id="dsb_aside">
 <h3 style="text-align: center;">프로필</h3>
 			<div>
